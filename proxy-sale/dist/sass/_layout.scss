@@ -1,0 +1,90 @@
+.pageIp{
+  &__bg{
+    background-image: url(../img/bg.png);
+  }
+  .container{
+    padding: 40px 22px 58px 30px;
+    border: 1px solid $contaiberBorder;
+  }
+  .ipWraper{
+    padding-bottom: 50px;
+  }
+  .title{
+    font-size: 12px;
+    font-family: 'RobotoSlabRegular';
+    margin-bottom: 23px;
+  }
+  .yourIp{
+    font-size: 16px;
+    margin-top: 63px;
+    font-family: 'RobotoSlabRegular';
+    .ip{
+      font-family: 'RobotoSlabBold';
+      font-weight: bold;
+      font-size: 20px;
+      text-transform: none;
+      padding-left: 10px;
+      color: $textColorMain;
+
+    }
+  }
+  .aboutIp{
+    td {
+      padding-top: 15px;
+    }
+    &__name{
+      font-size: 13px;
+      color: $textColorItemName;
+    }
+    &__status{
+      font-size: 13px;
+      color: $textColorItemStatus;
+      padding-left: 27px;
+    }
+  }
+  .detals{
+    padding: 38px 0;
+    &__question{
+      display: inline-block;
+      font-size: 17px;
+      margin-left: 35px;
+    }
+    &__button{
+      margin-left: 54px;
+      width: 300px;
+    }
+  }
+  .detailedInformation{
+    margin-top: 40px;
+    padding-bottom: 20px;
+    &__title{
+      font-size: 16px;
+    }
+    &__aboutIp{
+      margin-top: 35px;
+      margin-left: 35px;
+    }
+    &__joinToUs{
+      margin-top: 95px;
+      font-size:  12px;
+      display: inline-block;
+    }
+    &__description{
+      font-size: 14px;
+      font-family: 'RobotoSlabRegular';
+      margin-top: 18px;
+    }
+  }
+  .buyProxy{
+    padding-top: 28px;
+    &__description{
+      font-size: 13px;
+      color: $textColorItemStatus;
+      line-height: 1.4;
+    }
+  }
+}
+
+.dotted-bottom-right{
+  background: url(../img/border-gray1.png) no-repeat right bottom / 80% 1px;
+}
