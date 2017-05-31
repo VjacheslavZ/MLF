@@ -29,8 +29,8 @@ block main
 								a(href="#") Отзывы
 							li
 								a(href="#") Контакты
-	div(canvas='container')
-		header(class="header")
+	header(class="header")
+		div(canvas='container')
 			.headerWrap
 				//.header_modal
 				//	a(data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active") Обратный звонок
@@ -39,41 +39,40 @@ block main
 			.container
 				.row
 					.header_title
+						
 						h1
 							span Рулонные
 							| шторы под заказ
 						p Бесплатный выезд дизайнера на объект в Киеве и Харькове
+						.intermediate
+							.intermediate_wrap
+								form
+									.intermediate_item.col-lg-3.col-md-4.col-sm-4.col-lg-offset-1
+										.modal_form_input_wrap
+											.modal_input_error
+												| Заполните поле
+												.modal_error_triangle
+												.modal_error_chest_img
+											i.fa.fa-check
+											input.modal_form_input(name='name', type='text', placeholder='Имя')
+									.intermediate_item.col-lg-3.col-md-4.col-sm-4
+										.modal_form_input_wrap
+											.modal_input_error
+												| Заполните поле
+												.modal_error_triangle
+												.modal_error_chest_img
+											i.fa.fa-check
+											input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
+									input(type='hidden', name='form_name', value='')
+									input(type='hidden', name='form_type', value='normal')
 
-						form
-							.intermediate_item.col-lg-3.col-md-4.col-sm-4
-								.modal_form_input_wrap
-									.modal_input_error
-										| Заполните поле
-										.modal_error_triangle
-										.modal_error_chest_img
-									i.fa.fa-check
-									input.modal_form_input(name='name', type='text', placeholder='Имя')
-							.intermediate_item.col-lg-3.col-md-4.col-sm-4
-								.modal_form_input_wrap
-									.modal_input_error
-										| Заполните поле
-										.modal_error_triangle
-										.modal_error_chest_img
-									i.fa.fa-check
-									input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
-							input(type='hidden', name='form_name', value='')
-							input(type='hidden', name='form_type', value='normal')
-							input.col-lg-3(type='submit', value='Вызвать дизайнера')
+									input.col-lg-3(type='submit', value='Вызвать дизайнера')
 					//.header_bot_txt
 					//	p Более
 					//		span  400
 					//		|   довольных клиентов за
 					//		span  8 лет
 					//		|  успешной работы!
-
-
-
-
 		// Секция  our_advantages
 		section#our_advantages.our_advantages
 			.container

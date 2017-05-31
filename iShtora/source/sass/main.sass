@@ -408,7 +408,7 @@ li
 				a
 					font-family: $raleway-semibold
 			a
-				margin-right: 15px
+				//margin-right: 15px
 				color: #fff
 				@include fz(16)
 				text-decoration: none
@@ -591,14 +591,14 @@ nav[canvas]
 	//display: none
 	//z-index: 100
 
-	display: block;
-	width: 100%;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 100;
-	transition: .5s;
-	background-color: rgba(0, 0, 0, .5);
+	display: block
+	width: 100%
+	top: 0
+	left: 0
+	right: 0
+	z-index: 100
+	transition: .5s
+	background-color: rgba(0, 0, 0, .5)
 	height: 95px
 [class*=js-open-], [class*=js-toggle-], [class*=js-close-]
 	cursor: pointer
@@ -672,8 +672,8 @@ nav[canvas]
 // Секция 
 .intermediate
 	text-align: center
-	min-height: 300px
-	background-color: #00b6f4
+	min-height: 50px
+	//background-color: #00b6f4
 	.intermediate_title
 		max-width: 650px
 		margin: auto
@@ -683,23 +683,22 @@ nav[canvas]
 			text-transform: uppercase
 			@include fz(24)
 			color: #052243
-			
-			
 
 	.intermediate_wrap
-		margin-top: 40px
+		margin-top: 60px
 		form
 		.intermediate_item
 			display: inline-block
 			input
 				width: 100%
 				display: inline-block	
-				border: 1px solid #a2b6c9
+				border: 1px solid transparent
 				background: #fff
 				color: #43637f
-				height: 40px
+				height: 50px
 				margin: 0 10px
-				padding: 0 0 0 9px
+				padding: 0 0 0 20px
+				border-radius: 5px
 				&::-webkit-input-placeholder
 					color: #43637f
 				&:-moz-placeholder
@@ -708,10 +707,25 @@ nav[canvas]
 					color: #43637f
 				&:-ms-input-placeholder
 					color: #43637f
-			input[type=submit]
-				background: #052243
-				color: #fff
-	
+				&:focus
+					outline-color: transparent
+		input[type=submit]
+			background: linear-gradient(to left, #ff795e,#f64f6e)
+			color: #fff
+			height: 50px
+			border-radius: 5px
+			border: none
+			font-family: $raleway-bold
+			margin-left: 20px
+			position: relative
+			transition: background .1s ease-out
+			&:focus
+				outline-color: transparent
+			&:hover
+				background: linear-gradient(to left, #f64f6e, #ff795e)
+
+
+
 //	Секция 
 //	Секция
 //	Секция
