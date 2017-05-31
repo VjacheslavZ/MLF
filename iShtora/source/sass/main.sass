@@ -399,11 +399,11 @@ li
 			padding: 33px 10px
 			&:hover
 				border-bottom: 4px solid transparent
-				border-image: linear-gradient(to left, #ff795e 0%, #f64f6e 100%)
+				border-image: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
 				border-image-slice: 1
 			&.active
 				border-bottom: 4px solid transparent
-				border-image: linear-gradient(to left, #ff795e 0%, #f64f6e 100%)
+				border-image: linear-gradient(to right, $main_color_gradient_end 0%, $main_color_gradient_start 100%)
 				border-image-slice: 1
 				a
 					font-family: $raleway-semibold
@@ -612,28 +612,162 @@ nav[canvas]
 // Секция our_advantages
 .our_advantages
 	min-height: 630px
-	background-color: #fff
+	//background-color: #fff
+	background: url("../img/ourAdvantages_bg.jpg") no-repeat
 	h2
-		margin-top: 75px
+		margin-top: 93px
+		margin-bottom: 40px
 		color: #626262
 		text-align: center
-		font-size: 35px
-	.our_advantages_item
+		@include fz(36)
+		font-family: $raleway-extrabold
+		background: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+	p
+		@include fz(16)
+		margin-top: 35px
+		margin-bottom: 37px
+		text-align: center
+		padding: 0 200px
+
+	.our_advantages_items-left
 		margin-bottom: 55px
-		min-height: 230px
+		min-height: 735px
+		background: url("../img/our_advantages_bg.png") no-repeat right 55px top 78px
 		h3
-			font-size: 27px
-			text-align: center
-		p
-			margin-top: 15px
-			@include fz(16)
-			line-height: 1.2
-			text-align: center
-		.our_advantages_item_img
-			text-align: center
+			@include fz(18)
+			font-family: $raleway-bold
+			text-align: end
+			margin: 0
+		.our_advantages_item
+			margin-top: 40px
+			&:nth-child(3)
+				margin-right: 40px
+			&:nth-child(4)
+				margin-right: 44px
+			&:nth-child(5)
+				margin-right: 40px
+		.our_advantages_item + .our_advantages_item
+			margin-top: 70px
+		.our_advantages_description
+			display: inline-block
+			width: 75%
+			margin-right: 40px
+			vertical-align: top
+			h4
+				text-align: end
+				margin: 0 0 0 40px
+				font-family: $raleway-bold
+			p
+				padding: 0
+				margin: 0
+				text-align: end
+		.our_advantages_img-wash
+			display: inline-block
 			i
-				@include fz(72)
-				color: #00b6f4
+				@include sprite($wash-ico)
+				display: inline-block
+		.our_advantages_img-iron
+			display: inline-block
+			i
+				@include sprite($ironing-ico)
+				display: inline-block
+		.our_advantages_img-child
+			display: inline-block
+			i
+				@include sprite($child-ico)
+				display: inline-block
+		.our_advantages_img-time
+			display: inline-block
+			i
+				@include sprite($time-ico)
+				display: inline-block
+		.our_advantages_img-price
+			display: inline-block
+			i
+				@include sprite($price-ico)
+				display: inline-block
+
+	.our_advantages_items-right
+		margin-bottom: 55px
+		min-height: 735px
+		background: url("../img/our_advantages_bg-2.png") no-repeat  left 46px top 78px
+		h3
+			@include fz(18)
+			font-family: $raleway-bold
+			text-align: start
+			margin: 0
+		.our_advantages_item
+			margin-top: 40px
+			&:nth-child(2)
+				margin-left: 40px
+			&:nth-child(3)
+				margin-left: 44px
+			&:nth-child(4)
+				margin-left: 40px
+		.our_advantages_item + .our_advantages_item
+			margin-top: 68px
+		.our_advantages_description
+			display: inline-block
+			width: 75%
+			margin-left: 40px
+			vertical-align: top
+			h4
+				text-align: start
+				margin: 0
+				font-family: $raleway-bold
+			p
+				padding: 0
+				margin: 0
+				text-align: start
+				font-family: $raleway-regular
+				font-weight: 100
+		.our_advantages_img-wash
+			display: inline-block
+			i
+				@include sprite($no-wash-ico)
+				display: inline-block
+		.our_advantages_img-iron
+			display: inline-block
+			i
+				@include sprite($no-ironing-ico)
+				display: inline-block
+		.our_advantages_img-child
+			display: inline-block
+			i
+				@include sprite($child-ico)
+				display: inline-block
+		.our_advantages_img-time
+			display: inline-block
+			i
+				@include sprite($time-ico)
+				display: inline-block
+		.our_advantages_img-time2
+			display: inline-block
+			i
+				@include sprite($price2-ico)
+				display: inline-block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Секция main_content
 .main_content
 	text-align: center
@@ -722,7 +856,7 @@ nav[canvas]
 			&:focus
 				outline-color: transparent
 			&:hover
-				background: linear-gradient(to left, #f64f6e, #ff795e)
+				background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
 
 
 
@@ -741,6 +875,11 @@ nav[canvas]
 	height: 200px
 	flex: 0 0 auto
 
-
+.underline
+	display: block
+	margin: 0 auto
+	width: 84px
+	height: 3px
+	background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
 
 

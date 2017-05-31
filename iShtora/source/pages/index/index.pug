@@ -74,101 +74,166 @@ block main
 					//		span  8 лет
 					//		|  успешной работы!
 		// Секция  our_advantages
-		section#our_advantages.our_advantages
-			.container
-				.row
-					h2 Наши преимущества
-					.clearfix
-						.our_advantages_item.col-lg-4.col-md-6
-							.our_advantages_item_img
-								i.fa.fa-users
-							h3 Заголовок
-							p Индивидуальный подход к каждому клиенту
-						.our_advantages_item.col-lg-4.col-md-6
-							.our_advantages_item_img
-								i.fa.fa-diamond
-							h3 Заголовок
-							p Неповторимость и практичность каждого проекта мебели
-						.our_advantages_item.col-lg-4.col-md-6
-							.our_advantages_item_img
-								i.fa.fa-list-ol
-							h3 Заголовок
-							p Многообразие материалов и стилевых решений
-						.our_advantages_item.col-lg-4.col-md-6
-							.our_advantages_item_img
-								i.fa.fa-pencil
-							h3 Заголовок
-							p Для вас бесплатно: замер, дизайн-проект, доставка и монтаж
-						.our_advantages_item.col-lg-4.col-md-6
-							.our_advantages_item_img
-								i.fa.fa-credit-card-alt
-							h3 Заголовок
-							p Возможность оформления мебели в кредит
-						.our_advantages_item.col-lg-4.col-md-6
-							.our_advantages_item_img
-								i.fa.fa-wrench
-							h3 Заголовок
-							p Изготовление мебели только из высококачественных материалов
-		// Секция main_content
-		section.main_content
-			.container
-				.row
-					div Пример checkbox
-					label.check.noselect
-						input(type='checkbox')
-						i.fa.fa-1.fa-square-o
-						i.fa.fa-2.fa-check-square-o
-						span первый чек
-					label.check.noselect
-						input(type='checkbox')
-						i.fa.fa-1.fa-square-o
-						i.fa.fa-2.fa-check-square-o
-						span второй чек
-					div Пример radio button
-					label.radio.noselect
-						input(type='radio', name='radio')
-						i.fa.fa-1.fa-square-o
-						i.fa.fa-2.fa-check-square-o
-						span первый чек
-					label.radio.noselect
-						input(type='radio', name='radio', checked='')
-						i.fa.fa-1.fa-square-o
-						i.fa.fa-2.fa-check-square-o
-						span второй чек
-		// Секция  ask-form-title
-		section.intermediate
-			.container
-				.intermediate_title
-					h3 Заполните форму и мы бесплатно перезвоним и ответим на ваши вопросы
-				.intermediate_wrap
-					form
-						.intermediate_item.col-lg-3.col-md-4.col-sm-4
-							.modal_form_input_wrap
-								.modal_input_error
-									| Заполните поле
-									.modal_error_triangle
-									.modal_error_chest_img
-								i.fa.fa-check
-								input.modal_form_input(name='name', type='text', placeholder='Имя')
-						.intermediate_item.col-lg-3.col-md-4.col-sm-4
-							.modal_form_input_wrap
-								.modal_input_error
-									| Заполните поле
-									.modal_error_triangle
-									.modal_error_chest_img
-								i.fa.fa-check
-								input.modal_form_email(name='email', type='text', placeholder='Почта')
-						.intermediate_item.col-lg-3.col-md-4.col-sm-4
-							.modal_form_input_wrap
-								.modal_input_error
-									| Заполните поле
-									.modal_error_triangle
-									.modal_error_chest_img
-								i.fa.fa-check
-								input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
-						input(type='hidden', name='form_name', value='')
-						input(type='hidden', name='form_type', value='normal')
-						input.col-lg-3(type='submit', value='Записаться')
+	section#our_advantages.our_advantages
+		.container
+			.row
+				h2 Мы покажем плюсы новых технологий
+				span.underline
+				p Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику выбрать вы всегда успеете!
+				.clearfix
+					.our_advantages_items-left.col-lg-6
+						h3 Обычная штора
+						.our_advantages_item
+							.our_advantages_description
+								h4 Стирка
+								p Обязательна. Требует много сил, необходимо снять и повесить, аккуратно выложить валуны и складки.
+							.our_advantages_img-wash
+								i
+						.our_advantages_item
+							.our_advantages_description
+								h4 Глажка
+								p После каждой стирки, полотно каждой шторы обязательно необходимо прогладить.
+							.our_advantages_img-iron
+								i
+						.our_advantages_item
+							.our_advantages_description
+								h4 Дети  и коты
+								p В процессе развлечений детей или домашних животных штора может быть повреждена и требовать ремонта или полной замены.
+							.our_advantages_img-child
+								i
+						.our_advantages_item
+							.our_advantages_description
+								h4 Сроки производства
+								p От 1й до 3х недель.
+							.our_advantages_img-time
+								i
+						.our_advantages_item
+							.our_advantages_description
+								h4 Цена
+								p Достаточно дорого. В зависимости от выбранной ткани и количества слоев цена шторы может варьироваться как вверх, так и в низ.
+							.our_advantages_img-price
+								i
+
+					.our_advantages_items-right.col-lg-6
+						h3 Рулонная штора
+							.our_advantages_item
+								.our_advantages_img-wash
+									i
+								.our_advantages_description
+									h4 Нет надобности в стирке
+									p Ткань пропитана специальным раствором, который не позволяет шторе пачкаться.
+							.our_advantages_item
+								.our_advantages_img-iron
+									i
+								.our_advantages_description
+									h4 Глажка
+									p После каждой стирки, полотно каждой шторы обязательно необходимо прогладить.
+							.our_advantages_item
+								.our_advantages_img-child
+									i
+								.our_advantages_description
+									h4 Дети  и коты
+									p Тканевые роллеты устанавливаются на оконную конструкцию, очерчивая его размер. Таким образом достать до шторы не может ни ребенок, ни кот.
+							.our_advantages_item
+								.our_advantages_img-time
+									i
+								.our_advantages_description
+									h4 Сроки производства
+									p 3 дня.
+							.our_advantages_item
+								.our_advantages_img-time2
+									i
+								.our_advantages_description
+									h4 Цена
+									p Даже если вы выберете самую дорогую ткань, цена рулонной шторы будет в 2-3 раза меньше обычной шторы.
+
+
+
+					//.our_advantages_item.col-lg-4.col-md-6
+					//	.our_advantages_item_img
+					//		i.fa.fa-diamond
+					//	h3 Заголовок
+					//	p Неповторимость и практичность каждого проекта мебели
+					//.our_advantages_item.col-lg-4.col-md-6
+					//	.our_advantages_item_img
+					//		i.fa.fa-list-ol
+					//	h3 Заголовок
+					//	p Многообразие материалов и стилевых решений
+					//.our_advantages_item.col-lg-4.col-md-6
+					//	.our_advantages_item_img
+					//		i.fa.fa-pencil
+					//	h3 Заголовок
+					//	p Для вас бесплатно: замер, дизайн-проект, доставка и монтаж
+					//.our_advantages_item.col-lg-4.col-md-6
+					//	.our_advantages_item_img
+					//		i.fa.fa-credit-card-alt
+					//	h3 Заголовок
+					//	p Возможность оформления мебели в кредит
+					//.our_advantages_item.col-lg-4.col-md-6
+					//	.our_advantages_item_img
+					//		i.fa.fa-wrench
+					//	h3 Заголовок
+					//	p Изготовление мебели только из высококачественных материалов
+	// Секция main_content
+	//section.main_content
+	//	.container
+	//		.row
+	//			div Пример checkbox
+	//			label.check.noselect
+	//				input(type='checkbox')
+	//				i.fa.fa-1.fa-square-o
+	//				i.fa.fa-2.fa-check-square-o
+	//				span первый чек
+	//			label.check.noselect
+	//				input(type='checkbox')
+	//				i.fa.fa-1.fa-square-o
+	//				i.fa.fa-2.fa-check-square-o
+	//				span второй чек
+	//			div Пример radio button
+	//			label.radio.noselect
+	//				input(type='radio', name='radio')
+	//				i.fa.fa-1.fa-square-o
+	//				i.fa.fa-2.fa-check-square-o
+	//				span первый чек
+	//			label.radio.noselect
+	//				input(type='radio', name='radio', checked='')
+	//				i.fa.fa-1.fa-square-o
+	//				i.fa.fa-2.fa-check-square-o
+	//				span второй чек
+	// Секция  ask-form-title
+	//section.intermediate
+	//	.container
+	//		.intermediate_title
+	//			h3 Заполните форму и мы бесплатно перезвоним и ответим на ваши вопросы
+	//		.intermediate_wrap
+	//			form
+	//				.intermediate_item.col-lg-3.col-md-4.col-sm-4
+	//					.modal_form_input_wrap
+	//						.modal_input_error
+	//							| Заполните поле
+	//							.modal_error_triangle
+	//							.modal_error_chest_img
+	//						i.fa.fa-check
+	//						input.modal_form_input(name='name', type='text', placeholder='Имя')
+	//				.intermediate_item.col-lg-3.col-md-4.col-sm-4
+	//					.modal_form_input_wrap
+	//						.modal_input_error
+	//							| Заполните поле
+	//							.modal_error_triangle
+	//							.modal_error_chest_img
+	//						i.fa.fa-check
+	//						input.modal_form_email(name='email', type='text', placeholder='Почта')
+	//				.intermediate_item.col-lg-3.col-md-4.col-sm-4
+	//					.modal_form_input_wrap
+	//						.modal_input_error
+	//							| Заполните поле
+	//							.modal_error_triangle
+	//							.modal_error_chest_img
+	//						i.fa.fa-check
+	//						input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
+	//				input(type='hidden', name='form_name', value='')
+	//				input(type='hidden', name='form_type', value='normal')
+	//				input.col-lg-3(type='submit', value='Записаться')
 	div(off-canvas='id-1 left shift')
 		nav.header_nav_mobile
 			ul.menu
