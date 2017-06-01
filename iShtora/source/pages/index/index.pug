@@ -78,7 +78,7 @@ block main
 		section#our_advantages.our_advantages
 			.container
 				.row
-					h2 Мы покажем плюсы новых технологий
+					h2.title Мы покажем плюсы новых технологий
 					span.underline
 					p Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику выбрать вы всегда успеете!
 					.clearfix
@@ -153,6 +153,43 @@ block main
 
 		// секция наши работы слайдер
 		section#slider_ourWorks.slider_ourWorks
+			.container
+				.row
+					h2.title Наши работы
+					span.underline
+					.owl-carousel.owl-theme
+						img(src=require("../../img/slider_slide_1.jpg"))
+						img(src=require("../../img/slider_slide_2.jpg"))
+						img(src=require("../../img/slider_slide_3.jpg"))
+						img(src=require("../../img/slider_slide_4.jpg"))
+						img(src=require("../../img/slider_slide_1.jpg"))
+						img(src=require("../../img/slider_slide_2.jpg"))
+						img(src=require("../../img/slider_slide_3.jpg"))
+						img(src=require("../../img/slider_slide_4.jpg"))
+			.customNextBtn.customBtn
+			.customPrevBtn.customBtn
+
+
+		// секция видео
+		section#video.video
+
+		//секция товарные группы
+		section#tovar_groups.tovar_groups
+			.container
+				.row
+					h2.title Товарные группы
+					span.underline
+					.col-lg-12.tovar_groups_item
+						img(src=require("../../img/tovar-groups_1.jpg"))
+						.tovar_groups_description
+							h4 Римские шторы
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+						
+
+
+
+
 
 		div(off-canvas='id-1 left shift')
 			nav.header_nav_mobile

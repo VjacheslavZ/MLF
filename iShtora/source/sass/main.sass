@@ -613,16 +613,9 @@ nav[canvas]
 .our_advantages
 	min-height: 630px
 	background: url("../img/ourAdvantages_bg.jpg") no-repeat
-	h2
-		margin-top: 93px
-		margin-bottom: 40px
-		color: #626262
-		text-align: center
-		@include fz(36)
-		font-family: $raleway-extrabold
-		background: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
+	margin-top: 93px
+	.title
+		margin: 0 0 39px 0
 	p
 		@include fz(16)
 		margin-top: 35px
@@ -748,28 +741,69 @@ nav[canvas]
 				@include sprite($price2-ico)
 				display: inline-block
 
-// секция наши работы слайдер
+// секция наши работы, слайдер
 .slider_ourWorks
 	min-height: 680px
 	background: url("../img/our_advantages_slider_bg-2.png") no-repeat
 	background-color: #e7eaf5
+	position: relative
+	.container
+		overflow: hidden
+
+		.title
+			margin-top: 84px
+			margin-bottom: 23px
+		.underline
+			margin-bottom: 79px
+		.owl-carousel
+			div
+				display: inline-block
+			.owl-nav
+				display: none
+			.owl-dots.owl-dots
+				margin-top: 54px
+			.owl-dot.active
+				span
+					background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
+					margin: 5px 10px
+	.customBtn
+		display: inline-block
+		width: 14px
+		height: 28px
+		position: absolute
+		top: 54%
+	.customNextBtn
+		@include sprite($btn-slider)
+		left: 11%
+	.customPrevBtn
+		@include sprite($btn-slider)
+		transform: rotate(180deg)
+		right: 11%
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// секция видео
+.tovar_groups
+	padding: 93px 0
+	.title
+		margin-bottom: 30px
+	.tovar_groups_item
+		//background-clip: content-box
+		background: $tovar_goups_bg_item
+		background-clip: content-box
+		position: relative
+		img
+			float: left
+		.tovar_groups_description
+			text-align: left
+			padding: 40px
+			display: block
+			background: $main_bg_color
+			position: absolute
+			width: 740px
+			height: 240px
+			top: 30px
+			right: 45px
+			box-shadow: 0 0 3px rgba(0,0,0,0.5)
 
 // Секция main_content
 .main_content
@@ -877,7 +911,7 @@ nav[canvas]
 	background-color: #333
 	height: 200px
 	flex: 0 0 auto
-
+// Общие классы
 .underline
 	display: block
 	margin: 0 auto
@@ -885,4 +919,13 @@ nav[canvas]
 	height: 3px
 	background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
 
+.title
+	margin: 0
+	color: #626262
+	text-align: center
+	@include fz(36)
+	font-family: $raleway-extrabold
+	background: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
 
