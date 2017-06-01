@@ -80,8 +80,8 @@ $(document).ready( function() {
 		nav: false,
 		autoplay: false,
 		autoplayTimeout: 4000,
+		video: true,
 	});
-
 	// Кастомные кнопки управления слайдером
 	var owl = $('.owl-carousel');
 	owl.owlCarousel();
@@ -95,6 +95,18 @@ $(document).ready( function() {
 	   // Parameters has to be in square bracket '[]'
 		owl.trigger('prev.owl.carousel', [700]);
 	});
+
+	//Актиация слайдера блок с видео
+	$('.owl-carousel.owl-theme.video').owlCarousel({
+		items:1,
+		merge:true,
+		loop:true,
+		margin:10,
+		// video:true,
+		// lazyLoad:true,
+		center:true,
+	})
+	// console.log($('.owl-carousel.owl-theme.video'));
 
 
 });

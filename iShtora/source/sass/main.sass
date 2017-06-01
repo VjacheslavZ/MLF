@@ -848,6 +848,7 @@ nav[canvas]
 			@include fz(16)
 	.points_wrap
 		position: absolute
+		top: 13%
 		.point
 			display: inline-block
 			width: 8px
@@ -858,14 +859,37 @@ nav[canvas]
 				margin-left: 20px
 	.points_wrap_send
 		left: 22%
-		top: 13%
 	.points_wrap_consult
 		left: 47%
-		top: 13%
 	.points_wrap_settings
 		left: 72%
-		top: 13%
+//Секция купить рулонную штору,
+.buy_curtain
+	background: url(../img/buy_curtain_bg.jpg) no-repeat
+	background-size: cover
+	min-height: 402px
+	padding: 28px 0
+	&_title
+		font-family: $raleway-bold
+		@include fz(32)
+		color: $main_bg_color
+		line-height: 1.5
+	&_description
+		font-family: $raleway-regular
+		@include fz(16)
+		color: $main_bg_color
+		margin-top: 39px
+	.intermediate_wrap.intermediate_wrap
+		margin-top: 52px
 
+//Секция отзывы
+.reviews
+	background: $tovar_goups_bg_item
+	padding: 90px 0
+	.title
+		margin-bottom: 40px
+	.underline
+		margin-bottom: 37px
 // Секция main_content
 .main_content
 	text-align: center

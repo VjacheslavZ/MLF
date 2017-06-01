@@ -39,7 +39,6 @@ block main
 			.container
 				.row
 					.header_title
-						
 						h1
 							span Рулонные
 							| шторы под заказ
@@ -245,6 +244,72 @@ block main
 						.col-lg-3.item_usluga
 							img(src=require("../../img/sprite/gift_ico.png"))
 							p Вы наслаждаетесь обновленным интерьером и восторженными отзывами соседей и друзей.
+
+
+
+		//Секция купить рулонную штору,
+		section.buy_curtain
+			.container
+				.row
+					h3.buy_curtain_title Хочу купить рулонную штору,<br> когда Ваш дизайнер приедет к нам домой?
+					p.buy_curtain_description Отправьте заявку и наш менеджер свяжется с Вами в течении 10 минут и договорится о времени приезда дизайнера.
+					.intermediate
+						.intermediate_wrap
+							form
+								.intermediate_item.col-lg-3.col-md-4.col-sm-4.col-lg-offset-1
+									.modal_form_input_wrap
+										.modal_input_error
+											| Заполните поле
+											.modal_error_triangle
+											.modal_error_chest_img
+										i.fa.fa-check
+										input.modal_form_input(name='name', type='text', placeholder='Имя')
+								.intermediate_item.col-lg-3.col-md-4.col-sm-4
+									.modal_form_input_wrap
+										.modal_input_error
+											| Заполните поле
+											.modal_error_triangle
+											.modal_error_chest_img
+										i.fa.fa-check
+										input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
+								input(type='hidden', name='form_name', value='')
+								input(type='hidden', name='form_type', value='normal')
+
+								input.col-lg-3(type='submit', value='Вызвать дизайнера')
+
+		//Секция отзывы
+		section.reviews
+			.container
+				.row
+					h2.title Отзывы наших клиентов
+					span.underline
+					.owl-carousel.owl-theme.video
+						.item-video(data-merge="1")
+							a.owl-video(href="https://vimeo.com/23924346")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
