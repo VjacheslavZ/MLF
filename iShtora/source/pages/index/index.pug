@@ -217,13 +217,35 @@ block main
 				.row
 					h2.title Как мы работаем?
 					span.underline
-					.col-lg-3.item_usluga
-						img(src=require("../../img/sprite/send_ico.png"))
-						p Вы звоните или оставляете заявку на сайте.
-					.points_wrap
-						span.point
-						span.point
-						span.point
+					.how_we_work_icons.clearfix
+						.col-lg-3.item_usluga
+							img(src=require("../../img/sprite/send_ico.png"))
+							p Вы звоните или оставляете заявку на сайте.
+						.points_wrap.points_wrap_send
+							span.point
+							span.point
+							span.point
+
+						.col-lg-3.item_usluga
+							img(src=require("../../img/sprite/consult_ico.png"))
+							p Мы предварительно консультируем вас, наш дизайнер бесплатно выезжает к вам на объект в Киеве или Харькове.
+						.points_wrap.points_wrap_consult
+							span.point
+							span.point
+							span.point
+
+						.col-lg-3.item_usluga
+							img(src=require("../../img/sprite/settings_ico.png"))
+							p Через 3 дня приезжаем и устанавливаем выбранную штору
+						.points_wrap.points_wrap_settings
+							span.point
+							span.point
+							span.point
+
+						.col-lg-3.item_usluga
+							img(src=require("../../img/sprite/gift_ico.png"))
+							p Вы наслаждаетесь обновленным интерьером и восторженными отзывами соседей и друзей.
+
 
 
 		div(off-canvas='id-1 left shift')

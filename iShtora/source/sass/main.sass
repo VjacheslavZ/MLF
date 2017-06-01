@@ -833,31 +833,38 @@ nav[canvas]
 	background: url(../img/how_we_work_bg.png) no-repeat
 	background-size: cover
 	min-height: 620px
-	padding-top: 200px
+	padding-top: 192px
+	padding-bottom: 100px
+	.how_we_work_icons
+		margin-top: 59px
+		position: relative
 	.title
-		margin-bottom: 30px
+		margin-bottom: 25px
 	.item_usluga
 		position: relative
 		p
-			margin-top: 27px
+			margin-top: 20px
 			font-family: $raleway-regular
 			@include fz(16)
-			
 	.points_wrap
 		position: absolute
 		.point
 			display: inline-block
-			width: 10px
-			height: 10px
-			background: red
-
+			width: 8px
+			height: 8px
+			background: linear-gradient(to right, #f64f6e 0%, #ff795e 100%)
+			border-radius: 50%
 			& + .point
-				margin-left: 10px
-
-
-
-
-
+				margin-left: 20px
+	.points_wrap_send
+		left: 22%
+		top: 13%
+	.points_wrap_consult
+		left: 47%
+		top: 13%
+	.points_wrap_settings
+		left: 72%
+		top: 13%
 
 // Секция main_content
 .main_content
