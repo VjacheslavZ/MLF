@@ -152,7 +152,7 @@ block main
 
 
 		// секция наши работы слайдер
-		section#slider_ourWorks.slider_ourWorks
+		section.slider_ourWorks
 			.container
 				.row
 					h2.title Наши работы
@@ -171,24 +171,59 @@ block main
 
 
 		// секция видео
-		section#video.video
-
+		section.video
 		//секция товарные группы
-		section#tovar_groups.tovar_groups
+		section.tovar_groups
 			.container
 				.row
 					h2.title Товарные группы
 					span.underline
-					.col-lg-12.tovar_groups_item
-						img(src=require("../../img/tovar-groups_1.jpg"))
-						.tovar_groups_description
-							h4 Римские шторы
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					.col-lg-12.tovar_groups_item.tovar_groups_item-left
+						.shadow.clearfix
+							img(src=require("../../img/tovar-groups_1.jpg"))
+							.tovar_groups_description
+								h4 Римские шторы
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
+					.col-lg-12.tovar_groups_item.tovar_groups_item-right
+						.shadow.clearfix
+							img(src=require("../../img/tovar-groups_2.jpg"))
+							.tovar_groups_description
+								h4 Рулонные шторы
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+					.col-lg-12.tovar_groups_item.tovar_groups_item-left
+						.shadow.clearfix
+							img(src=require("../../img/tovar-groups_3.jpg"))
+							.tovar_groups_description
+								h4 День-ночь
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+					.col-lg-12.tovar_groups_item.tovar_groups_item-right
+						.shadow.clearfix
+							img(src=require("../../img/tovar-groups_4.jpg"))
+							.tovar_groups_description
+								h4 Шторы-плиссе
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 						
 
 
 
+
+
+		//cекция как мы работаем
+		section.how_we_work
+			.container
+				.row
+					h2.title Как мы работаем?
+					span.underline
+					.col-lg-3.item_usluga
+						img(src=require("../../img/sprite/send_ico.png"))
+						p Вы звоните или оставляете заявку на сайте.
+					.points_wrap
+						span.point
+						span.point
+						span.point
 
 
 		div(off-canvas='id-1 left shift')
