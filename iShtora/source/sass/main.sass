@@ -3,6 +3,10 @@
 @import "animate"
 @import "../libs/slidebars.min.css"
 @import "../libs/font-awesome.min.css"
+//карусель
+@import "../libs/owl.carousel.min.css"
+@import "../libs/owl.theme.default.min.css"
+
 
 html, body
 	font-size: 16px
@@ -374,19 +378,13 @@ li
 		height: 100%
 		min-height: 100%
 		position: relative
-
-
 .header_logo
 	display: inline-block
 	padding: 19px 0
-	//margin-left: 15px
 	a
-		color: #fff
-		@include fz(36)
-		font-family: $raleway-regular
+		@include font($main_font_color, 36,$raleway-regular,1.6)
 		&:hover
 			text-decoration: none
-
 .header_nav
 	display: inline-block
 	position: relative
@@ -408,15 +406,11 @@ li
 				a
 					font-family: $raleway-semibold
 			a
-				//margin-right: 15px
 				color: #fff
 				@include fz(16)
 				text-decoration: none
 				transition: .5s
 				padding: 33px 10px
-
-
-
 
 .header_modal
 	display: inline-block
@@ -558,6 +552,7 @@ body textarea:focus:required:invalid
 body input:required:valid,
 body textarea:required:valid
 	color: #666
+
 // Оформление слайдбара
 [off-canvas]
 	transition: transform 0.4s
@@ -622,7 +617,6 @@ nav[canvas]
 		margin-bottom: 37px
 		text-align: center
 		padding: 0 200px
-
 	.our_advantages_items-left
 		margin-bottom: 55px
 		min-height: 735px
@@ -750,7 +744,6 @@ nav[canvas]
 	position: relative
 	.container
 		overflow: hidden
-
 		.title
 			margin-top: 84px
 			margin-bottom: 23px
@@ -827,7 +820,6 @@ nav[canvas]
 		img
 			float: right
 
-
 //секция как мы работаем
 .how_we_work
 	background: url(../img/how_we_work_bg.png) no-repeat
@@ -870,26 +862,61 @@ nav[canvas]
 	min-height: 402px
 	padding: 28px 0
 	&_title
-		font-family: $raleway-bold
-		@include fz(32)
-		color: $main_bg_color
-		line-height: 1.5
+		@include font($main_bg_color,32,$raleway-bold,1.5)
 	&_description
-		font-family: $raleway-regular
-		@include fz(16)
-		color: $main_bg_color
+		@include font($main_font_color,16,$raleway-regular,1.6)
 		margin-top: 39px
 	.intermediate_wrap.intermediate_wrap
 		margin-top: 52px
 
-//Секция отзывы
+//Секция отзывы слайдер
 .reviews
 	background: $tovar_goups_bg_item
-	padding: 90px 0
+	padding: 80px 0 90px 0
+	position: relative
 	.title
-		margin-bottom: 40px
+		margin-bottom: 24px
 	.underline
-		margin-bottom: 37px
+		margin-bottom: 34px
+	.owl-carousel
+		.item-video
+			height: 275px
+			width: 970px
+			margin: 0 auto
+			&-title
+				@include font(#333,16,$raleway-medium, 1.1)
+				margin: 0 0 37px 0
+	.customBtn
+		display: inline-block
+		width: 14px
+		height: 28px
+		position: absolute
+		top: 54%
+	.customNextBtn
+		@include sprite($btn-slider)
+		left: 11%
+	.customPrevBtn
+		@include sprite($btn-slider)
+		transform: rotate(180deg)
+		right: 11%
+	.owl-carousel
+		.owl-dots.owl-dots
+			margin-top: 60px
+		.owl-nav
+			display: none
+		.owl-dots.owl-dots
+			margin-top: 54px
+		.owl-dot.active
+			span
+				background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
+				margin: 5px 10px
+		.owl-video-play-icon
+			width: 55px
+			height: 55px
+			left: 51%
+
+
+
 // Секция main_content
 .main_content
 	text-align: center
@@ -1013,4 +1040,9 @@ nav[canvas]
 	background: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
+
+
+//Секция отзывы карусель
+
+.reviews
 

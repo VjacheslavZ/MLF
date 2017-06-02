@@ -156,7 +156,7 @@ block main
 				.row
 					h2.title Наши работы
 					span.underline
-					.owl-carousel.owl-theme
+					#one.owl-carousel.owl-theme.slider_ourWorks_slides
 						img(src=require("../../img/slider_slide_1.jpg"))
 						img(src=require("../../img/slider_slide_2.jpg"))
 						img(src=require("../../img/slider_slide_3.jpg"))
@@ -278,14 +278,26 @@ block main
 								input.col-lg-3(type='submit', value='Вызвать дизайнера')
 
 		//Секция отзывы
-		section.reviews
+		section#reviews.reviews
 			.container
 				.row
 					h2.title Отзывы наших клиентов
 					span.underline
-					.owl-carousel.owl-theme.video
+					#two.owl-carousel.owl-theme
 						.item-video(data-merge="1")
-							a.owl-video(href="https://vimeo.com/23924346")
+							h4.item-video-title Александр Николаевич
+							a.owl-video(href="https://www.youtube.com/watch?v=JpxsRwnRwCQ")
+						.item-video(data-merge="1")
+							h4 Александр Николаевич
+							a.owl-video(href="https://www.youtube.com/watch?v=JpxsRwnRwCQ")
+			.customNextBtn.customBtn
+			.customPrevBtn.customBtn
+
+
+
+
+
+
 
 
 

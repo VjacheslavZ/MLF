@@ -8,10 +8,9 @@ require("../../libs/libs").matchMedia();
 require("../../libs/libs").waypoint();
 require("../../libs/libs").Animate_css();
 //карусель
-require("../../libs/libs").owl_carousel();
-require("../../libs/libs").owl_theme_default();
 require("../../libs/libs").owl_carousel_min_js();
-//--------
+
+
 
 import animate from '../../js/animate';
 import functions from '../../js/_functions.js';
@@ -73,42 +72,47 @@ $(document).ready( function() {
 	// });
 
 	 //Активация слайдера
-	$(".owl-carousel").owlCarousel({
+	var one = $("#one");
+	var two = $("#two");
+
+	one.owlCarousel({
 	    loop: true,
 	    items: 4,
-	    // dots: true,
+	    dots: true,
+		margin: 15,
 		nav: false,
 		autoplay: false,
 		autoplayTimeout: 4000,
-		video: true,
 	});
 	// Кастомные кнопки управления слайдером
-	var owl = $('.owl-carousel');
-	owl.owlCarousel();
+	var owl1 = $('#one.owl-carousel');
+	var owl2 = $('#two.owl-carousel');
+
+	owl1.owlCarousel();
+	//owl2.owlCarousel();
 	// Go to the next item
 	$('.customNextBtn').click(function() {
-	     owl.trigger('next.owl.carousel', [700]);
+	 	owl1.trigger('next.owl.carousel', [700]);
+		owl2.trigger('next.owl.carousel', [700]);
 	});
 	// Go to the previous item
 	$('.customPrevBtn').click(function() {
 	   // With optional speed parameter
 	   // Parameters has to be in square bracket '[]'
-		owl.trigger('prev.owl.carousel', [700]);
+		owl1.trigger('prev.owl.carousel', [700]);
+		owl2.trigger('prev.owl.carousel', [700]);
 	});
 
 	//Актиация слайдера блок с видео
-	$('.owl-carousel.owl-theme.video').owlCarousel({
+	two.owlCarousel({
 		items:1,
 		merge:true,
 		loop:true,
 		margin:10,
-		// video:true,
-		// lazyLoad:true,
+		video:true,
+		lazyLoad:true,
 		center:true,
-	})
-	// console.log($('.owl-carousel.owl-theme.video'));
-
-
+	});
 });
 
 $(window).resize(function() {
