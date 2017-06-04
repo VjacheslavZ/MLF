@@ -918,10 +918,53 @@ nav[canvas]
 			left: 51%
 //Секция Часто задаваемые вопросы
 .often_question
+	text-align: left
 	.title
-		margin: 110px 0 35px 0
+		margin: 96px 0 23px 0
+		letter-spacing: 1.2px
 	.underline
-		margin-bottom: 70px
+		margin-bottom: 50px
+	.ui-accordion-header
+		padding-top: 20px
+		font-size: 18px
+	.ui-accordion-header-active
+		.ui-icon
+			@include sprite($arrow-open)
+	&_title
+		border: transparent
+		background: transparent
+		color: #000
+		outline-color: transparent
+		font-family: $raleway-medium
+		font-weight: 600
+		letter-spacing: 1px
+		.ui-icon
+			@include sprite($arrow-close)
+			margin-right: 23px
+	&_content
+		border: transparent
+		margin-left: 40px
+		height: auto !important
+	&_description
+		padding-top: 5px
+		@include font(#333,16,$raleway-light, 1.8)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Секция main_content
@@ -1048,8 +1091,4 @@ nav[canvas]
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 
-
-//Секция отзывы карусель
-
-.reviews
 
