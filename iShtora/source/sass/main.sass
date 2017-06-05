@@ -326,7 +326,7 @@ li
 		font-size: 14px
 		color: #35be70
 	.modal_input_error
-		width: 141px
+		width: 210px
 		height: 35px
 		display: none
 		position: absolute
@@ -433,10 +433,13 @@ li
 	left: 0
 	right: 0
 	top: calc(50% - 71px)
+	letter-spacing: 3px
 	p
 		@include fz(18)
 		color: #fff
-		padding-top: 15px
+		padding-top: 18px
+		letter-spacing: 1px;
+		font-family: raleway-medium
 
 .header_bot_txt
 	margin: auto
@@ -609,15 +612,18 @@ nav[canvas]
 .our_advantages
 	min-height: 630px
 	background: url("../img/ourAdvantages_bg.jpg") no-repeat
-	margin-top: 93px
+	margin-top: 90px
 	.title
-		margin: 0 0 39px 0
+		margin: 0 0 28px 0
+		letter-spacing: 2px
 	p
 		@include fz(16)
-		margin-top: 35px
+		margin-top: 33px
 		margin-bottom: 37px
 		text-align: center
-		padding: 0 200px
+		padding: 0 170px
+		line-height: 1.8
+		//letter-spacing: 3px
 	.our_advantages_items-left
 		margin-bottom: 55px
 		min-height: 735px
@@ -627,6 +633,8 @@ nav[canvas]
 			font-family: $raleway-bold
 			text-align: end
 			margin: 0
+			text-transform: uppercase
+			letter-spacing: 1px
 		.our_advantages_item
 			margin-top: 40px
 			&:nth-child(3)
@@ -685,16 +693,22 @@ nav[canvas]
 			font-family: $raleway-bold
 			text-align: start
 			margin: 0
+			letter-spacing: 1px
+			text-transform: uppercase
+		.our_advantages_item + .our_advantages_item
+			margin-top: 68px
 		.our_advantages_item
 			margin-top: 40px
 			&:nth-child(2)
-				margin-left: 40px
+				margin-left: 20px
 			&:nth-child(3)
 				margin-left: 44px
 			&:nth-child(4)
-				margin-left: 40px
-		.our_advantages_item + .our_advantages_item
-			margin-top: 68px
+				margin-top: 71px
+				margin-left: 48px
+			&:nth-child(5)
+				margin-top: 46px
+				margin-left: 25px
 		.our_advantages_description
 			display: inline-block
 			width: 75%
@@ -1060,11 +1074,6 @@ nav[canvas]
 				display: none
 			&.fa-2
 				display: inline-block
-
-
-
-
-
 // Общие классы
 .underline
 	display: block
@@ -1097,7 +1106,7 @@ nav[canvas]
 			height: 50px
 			margin: 0 10px
 			padding: 0 0 0 20px
-			border-radius: 5px
+			border-radius: 10px
 			&::-webkit-input-placeholder
 				color: #43637f
 			&:-moz-placeholder
@@ -1112,7 +1121,7 @@ nav[canvas]
 		background: linear-gradient(to left, #ff795e,#f64f6e)
 		color: #fff
 		height: 50px
-		border-radius: 5px
+		border-radius: 10px
 		border: none
 		font-family: $raleway-bold
 		margin-left: 20px
@@ -1123,3 +1132,4 @@ nav[canvas]
 		&:hover
 			background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
 
+body
