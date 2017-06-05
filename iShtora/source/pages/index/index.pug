@@ -29,8 +29,8 @@ block main
 								a(href="#") Отзывы
 							li
 								a(href="#") Контакты
-	header(class="header")
-		div(canvas='container')
+	div(canvas='container')
+		header(class="header")
 			.headerWrap
 				//.header_modal
 				//	a(data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active") Обратный звонок
@@ -72,84 +72,86 @@ block main
 					//		|   довольных клиентов за
 					//		span  8 лет
 					//		|  успешной работы!
+
+
 	// Секция  our_advantages
-	section.main_content
-		section#our_advantages.our_advantages
-			.container
-				.row
-					h2.title Мы покажем плюсы новых технологий
-					span.underline
-					p Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику выбрать вы всегда успеете!
-					.clearfix
-						.our_advantages_items-left.col-lg-6
-							h3 Обычная штора
+	section#our_advantages.our_advantages
+		.container
+			.row
+				h2.title Мы покажем плюсы новых технологий
+				span.underline
+				p Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику выбрать вы всегда успеете!
+				.clearfix
+					.our_advantages_items-left.col-lg-6
+						h3 Обычная штора
+						.our_advantages_item
+							.our_advantages_description
+								h4 Стирка
+								p Обязательна. Требует много сил, необходимо снять и повесить, аккуратно выложить валуны и складки.
+							.our_advantages_img-wash
+								i
+						.our_advantages_item
+							.our_advantages_description
+								h4 Глажка
+								p После каждой стирки, полотно каждой шторы обязательно необходимо прогладить.
+							.our_advantages_img-iron
+								i
+						.our_advantages_item
+							.our_advantages_description
+								h4 Дети  и коты
+								p В процессе развлечений детей или домашних животных штора может быть повреждена и требовать ремонта или полной замены.
+							.our_advantages_img-child
+								i
+						.our_advantages_item
+							.our_advantages_description
+								h4 Сроки производства
+								p От 1й до 3х недель.
+							.our_advantages_img-time
+								i
+						.our_advantages_item
+							.our_advantages_description
+								h4 Цена
+								p Достаточно дорого. В зависимости от выбранной ткани и количества слоев цена шторы может варьироваться как вверх, так и в низ.
+							.our_advantages_img-price
+								i
+
+					.our_advantages_items-right.col-lg-6
+						h3 Рулонная штора
 							.our_advantages_item
-								.our_advantages_description
-									h4 Стирка
-									p Обязательна. Требует много сил, необходимо снять и повесить, аккуратно выложить валуны и складки.
 								.our_advantages_img-wash
 									i
+								.our_advantages_description
+									h4 Нет надобности в стирке
+									p Ткань пропитана специальным раствором, который не позволяет шторе пачкаться.
 							.our_advantages_item
+								.our_advantages_img-iron
+									i
 								.our_advantages_description
 									h4 Глажка
 									p После каждой стирки, полотно каждой шторы обязательно необходимо прогладить.
-								.our_advantages_img-iron
-									i
 							.our_advantages_item
-								.our_advantages_description
-									h4 Дети  и коты
-									p В процессе развлечений детей или домашних животных штора может быть повреждена и требовать ремонта или полной замены.
 								.our_advantages_img-child
 									i
-							.our_advantages_item
 								.our_advantages_description
-									h4 Сроки производства
-									p От 1й до 3х недель.
+									h4 Дети  и коты
+									p Тканевые роллеты устанавливаются на оконную конструкцию, очерчивая его размер. Таким образом достать до шторы не может ни ребенок, ни кот.
+							.our_advantages_item
 								.our_advantages_img-time
 									i
+								.our_advantages_description
+									h4 Сроки производства
+									p 3 дня.
 							.our_advantages_item
+								.our_advantages_img-time2
+									i
 								.our_advantages_description
 									h4 Цена
-									p Достаточно дорого. В зависимости от выбранной ткани и количества слоев цена шторы может варьироваться как вверх, так и в низ.
-								.our_advantages_img-price
-									i
-
-						.our_advantages_items-right.col-lg-6
-							h3 Рулонная штора
-								.our_advantages_item
-									.our_advantages_img-wash
-										i
-									.our_advantages_description
-										h4 Нет надобности в стирке
-										p Ткань пропитана специальным раствором, который не позволяет шторе пачкаться.
-								.our_advantages_item
-									.our_advantages_img-iron
-										i
-									.our_advantages_description
-										h4 Глажка
-										p После каждой стирки, полотно каждой шторы обязательно необходимо прогладить.
-								.our_advantages_item
-									.our_advantages_img-child
-										i
-									.our_advantages_description
-										h4 Дети  и коты
-										p Тканевые роллеты устанавливаются на оконную конструкцию, очерчивая его размер. Таким образом достать до шторы не может ни ребенок, ни кот.
-								.our_advantages_item
-									.our_advantages_img-time
-										i
-									.our_advantages_description
-										h4 Сроки производства
-										p 3 дня.
-								.our_advantages_item
-									.our_advantages_img-time2
-										i
-									.our_advantages_description
-										h4 Цена
-										p Даже если вы выберете самую дорогую ткань, цена рулонной шторы будет в 2-3 раза меньше обычной шторы.
+									p Даже если вы выберете самую дорогую ткань, цена рулонной шторы будет в 2-3 раза меньше обычной шторы.
 
 
 
 
+	section.main_content
 		// секция наши работы слайдер
 		section.slider_ourWorks
 			.container
@@ -171,6 +173,8 @@ block main
 
 		// секция видео
 		section.video
+		//Добавить видео !!!!
+		//---------------------
 		//секция товарные группы
 		section.tovar_groups
 			.container
@@ -218,35 +222,33 @@ block main
 					span.underline
 					.how_we_work_icons.clearfix
 						.col-lg-3.item_usluga
-							img(src=require("../../img/sprite/send_ico.png"))
+							.item_usluga-send
 							p Вы звоните или оставляете заявку на сайте.
 						.points_wrap.points_wrap_send
 							span.point
 							span.point
 							span.point
-
 						.col-lg-3.item_usluga
-							img(src=require("../../img/sprite/consult_ico.png"))
+							.item_usluga-consult
 							p Мы предварительно консультируем вас, наш дизайнер бесплатно выезжает к вам на объект в Киеве или Харькове.
 						.points_wrap.points_wrap_consult
 							span.point
 							span.point
 							span.point
-
 						.col-lg-3.item_usluga
-							img(src=require("../../img/sprite/settings_ico.png"))
+							.item_usluga-settings
 							p Через 3 дня приезжаем и устанавливаем выбранную штору
 						.points_wrap.points_wrap_settings
 							span.point
 							span.point
 							span.point
-
 						.col-lg-3.item_usluga
-							img(src=require("../../img/sprite/gift_ico.png"))
+							.item_usluga-gift
 							p Вы наслаждаетесь обновленным интерьером и восторженными отзывами соседей и друзей.
 
 
 
+	section.intermediate
 		//Секция купить рулонную штору,
 		section.buy_curtain
 			.container
@@ -345,25 +347,32 @@ block main
 
 
 
-		div(off-canvas='id-1 left shift')
-			nav.header_nav_mobile
-				ul.menu
-					li
-						a(href='#') 1
-					li
-						a(href='#') Преимущества
-					li
-						a(href='#') Отзывы
-					li
-						a(href='tel:73842596168') +7 3842 59 61 68
-					li
-						a(href='#') Преимущества
-					li
-						a(href='#') Отзывы
-					li
-						a(href='#') Примеры кухонь
-		div(off-canvas='id-2 right push')
-		div(off-canvas='id-3 top overlay')
-		div(off-canvas='id-4 bottom shift')
+
+
+
+
+
+
+	//-----------------------------------
+	div(off-canvas='id-1 left shift')
+		nav.header_nav_mobile
+			ul.menu
+				li
+					a(href='#') 1
+				li
+					a(href='#') Преимущества
+				li
+					a(href='#') Отзывы
+				li
+					a(href='tel:73842596168') +7 3842 59 61 68
+				li
+					a(href='#') Преимущества
+				li
+					a(href='#') Отзывы
+				li
+					a(href='#') Примеры кухонь
+	div(off-canvas='id-2 right push')
+	div(off-canvas='id-3 top overlay')
+	div(off-canvas='id-4 bottom shift')
 
 
