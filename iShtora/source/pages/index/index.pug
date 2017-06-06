@@ -286,11 +286,11 @@ block main
 
 	section.intermediate
 		//Секция купить рулонную штору,
-		section.buy_curtain
+		section.forma_callBack
 			.container
 				.row
-					h3.buy_curtain_title Хочу купить рулонную штору,<br> когда Ваш дизайнер приедет к нам домой?
-					p.buy_curtain_description Отправьте заявку и наш менеджер свяжется с Вами в течении 10 минут и договорится о времени приезда дизайнера.
+					h3.forma_callBack_title Хочу купить рулонную штору,<br> когда Ваш дизайнер приедет к нам домой?
+					p.forma_callBack_description Отправьте заявку и наш менеджер свяжется с Вами в течении 10 минут и договорится о времени приезда дизайнера.
 					.intermediate
 						.intermediate_wrap
 							form
@@ -366,18 +366,20 @@ block main
 						.col-lg-12
 							h2.title Как с нами связаться?
 							span.underline
-						.col-lg-4
-							.how-contact_ic-location
-							h3.how-contact_metod Посетите нас по адресу:
-							p.how-contact_adress просп. Московский 173 5-й подьезд, офис 105
-						.col-lg-4
+						//.col-lg-4
+						//	.how-contact_ic-location
+						//	h3.how-contact_metod Посетите нас по адресу:
+						//	p.how-contact_adress просп. Московский 173 5-й подьезд, офис 105
+						.col-lg-5.col-lg-offset-1
 							.how-contact_ic-send
-							h3.how-contact_metod Напишите на почту:
-							p.how-contact_adress iShtoraUA@shtora.ua
-						.col-lg-4
+							.how-contact_wrap
+								h3.how-contact_metod Напишите на почту:
+								p.how-contact_adress iShtoraUA@shtora.ua
+						.col-lg-5.col-lg-offset-1
 							.how-contact_ic-phone
-							h3.how-contact_metod Позвоните по телефону:
-							p.how-contact_adress +38 099 20 80 655
+							.how-contact_wrap
+								h3.how-contact_metod Позвоните по телефону:
+								p.how-contact_adress +38 099 20 80 655
 
 
 
@@ -388,6 +390,36 @@ block main
 
 
 
+
+		// Секция бесплатный замер
+		section.forma_callBack
+			.container
+				.row
+					h3.forma_callBack_title Записаться на бесплатный замер
+					p.forma_callBack_description Отправьте заявку и наш менеджер свяжется с Вами в течении 10 минут и договорится о времени приезда дизайнера.
+					.intermediate
+						.intermediate_wrap
+							form
+								.intermediate_item.col-lg-3.col-md-4.col-sm-4.col-lg-offset-1
+									.modal_form_input_wrap
+										.modal_input_error
+											| Заполните поле
+											.modal_error_triangle
+											.modal_error_chest_img
+										i.fa.fa-check
+										input.modal_form_input(name='name', type='text', placeholder='Имя')
+								.intermediate_item.col-lg-3.col-md-4.col-sm-4
+									.modal_form_input_wrap
+										.modal_input_error
+											| Заполните поле
+											.modal_error_triangle
+											.modal_error_chest_img
+										i.fa.fa-check
+										input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
+								input(type='hidden', name='form_name', value='')
+								input(type='hidden', name='form_type', value='normal')
+
+								input.col-lg-3(type='submit', value='Вызвать дизайнера')
 
 	//-----------------------------------
 	div(off-canvas='id-1 left shift')
