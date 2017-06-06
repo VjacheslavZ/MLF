@@ -47,7 +47,6 @@ p,ul
 	margin: 0
 li
 	list-style: none
-
 .noselect
 	-webkit-touch-callout: none
 	-webkit-user-select: none
@@ -55,9 +54,6 @@ li
 	-moz-user-select: none
 	-ms-user-select: none
 	user-select: none
-
-
-
 
 // html .loader
 // 	background: none repeat scroll 0 0 #ffffff
@@ -457,7 +453,7 @@ li
 	p
 		@include fz(18)
 		color: #fff
-		padding-top: 18px
+		padding-top: 10px
 		font-family: raleway-medium
 .header_bot_txt
 	margin: auto
@@ -626,11 +622,14 @@ nav[canvas]
 			padding: 0
 			display: block
 			list-style: none
+
+
 // Секция our_advantages
-.our_advantages
+.our__advantages
 	min-height: 630px
 	background: url("../img/ourAdvantages_bg.jpg") no-repeat
-	margin-top: 90px
+	padding-top: 90px
+	padding-bottom: 161px
 	.title
 		margin: 0 0 28px 0
 	p
@@ -640,9 +639,7 @@ nav[canvas]
 		text-align: center
 		padding: 0 170px
 		line-height: 1.8
-		//letter-spacing: 3px
-	.our_advantages_items-left
-		margin-bottom: 55px
+	&-items_left
 		min-height: 735px
 		background: url("../img/our_advantages_bg.png") no-repeat right 55px top 78px
 		h3
@@ -652,7 +649,7 @@ nav[canvas]
 			margin: 0
 			text-transform: uppercase
 			letter-spacing: 1px
-		.our_advantages_item
+		.our__advantages-item
 			margin-top: 40px
 			&:nth-child(3)
 				margin-right: 40px
@@ -660,9 +657,9 @@ nav[canvas]
 				margin-right: 44px
 			&:nth-child(5)
 				margin-right: 40px
-		.our_advantages_item + .our_advantages_item
-			margin-top: 70px
-		.our_advantages_description
+			& + .our__advantages-item
+				margin-top: 70px
+		.our__advantages-description
 			display: inline-block
 			width: 75%
 			margin-right: 40px
@@ -675,34 +672,33 @@ nav[canvas]
 				padding: 0
 				margin: 0
 				text-align: end
-		.our_advantages_img-wash
+		.our__advantages-img-wash
 			display: inline-block
 			i
 				@include sprite($wash-ico)
 				display: inline-block
-		.our_advantages_img-iron
+		.our__advantages-img-iron
 			display: inline-block
 			i
 				@include sprite($ironing-ico)
 				display: inline-block
-		.our_advantages_img-child
+		.our__advantages-img-child
 			display: inline-block
 			i
 				@include sprite($child-ico)
 				display: inline-block
-		.our_advantages_img-time
+		.our__advantages-img-time
 			display: inline-block
 			i
 				@include sprite($time-ico)
 				display: inline-block
-		.our_advantages_img-price
+		.our__advantages-img-price
 			display: inline-block
 			i
 				@include sprite($price-ico)
 				display: inline-block
-
-	.our_advantages_items-right
-		margin-bottom: 55px
+	&-items-right
+		//margin-bottom: 55px
 		min-height: 735px
 		background: url("../img/our_advantages_bg-2.png") no-repeat  left 46px top 78px
 		h3
@@ -712,9 +708,9 @@ nav[canvas]
 			margin: 0
 			letter-spacing: 1px
 			text-transform: uppercase
-		.our_advantages_item + .our_advantages_item
+		.our__advantages-item + .our__advantages-item
 			margin-top: 68px
-		.our_advantages_item
+		.our__advantages-item
 			margin-top: 40px
 			&:nth-child(2)
 				margin-left: 20px
@@ -726,7 +722,7 @@ nav[canvas]
 			&:nth-child(5)
 				margin-top: 43px
 				margin-left: 25px
-		.our_advantages_description
+		.our__advantages-description
 			display: inline-block
 			width: 75%
 			margin-left: 40px
@@ -741,27 +737,27 @@ nav[canvas]
 				text-align: start
 				font-family: $raleway-regular
 				font-weight: 100
-		.our_advantages_img-wash
+		.our__advantages-img-wash
 			display: inline-block
 			i
 				@include sprite($no-wash-ico)
 				display: inline-block
-		.our_advantages_img-iron
+		.our__advantages-img-iron
 			display: inline-block
 			i
 				@include sprite($no-ironing-ico)
 				display: inline-block
-		.our_advantages_img-child
+		.our__advantages-img-child
 			display: inline-block
 			i
 				@include sprite($child-ico)
 				display: inline-block
-		.our_advantages_img-time
+		.our__advantages-img-time
 			display: inline-block
 			i
 				@include sprite($time-ico)
 				display: inline-block
-		.our_advantages_img-time2
+		.our__advantages-img-time2
 			display: inline-block
 			i
 				@include sprite($price2-ico)
@@ -815,9 +811,8 @@ nav[canvas]
 // секция видео
 
 // секция группы товаров
-.tovar_groups
+.tovar-groups
 	padding: 78px 0 93px 0
-
 	.title
 		margin-bottom: 23px
 	.underline
@@ -827,14 +822,15 @@ nav[canvas]
 		margin-bottom: 56px
 		padding: 0 200px
 		background-color: transparent
-	&_item
-		//background-color: transparent
-		.tovar_groups_photo-zoom
+	&__item
+		background-clip: content-box
+		display: flex
+		.tovar-groups__photo_zoom
 			display: none
-		.tovar_groups_photo
+		.tovar-groups__photo
 			position: relative
 			&:hover
-				.tovar_groups_photo-zoom
+				.tovar-groups__photo_zoom
 					display: flex
 					justify-content: center
 					align-items: center
@@ -848,42 +844,13 @@ nav[canvas]
 					left: 0
 					background: rgba(0, 0, 0, 0.5)
 					text-decoration: none
-		//background: #fff
-		background-clip: content-box
-		display: flex
-		//img
-		//	&::after
-		//		content: ''
-		//&:hover
-		//	z-index: 1
-		//	opacity: 1
-		//	color: #37474f
-		//position: relative
-		//.shadow
-			//box-shadow: 1px 5px 10px 2px rgba(223, 224, 225, 0.5)
-
-		& + .tovar_groups_item
+		& + .tovar-groups__item
 			margin-top: 100px
-		.tovar_groups_description
+		.tovar-groups__description
 			text-align: left
 			padding: 29px 20px 40px 40px
 			display: block
-		//	background-color: transparent
-			//background: $main_bg_color
-			//position: absolute
-			//width: 740px
-			//height: 240px
-			//top: 30px
-			//box-shadow: 0 3px 5px 0 rgba(0,0,0,0.3)
-			h4
-				font-family: $raleway-semibold
-				@include fz(18)
-				margin: 0 0 36px 0
-			p + p
-				font-family: $raleway-regular
-				@include fz(16)
-				margin-top: 36px
-		.tovar_groups_description-left
+		.tovar-groups__description_left
 			padding-left: 0
 		.fa-search
 			display: inline-block
@@ -894,7 +861,6 @@ nav[canvas]
 			display: flex
 			justify-content: center
 			align-items: center
-
 // секция Хиты продаж
 .best_seiling
 	background: transparent none
@@ -904,8 +870,8 @@ nav[canvas]
 		content: ' '
 		display: block
 		position: absolute
-		width: 2050px
-		height: 535px
+		width: 110%
+		height: 100%
 		top: -136px
 		z-index: -1
 		background: #feedf0
@@ -1093,8 +1059,8 @@ nav[canvas]
 		content: ' '
 		display: block
 		position: absolute
-		width: 2050px
-		height: 535px
+		width: 110%
+		height: 120%
 		top: -342px
 		z-index: 0
 		background: #fff
