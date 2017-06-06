@@ -29,6 +29,9 @@ block main
 								a(href="#reviews") Отзывы
 							li
 								a(href="#howContact") Контакты
+					.header_phone
+						a Позвоните нам +38 099 20 80 655
+
 	div(canvas='container')
 		header#header_logo(class="header")
 			.headerWrap
@@ -168,8 +171,8 @@ block main
 						img(src=require("../../img/slider_slide_2.jpg"))
 						img(src=require("../../img/slider_slide_3.jpg"))
 						img(src=require("../../img/slider_slide_4.jpg"))
-			.customNextBtn.customBtn
-			.customPrevBtn.customBtn
+				.customNextBtn.customBtn
+				.customPrevBtn.customBtn
 
 
 		// секция видео
@@ -183,40 +186,70 @@ block main
 				.row
 					h2.title Товарные группы
 					span.underline
-					.col-lg-12.tovar_groups_item.tovar_groups_item-left
-						.shadow.clearfix
+					p.description Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику Вы выбрать всегда успеете!
+					.col-lg-12.tovar_groups_item
+						.tovar_groups_photo
 							img(src=require("../../img/tovar-groups_1.jpg"))
-							.tovar_groups_description
-								h4 Римские шторы
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-					.col-lg-12.tovar_groups_item.tovar_groups_item-right
-						.shadow.clearfix
+							a.tovar_groups_photo-zoom
+								i.fa.fa-search
+						.tovar_groups_description
+							h4 Римские шторы
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					.col-lg-12.tovar_groups_item
+						.tovar_groups_description.tovar_groups_description-left
+							h4 Римские шторы
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						.tovar_groups_photo
 							img(src=require("../../img/tovar-groups_2.jpg"))
-							.tovar_groups_description
-								h4 Рулонные шторы
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-					.col-lg-12.tovar_groups_item.tovar_groups_item-left
-						.shadow.clearfix
+							a.tovar_groups_photo-zoom
+								i.fa.fa-search
+					.col-lg-12.tovar_groups_item
+						.tovar_groups_photo
 							img(src=require("../../img/tovar-groups_3.jpg"))
-							.tovar_groups_description
-								h4 День-ночь
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							a.tovar_groups_photo-zoom
+								i.fa.fa-search
+						.tovar_groups_description
+							h4 День-ночь
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-					.col-lg-12.tovar_groups_item.tovar_groups_item-right
-						.shadow.clearfix
+					.col-lg-12.tovar_groups_item
+						.tovar_groups_description.tovar_groups_description-left
+							h4 Шторы-плиссе
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						.tovar_groups_photo
 							img(src=require("../../img/tovar-groups_4.jpg"))
-							.tovar_groups_description
-								h4 Шторы-плиссе
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						
+							a.tovar_groups_photo-zoom
+								i.fa.fa-search
 
 
 
 
-
-		//cекция как мы работаем
+		//cекция Хиты продаж
+		section#slider_ourWorks2.slider_ourWorks.best_seiling
+			.container
+				.row
+					h2.title Хиты продаж
+					.best_seiling_wrap
+						span.underline
+			.best_seiling_wrap
+				.container
+					.row
+						p.description Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику Вы выбрать всегда успеете!
+						#three.owl-carousel.owl-theme.slider_ourWorks_slides
+							img(src=require("../../img/slider_slide_1.jpg"))
+							img(src=require("../../img/slider_slide_2.jpg"))
+							img(src=require("../../img/slider_slide_3.jpg"))
+							img(src=require("../../img/slider_slide_4.jpg"))
+							img(src=require("../../img/slider_slide_1.jpg"))
+							img(src=require("../../img/slider_slide_2.jpg"))
+							img(src=require("../../img/slider_slide_3.jpg"))
+							img(src=require("../../img/slider_slide_4.jpg"))
+				.customNextBtn.customBtn
+				.customPrevBtn.customBtn
 		section#how_we_work.how_we_work
 			.container
 				.row

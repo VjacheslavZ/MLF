@@ -71,19 +71,21 @@ $(document).ready( function() {
 	 //Активация слайдера
 	var one = $("#one");
 	var two = $("#two");
+	var three = $("#three");
 
 	one.owlCarousel({
 	    loop: true,
 	    items: 4,
 	    dots: true,
 		margin: 30,
-		nav: false,
+		// nav: true,
 		autoplay: false,
 		autoplayTimeout: 4000,
 	});
 	// Кастомные кнопки управления слайдером
 	var owl1 = $('#one.owl-carousel');
 	var owl2 = $('#two.owl-carousel');
+	var owl3 = $('#three.owl-carousel');
 
 	owl1.owlCarousel();
 	//owl2.owlCarousel();
@@ -91,6 +93,7 @@ $(document).ready( function() {
 	$('.customNextBtn').click(function() {
 	 	owl1.trigger('next.owl.carousel', [700]);
 		owl2.trigger('next.owl.carousel', [700]);
+		owl3.trigger('next.owl.carousel', [700]);
 	});
 	// Go to the previous item
 	$('.customPrevBtn').click(function() {
@@ -98,6 +101,7 @@ $(document).ready( function() {
 	   // Parameters has to be in square bracket '[]'
 		owl1.trigger('prev.owl.carousel', [700]);
 		owl2.trigger('prev.owl.carousel', [700]);
+		owl3.trigger('prev.owl.carousel', [700]);
 	});
 
 	//Актиация слайдера блок с видео
@@ -120,10 +124,18 @@ $(document).ready( function() {
 	$('[data-spy="scroll"]').each(function () {
 		var $spy = $(this).scrollspy('refresh')
 	})
+
+	three.owlCarousel({
+		loop: true,
+		items: 4,
+		dots: true,
+		margin: 30,
+		autoplay: false,
+		autoplayTimeout: 4000,
+	});
 });
 
 //фиксированная шапка
-
 (function ($){
 	var header_top = $(".header_top"),
 		windowHeight = $(window).height();

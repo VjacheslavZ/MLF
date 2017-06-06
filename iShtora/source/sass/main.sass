@@ -366,7 +366,10 @@ li
 		height: 9px
 	.modal_error_triangle
 
-
+.header_top
+	display: flex
+	justify-content: space-between
+	align-items: center
 // Header
 .header
 	text-align: center
@@ -390,7 +393,6 @@ li
 	display: inline-block
 	position: relative
 	margin-left: 10px
-	float: right
 	ul
 		li
 			list-style: none
@@ -412,6 +414,15 @@ li
 				text-decoration: none
 				transition: .5s
 				padding: 33px 10px
+.header_phone
+	display: inline-block
+	width: 140px
+	font-family: $raleway-regular
+	@include fz(16)
+	a
+		color: #fff
+		&:hover
+			text-decoration: none
 //стили для шапки при скролле
 .header_top.haeder_scroll
 	height: auto
@@ -759,94 +770,159 @@ nav[canvas]
 // секция наши работы, слайдер
 .slider_ourWorks
 	min-height: 680px
-	background: #e7eaf5 url("../img/our_advantages_slider_bg-2.png") no-repeat
+	background: #feedf0 url("../img/our_advantages_slider_bg-2.png") no-repeat
 	background-size: cover
 	position: relative
 	text-align: center
 	.container
 		overflow: hidden
-		.title
-			margin-top: 94px
-			margin-bottom: 29px
-		.underline
-			margin-bottom: 88px
-		.owl-carousel
-			div
-				display: inline-block
-			.owl-nav
-				display: none
-			.owl-dots.owl-dots
-				margin-top: 54px
-			.owl-dot.active
-				span
-					background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
-					margin: 5px 10px
-	.customBtn
-		display: inline-block
-		//width: 14px
-		//height: 28px
-		position: absolute
-		top: 58%
-	.customNextBtn
-		@include sprite($btn-slider)
-		left: 11%
-	.customPrevBtn
-		@include sprite($btn-slider)
-		transform: rotate(180deg)
-		right: 11%
-
+	.title
+		margin-top: 94px
+		margin-bottom: 29px
+	.underline
+		margin-bottom: 88px
+	.owl-carousel
+		.owl-item.active
+			//margin-left: 15px
+			//margin-right: 15px
+			//width: 270px
+			//height: 270px
+			//img
+		div
+			display: inline-block
+		.owl-nav
+			display: block
+		.owl-dots.owl-dots
+			margin-top: 58px
+		.owl-dot.active
+			span
+				background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
+				margin: 5px 10px
+.customBtn
+	display: inline-block
+	//width: 14px
+	//height: 28px
+	position: absolute
+	top: 58%
+.customNextBtn
+	@include sprite($btn-slider)
+	left: 16%
+.customPrevBtn
+	@include sprite($btn-slider)
+	transform: rotate(180deg)
+	right: 16%
 
 // секция видео
 
 // секция группы товаров
 .tovar_groups
-	padding: 88px 0 93px 0
+	padding: 78px 0 93px 0
+
 	.title
-		margin-bottom: 29px
+		margin-bottom: 23px
 	.underline
-		margin-bottom: 80px
-	.tovar_groups_item
-		background: $tovar_goups_bg_item
+		margin-bottom: 31px
+	.description
+		text-align: center
+		margin-bottom: 56px
+		padding: 0 200px
+		background-color: transparent
+	&_item
+		//background-color: transparent
+		.tovar_groups_photo-zoom
+			display: none
+		.tovar_groups_photo
+			position: relative
+			&:hover
+				.tovar_groups_photo-zoom
+					display: flex
+					justify-content: center
+					align-items: center
+					color: #fff
+					transition: all .3s linear
+					position: absolute
+					height: 100%
+					width: 100%
+					top: 0
+					bottom: 0
+					left: 0
+					background: rgba(0, 0, 0, 0.5)
+					text-decoration: none
+		//background: #fff
 		background-clip: content-box
-		position: relative
-		.shadow
-			box-shadow: 1px 5px 10px 2px rgba(223, 224, 225, 0.5)
+		display: flex
+		//img
+		//	&::after
+		//		content: ''
+		//&:hover
+		//	z-index: 1
+		//	opacity: 1
+		//	color: #37474f
+		//position: relative
+		//.shadow
+			//box-shadow: 1px 5px 10px 2px rgba(223, 224, 225, 0.5)
+
 		& + .tovar_groups_item
-			margin-top: 60px
+			margin-top: 100px
 		.tovar_groups_description
 			text-align: left
 			padding: 29px 20px 40px 40px
 			display: block
-			background: $main_bg_color
-			position: absolute
-			width: 740px
-			height: 240px
-			top: 30px
-			box-shadow: 0 3px 5px 0 rgba(0,0,0,0.3)
+		//	background-color: transparent
+			//background: $main_bg_color
+			//position: absolute
+			//width: 740px
+			//height: 240px
+			//top: 30px
+			//box-shadow: 0 3px 5px 0 rgba(0,0,0,0.3)
 			h4
 				font-family: $raleway-semibold
 				@include fz(18)
-				margin: 0 0 13px 0
-			p
+				margin: 0 0 36px 0
+			p + p
 				font-family: $raleway-regular
 				@include fz(16)
-	.tovar_groups_item-left
-		.tovar_groups_description
-			right: 45px
-		img
-			float: left
-	.tovar_groups_item-right
-		.tovar_groups_description
-			left: 45px
-		img
-			float: right
+				margin-top: 36px
+		.tovar_groups_description-left
+			padding-left: 0
+		.fa-search
+			display: inline-block
+			width: 54px
+			height: 54px
+			border-radius: 50%
+			background: linear-gradient(to right, #f64f6e 0%, #ff795e 100%)
+			display: flex
+			justify-content: center
+			align-items: center
 
+// секция Хиты продаж
+.best_seiling
+	background: transparent none
+	.title
+		margin-top: 36px
+	&:before
+		content: ' '
+		display: block
+		position: absolute
+		width: 2050px
+		height: 535px
+		top: -136px
+		z-index: -1
+		background: #feedf0
+		transform: rotate(169deg)
+	.underline
+		margin-bottom: 35px
+	.description
+		margin-bottom: 56px
+	.best_seiling_wrap
+		background: #feedf0
+		padding-bottom: 60px
 //секция как мы работаем
 .how_we_work
-	background: url(../img/how_we_work_bg.png) no-repeat
+	background: #feedf0
 	background-size: cover
 	min-height: 620px
-	padding-top: 192px
+	padding-top: 82px
 	padding-bottom: 100px
 	.how_we_work_icons
 		margin-top: 59px
@@ -877,18 +953,18 @@ nav[canvas]
 		top: 13%
 		.point
 			display: inline-block
-			width: 8px
-			height: 8px
+			width: 22px
+			height: 2px
 			background: linear-gradient(to right, #f64f6e 0%, #ff795e 100%)
 			border-radius: 50%
 			& + .point
 				margin-left: 20px
 	.points_wrap_send
-		left: 22%
+		left: 21%
 	.points_wrap_consult
-		left: 47%
+		left: 46%
 	.points_wrap_settings
-		left: 72%
+		left: 71%
 //Секция купить рулонную штору,
 .buy_curtain
 	background: url(../img/buy_curtain_bg.jpg) no-repeat
@@ -929,16 +1005,14 @@ nav[canvas]
 		top: 54%
 	.customNextBtn
 		@include sprite($btn-slider)
-		left: 11%
+		left: 16%
 	.customPrevBtn
 		@include sprite($btn-slider)
 		transform: rotate(180deg)
-		right: 11%
-	.owl-carousel
+		right: 16%
 		.owl-dots.owl-dots
 			margin-top: 60px
-		.owl-nav
-			display: none
+
 		.owl-dots.owl-dots
 			margin-top: 54px
 		.owl-dot.active
@@ -1097,6 +1171,9 @@ nav[canvas]
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 
+.owl-carousel
+	.owl-nav.owl-nav
+		display: none
 .intermediate_wrap
 	margin-top: 60px
 	form
