@@ -26,7 +26,8 @@ exports.owl_carousel_min_js = function () {
 
 exports.bootstrap = function () {
 	return require("../libs/bootstrap.min")
-}
-
-
+};
+exports.fancyBox = function () {
+	return require("../libs/jquery.fancybox-1.3.4.pack.js")
+};
 

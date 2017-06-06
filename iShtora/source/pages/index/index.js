@@ -9,6 +9,7 @@ require("../../libs/libs").Animate_css();
 //карусель
 require("../../libs/libs").owl_carousel_min_js();
 require("../../libs/libs").bootstrap();
+// require("../../libs/libs").fancyBox();
 import animate from '../../js/animate';
 import functions from '../../js/_functions.js';
 
@@ -133,6 +134,25 @@ $(document).ready( function() {
 		autoplay: false,
 		autoplayTimeout: 4000,
 	});
+
+
+	// /* This is basic - uses default settings */
+	// $("a#single_image").fancybox();
+	//
+	// /* Using custom settings */
+	// $("a#inline").fancybox({
+	// 	'hideOnContentClick': true
+	// });
+	//
+	// /* Apply fancybox to multiple items */
+	// $("a.group").fancybox({
+	// 	'transitionIn'	:	'elastic',
+	// 	'transitionOut'	:	'elastic',
+	// 	'speedIn'		:	600,
+	// 	'speedOut'		:	200,
+	// 	'overlayShow'	:	false
+	// })
+
 });
 
 //фиксированная шапка

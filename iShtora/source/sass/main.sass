@@ -7,6 +7,7 @@
 @import "../libs/owl.carousel.min.css"
 @import "../libs/owl.theme.default.min.css"
 @import "../libs/jquery-ui.min.css"
+@import "../libs/jquery.fancybox-1.3.4.css"
 
 
 html, body
@@ -809,6 +810,20 @@ nav[canvas]
 	right: 16%
 
 // секция видео
+.player-video
+	background: url("../img/video_bg.jpg") no-repeat
+	background-size: cover
+	min-height: 500px
+	display: flex
+	justify-content: center
+	align-items: center
+	&__btn-paly_wrap
+		width: 280px
+		height: 280px
+		cursor: pointer
+	&__btn-paly
+		@include sprite($btn-play)
+		display: block
 
 // секция группы товаров
 .tovar-groups
@@ -862,7 +877,7 @@ nav[canvas]
 			justify-content: center
 			align-items: center
 // секция Хиты продаж
-.best_seiling
+.best-seiling
 	background: transparent none
 	.title
 		margin-top: 36px
@@ -880,11 +895,11 @@ nav[canvas]
 		margin-bottom: 35px
 	.description
 		margin-bottom: 56px
-	.best_seiling_wrap
+	.best-seiling__wrap
 		background: #feedf0
 		padding-bottom: 60px
 //секция как мы работаем
-.how_we_work
+.how-we-work
 	background: #feedf0
 	background-size: cover
 	min-height: 620px
@@ -892,10 +907,10 @@ nav[canvas]
 	padding-bottom: 100px
 	.title
 		margin-bottom: 22px
-	.how_we_work_icons
+	.how-we-work__icons
 		margin-top: 54px
 		position: relative
-	&_title
+	&__title
 		padding: 0 200px
 		margin-top: 32px
 		margin-bottom: 25px
@@ -903,26 +918,26 @@ nav[canvas]
 		color: #000
 		font-family: $raleway-regular
 		text-align: center
-	.item_usluga
+	.item-usluga
 		position: relative
 		text-align: center
-		&-send
+		&__send
 			@include sprite($send-ico)
 			margin: 0 auto
-		&-consult
+		&__consult
 			@include sprite($consult-ico)
 			margin: 0 auto
-		&-settings
+		&__settings
 			@include sprite($settings-ico)
 			margin: 0 auto
-		&-gift
+		&__gift
 			@include sprite($gift-ico)
 			margin: 0 auto
 		p
 			margin-top: 20px
 			font-family: $raleway-regular
 			@include fz(16)
-	.points_wrap
+	.points-wrap
 		position: absolute
 		top: 13%
 		.point
@@ -933,22 +948,22 @@ nav[canvas]
 			border-radius: 50%
 			& + .point
 				margin-left: 20px
-	.points_wrap_send
+	.points-wrap__send
 		left: 21%
-	.points_wrap_consult
+	.points-wrap__consult
 		left: 46%
-	.points_wrap_settings
+	.points-wrap__settings
 		left: 71%
 //Секция купить рулонную штору,
-.forma_callBack
+.forma-callBack
 	background: url(../img/buy_curtain_bg.jpg) no-repeat
 	background-size: cover
 	min-height: 402px
 	padding: 28px 0
 	text-align: center
-	&_title
+	&__title
 		@include font($main_bg_color,32,$raleway-bold,1.5)
-	&_description
+	&__description
 		@include font($main_font_color,16,$raleway-regular,1.6)
 		margin-top: 39px
 	.intermediate_wrap.intermediate_wrap
@@ -998,7 +1013,7 @@ nav[canvas]
 			height: 55px
 			left: 51%
 //Секция Часто задаваемые вопросы
-.often_question
+.often-question
 	text-align: left
 	background: #feedf0
 	.title
@@ -1010,7 +1025,7 @@ nav[canvas]
 		position: relative
 		z-index: 1
 		//height: 526px
-	.often_question_title
+	.often-question__title
 		margin-top: 20px
 		padding-left: 20px
 	.ui-accordion-header
@@ -1027,7 +1042,7 @@ nav[canvas]
 			float: right
 			margin-top: 8px
 			margin-right: 11px
-	&_title
+	&__title
 		border: transparent
 		background: transparent
 		color: #fff
@@ -1040,13 +1055,13 @@ nav[canvas]
 			margin-right: 11px
 			margin-top: 8px
 			float: right
-	&_content
+	&__content
 		background: transparent
 		//margin-left: 40px
 		height: 150px
 		border: 1px solid #f64f6e
 		border-radius: 0 0 12px 22px
-	&_description
+	&__description
 		padding-top: 5px
 		@include font(#333,16,$raleway-light, 1.8)
 
