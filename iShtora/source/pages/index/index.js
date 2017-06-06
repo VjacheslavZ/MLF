@@ -122,6 +122,26 @@ $(document).ready( function() {
 	})
 });
 
+//фиксированная шапка
+
+(function ($){
+	var header_top = $(".header_top"),
+		windowHeight = $(window).height();
+
+	$(window).on('scroll', function(){
+		var scrollTop = $(window).scrollTop();
+
+		if( scrollTop  > windowHeight/3){
+			header_top.addClass('haeder_scroll')
+		}else{
+			header_top.removeClass('haeder_scroll')
+		}
+	});
+
+
+})(jQuery);
+
+
 $(window).resize(function() {
 
 });

@@ -1,5 +1,4 @@
 // подключение functions.js
-
 $(function() {
 
 	//SVG Fallback
@@ -83,7 +82,6 @@ $(window).scroll(function() {
 			$("#nav-button-label .nav-line").removeClass("active");
 			$("html,body").removeClass("slidebars");
 			controller.close();
-
 		}
 	});
 })($);
@@ -96,8 +94,6 @@ $(document).ready(function() {
 	if (md.userAgent() == "Safari" && md.mobile() == "iPhone" || md.mobile() == "iPad") {
 		$("html,body").css("overflow", "hidden !important");
 	}
-
-
 	// Select в модальном окне
 	$(document).click(function() {
 		$('.slct').removeClass('active');
@@ -227,8 +223,8 @@ $(document).ready(function() {
 			$(this).focus(function() {
 				$(this).siblings('.modal_input_error').hide("fade", 500)
 			});
-
 		});
+
 		form.find('.modal_form_phone').each(function() { // пробежим по каждому полю в форме
 			var pattern = /^(\+|d+)*\d[\d\(\)\-]{4,14}\d$/;
 			if ($(this).val() == '') { // если пустое
@@ -263,8 +259,8 @@ $(document).ready(function() {
 			$(this).focus(function() {
 				$(this).siblings('.modal_input_error').hide("fade", 500);
 			});
-
 		});
+
 		form.find('.modal_form_email').each(function() { // пробежим по каждому полю в форме
 			var pattern = /^(([a-zA-Z0-9]|[!#$%\*\/\?\|^\{\}`~&'\+=-_])+\.)*([a-zA-Z0-9\-]|[!#$%\*\/\?\|^\{\}`~&'\+=-_])+@([a-zA-Z0-9-]+\.)+[a-zA-Z0-9-]+$/;
 			if ($(this).val() == '') { // если пустое
@@ -300,8 +296,8 @@ $(document).ready(function() {
 			$(this).focus(function() {
 				$(this).siblings('.modal_input_error').hide("fade", 500);
 			});
-
 		});
+
 		var erorr_finish = 0;
 		for (var i = 0; i < error.length; i++) {
 			if (error[i] == false) {
@@ -315,7 +311,7 @@ $(document).ready(function() {
 			var data = form.serialize(); // подготавливаем данные
 			$.ajax({ // инициализируем ajax запрос
 				type: 'POST', // отправляем в POST формате, можно GET
-				url: 'mail.php', // путь до обработчика, у нас он лежит в той же папке
+				url: ' ', // путь до обработчика, у нас он лежит в той же папке
 				dataType: 'json', // ответ ждем в json формате
 				data: data, // данные для отправки
 				beforeSend: function(data) { // событие до отправки
@@ -527,22 +523,6 @@ $(document).ready(function() {
 			});
 		}
 	});
-
-
-	// $("#menu").on("click","a", function (event) {
-	// 	//отменяем стандартную обработку нажатия по ссылке
-	// 	event.preventDefault();
-	//
-	// 	//забираем идентификатор бока с атрибута href
-	// 	var id  = $(this).attr('href'),
-	// 	//узнаем высоту от начала страницы до блока на который ссылается якорь
-	// 	top = $(id).offset().top;
-	// 	console.log(top);
-	// 	//анимируем переход на расстояние - top за 1500 мс
-	// 	$('body,html').animate({scrollTop: top}, 1500);
-	// });
-
-
 });
 
 $(".loader_inner").fadeOut();

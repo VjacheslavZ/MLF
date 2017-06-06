@@ -42,7 +42,7 @@ if ($_POST) {
 
     $mailer = new PHPMailer();
     $subject = "Заявка с сайта Название сайта";
-    $to = 'orionpro79@gmail.com';
+    $to = 'slavikov.net@gmail.com';
  //   $mailer->IsSMTP();
     $mailer->Host = 'smtp.yandex.ru';
     $mailer->Port = 465;
