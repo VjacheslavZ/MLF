@@ -17,18 +17,18 @@ block main
 					.header_logo
 						a(href="/" class="logo").
 							Лого
-					nav.header_nav
-						ul
+					nav#navbar.header_nav
+						ul.nav.nav-tabs.navbar-nav(role="tablist")
 							li.active
-								a(href="#") Наши работы
+								a(href="#slider_ourWorks") Наши работы
 							li
-								a(href="#") Товары
+								a(href="#tovarGroups") Товары
 							li
-								a(href="#") Как мы работаем
+								a(href="#how_we_work") Как мы работаем
 							li
-								a(href="#") Отзывы
+								a(href="#reviews") Отзывы
 							li
-								a(href="#") Контакты
+								a(href="#howContact") Контакты
 	div(canvas='container')
 		header(class="header")
 			.headerWrap
@@ -151,9 +151,10 @@ block main
 
 
 
+
 	section.main_content
 		// секция наши работы слайдер
-		section.slider_ourWorks
+		section#slider_ourWorks.slider_ourWorks
 			.container
 				.row
 					h2.title Наши работы
@@ -172,11 +173,12 @@ block main
 
 
 		// секция видео
-		section.video
-		//Добавить видео !!!!
+		section.player
+			//video.player_video.viewer(src=("../../video/mov_bbb.mp4"))
+
 		//---------------------
 		//секция товарные группы
-		section.tovar_groups
+		section#tovarGroups.tovar_groups
 			.container
 				.row
 					h2.title Товарные группы
@@ -215,7 +217,7 @@ block main
 
 
 		//cекция как мы работаем
-		section.how_we_work
+		section#how_we_work.how_we_work
 			.container
 				.row
 					h2.title Как мы работаем?

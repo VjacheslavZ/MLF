@@ -18,6 +18,7 @@ $(window).scroll(function() {
 		var topOfWindow = $(window).scrollTop() + 40;
 		var heightOfWindow = $(window).height();
 		var animName = $(this).data('anim');
+
 		if (!$(this).data('atop')) {
 			var animTop = 0.9;
 		} else {
@@ -199,6 +200,7 @@ $(document).ready(function() {
 		event.stopPropagation();
 
 	});
+
 	//  Отправка форм
 	$("form:not('#form-file')").submit(function(e) { // перехватываем все при событии отправки
 		e.preventDefault();
@@ -525,6 +527,21 @@ $(document).ready(function() {
 			});
 		}
 	});
+
+
+	// $("#menu").on("click","a", function (event) {
+	// 	//отменяем стандартную обработку нажатия по ссылке
+	// 	event.preventDefault();
+	//
+	// 	//забираем идентификатор бока с атрибута href
+	// 	var id  = $(this).attr('href'),
+	// 	//узнаем высоту от начала страницы до блока на который ссылается якорь
+	// 	top = $(id).offset().top;
+	// 	console.log(top);
+	// 	//анимируем переход на расстояние - top за 1500 мс
+	// 	$('body,html').animate({scrollTop: top}, 1500);
+	// });
+
 
 });
 

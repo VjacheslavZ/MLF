@@ -433,14 +433,11 @@ li
 	left: 0
 	right: 0
 	top: calc(50% - 71px)
-	letter-spacing: 3px
 	p
 		@include fz(18)
 		color: #fff
 		padding-top: 18px
-		letter-spacing: 1px;
 		font-family: raleway-medium
-
 .header_bot_txt
 	margin: auto
 	position: absolute
@@ -615,7 +612,6 @@ nav[canvas]
 	margin-top: 90px
 	.title
 		margin: 0 0 28px 0
-		letter-spacing: 2px
 	p
 		@include fz(16)
 		margin-top: 33px
@@ -707,7 +703,7 @@ nav[canvas]
 				margin-top: 71px
 				margin-left: 48px
 			&:nth-child(5)
-				margin-top: 46px
+				margin-top: 43px
 				margin-left: 25px
 		.our_advantages_description
 			display: inline-block
@@ -760,10 +756,10 @@ nav[canvas]
 	.container
 		overflow: hidden
 		.title
-			margin-top: 84px
-			margin-bottom: 23px
+			margin-top: 94px
+			margin-bottom: 29px
 		.underline
-			margin-bottom: 79px
+			margin-bottom: 88px
 		.owl-carousel
 			div
 				display: inline-block
@@ -777,10 +773,10 @@ nav[canvas]
 					margin: 5px 10px
 	.customBtn
 		display: inline-block
-		width: 14px
-		height: 28px
+		//width: 14px
+		//height: 28px
 		position: absolute
-		top: 54%
+		top: 58%
 	.customNextBtn
 		@include sprite($btn-slider)
 		left: 11%
@@ -794,9 +790,9 @@ nav[canvas]
 
 // секция группы товаров
 .tovar_groups
-	padding: 80px 0 93px 0
+	padding: 88px 0 93px 0
 	.title
-		margin-bottom: 23px
+		margin-bottom: 29px
 	.underline
 		margin-bottom: 80px
 	.tovar_groups_item
@@ -948,7 +944,6 @@ nav[canvas]
 	text-align: left
 	.title
 		margin: 96px 0 23px 0
-		letter-spacing: 1.2px
 	.underline
 		margin-bottom: 50px
 	#accordion
@@ -984,7 +979,7 @@ nav[canvas]
 	background: url("../img/how_contact_bg.jpg") no-repeat
 	background-size: cover
 	&_metods
-		background: #fff url("../img/how_contact__ico_bg.jpg") no-repeat
+		background: url("../img/how_contact__ico_bg.jpg") no-repeat
 		background-size: cover
 		padding: 95px 0
 		margin: 101px 0 91px 0
@@ -1133,3 +1128,4 @@ nav[canvas]
 			background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
 
 body
+	position: relative

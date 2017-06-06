@@ -38,7 +38,7 @@ const common = merge([
 				'sprite': path.resolve(__dirname, 'source/spritesmith/'),
 				'img': path.resolve(__dirname, 'source/img/'),
 				'fonts': path.resolve(__dirname, 'source/fonts/'),
-				'owlImage': path.resolve(__dirname, 'source/img/')
+				'owlImage': path.resolve(__dirname, 'source/img/'),
 			}
 		},
 		plugins: [
@@ -65,7 +65,7 @@ const common = merge([
 	pug(),
 	sprite(),
 	images(),
-	fonts()
+	fonts(),
 ]);
 
 module.exports = function(env) {

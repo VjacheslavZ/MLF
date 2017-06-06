@@ -8,7 +8,7 @@ require("../../libs/libs").waypoint();
 require("../../libs/libs").Animate_css();
 //карусель
 require("../../libs/libs").owl_carousel_min_js();
-
+require("../../libs/libs").bootstrap();
 import animate from '../../js/animate';
 import functions from '../../js/_functions.js';
 
@@ -76,7 +76,7 @@ $(document).ready( function() {
 	    loop: true,
 	    items: 4,
 	    dots: true,
-		margin: 15,
+		margin: 30,
 		nav: false,
 		autoplay: false,
 		autoplayTimeout: 4000,
@@ -114,6 +114,12 @@ $(document).ready( function() {
 	$( "#accordion" ).accordion({
 		collapsible: true
 	});
+
+	$('body').scrollspy({ target: '#navbar-example' })
+
+	$('[data-spy="scroll"]').each(function () {
+		var $spy = $(this).scrollspy('refresh')
+	})
 });
 
 $(window).resize(function() {
