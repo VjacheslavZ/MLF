@@ -793,7 +793,7 @@ nav[canvas]
 		.owl-nav
 			display: block
 		.owl-dots.owl-dots
-			margin-top: 58px
+			margin-top: 37px
 		.owl-dot.active
 			span
 				background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
@@ -922,13 +922,21 @@ nav[canvas]
 	background: #feedf0
 	background-size: cover
 	min-height: 620px
-	padding-top: 82px
+	padding-top: 57px
 	padding-bottom: 100px
-	.how_we_work_icons
-		margin-top: 59px
-		position: relative
 	.title
+		margin-bottom: 22px
+	.how_we_work_icons
+		margin-top: 54px
+		position: relative
+	&_title
+		padding: 0 200px
+		margin-top: 32px
 		margin-bottom: 25px
+		@include fz(16)
+		color: #000
+		font-family: $raleway-regular
+		text-align: center
 	.item_usluga
 		position: relative
 		text-align: center
