@@ -4,13 +4,13 @@ block title
 block main
 	include ../modal
 	nav(canvas="header_top" class="header_top")
-		//.mnu_btn
-		//	label(id="nav-button-label")
-		//		#nav-lines
-		//			i.nav-line
-		//			i.nav-line
-		//			i.nav-line
-		//			i.nav-line
+		.mnu_btn
+			label(id="nav-button-label")
+				#nav-lines
+					i.nav-line
+					i.nav-line
+					i.nav-line
+					i.nav-line
 		.container
 			.row
 				.header_top.col-lg-12
@@ -49,7 +49,7 @@ block main
 						.intermediate
 							.intermediate_wrap
 								form#form-file
-									.intermediate_item.col-lg-4.col-md-3.col-sm-4
+									.intermediate_item.col-lg-4.col-md-4.col-sm-4
 										.modal_form_input_wrap
 											.modal_input_error
 												| Заполните поле
@@ -57,7 +57,7 @@ block main
 												.modal_error_chest_img
 											i.fa.fa-check
 											input.modal_form_input(name='name', type='text', placeholder='Имя')
-									.intermediate_item.col-lg-4.col-md-3.col-sm-4
+									.intermediate_item.col-lg-4.col-md-4.col-sm-4
 										.modal_form_input_wrap
 											.modal_input_error
 												| Заполните поле
@@ -77,7 +77,7 @@ block main
 					//		|  успешной работы!
 
 
-	// Секция  our_advantages
+	// Секция  наши преимущества
 	section#our_advantages.our__advantages
 		.container
 			.row
@@ -85,7 +85,7 @@ block main
 				span.underline
 				p Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику выбрать вы всегда успеете!
 				.clearfix
-					.our__advantages-items_left.col-lg-6
+					.our__advantages-items_left.col-sm-12.col-md-6
 						h3 Обычная штора
 						.our__advantages-item
 							.our__advantages-description
@@ -118,7 +118,7 @@ block main
 							.our__advantages-img-price
 								i
 
-					.our__advantages-items-right.col-lg-6
+					.our__advantages-items_right.col-sm-12.col-md-6
 						h3 Рулонная штора
 						.our__advantages-item
 							.our__advantages-img-wash
@@ -242,13 +242,13 @@ block main
 										img(src=require("../../img/slider_slide_1.jpg"))
 										a.tovar-groups__photo_zoom
 											i.fa.fa-search
-								img(src=require("../../img/slider_slide_2.jpg"))
+								//img(src=require("../../img/slider_slide_2.jpg"))
 								.tovar-groups__item
 									.tovar-groups__photo
 										img(src=require("../../img/slider_slide_3.jpg"))
 										a.tovar-groups__photo_zoom
 											i.fa.fa-search
-								img(src=require("../../img/slider_slide_4.jpg"))
+								//img(src=require("../../img/slider_slide_4.jpg"))
 								.tovar-groups__item
 									.tovar-groups__photo
 										img(src=require("../../img/slider_slide_1.jpg"))
@@ -279,28 +279,28 @@ block main
 					span.underline
 					p.how-we-work__title Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику выбрать вы всегда успеете!
 					.how-we-work__icons.clearfix
-						.col-lg-3.item-usluga
+						.col-md-3.item-usluga
 							.item-usluga__send
 							p Вы звоните или оставляете заявку на сайте.
 						.points-wrap.points-wrap__send
 							span.point
 							span.point
 							span.point
-						.col-lg-3.item-usluga
+						.col-md-3.item-usluga
 							.item-usluga__consult
 							p Мы предварительно консультируем вас, наш дизайнер бесплатно выезжает к вам на объект в Киеве или Харькове.
 						.points-wrap.points-wrap__consult
 							span.point
 							span.point
 							span.point
-						.col-lg-3.item-usluga
+						.col-md-3.item-usluga
 							.item-usluga__settings
 							p Через 3 дня приезжаем и устанавливаем выбранную штору
 						.points-wrap.points-wrap__settings
 							span.point
 							span.point
 							span.point
-						.col-lg-3.item-usluga
+						.col-md-3.item-usluga
 							.item-usluga__gift
 							p Вы наслаждаетесь обновленным интерьером и восторженными отзывами соседей и друзей.
 
@@ -324,7 +324,7 @@ block main
 											.modal_error_chest_img
 										i.fa.fa-check
 										input.modal_form_input(name='name', type='text', placeholder='Имя')
-								.intermediate_item.col-lg-3.col-md-3.col-sm-4
+								.intermediate_item.col-lg-3.col-md-4.col-sm-4
 									.modal_form_input_wrap
 										.modal_input_error
 											| Заполните поле
@@ -395,12 +395,12 @@ block main
 						//	.how-contact_ic-location
 						//	h3.how-contact_metod Посетите нас по адресу:
 						//	p.how-contact_adress просп. Московский 173 5-й подьезд, офис 105
-						.col-lg-5.col-lg-offset-1
+						.col-md-5.col-md-offset-1.col-lg-5.col-lg-offset-1
 							.how-contact_ic-send
 							.how-contact_wrap
 								h3.how-contact_metod Напишите на почту:
 								p.how-contact_adress iShtoraUA@shtora.ua
-						.col-lg-5.col-lg-offset-1
+						.col-md-5.col-md-offset-1.col-lg-5.col-lg-offset-1
 							.how-contact_ic-phone
 							.how-contact_wrap
 								h3.how-contact_metod Позвоните по телефону:

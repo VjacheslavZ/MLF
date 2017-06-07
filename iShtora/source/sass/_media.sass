@@ -9,6 +9,19 @@
 	// 	width: 1200px
 	.header_modal
 		margin-top: 20px
+	.our__advantages
+		p
+			padding: 0
+	.our__advantages-items_left
+		max-height: 800px
+		background-size: contain
+		.our__advantages-description
+			width: 69%
+	.our__advantages-items_right
+		max-height: 800px
+		background-size: contain
+		.our__advantages-description
+			width: 69%
 	.intermediate
 		.intermediate_wrap
 			margin-bottom: 20px
@@ -19,7 +32,9 @@
 				display: inline-block
 	//Секция отзывы слайдер
 	.reviews
-		padding-bottom: 0px
+		padding-bottom: 0
+		.description
+			margin: 0 0 15px 0
 		.customPrevBtn
 			right: 13px
 
@@ -28,12 +43,54 @@
 		padding: 0 40px
 	.customPrevBtn
 		right: 18px
+	.best-seiling
+		&:before
+			height: 70%
+	//секция товарные группы
+	#tovarGroups
+		.description
+			padding: 0
+		.tovar-groups__item
+			& + .tovar-groups__item
+				margin-top: 50px
+			.tovar-groups__photo
+				width: 377px
+				height: 311px
+				img
+					width: 377px
+					height: 311px
+			.tovar-groups__description
+				padding: 0 3px 0 15px
+				h4
+					margin-top: 0
+				p + p
+					padding-top: 10px
+	//cекция Хиты продаж
+	.best-seiling
+		.tovar-groups__item
+			.tovar-groups__photo
+				height: inherit
+	// секция наши работы слайдер
+	.slider_ourWorks
+		min-height: inherit
+		.description
+			padding: 0
 	//Секция Часто задаваемые вопросы
 	.accordion
 		margin-right: 15px
 		.often-question
 			&__content
 				height: auto
+	// Секция как мы работаем
+	.how-we-work
+		&__title
+			padding: 0
+		.points-wrap__send
+			left: 20%
+		.points-wrap__consult
+			left: 45%
+		.points-wrap__settings
+			left: 70%
 	//Секция Как с нами связаться?
 	.how-contact
 		&:before
@@ -44,15 +101,74 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
-	.header_nav
-		display: none
+	.mnu_btn
+		display: block
+	//.header_top.haeder_scroll
+	//	height: 60px
+	nav[canvas]
+		height: 57px
 	.header_logo
 		display: block
-		margin-top: 0
+		margin: 0 auto
+		padding: 0
+	.header_nav
+		display: none
+	.header_phone
+		display: none
 	.header_modal
 		margin-top: 40px
 	nav[canvas]
-		display: block		
+		display: block
+	/**/
+	// Секция our_advantages
+	.our__advantages-items_left
+		background: none
+		max-height: inherit
+		h3
+			text-align: center
+		.our__advantages-item
+			&:nth-child(3)
+				margin-right: 0
+			&:nth-child(4)
+				margin-right: 0
+			&:nth-child(5)
+				margin-right: 0
+		.our__advantages-description
+			width: 80%
+	.our__advantages-items_right
+		margin-top: 30px
+		background: none
+		h3
+			text-align: center
+		.our__advantages-item
+			&:nth-child(2)
+				margin-left: 0
+			&:nth-child(3)
+				margin-left: 0
+			&:nth-child(4)
+				margin-left: 0
+			&:nth-child(5)
+				margin-left: 0
+	#tovarGroups
+		.tovar-groups__item
+			.tovar-groups__photo
+				width: 266px
+				height: 200px
+				img
+					width: 266px
+					height: 200px
+	// Секция как мы работаем
+	.how-we-work
+		.item-usluga
+			margin-top: 15px
+			p
+				margin-top: 0
+		.points-wrap__send
+			display: none
+		.points-wrap__consult
+			display: none
+		.points-wrap__settings
+			display: none
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	

@@ -86,7 +86,11 @@ $(document).ready( function() {
 		responsive: {
 			1200: {
 				margin: 15
+			},
+			991:{
+				items: 3
 			}
+
 		}
 	});
 	// Кастомные кнопки управления слайдером
@@ -144,6 +148,14 @@ $(document).ready( function() {
 		margin: 30,
 		autoplay: false,
 		autoplayTimeout: 4000,
+		responsive: {
+			1200: {
+				margin: 15
+			},
+			991:{
+				items: 3
+			}
+		}
 	});
 
 
