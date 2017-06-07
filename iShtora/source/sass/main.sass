@@ -374,6 +374,7 @@ li
 	height: 100vh
 	background: url(../img/header_bg.jpg) no-repeat
 	background-size: cover
+	overflow: hidden
 .header
 	.container
 		height: 100%
@@ -629,10 +630,10 @@ nav[canvas]
 .our__advantages
 	min-height: 630px
 	background: url("../img/ourAdvantages_bg.jpg") no-repeat
-	padding-top: 90px
-	padding-bottom: 161px
+	padding-top: 81px
+	padding-bottom: 132px
 	.title
-		margin: 0 0 28px 0
+		margin-bottom: 22px
 	p
 		@include fz(16)
 		margin-top: 33px
@@ -766,6 +767,7 @@ nav[canvas]
 
 // секция наши работы, слайдер
 .slider_ourWorks
+	padding: 76px 0 89px 0
 	min-height: 680px
 	background: #feedf0 url("../img/our_advantages_slider_bg-2.png") no-repeat
 	background-size: cover
@@ -774,10 +776,13 @@ nav[canvas]
 	.container
 		overflow: hidden
 	.title
-		margin-top: 94px
-		margin-bottom: 29px
+		//margin-top: 76px
+		margin-bottom: 24px
 	.underline
-		margin-bottom: 88px
+		margin-bottom: 36px
+	.description
+		margin-bottom: 56px
+		padding: 0 200px
 	.owl-carousel
 		.owl-item.active
 			//margin-left: 15px
@@ -795,19 +800,6 @@ nav[canvas]
 			span
 				background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
 				margin: 5px 10px
-.customBtn
-	display: inline-block
-	//width: 14px
-	//height: 28px
-	position: absolute
-	top: 58%
-.customNextBtn
-	@include sprite($btn-slider)
-	left: 16%
-.customPrevBtn
-	@include sprite($btn-slider)
-	transform: rotate(180deg)
-	right: 16%
 
 // секция видео
 .player-video
@@ -824,7 +816,6 @@ nav[canvas]
 	&__btn-paly
 		@include sprite($btn-play)
 		display: block
-
 // секция группы товаров
 .tovar-groups
 	padding: 78px 0 93px 0
@@ -865,6 +856,8 @@ nav[canvas]
 			text-align: left
 			padding: 29px 20px 40px 40px
 			display: block
+			p + p
+				padding-top: 35px
 		.tovar-groups__description_left
 			padding-left: 0
 		.fa-search
@@ -899,8 +892,10 @@ nav[canvas]
 // секция Хиты продаж
 .best-seiling
 	background: transparent none
+
+	padding: 0
 	.title
-		margin-top: 36px
+		margin: 34px 0 24px 0
 	&:before
 		content: ' '
 		display: block
@@ -910,20 +905,20 @@ nav[canvas]
 		top: -136px
 		z-index: -1
 		background: #feedf0
-		transform: rotate(169deg)
+		transform: rotate(165deg)
 	.underline
 		margin-bottom: 35px
 	.description
 		margin-bottom: 56px
 	.best-seiling__wrap
 		background: #feedf0
-		padding-bottom: 60px
+		padding-bottom: 87px
 //секция как мы работаем
 .how-we-work
 	background: #feedf0
 	background-size: cover
-	min-height: 620px
-	padding-top: 57px
+	min-height: 530px
+	padding-top: 24px
 	padding-bottom: 100px
 	.title
 		margin-bottom: 22px
@@ -998,36 +993,37 @@ nav[canvas]
 		margin-bottom: 24px
 	.underline
 		margin-bottom: 34px
+	.description
+		margin: 35px 200px
+		text-align: center
 	.owl-carousel
 		.item-video
-			height: 275px
-			width: 970px
+			height: 346px
+			width: 100%
 			margin: 0 auto
 			&-title
 				@include font(#333,16,$raleway-medium, 1.1)
 				margin: 0 0 37px 0
-	.customBtn
-		display: inline-block
-		width: 14px
-		height: 28px
-		position: absolute
-		top: 54%
 	.customNextBtn
 		@include sprite($btn-slider)
-		left: 16%
+		left: 10px
+		top: 40%
+		z-index: 999
 	.customPrevBtn
 		@include sprite($btn-slider)
 		transform: rotate(180deg)
-		right: 16%
+		right: 10px
+		top: 40%
+		z-index: 999
+	.owl-theme
 		.owl-dots.owl-dots
-			margin-top: 60px
-
-		.owl-dots.owl-dots
-			margin-top: 54px
-		.owl-dot.active
-			span
-				background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
-				margin: 5px 10px
+			margin-top: 49px
+		//.owl-dots.owl-dots
+		//	margin-top: 54px
+		//.owl-dot.active
+		//	span
+		//		background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
+		//		margin: 5px 10px
 		.owl-video-play-icon
 			width: 55px
 			height: 55px
@@ -1037,7 +1033,7 @@ nav[canvas]
 	text-align: left
 	background: #feedf0
 	.title
-		margin: 96px 0 23px 0
+		margin: 80px 0 23px 0
 	.underline
 		margin-bottom: 40px
 	#accordion
@@ -1078,7 +1074,7 @@ nav[canvas]
 	&__content
 		background: transparent
 		//margin-left: 40px
-		height: 150px
+		height: 138px
 		border: 1px solid #f64f6e
 		border-radius: 0 0 12px 22px
 	&__description
@@ -1103,11 +1099,13 @@ nav[canvas]
 	&_metods
 		//background: url("../img/how_contact__ico_bg.jpg") no-repeat
 		//background-size: cover
-		padding: 98px 0
+		//padding: 98px 0
+		padding-top: 98px
+		padding-bottom: 160px
 		//margin: 101px 0 91px 0
 		overflow: hidden
 		.underline
-			margin-top: 40px
+			margin-top: 22px
 			margin-bottom: 60px
 	&_ic-location
 		@include sprite($location-ico)
@@ -1217,9 +1215,30 @@ nav[canvas]
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 
+//Общие стили для карусели
 .owl-carousel
+	overflow: hidden
 	.owl-nav.owl-nav
 		display: none
+	.owl-video-play-icon
+		&:hover
+			transform: inherit
+.slider-wrap
+	padding: 0 30px
+	position: relative
+.customBtn
+	display: inline-block
+	position: absolute
+	top: 34%
+	z-index: 9999
+.customNextBtn
+	@include sprite($btn-slider)
+	left: 10px
+.customPrevBtn
+	@include sprite($btn-slider)
+	transform: rotate(180deg)
+	right: 10px
+//--------------
 .intermediate_wrap
 	margin-top: 60px
 	form

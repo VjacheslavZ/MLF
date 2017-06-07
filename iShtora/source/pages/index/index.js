@@ -82,6 +82,12 @@ $(document).ready( function() {
 		// nav: true,
 		autoplay: false,
 		autoplayTimeout: 4000,
+
+		responsive: {
+			1200: {
+				margin: 15
+			}
+		}
 	});
 	// Кастомные кнопки управления слайдером
 	var owl1 = $('#one.owl-carousel');
@@ -114,6 +120,11 @@ $(document).ready( function() {
 		video:true,
 		lazyLoad:true,
 		center:true,
+		responsive: {
+			1200: {
+				margin: 5
+			}
+		}
 	});
 
 	$( "#accordion" ).accordion({

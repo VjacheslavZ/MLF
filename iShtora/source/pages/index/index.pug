@@ -49,7 +49,7 @@ block main
 						.intermediate
 							.intermediate_wrap
 								form#form-file
-									.intermediate_item.col-lg-4.col-md-4.col-sm-4
+									.intermediate_item.col-lg-4.col-md-3.col-sm-4
 										.modal_form_input_wrap
 											.modal_input_error
 												| Заполните поле
@@ -57,7 +57,7 @@ block main
 												.modal_error_chest_img
 											i.fa.fa-check
 											input.modal_form_input(name='name', type='text', placeholder='Имя')
-									.intermediate_item.col-lg-4.col-md-4.col-sm-4
+									.intermediate_item.col-lg-4.col-md-3.col-sm-4
 										.modal_form_input_wrap
 											.modal_input_error
 												| Заполните поле
@@ -68,7 +68,7 @@ block main
 									input(type='hidden', name='form_name', value='')
 									input(type='hidden', name='form_type', value='normal')
 
-									input.col-lg-3(type='submit', value='Вызвать дизайнера')
+									input.col-md-3(type='submit', value='Вызвать дизайнера')
 					//.header_bot_txt
 					//	p Более
 					//		span  400
@@ -162,19 +162,19 @@ block main
 				.row
 					h2.title Наши работы
 					span.underline
-					#one.owl-carousel.owl-theme.slider_ourWorks_slides
-						img(src=require("../../img/slider_slide_1.jpg"))
-						img(src=require("../../img/slider_slide_2.jpg"))
-						img(src=require("../../img/slider_slide_3.jpg"))
-						img(src=require("../../img/slider_slide_4.jpg"))
-						img(src=require("../../img/slider_slide_1.jpg"))
-						img(src=require("../../img/slider_slide_2.jpg"))
-						img(src=require("../../img/slider_slide_3.jpg"))
-						img(src=require("../../img/slider_slide_4.jpg"))
-				.customNextBtn.customBtn
-				.customPrevBtn.customBtn
-
-
+					p.description Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику Вы выбрать всегда успеете!
+					.slider-wrap
+						#one.owl-carousel.owl-theme.slider_ourWorks_slides
+							img(src=require("../../img/slider_slide_1.jpg"))
+							img(src=require("../../img/slider_slide_2.jpg"))
+							img(src=require("../../img/slider_slide_3.jpg"))
+							img(src=require("../../img/slider_slide_4.jpg"))
+							img(src=require("../../img/slider_slide_1.jpg"))
+							img(src=require("../../img/slider_slide_2.jpg"))
+							img(src=require("../../img/slider_slide_3.jpg"))
+							img(src=require("../../img/slider_slide_4.jpg"))
+						.customNextBtn.customBtn
+						.customPrevBtn.customBtn
 		// секция видео
 		section.player-video
 			//video.player_video.viewer(src=("../../video/mov_bbb.mp4"))
@@ -230,47 +230,47 @@ block main
 			.container
 				.row
 					h2.title Хиты продаж
-					.best-seiling__wrap
-						span.underline
+					span.underline
 			.best-seiling__wrap
 				.container
 					.row
 						p.description Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику Вы выбрать всегда успеете!
-						#three.owl-carousel.owl-theme.slider_ourWorks_slides
-							.tovar-groups__item
-								.tovar-groups__photo
-									img(src=require("../../img/slider_slide_1.jpg"))
-									a.tovar-groups__photo_zoom
-										i.fa.fa-search
-							img(src=require("../../img/slider_slide_2.jpg"))
-							.tovar-groups__item
-								.tovar-groups__photo
-									img(src=require("../../img/slider_slide_3.jpg"))
-									a.tovar-groups__photo_zoom
-										i.fa.fa-search
-							img(src=require("../../img/slider_slide_4.jpg"))
-							.tovar-groups__item
-								.tovar-groups__photo
-									img(src=require("../../img/slider_slide_1.jpg"))
-									a.tovar-groups__photo_zoom
-										i.fa.fa-search
-							.tovar-groups__item
-								.tovar-groups__photo
-									img(src=require("../../img/slider_slide_2.jpg"))
-									a.tovar-groups__photo_zoom
-										i.fa.fa-search
-							.tovar-groups__item
-								.tovar-groups__photo
-									img(src=require("../../img/slider_slide_3.jpg"))
-									a.tovar-groups__photo_zoom
-										i.fa.fa-search
-							.tovar-groups__item
-								.tovar-groups__photo
-									img(src=require("../../img/slider_slide_4.jpg"))
-									a.tovar-groups__photo_zoom
-										i.fa.fa-search
-				.customNextBtn.customBtn
-				.customPrevBtn.customBtn
+						.slider-wrap
+							#three.owl-carousel.owl-theme.slider_ourWorks_slides
+								.tovar-groups__item
+									.tovar-groups__photo
+										img(src=require("../../img/slider_slide_1.jpg"))
+										a.tovar-groups__photo_zoom
+											i.fa.fa-search
+								img(src=require("../../img/slider_slide_2.jpg"))
+								.tovar-groups__item
+									.tovar-groups__photo
+										img(src=require("../../img/slider_slide_3.jpg"))
+										a.tovar-groups__photo_zoom
+											i.fa.fa-search
+								img(src=require("../../img/slider_slide_4.jpg"))
+								.tovar-groups__item
+									.tovar-groups__photo
+										img(src=require("../../img/slider_slide_1.jpg"))
+										a.tovar-groups__photo_zoom
+											i.fa.fa-search
+								.tovar-groups__item
+									.tovar-groups__photo
+										img(src=require("../../img/slider_slide_2.jpg"))
+										a.tovar-groups__photo_zoom
+											i.fa.fa-search
+								.tovar-groups__item
+									.tovar-groups__photo
+										img(src=require("../../img/slider_slide_3.jpg"))
+										a.tovar-groups__photo_zoom
+											i.fa.fa-search
+								.tovar-groups__item
+									.tovar-groups__photo
+										img(src=require("../../img/slider_slide_4.jpg"))
+										a.tovar-groups__photo_zoom
+											i.fa.fa-search
+							.customNextBtn.customBtn
+							.customPrevBtn.customBtn
 		// Секция как мы работаем
 		section#how_we_work.how-we-work
 			.container
@@ -324,7 +324,7 @@ block main
 											.modal_error_chest_img
 										i.fa.fa-check
 										input.modal_form_input(name='name', type='text', placeholder='Имя')
-								.intermediate_item.col-lg-3.col-md-4.col-sm-4
+								.intermediate_item.col-lg-3.col-md-3.col-sm-4
 									.modal_form_input_wrap
 										.modal_input_error
 											| Заполните поле
@@ -332,10 +332,10 @@ block main
 											.modal_error_chest_img
 										i.fa.fa-check
 										input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
+								.modal_form_input_wrap
 								input(type='hidden', name='form_name', value='')
 								input(type='hidden', name='form_type', value='normal')
-
-								input.col-lg-3(type='submit', value='Вызвать дизайнера')
+								input.col-md-3(type='submit', value='Вызвать дизайнера')
 
 		//Секция отзывы
 		section#reviews.reviews
@@ -343,43 +343,46 @@ block main
 				.row
 					h2.title Отзывы наших клиентов
 					span.underline
-					#two.owl-carousel.owl-theme
-						.item-video(data-merge="1")
-							h4.item-video-title Александр Николаевич
-							a.owl-video(href="https://www.youtube.com/watch?v=JpxsRwnRwCQ")
-						.item-video(data-merge="1")
-							h4 Александр Николаевич
-							a.owl-video(href="https://www.youtube.com/watch?v=JpxsRwnRwCQ")
-			.customNextBtn.customBtn
-			.customPrevBtn.customBtn
+					p.description Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику Вы выбрать всегда успеете!
+					.slider-wrap
+						#two.owl-carousel.owl-theme
+							.item-video(data-merge="1")
+								//h4.item-video-title Александр Николаевич
+								a.owl-video(href="https://www.youtube.com/watch?v=JpxsRwnRwCQ")
+							.item-video(data-merge="1")
+								//h4 Александр Николаевич
+								a.owl-video(href="https://www.youtube.com/watch?v=JpxsRwnRwCQ")
+						.customNextBtn.customBtn
+						.customPrevBtn.customBtn
 		//Секция Часто задаваемые вопросы
 		section#often_question.often-question
 			.container
 				.row
 					h2.title Часто задаваемые вопросы
 					span.underline
-					#accordion
-						h3.often-question__title Как ухаживать за рулонными шторами? Нужно ли их стирать и чистить?
-						div.often-question__content
-							p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						h3.often-question__title Выгорает ли ткань шторы со временем?
-						div.often-question__content
-							p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						h3.often-question__title Какую вы даете гарантию на установленное изделие?
-						div.often-question__content
-							p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						h3.often-question__title Когда будет установлена моя штора, если замер вы сделали сегодня?
-						div.often-question__content
-							p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						h3.often-question__title Кукую предоплату нужно сделать для запуска шторы в производство?
-						div.often-question__content
-							p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						h3.often-question__title Почему штора из супермаркета стоит дешевле?
-						div.often-question__content
-							p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						h3.often-question__title Я хочу рулонную штору купить у вас, но живу не в Киеве и не Харькове?
-						div.often-question__content
-							p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					.col-lg-12
+						#accordion.accordion
+							h3.often-question__title Как ухаживать за рулонными шторами? Нужно ли их стирать и чистить?
+							div.often-question__content
+								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							h3.often-question__title Выгорает ли ткань шторы со временем?
+							div.often-question__content
+								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							h3.often-question__title Какую вы даете гарантию на установленное изделие?
+							div.often-question__content
+								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							h3.often-question__title Когда будет установлена моя штора, если замер вы сделали сегодня?
+							div.often-question__content
+								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							h3.often-question__title Кукую предоплату нужно сделать для запуска шторы в производство?
+							div.often-question__content
+								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							h3.often-question__title Почему штора из супермаркета стоит дешевле?
+							div.often-question__content
+								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							h3.often-question__title Я хочу рулонную штору купить у вас, но живу не в Киеве и не Харькове?
+							div.often-question__content
+								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		//Секция Как с нами связаться?
 		section#howContact.how-contact
 			.container
