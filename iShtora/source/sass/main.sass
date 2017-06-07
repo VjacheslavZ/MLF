@@ -840,8 +840,6 @@ nav[canvas]
 	&__item
 		background-clip: content-box
 		display: flex
-		.tovar-groups__photo_zoom
-			display: none
 		.tovar-groups__photo
 			position: relative
 			&:hover
@@ -859,6 +857,8 @@ nav[canvas]
 					left: 0
 					background: rgba(0, 0, 0, 0.5)
 					text-decoration: none
+		.tovar-groups__photo_zoom
+			display: none
 		& + .tovar-groups__item
 			margin-top: 100px
 		.tovar-groups__description
@@ -876,6 +876,26 @@ nav[canvas]
 			display: flex
 			justify-content: center
 			align-items: center
+//.zoom-photo
+//	background-clip: content-box
+//	display: flex
+//.zoom-photo
+//	position: relative
+//	&:hover
+//		.zoom-photo__icon
+//			display: flex
+//			justify-content: center
+//			align-items: center
+//			color: #fff
+//			transition: all .3s linear
+//			position: absolute
+//			height: 100%
+//			width: 100%
+//			top: 0
+//			bottom: 0
+//			left: 0
+//			background: rgba(0, 0, 0, 0.5)
+//			text-decoration: none
 // секция Хиты продаж
 .best-seiling
 	background: transparent none

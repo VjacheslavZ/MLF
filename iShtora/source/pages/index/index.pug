@@ -180,8 +180,6 @@ block main
 			//video.player_video.viewer(src=("../../video/mov_bbb.mp4"))
 			.player-video__btn-paly_wrap
 				a.player-video__btn-paly
-
-
 		//---------------------
 		//секция товарные группы
 		section#tovarGroups.tovar-groups
@@ -227,10 +225,6 @@ block main
 							img(src=require("../../img/tovar-groups_4.jpg"))
 							a.tovar-groups__photo_zoom
 								i.fa.fa-search
-
-
-
-
 		//cекция Хиты продаж
 		section#slider_ourWorks2.slider_ourWorks.best-seiling
 			.container
@@ -243,14 +237,38 @@ block main
 					.row
 						p.description Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику Вы выбрать всегда успеете!
 						#three.owl-carousel.owl-theme.slider_ourWorks_slides
-							img(src=require("../../img/slider_slide_1.jpg"))
+							.tovar-groups__item
+								.tovar-groups__photo
+									img(src=require("../../img/slider_slide_1.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
 							img(src=require("../../img/slider_slide_2.jpg"))
-							img(src=require("../../img/slider_slide_3.jpg"))
+							.tovar-groups__item
+								.tovar-groups__photo
+									img(src=require("../../img/slider_slide_3.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
 							img(src=require("../../img/slider_slide_4.jpg"))
-							img(src=require("../../img/slider_slide_1.jpg"))
-							img(src=require("../../img/slider_slide_2.jpg"))
-							img(src=require("../../img/slider_slide_3.jpg"))
-							img(src=require("../../img/slider_slide_4.jpg"))
+							.tovar-groups__item
+								.tovar-groups__photo
+									img(src=require("../../img/slider_slide_1.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
+							.tovar-groups__item
+								.tovar-groups__photo
+									img(src=require("../../img/slider_slide_2.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
+							.tovar-groups__item
+								.tovar-groups__photo
+									img(src=require("../../img/slider_slide_3.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
+							.tovar-groups__item
+								.tovar-groups__photo
+									img(src=require("../../img/slider_slide_4.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
 				.customNextBtn.customBtn
 				.customPrevBtn.customBtn
 		// Секция как мы работаем
