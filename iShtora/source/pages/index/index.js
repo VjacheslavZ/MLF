@@ -73,7 +73,7 @@ $(document).ready( function() {
 	var one = $("#one");
 	var two = $("#two");
 	var three = $("#three");
-
+	//наши работы
 	one.owlCarousel({
 	    loop: true,
 	    items: 4,
@@ -82,17 +82,62 @@ $(document).ready( function() {
 		// nav: true,
 		autoplay: false,
 		autoplayTimeout: 4000,
-
 		responsive: {
 			1200: {
 				margin: 15
 			},
-			991:{
-				items: 3
-			}
 
+			767: {
+				items: 3
+			},
+			600: {
+				items: 2
+			},
+			// 991:  {
+			// 	items: 3
+			// },
 		}
 	});
+	// Хиты продаж
+	three.owlCarousel({
+		loop: true,
+		items: 4,
+		dots: true,
+		margin: 30,
+		autoplay: false,
+		autoplayTimeout: 4000,
+		responsive: {
+			1200: {
+				margin: 15
+			},
+
+			767: {
+				items: 3
+			},
+			600: {
+				items: 2
+			},
+			// 991:{
+			// 	items: 3
+			// }
+		}
+	});
+	//Актиация слайдера блок с видео
+	two.owlCarousel({
+		items:1,
+		merge:true,
+		loop:true,
+		margin:10,
+		video:true,
+		lazyLoad:true,
+		center:true,
+		responsive: {
+			1200: {
+				margin: 5
+			}
+		}
+	});
+
 	// Кастомные кнопки управления слайдером
 	var owl1 = $('#one.owl-carousel');
 	var owl2 = $('#two.owl-carousel');
@@ -115,21 +160,7 @@ $(document).ready( function() {
 		owl3.trigger('prev.owl.carousel', [700]);
 	});
 
-	//Актиация слайдера блок с видео
-	two.owlCarousel({
-		items:1,
-		merge:true,
-		loop:true,
-		margin:10,
-		video:true,
-		lazyLoad:true,
-		center:true,
-		responsive: {
-			1200: {
-				margin: 5
-			}
-		}
-	});
+
 
 	$( "#accordion" ).accordion({
 		collapsible: true
@@ -141,22 +172,6 @@ $(document).ready( function() {
 		var $spy = $(this).scrollspy('refresh')
 	})
 
-	three.owlCarousel({
-		loop: true,
-		items: 4,
-		dots: true,
-		margin: 30,
-		autoplay: false,
-		autoplayTimeout: 4000,
-		responsive: {
-			1200: {
-				margin: 15
-			},
-			991:{
-				items: 3
-			}
-		}
-	});
 
 
 	// /* This is basic - uses default settings */
