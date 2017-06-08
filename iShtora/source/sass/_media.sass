@@ -177,6 +177,12 @@
 			display: none
 		.points-wrap__settings
 			display: none
+	//Видео отзывы наших клиентов
+	.reviews
+		.customNextBtn
+			top: 36%
+		.customPrevBtn
+			top: 36%
 	//Часто задаваемые вопросы
 	.often-question
 		.title
@@ -223,6 +229,9 @@
 		padding-bottom: 0
 	//Хиты продаж
 	.best-seiling
+		&:before
+			height: 56%
+			width: 115%
 		.best-seiling__wrap
 			padding-bottom: 0
 	.forma-callBack
@@ -234,7 +243,6 @@
 			margin-top: 20px
 	//Секция Часто задаваемые вопросы
 	.accordion
-
 		.ui-accordion-header
 			font-size: 12px
 			line-height: 3
@@ -243,7 +251,7 @@
 			margin-bottom: 40px
 	.how-contact_metods
 		text-align: center
-		.how-contact_metods-wrap + .how-contact_metods-wrap
+		.how-contact_metods-wrap
 			margin-top: 20px
 	.how-we-work
 		.how-we-work__icons
@@ -282,6 +290,43 @@
 		margin-top: 40px
 	[off-canvas*=left]
 		width: 255px
+@media only screen and (max-width : 668px)
+	//Скция наши перимущеста
+	.our__advantages-items_left
+		.our__advantages-description
+			width: 100%
+			h4
+				text-align: center
+				margin-left: 0
+			p
+				text-align: center
+		.our__advantages-item
+			div + div
+				display: block
+				text-align: center
+	.our__advantages-items_right
+		max-height: 100%
+		h3
+			margin-top: 30px
+		.our__advantages-description
+			width: 100%
+			margin-left: 0
+			h4
+				text-align: center
+			p
+				text-align: center
+		.our__advantages-item
+			display: flex
+			flex-direction: column-reverse
+			div
+				display: block
+				text-align: center
+
+@media only screen and (max-width : 600px)
+	.accordion
+		.ui-accordion-header
+			font-size: 10px
+			line-height: 4
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 520px)

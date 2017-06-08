@@ -79,23 +79,24 @@ $(document).ready( function() {
 	    items: 4,
 	    dots: true,
 		margin: 30,
-		// nav: true,
 		autoplay: false,
 		autoplayTimeout: 4000,
 		responsive: {
 			1200: {
 				margin: 15
 			},
-
 			767: {
 				items: 3
 			},
-			600: {
+			667: {
 				items: 2
 			},
-			// 991:  {
-			// 	items: 3
-			// },
+			600: {
+				items: 1
+			},
+			0: {
+				items: 1
+			},
 		}
 	});
 	// Хиты продаж
@@ -110,16 +111,18 @@ $(document).ready( function() {
 			1200: {
 				margin: 15
 			},
-
 			767: {
 				items: 3
 			},
-			600: {
+			667: {
 				items: 2
 			},
-			// 991:{
-			// 	items: 3
-			// }
+			600: {
+				items: 1
+			},
+			0: {
+				items: 1
+			},
 		}
 	});
 	//Актиация слайдера блок с видео
