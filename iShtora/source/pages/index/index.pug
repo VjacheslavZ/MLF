@@ -15,11 +15,11 @@ block main
 			.row
 				.header_top.col-lg-12
 					.header_logo
-						a(href="#header_logo" class="logo").
-							Лого
+						a(href="#header_logo" class="logo")
+
 					nav#navbar.header_nav
 						ul.nav.nav-tabs.navbar-nav(role="tablist")
-							li.active
+							li
 								a(href="#slider_ourWorks") Наши работы
 							li
 								a(href="#tovarGroups") Товары
@@ -341,7 +341,7 @@ block main
 										i.fa.fa-check
 										input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
 								.modal_form_input_wrap
-								input(type='hidden', name='form_name', value='')
+								input(type='hidden', name='form_name', value='Заявка на выезд дизайнера')
 								input(type='hidden', name='form_type', value='normal')
 								input.col-md-3(type='submit', value='Вызвать дизайнера')
 
@@ -459,19 +459,17 @@ block main
 		nav.header_nav_mobile
 			ul.menu
 				li
-					a(href='#') 1
+					a(href='#slider_ourWorks') Наши работы
 				li
-					a(href='#') Преимущества
+					a(href='#tovarGroups') Товары
 				li
-					a(href='#') Отзывы
+					a(href='#how_we_work') Как мы работаем
 				li
-					a(href='tel:73842596168') +7 3842 59 61 68
+					a(href='#reviews') Отзывы
 				li
-					a(href='#') Преимущества
+					a(href='#howContact') Контакты
 				li
-					a(href='#') Отзывы
-				li
-					a(href='#') Примеры кухонь
+					a(href='tel:380992080655') +38 099 20 80 655
 	div(off-canvas='id-2 right push')
 	div(off-canvas='id-3 top overlay')
 	div(off-canvas='id-4 bottom shift')

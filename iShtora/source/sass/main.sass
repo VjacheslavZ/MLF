@@ -367,6 +367,7 @@ li
 	display: flex
 	justify-content: space-between
 	align-items: center
+
 // Header
 .header
 	text-align: center
@@ -384,19 +385,28 @@ li
 	display: inline-block
 	padding: 19px 0
 	a
-		@include font($main_font_color, 36,$raleway-regular,1.6)
+		//@include font($main_font_color, 36,$raleway-regular,1.6)
+		background: url(../img/Logo.png) no-repeat
+		width: 111px
+		height: 39px
+		display: block
 		&:hover
 			text-decoration: none
 .header_nav
 	display: inline-block
 	position: relative
-	margin-left: 10px
+	//margin-left: 10px
 	ul
 		li
+			border-bottom: 4px solid transparent
+			transition: 0.5s linear
 			list-style: none
 			display: inline-block
 			padding: 33px 10px
+			transition: .5s linear
 			&:hover
+
+				transition: none
 				border-bottom: 4px solid transparent
 				border-image: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
 				border-image-slice: 1
@@ -424,6 +434,7 @@ li
 //стили для шапки при скролле
 .header_top.haeder_scroll
 	height: auto
+	min-height: 63px
 .haeder_scroll
 	.header_logo
 		padding: 0
@@ -528,7 +539,8 @@ label
 	width: 100%
 	transition: 2s
 	&.active
-		background: $main_color
+		background: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
+
 	&:nth-child(2)
 		-webkit-transition: .5s
 		-o-transition: .5s
@@ -574,9 +586,21 @@ body textarea:required:valid
 	color: #666
 
 // Оформление слайдбара
+.header_nav_mobile
+	text-align: center
+	li
+		padding: 10px 0
+		font-family: $raleway-bold
+		a
+			color: #000
+			&:hover
+				text-decoration: none
+
+
 [off-canvas]
 	transition: transform 0.4s
 	overflow: auto
+	background-color: #fff
 	-webkit-overflow-scrolling: touch
 [off-canvas*=left]
 	width: 250px
@@ -618,6 +642,8 @@ nav[canvas]
 [class*=js-open-], [class*=js-toggle-], [class*=js-close-]
 	cursor: pointer
 [off-canvas]
+	z-index: 4
+	opacity: 1
 	ul
 		&.menu
 			margin: 0
@@ -1146,7 +1172,7 @@ nav[canvas]
 
 	.copyright
 		display: inline-block
-		vertical-align: -webkit-baseline-middle
+		vertical-align: - webkit-baseline-middle
 		.fa-copyright
 			@include fz(16)
 			color: #fff
@@ -1164,13 +1190,18 @@ nav[canvas]
 			&:hover
 				color: #555fb7
 			i
-				vertical-align: -webkit-baseline-middle
+				//vertical-align: -webkit-baseline-middle
+				line-height: 2.3
 		& + .copyright
 			margin-left: 20px
 	.social_networks
 		display: inline-block
 
 // Секция main_content
+//Мобильное меню
+.left.shift
+	background: #fff
+
 // Пример checkbox
 .check, .radio
 	display: inline-block
