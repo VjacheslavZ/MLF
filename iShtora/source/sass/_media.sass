@@ -230,8 +230,8 @@
 	//Хиты продаж
 	.best-seiling
 		&:before
-			height: 56%
-			width: 115%
+			height: 75%
+			width: 130%
 		.best-seiling__wrap
 			padding-bottom: 0
 	.forma-callBack
@@ -327,19 +327,38 @@
 		.ui-accordion-header
 			font-size: 10px
 			line-height: 4
-
+	.forma-callBack
+		&__title
+			font-size: 1.3rem
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 520px)
 	/**/
-		
+	//секция часто задавемы вопросы
+	.accordion
+		.ui-accordion-header
+			font-size: 10px
+			line-height: 3
+			height: 65px
+	.often-question__title
+		.ui-icon
+			margin-top: 16px
+	.often-question
+		.ui-accordion-header-active
+			.ui-icon
+				margin-top: 16px
 	.dm-modal
 		width: 100%
 	.dm-modal
 		input[type=submit]
 			width: 100%
+	.how-contact
+		&:before
+			width: 120%
+	.forma-callBack
+		&__title
+			font-size: 1.1rem
 @media only screen and (max-width : 480px)
 	/**/
-
 	.header_title
 		h1
 			font-size: 26px
@@ -350,11 +369,22 @@
 		.intermediate_title
 			h3
 				font-size: 20px
+	.how-contact_ic-send
+		display: block
+		margin: 0 auto
+	.how-contact_ic-phone
+		display: block
+		margin: 0 auto
+	.accordion
+		.ui-accordion-header
+			line-height: 2
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
-
+	.forma-callBack
+		&__title
+			font-size: 1rem
 
 /*==========  Mobile First Method  ==========*/
 
