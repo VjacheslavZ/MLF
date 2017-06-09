@@ -1,17 +1,13 @@
 <?php
-
 define('__ROOT__', dirname(__FILE__));
 require_once __ROOT__ . '/PHPMailer/class.phpmailer.php';
-
 if ($_POST) {
     $json = array(); // подготовим массив ответа
-
     if(isset($_POST['form_type'])){
         $id_form = $_POST['form_type'];
         $json['form_type'] = $id_form;
     }
 
-   
      if (isset($_POST['form_name']) and $_POST['form_name'] != "") {
         $form_name = $_POST['form_name'];
         $message .= '
@@ -37,9 +33,7 @@ if ($_POST) {
      if(isset($_POST["services"]) and $_POST['services'] != "") {
         $services = $_POST["services"];
         $message .= '<div style="font-size: 18px; margin-bottom: 10px; padding-left: 10px">Select: ' . $services . '</div>';
-    } 
-
-
+    }
     $mailer = new PHPMailer();
     $subject = "Заявка с сайта Название сайта";
     $to = 'slavikov.net@gmail.com';
@@ -56,33 +50,24 @@ if ($_POST) {
     $mailer->Subject = $subject;
     $mailer->MsgHTML($message);
     $mailer->AddAddress($to);
-
     //Upload Files
-
     foreach ($_FILES as $image) {
-
         $ext = '.' . pathinfo($image['name'], PATHINFO_EXTENSION);
-
         while (true) {
             $filename = uniqid(rand(), true) . $ext;
-
-
             if (!file_exists(__ROOT__ . '\uploads\\' . $filename)) {
                 break;
             }
         }
-
         move_uploaded_file($image['tmp_name'], __ROOT__ . '\uploads\\' . $filename);
         $file_to_attach = __ROOT__ . '\uploads\\' . $filename;
         $mailer->AddAttachment($file_to_attach, $filename);
         // $images[] = __ROOT__ . '\uploads\\' . $filename;
     }
-
     if ($mailer->Send()) {
         $json['error'] = 0;
     } else {
         $json['error'] = 1;
     }
-
     echo json_encode($json);
 }
