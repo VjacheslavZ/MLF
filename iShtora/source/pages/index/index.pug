@@ -197,7 +197,7 @@ block main
 					span.underline
 					p.description Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику Вы выбрать всегда успеете!
 					.col-lg-12.tovar-groups__item
-						.tovar-groups__photo
+						a.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/tovar-groups_1.jpg")
 							img(src=require("../../img/tovar-groups_1.jpg"))
 							a.tovar-groups__photo_zoom
 								i.fa.fa-search
@@ -210,12 +210,12 @@ block main
 							h4 Рулонные шторы
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						.tovar-groups__photo
+						a.tovar-groups__photo(data-fancybox data-caption="Рулонные шторы" href="../../img/tovar-groups_2.jpg")
 							img(src=require("../../img/tovar-groups_2.jpg"))
 							a.tovar-groups__photo_zoom
 								i.fa.fa-search
 					.col-lg-12.tovar-groups__item
-						.tovar-groups__photo
+						a.tovar-groups__photo(data-fancybox data-caption="День-ночь" href="../../img/tovar-groups_3.jpg")
 							img(src=require("../../img/tovar-groups_3.jpg"))
 							a.tovar-groups__photo_zoom
 								i.fa.fa-search
@@ -229,7 +229,7 @@ block main
 							h4 Шторы-плиссе
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						.tovar-groups__photo
+						a.tovar-groups__photo(data-fancybox data-caption="Шторы-плиссе" href="../../img/tovar-groups_4.jpg")
 							img(src=require("../../img/tovar-groups_4.jpg"))
 							a.tovar-groups__photo_zoom
 								i.fa.fa-search
@@ -246,35 +246,41 @@ block main
 						.slider-wrap
 							#three.owl-carousel.owl-theme.slider_ourWorks_slides
 								.tovar-groups__item
-									.tovar-groups__photo
+									.tovar-groups__photo(data-fancybox data-caption="" href="../../img/slider_slide_1.jpg")
 										img(src=require("../../img/slider_slide_1.jpg"))
+										span.tovar-groups__photo-name На кухню
 										a.tovar-groups__photo_zoom
 											i.fa.fa-search
 								//img(src=require("../../img/slider_slide_2.jpg"))
 								.tovar-groups__item
-									.tovar-groups__photo
+									.tovar-groups__photo(data-fancybox data-caption="" href="../../img/slider_slide_3.jpg")
 										img(src=require("../../img/slider_slide_3.jpg"))
+										span.tovar-groups__photo-name В спальню
 										a.tovar-groups__photo_zoom
 											i.fa.fa-search
 								//img(src=require("../../img/slider_slide_4.jpg"))
 								.tovar-groups__item
-									.tovar-groups__photo
+									.tovar-groups__photo(data-fancybox data-caption="" href="../../img/slider_slide_1.jpg")
 										img(src=require("../../img/slider_slide_1.jpg"))
+										span.tovar-groups__photo-name В офис
 										a.tovar-groups__photo_zoom
 											i.fa.fa-search
 								.tovar-groups__item
-									.tovar-groups__photo
+									.tovar-groups__photo(data-fancybox data-caption="" href="../../img/slider_slide_2.jpg")
 										img(src=require("../../img/slider_slide_2.jpg"))
+										span.tovar-groups__photo-name В школу
 										a.tovar-groups__photo_zoom
 											i.fa.fa-search
 								.tovar-groups__item
-									.tovar-groups__photo
+									.tovar-groups__photo(data-fancybox data-caption="" href="../../img/slider_slide_3.jpg")
 										img(src=require("../../img/slider_slide_3.jpg"))
+										span.tovar-groups__photo-name В спальню
 										a.tovar-groups__photo_zoom
 											i.fa.fa-search
 								.tovar-groups__item
-									.tovar-groups__photo
+									.tovar-groups__photo(data-fancybox data-caption="" href="../../img/slider_slide_4.jpg")
 										img(src=require("../../img/slider_slide_4.jpg"))
+										span.tovar-groups__photo-name В школ
 										a.tovar-groups__photo_zoom
 											i.fa.fa-search
 							.customNextBtn.customBtn

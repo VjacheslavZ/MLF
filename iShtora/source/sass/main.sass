@@ -7,7 +7,7 @@
 @import "../libs/owl.carousel.min.css"
 @import "../libs/owl.theme.default.min.css"
 @import "../libs/jquery-ui.min.css"
-@import "../libs/jquery.fancybox-1.3.4.css"
+@import "../libs/jquery.fancybox.min.css"
 
 
 html, body
@@ -860,6 +860,7 @@ nav[canvas]
 		.tovar-groups__photo
 			position: relative
 			height: 470px
+			display: block
 			&:hover
 				.tovar-groups__photo_zoom
 					display: flex
@@ -875,6 +876,19 @@ nav[canvas]
 					left: 0
 					background: rgba(0, 0, 0, 0.5)
 					text-decoration: none
+				.tovar-groups__photo-name
+					bottom: 27%
+					z-index: 999
+		.tovar-groups__photo-name
+			position: absolute
+			bottom: 6%
+			left: 0
+			right: 0
+			color: #fff
+			font-family: $raleway-bold
+			font-size: 19px
+			&:hover
+				bottom: 10%
 		.tovar-groups__photo_zoom
 			display: none
 		& + .tovar-groups__item

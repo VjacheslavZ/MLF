@@ -28,6 +28,5 @@ exports.bootstrap = function () {
 	return require("../libs/bootstrap.min")
 };
 exports.fancyBox = function () {
-	return require("../libs/jquery.fancybox-1.3.4.pack.js")
+	return require("../libs/jquery.fancybox.min.js")
 };
-
