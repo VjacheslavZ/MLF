@@ -65,7 +65,7 @@ block main
 												.modal_error_chest_img
 											i.fa.fa-check
 											input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
-									input(type='hidden', name='form_name', value='')
+									input(type='hidden', name='form_name', value='Вызов дизайнера')
 									input(type='hidden', name='form_type', value='normal')
 
 									input.col-md-3(type='submit', value='Вызвать дизайнера')
@@ -197,7 +197,7 @@ block main
 					span.underline
 					p.description Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику Вы выбрать всегда успеете!
 					.col-lg-12.tovar-groups__item
-						a.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/tovar-groups_1.jpg")
+						.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/tovar-groups_1.jpg")
 							img(src=require("../../img/tovar-groups_1.jpg"))
 							a.tovar-groups__photo_zoom
 								i.fa.fa-search
@@ -210,12 +210,12 @@ block main
 							h4 Рулонные шторы
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						a.tovar-groups__photo(data-fancybox data-caption="Рулонные шторы" href="../../img/tovar-groups_2.jpg")
+						.tovar-groups__photo(data-fancybox data-caption="Рулонные шторы" href="../../img/tovar-groups_2.jpg")
 							img(src=require("../../img/tovar-groups_2.jpg"))
 							a.tovar-groups__photo_zoom
 								i.fa.fa-search
 					.col-lg-12.tovar-groups__item
-						a.tovar-groups__photo(data-fancybox data-caption="День-ночь" href="../../img/tovar-groups_3.jpg")
+						.tovar-groups__photo(data-fancybox data-caption="День-ночь" href="../../img/tovar-groups_3.jpg")
 							img(src=require("../../img/tovar-groups_3.jpg"))
 							a.tovar-groups__photo_zoom
 								i.fa.fa-search
@@ -229,7 +229,7 @@ block main
 							h4 Шторы-плиссе
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						a.tovar-groups__photo(data-fancybox data-caption="Шторы-плиссе" href="../../img/tovar-groups_4.jpg")
+						.tovar-groups__photo(data-fancybox data-caption="Шторы-плиссе" href="../../img/tovar-groups_4.jpg")
 							img(src=require("../../img/tovar-groups_4.jpg"))
 							a.tovar-groups__photo_zoom
 								i.fa.fa-search
@@ -320,7 +320,7 @@ block main
 
 
 
-	section.intermediate
+		section.intermediate
 		//Секция купить рулонную штору,
 		section.forma-callBack
 			.container
@@ -479,5 +479,7 @@ block main
 	div(off-canvas='id-2 right push')
 	div(off-canvas='id-3 top overlay')
 	div(off-canvas='id-4 bottom shift')
+
+
 
 

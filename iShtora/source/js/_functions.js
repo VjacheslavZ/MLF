@@ -356,7 +356,6 @@ $(document).ready(function() {
 				complete: function(data) { // событие после любого исхода
 					form.find('input[type="submit"]').prop('disabled', false); // в любом случае включим кнопку обратно
 				}
-
 			});
 		}
 		return false; // вырубаем стандартную отправку формы

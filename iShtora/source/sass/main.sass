@@ -364,6 +364,7 @@ li
 	.modal_error_triangle
 
 .header_top
+	text-align: center
 	display: flex
 	justify-content: space-between
 	align-items: center
@@ -384,6 +385,7 @@ li
 .header_logo
 	display: inline-block
 	padding: 19px 0
+	vertical-align: middle
 	a
 		//@include font($main_font_color, 36,$raleway-regular,1.6)
 		background: url(../img/Logo.png) no-repeat
@@ -423,6 +425,7 @@ li
 				transition: .5s
 				padding: 33px 10px
 .header_phone
+	vertical-align: middle
 	display: inline-block
 	width: 140px
 	font-family: $raleway-regular
@@ -673,6 +676,7 @@ nav[canvas]
 		h3
 			@include fz(18)
 			font-family: $raleway-bold
+			text-align: right
 			text-align: end
 			margin: 0
 			text-transform: uppercase
@@ -693,13 +697,15 @@ nav[canvas]
 			margin-right: 40px
 			vertical-align: top
 			h4
-				text-align: end
+				text-align: right
+				//text-align: end
 				margin: 0 0 0 40px
 				font-family: $raleway-bold
 			p
 				padding: 0
 				margin: 0
-				text-align: end
+				text-align: right
+				//text-align: end
 		.our__advantages-img-wash
 			display: inline-block
 			i
@@ -733,6 +739,7 @@ nav[canvas]
 			@include fz(18)
 			font-family: $raleway-bold
 			text-align: start
+			//text-align-last: left
 			margin: 0
 			letter-spacing: 1px
 			text-transform: uppercase
@@ -762,7 +769,8 @@ nav[canvas]
 			p
 				padding: 0
 				margin: 0
-				text-align: start
+				//text-align: start
+				text-align: left
 				font-family: $raleway-regular
 				font-weight: 100
 		.our__advantages-img-wash
@@ -830,6 +838,7 @@ nav[canvas]
 // секция видео
 .player-video
 	background: url("../img/video_bg.jpg") no-repeat
+
 	background-size: cover
 	min-height: 500px
 	display: flex
@@ -839,6 +848,7 @@ nav[canvas]
 		width: 280px
 		height: 280px
 		cursor: pointer
+		//margin: 0 auto
 	&__btn-paly
 		@include sprite($btn-play)
 		display: block
@@ -1091,6 +1101,7 @@ nav[canvas]
 		//padding-top: 20px
 		font-size: 18px
 		line-height: 2
+		background: $main_color_gradient_start
 		background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
 		height: 51px
 		border-radius: 12px
@@ -1262,7 +1273,9 @@ nav[canvas]
 	text-align: center
 	@include fz(36)
 	font-family: $raleway-extrabold
+
 	background: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
+	background:	-ms-linear-gradient(top, $main_color_gradient_start 99%, transparent 100%) /* IE10+ */
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 
@@ -1320,8 +1333,10 @@ nav[canvas]
 				color: #43637f
 			&:focus
 				outline-color: transparent
+
 	input[type=submit]
-		background: linear-gradient(to left, #ff795e,#f64f6e)
+		background: $main_color_gradient_start
+		background: linear-gradient(to left, $main_color_gradient_start,$main_color_gradient_end)
 		color: #fff
 		height: 50px
 		border-radius: 10px
@@ -1330,6 +1345,7 @@ nav[canvas]
 		margin-left: 20px
 		position: relative
 		transition: background .1s ease-out
+
 		&:focus
 			outline-color: transparent
 		&:hover

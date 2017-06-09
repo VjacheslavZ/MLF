@@ -33,6 +33,7 @@ $(document).ready( function() {
 		return 'Не определен';
 	}
 
+
 	if (get_name_browser() == "Trident" || get_name_browser() == "Internet Explorer" || get_name_browser() == "Firefox") {
 		// $(".from_what_is_seo .from_what_is_seo_bot_decor svg").css("bottom", "-217px");
 		// $(".website_promotion .website_promotion_decor").css("bottom", "-177px");
@@ -140,7 +141,6 @@ $(document).ready( function() {
 			}
 		}
 	});
-
 	// Кастомные кнопки управления слайдером
 	var owl1 = $('#one.owl-carousel');
 	var owl2 = $('#two.owl-carousel');
@@ -163,8 +163,6 @@ $(document).ready( function() {
 		owl3.trigger('prev.owl.carousel', [700]);
 	});
 
-
-
 	$( "#accordion" ).accordion({
 		collapsible: true
 	});
@@ -180,13 +178,35 @@ $(document).ready( function() {
 		loop     : true,
 		selector : '[data-fancybox="images"]',
 		afterClose : $(".tovar-groups__photo").css("display: block")
-
-
-
-
-
 	});
-
+	//плейс холдер для IE9
+	if(get_name_browser() == 'Internet Explorer'){
+		$(function() {
+			if(!$.support.placeholder) {
+				var active = document.activeElement;
+				$('textarea').each(function(index, element) {
+					if($(this).val().length == 0) {
+						$(this).html($(this).attr('id')).addClass('hasPlaceholder');
+					}
+				});
+				$('input, textarea').focus(function () {
+					if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
+						$(this).val('').removeClass('hasPlaceholder');
+					}
+				}).blur(function () {
+					if (($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder')))) {
+						$(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+						//$(this).css('background', 'red');
+					}
+				});
+				$(':text').blur();
+				$(active).focus();
+				$('form').submit(function () {
+					$(this).find('.hasPlaceholder').each(function() { $(this).val(''); });
+				});
+			}
+		});
+	}
 });
 
 //фиксированная шапка
@@ -219,3 +239,4 @@ $(window).scroll(function() {
 
 $(".loader_inner").fadeOut();
 $(".loader").fadeOut("fast");
+
