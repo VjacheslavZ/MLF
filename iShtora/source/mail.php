@@ -35,7 +35,7 @@ if ($_POST) {
         $message .= '<div style="font-size: 18px; margin-bottom: 10px; padding-left: 10px">Select: ' . $services . '</div>';
     }
     $mailer = new PHPMailer();
-    $subject = "Заявка с сайта Название сайта";
+    $subject = "Заявка с сайта Ishtora";
     $to = 'slavikov.net@gmail.com';
  //   $mailer->IsSMTP();
     $mailer->Host = 'smtp.yandex.ru';

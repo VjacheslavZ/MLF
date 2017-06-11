@@ -145,6 +145,7 @@ $(document).ready(function() {
 		/* Предотвращаем обычное поведение ссылки при клике */
 		return false;
 	});
+
 	// Открываем модальное окно
 	$(".modal").click(function(e) {
 		e.preventDefault();
@@ -223,8 +224,8 @@ $(document).ready(function() {
 			$(this).focus(function() {
 				$(this).siblings('.modal_input_error').hide("fade", 500)
 			});
-		});
 
+		});
 		form.find('.modal_form_phone').each(function() { // пробежим по каждому полю в форме
 			var pattern = /^(\+|d+)*\d[\d\(\)\-]{4,14}\d$/;
 			if ($(this).val() == '') { // если пустое
@@ -259,8 +260,8 @@ $(document).ready(function() {
 			$(this).focus(function() {
 				$(this).siblings('.modal_input_error').hide("fade", 500);
 			});
-		});
 
+		});
 		form.find('.modal_form_email').each(function() { // пробежим по каждому полю в форме
 			var pattern = /^(([a-zA-Z0-9]|[!#$%\*\/\?\|^\{\}`~&'\+=-_])+\.)*([a-zA-Z0-9\-]|[!#$%\*\/\?\|^\{\}`~&'\+=-_])+@([a-zA-Z0-9-]+\.)+[a-zA-Z0-9-]+$/;
 			if ($(this).val() == '') { // если пустое
@@ -296,8 +297,8 @@ $(document).ready(function() {
 			$(this).focus(function() {
 				$(this).siblings('.modal_input_error').hide("fade", 500);
 			});
-		});
 
+		});
 		var erorr_finish = 0;
 		for (var i = 0; i < error.length; i++) {
 			if (error[i] == false) {
@@ -311,7 +312,7 @@ $(document).ready(function() {
 			var data = form.serialize(); // подготавливаем данные
 			$.ajax({ // инициализируем ajax запрос
 				type: 'POST', // отправляем в POST формате, можно GET
-				url: ' ', // путь до обработчика, у нас он лежит в той же папке
+				url: 'mail.php', // путь до обработчика, у нас он лежит в той же папке
 				dataType: 'json', // ответ ждем в json формате
 				data: data, // данные для отправки
 				beforeSend: function(data) { // событие до отправки
@@ -356,6 +357,7 @@ $(document).ready(function() {
 				complete: function(data) { // событие после любого исхода
 					form.find('input[type="submit"]').prop('disabled', false); // в любом случае включим кнопку обратно
 				}
+
 			});
 		}
 		return false; // вырубаем стандартную отправку формы
