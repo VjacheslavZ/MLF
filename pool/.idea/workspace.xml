@@ -17,26 +17,16 @@
     <splitter split-orientation="horizontal" split-proportion="0.5499255">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.pug" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.pug" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/source/pages/index/index.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="80">
-                  <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+                <state relative-caret-position="2230">
+                  <caret line="193" column="0" lean-forward="false" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
                   <folding>
                     <element signature="n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
                     <element signature="n#nav#1;n#div#0;n#div#0;n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
-                    <marker date="1497273235384" expanded="true" signature="4479:4531" ph="..." />
+                    <marker date="1497277796693" expanded="true" signature="4521:4573" ph="..." />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="base.pug" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/source/pages/base.pug">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="160">
-                  <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -48,12 +38,14 @@
           <file leaf-file-name="main.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/source/sass/main.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="286">
-                  <caret line="108" column="18" lean-forward="false" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
+                <state relative-caret-position="144">
+                  <caret line="746" column="18" lean-forward="false" selection-start-line="746" selection-start-column="18" selection-end-line="746" selection-end-column="18" />
                   <folding>
                     <element signature="e#342#1122#0" expanded="false" />
+                    <element signature="e#2181#2548#0" expanded="false" />
                     <element signature="e#8835#9128#0" expanded="false" />
-                    <element signature="e#14742#14797#0" expanded="false" />
+                    <element signature="e#13733#14485#0" expanded="false" />
+                    <element signature="e#15425#15480#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -85,7 +77,7 @@
             <entry file="file://$PROJECT_DIR$/source/pages/index/index.sass">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="160">
-                  <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+                  <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -94,8 +86,8 @@
           <file leaf-file-name="_vars.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/source/sass/_vars.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="40">
-                  <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+                <state relative-caret-position="167">
+                  <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -117,9 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$font_7</find>
-      <find>$font_RobotoRegular</find>
-      <find>$font_ROBOTO_BLACK</find>
       <find>$font_ROBOTO_THIN</find>
       <find>header_nav</find>
       <find>.header_bot_txt</find>
@@ -145,8 +134,11 @@
       <find>owl2</find>
       <find>dm-modal</find>
       <find>popup</find>
-      <find>input</find>
       <find>pup</find>
+      <find>input</find>
+      <find>1967a5</find>
+      <find>19a9db</find>
+      <find>aboutUs</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -156,11 +148,11 @@
         <option value="$PROJECT_DIR$/source/libs/owl.carousel.min.css" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/source/libs/libs.js" />
-        <option value="$PROJECT_DIR$/source/pages/index/index.sass" />
         <option value="$PROJECT_DIR$/source/pages/index/index.js" />
-        <option value="$PROJECT_DIR$/source/pages/index/index.pug" />
         <option value="$PROJECT_DIR$/source/pages/modal.pug" />
         <option value="$PROJECT_DIR$/source/sass/_vars.sass" />
+        <option value="$PROJECT_DIR$/source/pages/index/index.sass" />
+        <option value="$PROJECT_DIR$/source/pages/index/index.pug" />
         <option value="$PROJECT_DIR$/source/sass/main.sass" />
       </list>
     </option>
@@ -405,12 +397,12 @@
       <option name="presentableId" value="Default" />
       <updated>1497248664524</updated>
       <workItem from="1497248666650" duration="6687000" />
-      <workItem from="1497256548020" duration="18338000" />
+      <workItem from="1497256548020" duration="20390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25025000" />
+    <option name="totallyTimeSpent" value="27077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -472,7 +464,7 @@
           <folding>
             <element signature="n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
             <element signature="n#nav#1;n#div#0;n#div#0;n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
-            <marker date="1497273235384" expanded="true" signature="4479:4531" ph="..." />
+            <marker date="1497277796693" expanded="true" signature="4521:4573" ph="..." />
           </folding>
         </state>
       </provider>
@@ -491,8 +483,10 @@
           <caret line="675" column="0" lean-forward="false" selection-start-line="675" selection-start-column="0" selection-end-line="675" selection-end-column="0" />
           <folding>
             <element signature="e#342#1122#0" expanded="false" />
+            <element signature="e#2181#2548#0" expanded="false" />
             <element signature="e#8835#9128#0" expanded="false" />
-            <element signature="e#14742#14797#0" expanded="false" />
+            <element signature="e#13733#14485#0" expanded="false" />
+            <element signature="e#15425#15480#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -586,26 +580,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/sass/_vars.sass">
+    <entry file="file://$PROJECT_DIR$/source/pages/base.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/pages/index/index.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/libs/libs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+        <state relative-caret-position="177">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -620,34 +598,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/pages/index/index.pug">
+    <entry file="file://$PROJECT_DIR$/source/libs/libs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
-            <element signature="n#nav#1;n#div#0;n#div#0;n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
-            <marker date="1497273235384" expanded="true" signature="4479:4531" ph="..." />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/pages/base.pug">
+    <entry file="file://$PROJECT_DIR$/source/pages/index/index.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/sass/_vars.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/pages/index/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2230">
+          <caret line="193" column="0" lean-forward="false" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
+            <element signature="n#nav#1;n#div#0;n#div#0;n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
+            <marker date="1497277796693" expanded="true" signature="4521:4573" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/sass/main.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="108" column="18" lean-forward="false" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
+        <state relative-caret-position="144">
+          <caret line="746" column="18" lean-forward="false" selection-start-line="746" selection-start-column="18" selection-end-line="746" selection-end-column="18" />
           <folding>
             <element signature="e#342#1122#0" expanded="false" />
+            <element signature="e#2181#2548#0" expanded="false" />
             <element signature="e#8835#9128#0" expanded="false" />
-            <element signature="e#14742#14797#0" expanded="false" />
+            <element signature="e#13733#14485#0" expanded="false" />
+            <element signature="e#15425#15480#0" expanded="false" />
           </folding>
         </state>
       </provider>

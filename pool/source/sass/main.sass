@@ -638,30 +638,30 @@ nav[canvas]
 			display: block
 			list-style: none
 // Секция our_advantages
-.our_advantages
-	min-height: 630px
-	background-color: #fff
-	h2
-		margin-top: 75px
-		color: #626262
-		text-align: center
-		font-size: 35px
-	.our_advantages_item
-		margin-bottom: 55px
-		min-height: 230px
-		h3
-			font-size: 27px
-			text-align: center
-		p
-			margin-top: 15px
-			@include fz(16)
-			line-height: 1.2
-			text-align: center
-		.our_advantages_item_img
-			text-align: center
-			i
-				@include fz(72)
-				color: #00b6f4
+//.our_advantages
+//	min-height: 630px
+//	background-color: #fff
+//	h2
+//		margin-top: 75px
+//		color: #626262
+//		text-align: center
+//		font-size: 35px
+//	.our_advantages_item
+//		margin-bottom: 55px
+//		min-height: 230px
+//		h3
+//			font-size: 27px
+//			text-align: center
+//		p
+//			margin-top: 15px
+//			@include fz(16)
+//			line-height: 1.2
+//			text-align: center
+//		.our_advantages_item_img
+//			text-align: center
+//			i
+//				@include fz(72)
+//				color: #00b6f4
 // Секция main_content
 .main_content
 	text-align: center
@@ -697,7 +697,7 @@ nav[canvas]
 				display: none
 			&.fa-2
 				display: inline-block
-// Секция 
+// Секция стили для формы
 .intermediate
 	text-align: center
 	min-height: 300px
@@ -737,6 +737,35 @@ nav[canvas]
 				background: #052243
 				color: #fff
 //	Секция о нас
+.aboutUs
+	padding: 55px 0 65px 0
+	background-color: $main_bg_color
+	text-align-last: left
+	&__uzor
+		display: inline-block
+		width: 149px
+		height: 60px
+		border-left: 2px solid #e8f0f6
+		border-top: 2px solid #e8f0f6
+		position: relative
+		&:after
+			content: ""
+			display: inline-block
+			width: 20px
+			height: 20px
+			border: 2px solid #e8f0f6
+			border-radius: 50%
+			position: absolute
+			right: 0
+			top: -11px
+			background-color: #fff
+	&__default-wrap
+		display: inline-block
+	&__title
+		padding-left: 20px
+	&__description
+		@include font($main_color-description, 36, $font_PT_Sans-Bold, 1)
+		margin-left: 5px
 //	Секция видео
 //	Секция техноологии
 //	Секиця Скидки, форма
@@ -761,4 +790,5 @@ nav[canvas]
 	top: 34%
 	z-index: 9999
 	cursor: pointer
-
+.section__default-caption
+	@include font($main_color-title, 120, $font_PT_Sans-Bold, 1)
