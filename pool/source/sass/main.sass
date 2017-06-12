@@ -12,6 +12,12 @@ html, body
 		width: 100%
 		overflow: hidden !important
 body
+	//background: url("../img/Pool_maket.png") no-repeat
+	//background-size: cover
+	//width: 1200px
+	//z-index: 1
+	height: 10000px
+	//opacity: 0.3
 	margin: 0
 	min-width: 320px
 	position: relative
@@ -386,15 +392,27 @@ li
 	position: relative
 	margin-left: 10px
 	ul
+		padding: 13px 0 12px 0
+		border-bottom: 2px solid rgba(255,255,255, 0.2)
 		li
 			list-style: none
 			display: inline-block
+			i
+				color: $main_color-text
 			a
-				margin-right: 15px
-				color: #fff
-				@include fz(16)
+				margin-left: 10px
+				color: $main_color-text
+				@include fz(14)
 				text-decoration: none
 				transition: .5s
+.header_nav-main-menu
+	display: inline-block
+	position: relative
+	margin-left: 10px
+	ul
+		li
+			list-style: none
+			display: inline-block
 .header_modal
 	display: inline-block
 	a
@@ -673,14 +691,16 @@ nav[canvas]
 			input[type=submit]
 				background: #052243
 				color: #fff
-//	Секция 
-//	Секция
-//	Секция
-//	Секция 
-//	Секция 
-//	Секция
-//	Секция
-
+//	Секция о нас
+//	Секция видео
+//	Секция техноологии
+//	Секиця Скидки, форма
+//	Секиция наши работы, слайдер
+//	Секиция цены на басейны
+//	Секиция скидки на монтаж, форма
+//	Секиция Этапы работы
+//	Секиця отзывы, слайдер
+//	Секиця скидки на монтаж терассной доски при заказе через сайт, фрма
 
 // Секия footer 
 .footer

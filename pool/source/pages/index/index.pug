@@ -24,15 +24,40 @@ block main
 						//.header_logo
 						//	a(href="/" class="logo").
 						//		Ваше Логотип
-						nav.header_nav
-							ul
-								-var links = [{title:'прос. Московский 195', href:'#'},{title:'Пн-Пт: 9:00-20:00', href:'#'},{title:'096 222 22 22', href:'#'},{title:'093 111 11 11', href:'tel:0931111111'}];
-								each i in links
-									li
-										a(href=i.href)= i.title
-						.header_modal
+						nav.header_nav.col-lg-12
+							ul.clearfix
+								//-var links = [{title:'прос. Московский 195', href:'#'},{title:'Пн-Пт: 9:00-20:00', href:'#'},{title:'096 222 22 22', href:'#'},{title:'093 111 11 11', href:'tel:0931111111'}];
+								//each i in links
+								//	li
+								//		a(href=i.href)= i.title
+								li.col-lg-2
+									i.fa.fa-map-marker
+									a(href="#") прос. Московский 195
+								li.col-lg-2
+									i.fa.fa-clock-o
+									a(href="#") Пн-Пт: 9:00-20:00
+								li.col-lg-2.col-lg-offset-4
+									i.fa.fa-phone
+									a(href="0962222222") 096 222 22 22
+								li.col-lg-2
+									i.fa.fa-phone
+									a(href="0931111111") 093 111 11 11
+						nav.header_nav-main-menu
+							ul.clearfix
+								li
+									a(href="#aboutUs") О нас
+								li
+									a(href="#technoligy") Технологии
+								li
+									a(href="header_logo").logo
+								li
+									a(href="#pricePools") Наши тарифы
+								li
+									a(href="#StagesOfWork") Этапы работы
+
+						//.header_modal
 							a(data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active") Обратный звонок
-						.header_modal
+						//.header_modal
 							a(data-modal="modal-3" data-info="Обратный звонок" href="#" class="modal active") Мобильное меню
 						.header_title
 							h1
@@ -45,8 +70,30 @@ block main
 								|   довольных клиентов за
 								span  8 лет
 								|  успешной работы!
+			//секиця главнй контент
+			section.main_content
+				//Секция о нас
+				section#aboutUs.aboutUs
+				//Секция видео
+				section#video.video
+				//Секция техноологии
+				section#technoligy.technoligy
+				//Секиця Скидки, форма
+				section#discounts.discounts
+				//Cекиця наши работы, слайдер
+				section#ourWorks.ourWorks
+				//Cекиця цены на басейны
+				section#pricePools.pricePools
+				//Cекиця скидки на монтаж, форма
+				section#discountsInstallation.discountsInstallation
+				//Секиция Этапы работы
+				section#StagesOfWork.StagesOfWork
+				//Секиця отзывы, слайдер
+				section#reviews.reviews
+				//Секиця скидки на монтаж терассной доски при заказе через сайт, фрма
+				section#discountsInstallation-TerraceBoard.discountsInstallation-TerraceBoard
 			// Секция  our_advantages
-			section#our_advantages.our_advantages
+			//section#our_advantages.our_advantages
 				.container
 					.row
 						h2 Наши преимущества
@@ -82,12 +129,12 @@ block main
 								h3 Заголовок
 								p Изготовление мебели только из высококачественных материалов
 			// Тест react
-			section.react
+			//section.react
 				.container
 					.row
 						#app
 			// Секция main_content
-			section.main_content
+			//section.main_content
 				.container
 					.row
 						div Пример checkbox
@@ -113,7 +160,7 @@ block main
 							i.fa.fa-2.fa-check-square-o
 							span второй чек
 			// Секция  ask-form-title
-			section.intermediate
+			//section.intermediate
 				.container
 					.intermediate_title
 						h3 Заполните форму и мы бесплатно перезвоним и ответим на ваши вопросы
