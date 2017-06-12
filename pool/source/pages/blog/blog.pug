@@ -1,0 +1,59 @@
+extends ../base
+block title
+	| Blog page
+block main
+	body.blog
+		div
+			.loader
+				.loader_inner
+					include ../../img/preloader.svg
+		include ../modal
+		nav(canvas="" class="")
+			.mnu_btn
+				label(id="nav-button-label")
+					#nav-lines
+						i.nav-line
+						i.nav-line
+						i.nav-line
+						i.nav-line
+		div(canvas='container')
+			header(class="header")
+				.container
+					.row
+						.header_logo
+							a(href="/" class="logo").
+								Ваш логотип
+						nav.header_nav
+							ul
+								-var links = [{title:'Примеры кухонь', href:'#'},{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'7 3842 59 61 68', href:'tel:73842596168'}];
+								each i in links
+									li
+										a(href=`${i.href}`)= i.title
+						.header_modal
+							a(data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active") Обратный звонок
+						.header_modal
+							a(data-modal="modal-3" data-info="Обратный звонок" href="#" class="modal active") Мобильное меню
+						.header_title
+							h1 Страница Blog
+							p для максимального удобства
+						.header_bot_txt
+							p Более
+								span  400
+								|   довольных клиентов за
+								span  8 лет
+								|  успешной работы!
+		div(off-canvas='id-1 left shift')
+			nav.header_nav_mobile
+				ul.menu
+					-var obj1 = [{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'7 38 425 961 68', href:'tel:73842596168'},{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'Примеры кухонь', href:'#'}];
+					each i in obj1
+						li
+							a(href=`${i.href}`)= i.title
+		div(off-canvas='id-2 right push')
+		div(off-canvas='id-3 top overlay')
+		div(off-canvas='id-4 bottom shift')
+		//[if IE 9]>
+			<script src="libs/html5shiv/es5-shim.min.js"></script>
+			<script src="libs/html5shiv/html5shiv.min.js"></script>
+			<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>`
+			<script src="libs/respond/respond.min.js"></script>

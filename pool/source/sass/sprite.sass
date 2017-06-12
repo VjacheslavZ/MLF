@@ -1,0 +1,154 @@
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$apple-ico-name: 'apple_ico'
+$apple-ico-x: 171px
+$apple-ico-y: 0px
+$apple-ico-offset-x: -171px
+$apple-ico-offset-y: 0px
+$apple-ico-width: 50px
+$apple-ico-height: 50px
+$apple-ico-total-width: 221px
+$apple-ico-total-height: 123px
+$apple-ico-image: '~sprite/sprite.png'
+$apple-ico: (171px, 0px, -171px, 0px, 50px, 50px, 221px, 123px, '~sprite/sprite.png', 'apple_ico', )
+$google-ico-name: 'google_ico'
+$google-ico-x: 171px
+$google-ico-y: 52px
+$google-ico-offset-x: -171px
+$google-ico-offset-y: -52px
+$google-ico-width: 50px
+$google-ico-height: 50px
+$google-ico-total-width: 221px
+$google-ico-total-height: 123px
+$google-ico-image: '~sprite/sprite.png'
+$google-ico: (171px, 52px, -171px, -52px, 50px, 50px, 221px, 123px, '~sprite/sprite.png', 'google_ico', )
+$header-mail-name: 'header_mail'
+$header-mail-x: 171px
+$header-mail-y: 104px
+$header-mail-offset-x: -171px
+$header-mail-offset-y: -104px
+$header-mail-width: 17px
+$header-mail-height: 19px
+$header-mail-total-width: 221px
+$header-mail-total-height: 123px
+$header-mail-image: '~sprite/sprite.png'
+$header-mail: (171px, 104px, -171px, -104px, 17px, 19px, 221px, 123px, '~sprite/sprite.png', 'header_mail', )
+$logo-name: 'logo'
+$logo-x: 0px
+$logo-y: 0px
+$logo-offset-x: 0px
+$logo-offset-y: 0px
+$logo-width: 169px
+$logo-height: 80px
+$logo-total-width: 221px
+$logo-total-height: 123px
+$logo-image: '~sprite/sprite.png'
+$logo: (0px, 0px, 0px, 0px, 169px, 80px, 221px, 123px, '~sprite/sprite.png', 'logo', )
+$modal-close-name: 'modal_close'
+$modal-close-x: 110px
+$modal-close-y: 82px
+$modal-close-offset-x: -110px
+$modal-close-offset-y: -82px
+$modal-close-width: 35px
+$modal-close-height: 36px
+$modal-close-total-width: 221px
+$modal-close-total-height: 123px
+$modal-close-image: '~sprite/sprite.png'
+$modal-close: (110px, 82px, -110px, -82px, 35px, 36px, 221px, 123px, '~sprite/sprite.png', 'modal_close', )
+$modal-select-traingle-name: 'modal_select_traingle'
+$modal-select-traingle-x: 190px
+$modal-select-traingle-y: 104px
+$modal-select-traingle-offset-x: -190px
+$modal-select-traingle-offset-y: -104px
+$modal-select-traingle-width: 8px
+$modal-select-traingle-height: 8px
+$modal-select-traingle-total-width: 221px
+$modal-select-traingle-total-height: 123px
+$modal-select-traingle-image: '~sprite/sprite.png'
+$modal-select-traingle: (190px, 104px, -190px, -104px, 8px, 8px, 221px, 123px, '~sprite/sprite.png', 'modal_select_traingle', )
+$my-discounts-progress-level-item-circle5-name: 'my_discounts_progress_level_item_circle5'
+$my-discounts-progress-level-item-circle5-x: 0px
+$my-discounts-progress-level-item-circle5-y: 82px
+$my-discounts-progress-level-item-circle5-offset-x: 0px
+$my-discounts-progress-level-item-circle5-offset-y: -82px
+$my-discounts-progress-level-item-circle5-width: 66px
+$my-discounts-progress-level-item-circle5-height: 41px
+$my-discounts-progress-level-item-circle5-total-width: 221px
+$my-discounts-progress-level-item-circle5-total-height: 123px
+$my-discounts-progress-level-item-circle5-image: '~sprite/sprite.png'
+$my-discounts-progress-level-item-circle5: (0px, 82px, 0px, -82px, 66px, 41px, 221px, 123px, '~sprite/sprite.png', 'my_discounts_progress_level_item_circle5', )
+$slider-btn-name: 'slider_btn'
+$slider-btn-x: 68px
+$slider-btn-y: 82px
+$slider-btn-offset-x: -68px
+$slider-btn-offset-y: -82px
+$slider-btn-width: 40px
+$slider-btn-height: 41px
+$slider-btn-total-width: 221px
+$slider-btn-total-height: 123px
+$slider-btn-image: '~sprite/sprite.png'
+$slider-btn: (68px, 82px, -68px, -82px, 40px, 41px, 221px, 123px, '~sprite/sprite.png', 'slider_btn', )
+$spritesheet-width: 221px
+$spritesheet-height: 123px
+$spritesheet-image: '~sprite/sprite.png'
+$spritesheet-sprites: ($apple-ico, $google-ico, $header-mail, $logo, $modal-close, $modal-select-traingle, $my-discounts-progress-level-item-circle5, $slider-btn, )
+$spritesheet: (221px, 123px, '~sprite/sprite.png', $spritesheet-sprites, )
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)
