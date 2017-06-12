@@ -108,7 +108,6 @@ $(document).ready( function() {
 		nav: false,
 		margin: 30,
 		autoplay: false,
-		autoplayTimeout: 4000,
 		// responsive: {
 		// 	1200: {
 		// 		margin: 15
@@ -125,7 +124,8 @@ $(document).ready( function() {
 		// 	0: {
 		// 		items: 1
 		// 	},
-		// }
+		// }autoplayTimeout: 4000,
+
 	});
 
 	$('.customNextBtn').click(function() {

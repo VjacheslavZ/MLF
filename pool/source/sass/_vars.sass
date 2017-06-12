@@ -13,6 +13,7 @@
 $main_color: #fff
 $main_color-text: #fff
 $main_bg_color: #fff
+$text-color_label: #000
 
 $btn_color_hover: #1967a5
 
@@ -95,22 +96,24 @@ $auxiliary_txt_color: #443133
 	min-width: 272px
 	height: 49px
 	padding: 0 5px
-	background-color: #FD5233
+	padding: 0 5px
+	color: #000
+	background-color: $main_color-title
 	-moz-border-radius: 5px
 	border: none
 	text-transform: uppercase
 	-webkit-border-radius: 5px
 	border-radius: 5px
-	-moz-box-shadow: 0 1px 0 #FDB10D
-	-webkit-box-shadow: 0 1px 0 #FDB10D
-	box-shadow: 0 1px 0 #FDB10D
+	-moz-box-shadow: 0 1px 0 $main_color-title
+	-webkit-box-shadow: 0 1px 0 $main_color-title
+	box-shadow: 0 1px 0 $main_color-title
 	@include font(#fff, 17px, $font_PT_Sans-Regular, 49px)
 	&:hover
-		background-color: #FD2233
+		//background-color: #FD2233
 	&:active
-		background-color: #FD2233
+		//background-color: #FD2233
 	&:focus
-		background-color: #FD2233
+		//background-color: #FD2233
 		outline: 0	
 
 .center
