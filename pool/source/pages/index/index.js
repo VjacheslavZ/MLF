@@ -7,7 +7,8 @@ require("../../libs/libs").jqueryui();
 require("../../libs/libs").matchMedia();
 require("../../libs/libs").waypoint();
 require("../../libs/libs").Animate_css();
-
+//карусель
+require("../../libs/libs").owl_carousel_min_js();
 
 
 import animate from '../../js/animate';
@@ -75,11 +76,11 @@ $(document).ready( function() {
 	// });
 
 	//  Активация слайдера
-	// $(".owl-carousel").owlCarousel({
-	//     loop: true,
-	//     items: 1,
-	//     dots: true
-	// });
+	$(".owl-carousel").owlCarousel({
+	    loop: true,
+	    items: 1,
+	    dots: true
+	});
 
 	// Кастомные кнопки управления слайдером
 	// var owl = $('.owl-carousel');
@@ -95,7 +96,47 @@ $(document).ready( function() {
 	//     owl.trigger('prev.owl.carousel', [700]);
 	// });
 
+	//инициализаиця header_title слайдер
+	var one = $("#one");
+	var owl1 = $('#one.owl-carousel');
+	owl1.owlCarousel();//карусель хедер
 
+	one.owlCarousel({
+		loop: true,
+		items: 4,
+		dots: false,
+		nav: false,
+		margin: 30,
+		autoplay: false,
+		autoplayTimeout: 4000,
+		// responsive: {
+		// 	1200: {
+		// 		margin: 15
+		// 	},
+		// 	767: {
+		// 		items: 3
+		// 	},
+		// 	667: {
+		// 		items: 2
+		// 	},
+		// 	600: {
+		// 		items: 1
+		// 	},
+		// 	0: {
+		// 		items: 1
+		// 	},
+		// }
+	});
+
+	$('.customNextBtn').click(function() {
+		owl1.trigger('next.owl.carousel', [700]);
+	});
+	// Go to the previous item
+	$('.customPrevBtn').click(function() {
+		// With optional speed parameter
+		// Parameters has to be in square bracket '[]'
+		owl1.trigger('prev.owl.carousel', [700]);
+	});
 });
 
 $(window).resize(function() {

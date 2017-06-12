@@ -25,7 +25,9 @@ exports.waypoint = function () {
 exports.Animate_css = function () {
 	return require("../libs/Animate_css");
 };
-
-
+//карусель
+exports.owl_carousel_min_js = function () {
+	return require("../libs/owl.carousel.min.js")
+};
 
 

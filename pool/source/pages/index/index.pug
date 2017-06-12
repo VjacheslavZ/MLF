@@ -59,21 +59,35 @@ block main
 						//	a(href="/" class="logo").
 						//		Ваше Логотип
 
-						//.header_modal
-							a(data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active") Обратный звонок
+
 						//.header_modal
 							a(data-modal="modal-3" data-info="Обратный звонок" href="#" class="modal active") Мобильное меню
+
 						.header_title
-							h1
-								span ФУНКЦИОНАЛЬНЫЕ
-								|  ЛЕНДИНГИ НА ЗАКАЗ
-							p для максимального удобства
-						.header_bot_txt
-							p Более
-								span  400
-								|   довольных клиентов за
-								span  8 лет
-								|  успешной работы!
+							.slider-wrap
+								#one.owl-carousel.owl-theme
+									.item
+										h1
+											span Строительство и обслуживание бассейнов на
+											|  территории востока и юга Украины
+										p Бесплатная консультация и выезд на объект
+
+									.item
+										h1
+											span Строительство и обслуживание бассейнов на
+											|  территории востока и юга Украины
+										p Бесплатная консультация и выезд на объект
+								.customNextBtn.customBtn
+								.customPrevBtn.customBtn
+
+							.header_modal
+								a(data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active") Заказать обратный звонок
+						//.header_bot_txt
+						//	p Более
+						//		span  400
+						//		|   довольных клиентов за
+						//		span  8 лет
+						//		|  успешной работы!
 			//секиця главнй контент
 			section.main_content
 				//Секция о нас
@@ -133,7 +147,7 @@ block main
 								h3 Заголовок
 								p Изготовление мебели только из высококачественных материалов
 			// Тест react
-			//section.react
+			section.react
 				.container
 					.row
 						#app
@@ -229,7 +243,7 @@ block main
 
 
 			// Секция footer
-			footer.footer
+			//footer.footer
 		div(off-canvas='id-1 left shift')
 			nav.header_nav_mobile
 				ul.menu

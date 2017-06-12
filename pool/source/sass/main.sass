@@ -3,6 +3,9 @@
 @import "animate"
 @import "../libs/slidebars.min.css"
 @import "../libs/font-awesome.min.css"
+//карусель
+@import "../libs/owl.carousel.min.css"
+@import "../libs/owl.theme.default.min.css"
 
 html, body
 	font-size: 16px
@@ -16,7 +19,7 @@ body
 	//background-size: cover
 	//width: 1200px
 	//z-index: 1
-	height: 10000px
+	//height: 10000px
 	//opacity: 0.3
 	margin: 0
 	min-width: 320px
@@ -24,7 +27,7 @@ body
 	line-height: 1.6
 	font-family: $font_PT_Sans-Regular
 	overflow-x: hidden
-	color: $main_txt_color
+	color: $main_color-text
 	-webkit-tap-highlight-color: transparent
 	//внешний вид скроллбара
 	scrollbar-base-color: $main_color   //для IE
@@ -203,7 +206,7 @@ li
 		display: block
 		font-family: $font_PT_Sans-Regular
 		@include fz(14)
-		color: $main_txt_color
+		color: $main_color-text
 		&.active
 			color: $main_color
 	input
@@ -399,7 +402,7 @@ li
 	margin-left: 10px
 	ul
 		padding: 13px 0 12px 0
-		border-bottom: 2px solid rgba(255,255,255, 0.2)
+		border-bottom: 1px solid rgba(255,255,255, 0.2)
 		li
 			list-style: none
 			display: inline-block
@@ -436,38 +439,57 @@ li
 		margin-left: 60px
 
 .header_modal
+	margin-top: 52px
 	display: inline-block
+	border: 1px solid #FFF
+	border-radius: 10px
+	transition: .5s
+	padding: 9px 67px
+	&:hover
+		border: 1px solid #FFF
+		background-color: $btn_color_hover
+		color: #fff
 	a
-		margin-left: 15px
-		padding: 10px 15px
-		@include font(#fff, 17, $font_PT_Sans-Regular)
-		border: 2px solid #FFF
-		border-radius: 10px
+
+		@include font($main_color-text, 20, $font_PT_Sans-Bold)
 		text-decoration: none
-		transition: .5s
-		&:hover
-			border: 2px solid transparent
-			background-color: #ff9600
-			color: #fff
+
+
 .header_title
 	margin: auto
 	position: absolute
 	left: 0
 	right: 0
-	top: calc(50% - 71px)
+	top: calc(36% - 68px)
+	h1
+		margin-bottom: 36px
 	p
-		@include fz(30)
-		color: #fff
-.header_bot_txt
-	margin: auto
-	position: absolute
-	left: 0
-	right: 0
-	bottom: 50px
-	text-align: center
-	p
-		@include fz(25)
-		color: #fff
+		@include fz(18)
+		color: $main_color-text
+.slider-wrap
+	padding: 0 30px
+	.owl-dots
+		display: none
+	.customNextBtn
+		@include sprite($btn_slider_next)
+		right: -4%
+		top: 50%
+		z-index: 999
+	.customPrevBtn
+		@include sprite($btn_slider_prev)
+		left: -4%
+		top: 50%
+		z-index: 999
+//.header_bot_txt
+//	margin: auto
+//	position: absolute
+//	left: 0
+//	right: 0
+//	bottom: 50px
+//	text-align: center
+//	p
+//		@include fz(25)
+//		color: #fff
 
 // Бутерброд
 .no-touch #nav-button-label
@@ -731,5 +753,10 @@ nav[canvas]
 	flex: 0 0 auto
 
 
-
+//Общие слили
+.customBtn
+	display: inline-block
+	position: absolute
+	top: 34%
+	z-index: 9999
 
