@@ -16,44 +16,48 @@ block main
 						i.nav-line
 						i.nav-line
 						i.nav-line
+		.header_nav-wrap
+			.container
+				.row
+					nav.header_nav.col-lg-12
+						ul.clearfix
+							//-var links = [{title:'прос. Московский 195', href:'#'},{title:'Пн-Пт: 9:00-20:00', href:'#'},{title:'096 222 22 22', href:'#'},{title:'093 111 11 11', href:'tel:0931111111'}];
+							//each i in links
+							//	li
+							//		a(href=i.href)= i.title
+							li.col-lg-2
+								i.fa.fa-map-marker
+								a(href="#") прос. Московский 195
+							li.col-lg-2
+								i.fa.fa-clock-o
+								a(href="#") Пн-Пт: 9:00-20:00
+							li.col-lg-2.col-lg-offset-4
+								i.fa.fa-phone
+								a(href="0962222222") 096 222 22 22
+							li.col-lg-2
+								i.fa.fa-phone
+								a(href="0931111111") 093 111 11 11
+
+					nav.header_nav-main-menu.col-lg-12
+						ul.clearfix
+							li
+								a(href="#aboutUs") О нас
+							li.header_nav-main-menu_item
+								a(href="#technoligy") Технологии
+							li
+								a(href="header_logo").logo
+							li
+								a(href="#pricePools") Наши тарифы
+							li.header_nav-main-menu_item
+								a(href="#StagesOfWork") Этапы работы
+
 		div(canvas='container')
 			header(class="header")
 				.container
 					.row
-
 						//.header_logo
 						//	a(href="/" class="logo").
 						//		Ваше Логотип
-						nav.header_nav.col-lg-12
-							ul.clearfix
-								//-var links = [{title:'прос. Московский 195', href:'#'},{title:'Пн-Пт: 9:00-20:00', href:'#'},{title:'096 222 22 22', href:'#'},{title:'093 111 11 11', href:'tel:0931111111'}];
-								//each i in links
-								//	li
-								//		a(href=i.href)= i.title
-								li.col-lg-2
-									i.fa.fa-map-marker
-									a(href="#") прос. Московский 195
-								li.col-lg-2
-									i.fa.fa-clock-o
-									a(href="#") Пн-Пт: 9:00-20:00
-								li.col-lg-2.col-lg-offset-4
-									i.fa.fa-phone
-									a(href="0962222222") 096 222 22 22
-								li.col-lg-2
-									i.fa.fa-phone
-									a(href="0931111111") 093 111 11 11
-						nav.header_nav-main-menu
-							ul.clearfix
-								li
-									a(href="#aboutUs") О нас
-								li
-									a(href="#technoligy") Технологии
-								li
-									a(href="header_logo").logo
-								li
-									a(href="#pricePools") Наши тарифы
-								li
-									a(href="#StagesOfWork") Этапы работы
 
 						//.header_modal
 							a(data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active") Обратный звонок

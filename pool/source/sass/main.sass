@@ -386,7 +386,13 @@ li
 		font-family: $font_PT_Sans-Bold
 		&:hover
 			text-decoration: none
-
+.header_nav-wrap
+	background: rgba(0,0,0, 0.5)
+	position: absolute
+	top: 0
+	z-index: 111
+	left: 0
+	right: 0
 .header_nav
 	display: inline-block
 	position: relative
@@ -408,11 +414,27 @@ li
 .header_nav-main-menu
 	display: inline-block
 	position: relative
-	margin-left: 10px
 	ul
+		padding: 20px 85px 46px 85px
 		li
 			list-style: none
 			display: inline-block
+			//& + li:not([class="logo"])
+			//	margin-left: 60px
+			.logo
+				@include sprite($logo)
+				display: inline-block
+				vertical-align: middle
+				margin-left: 200px
+				margin-right: 114px
+			a
+				color: $main_color-text
+				@include fz(18)
+				text-decoration: none
+				transition: .5s
+	.header_nav-main-menu_item
+		margin-left: 60px
+
 .header_modal
 	display: inline-block
 	a
