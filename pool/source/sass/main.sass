@@ -863,6 +863,28 @@ nav[canvas]
 				background: transparent
 
 //	Секция видео
+.video
+	display: flex
+	justify-content: center
+	align-items: center
+	background: url("../img/section_video-bg.jpg") no-repeat
+	background-size: cover
+	height: 657px
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,0.5)
+	&__play-btn
+		@include sprite($btn-video-play)
+		display: inline-block
+		cursor: pointer
+		z-index: 99999
+
 //	Секция техноологии
 //	Секиця Скидки, форма
 //	Секиция наши работы, слайдер
