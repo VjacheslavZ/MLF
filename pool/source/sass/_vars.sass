@@ -21,8 +21,8 @@ $main_color-title: #1967a5
 $main_color-description: #19a9db
 $btn_color: #1967a5
 
-$btn_color__slider-next: #fba84b
-$btn_color__slider-prev: #e8f0f6
+$btn_color__slider-hover: #fba84b
+$btn_color__slider: #e8f0f6
 
 $btn_color__sliderOur-works-next: #1967a5
 $btn_color__sliderOur-works-prev: #e8f0f6
@@ -33,6 +33,8 @@ $main_bg-socialNetworks: #f64f6e
 $font_PT_Sans-Bold: "PT_Sans-Web-Bold", Arial, sans-serif
 $font_PT_Sans-Italic: "PT_Sans-Web-Italic", Arial, sans-serif
 $font_PT_Sans-Regular: "PT_Sans-Web-Regular", Arial, sans-serif
+
+$lineUzorColor: 2px solid rgba(232, 239, 246, .4)
 
 //---old vars
 $auxiliary_txt_color: #443133
@@ -91,6 +93,15 @@ $auxiliary_txt_color: #443133
 	white-space: nowrap
 	overflow: hidden
 	text-overflow: ellipsis
+@mixin roundUzor()
+	content: ""
+	position: absolute
+	width: 20px
+	height: 20px
+	border: 2px solid rgba(232, 239, 246, .4)
+	border-radius: 50%
+	background-color: transparent
+
 
 .main_btn
 	min-width: 272px

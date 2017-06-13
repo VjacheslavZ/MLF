@@ -886,6 +886,56 @@ nav[canvas]
 		z-index: 99999
 
 //	Секция техноологии
+.technoligy
+	min-height: 926px
+	background-color: #19a9db
+	&__main
+		position: relative
+	&__uzor-before
+		position: absolute
+		border-left: $lineUzorColor
+		height: 196px
+		display: inline-block
+		top: -45px
+		left: 20px
+		&:after
+			bottom: -20px
+			left: -10px
+			@include roundUzor()
+	&__caption
+		margin-top: 88px
+		margin-left: 88px
+		text-align-last: left
+	&__uzor-after
+		position: absolute
+		border-top: $lineUzorColor
+		border-right: $lineUzorColor
+		width: 389px
+		height: 53px
+		right: 4%
+		top: 78%
+		&:before
+			left: -20px
+			top: -10px
+			@include roundUzor()
+
+	&__slider-wrap
+		position: relative
+		padding: 38px 0
+		margin-top: 75px
+		background: #fff url("../img/section__technologi_slider-bg.png") no-repeat bottom right
+
+	&__description-caption
+		margin: 0 0 20px 0
+		text-align: left
+		font-family: $font_PT_Sans-Bold
+		color: $main_color-title
+	.aboutUs__usluga-description
+		line-height: 1.4
+	//кнопки управления слйдером
+	//.customNextBtn
+
+
 //	Секиця Скидки, форма
 //	Секиция наши работы, слайдер
 //	Секиция цены на басейны
@@ -908,6 +958,16 @@ nav[canvas]
 	top: 34%
 	z-index: 9999
 	cursor: pointer
+	width: 40px
+	height: 40px
+	border-radius: 50%
+	background-color: $btn_color__slider
+	transition: .5s
+	&:hover
+		background-color: $btn_color__slider-hover
+	i
+		font-size: 40px
+		margin-right: 5px
 .section__default-caption
 	@include font($main_color-title, 120, $font_PT_Sans-Bold, 1)
 .box-shadow

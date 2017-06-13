@@ -88,6 +88,12 @@ $(document).ready( function() {
 		dots: true,
 		nav: true
 	});
+	$("#three.owl-carousel").owlCarousel({
+		loop: true,
+		items: 1,
+		dots: true,
+		nav: true
+	});
 	// Кастомные кнопки управления слайдером
 	// var owl = $('.owl-carousel');
 	// owl.owlCarousel();
@@ -109,9 +115,12 @@ $(document).ready( function() {
 	var two = $("#two");
 	var owl2 = $('#two.owl-carousel');
 
+	var three = $("#three");
+	var owl3 = $('#three.owl-carousel');
+
 	owl1.owlCarousel();//карусель хедер
 	owl2.owlCarousel();//карусель хедер
-
+	owl3.owlCarousel();//карусель хедер
 	// $(".owl-carousel").owlCarousel({
 	// 	loop: true,
 	// 	items: 1,
@@ -132,11 +141,13 @@ $(document).ready( function() {
 	$('.customNextBtn').click(function() {
 		owl1.trigger('next.owl.carousel', [700]);
 		owl2.trigger('next.owl.carousel', [700]);
+		owl3.trigger('next.owl.carousel', [700]);
 	});
 
 	$('.customPrevBtn').click(function() {
 		owl1.trigger('prev.owl.carousel', [700]);
 		owl2.trigger('prev.owl.carousel', [700]);
+		owl3.trigger('prev.owl.carousel', [700]);
 	});
 });
 
