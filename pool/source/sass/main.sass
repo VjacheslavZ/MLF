@@ -888,7 +888,8 @@ nav[canvas]
 //	Секция техноологии
 .technoligy
 	min-height: 926px
-	background-color: #19a9db
+	background: url("../img/section__technologi-bg.png")no-repeat
+	background-size: cover
 	&__main
 		position: relative
 	&__uzor-before
@@ -924,7 +925,6 @@ nav[canvas]
 		padding: 38px 0
 		margin-top: 75px
 		background: #fff url("../img/section__technologi_slider-bg.png") no-repeat bottom right
-
 	&__description-caption
 		margin: 0 0 20px 0
 		text-align: left
@@ -932,7 +932,18 @@ nav[canvas]
 		color: $main_color-title
 	.aboutUs__usluga-description
 		line-height: 1.4
-	//кнопки управления слйдером
+	.owl-nav
+		display: none
+	.owl-dots
+		bottom: -120px
+	.customNextBtn
+		right: 36%
+		bottom: -20%
+	.customPrevBtn
+		left: 45%
+		bottom: -20%
+
+//кнопки управления слйдером
 	//.customNextBtn
 
 
@@ -955,7 +966,6 @@ nav[canvas]
 .customBtn
 	display: inline-block
 	position: absolute
-	top: 34%
 	z-index: 9999
 	cursor: pointer
 	width: 40px
@@ -967,7 +977,34 @@ nav[canvas]
 		background-color: $btn_color__slider-hover
 	i
 		font-size: 40px
+.customNextBtn
+	i
+		margin-left: 7px
+.customPrevBtnBtn
+	i
 		margin-right: 5px
+.owl-theme
+	.owl-dots
+		position: absolute
+		z-index: 999
+		display: inline-block
+		.owl-dot
+			span
+				width: 20px
+				height: 20px
+				border: 2px solid #e6e6e6
+				background: transparent
+			&:hover
+				span
+					background: #fba84b
+		.owl-dot.active
+			span
+				width: 20px
+				height: 20px
+				border: 2px solid #fba84b
+				background: transparent
+
+
 .section__default-caption
 	@include font($main_color-title, 120, $font_PT_Sans-Bold, 1)
 .box-shadow
