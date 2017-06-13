@@ -815,11 +815,53 @@ nav[canvas]
 			display: inline-block
 			& + img
 				margin-left: 30px
+	//.owl-theme
+	//	.owl-nav [class*=owl-]
+	//		background: transparent
 	.owl-carousel
 		.owl-item
 			img
 				display: inline-block
 				width: inherit
+	.owl-nav
+		position: absolute
+		bottom: 7%
+		.owl-prev
+			@include sprite($slider-prev-ic)
+			color: transparent
+			border-radius: 50%
+			&:hover
+				border-radius: 50%
+				@include sprite($slider-prev-ic)
+				color: transparent
+		.owl-next
+			@include sprite($slider-next-ic)
+			color: transparent
+			margin-left: 130px
+			border-radius: 50%
+			&:hover
+				border-radius: 50%
+				color: transparent
+				@include sprite($slider-next-ic)
+	.owl-dots
+		position: absolute
+		z-index: 999
+		display: inline-block
+		left: 7%
+		bottom: 7%
+		.owl-dot
+			span
+				width: 20px
+				height: 20px
+				border: 2px solid #e6e6e6
+				background: transparent
+		.owl-dot.active
+			span
+				width: 20px
+				height: 20px
+				border: 2px solid #fba84b
+				background: transparent
+
 //	Секция видео
 //	Секция техноологии
 //	Секиця Скидки, форма
