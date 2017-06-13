@@ -75,13 +75,19 @@ $(document).ready( function() {
 	//     return false;
 	// });
 
-	//  Активация слайдера
-	$(".owl-carousel").owlCarousel({
-	    loop: true,
-	    items: 1,
-	    dots: true
+	 //Активация слайдера
+	$("#one.owl-carousel").owlCarousel({
+		loop: true,
+		items: 1,
+		dots: true
 	});
 
+	$("#two.owl-carousel").owlCarousel({
+		loop: true,
+		items: 1,
+		dots: true,
+		nav: true
+	});
 	// Кастомные кнопки управления слайдером
 	// var owl = $('.owl-carousel');
 	// owl.owlCarousel();
@@ -99,43 +105,38 @@ $(document).ready( function() {
 	//инициализаиця header_title слайдер
 	var one = $("#one");
 	var owl1 = $('#one.owl-carousel');
+
+	var two = $("#two");
+	var owl2 = $('#two.owl-carousel');
+
 	owl1.owlCarousel();//карусель хедер
+	owl2.owlCarousel();//карусель хедер
 
-	one.owlCarousel({
-		loop: true,
-		items: 4,
-		dots: false,
-		nav: false,
-		margin: 30,
-		autoplay: false,
-		// responsive: {
-		// 	1200: {
-		// 		margin: 15
-		// 	},
-		// 	767: {
-		// 		items: 3
-		// 	},
-		// 	667: {
-		// 		items: 2
-		// 	},
-		// 	600: {
-		// 		items: 1
-		// 	},
-		// 	0: {
-		// 		items: 1
-		// 	},
-		// }autoplayTimeout: 4000,
+	// $(".owl-carousel").owlCarousel({
+	// 	loop: true,
+	// 	items: 1,
+	// 	dots: true
+	// });
 
-	});
+	// two.owlCarousel({
+	// 	loop:true,
+	// 	margin:10,
+	// 	nav:true,
+	// 	responsive:{
+	// 		0:{
+	// 			items:1
+	// 		},
+	// 	}
+	// });
 
 	$('.customNextBtn').click(function() {
 		owl1.trigger('next.owl.carousel', [700]);
+		owl2.trigger('next.owl.carousel', [700]);
 	});
-	// Go to the previous item
+
 	$('.customPrevBtn').click(function() {
-		// With optional speed parameter
-		// Parameters has to be in square bracket '[]'
 		owl1.trigger('prev.owl.carousel', [700]);
+		owl2.trigger('prev.owl.carousel', [700]);
 	});
 });
 

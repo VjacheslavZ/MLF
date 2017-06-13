@@ -738,16 +738,24 @@ nav[canvas]
 				color: #fff
 //	Секция о нас
 .aboutUs
-	padding: 55px 0 65px 0
+	padding: 33px 0 65px 0
 	background-color: $main_bg_color
 	text-align-last: left
 	&__uzor
+		margin-right: 10px
 		display: inline-block
 		width: 149px
 		height: 60px
-		border-left: 2px solid #e8f0f6
+		//border-left: 2px solid #e8f0f6
 		border-top: 2px solid #e8f0f6
 		position: relative
+		&:before
+			content: ''
+			position: absolute
+			display: inline-block
+			border: 1px solid #e8f0f6
+			left: 0
+			height: 101px
 		&:after
 			content: ""
 			display: inline-block
@@ -766,6 +774,52 @@ nav[canvas]
 	&__description
 		@include font($main_color-description, 36, $font_PT_Sans-Bold, 1)
 		margin-left: 5px
+		line-height: 1.3
+	&__slider-wrap
+		margin-top: 57px
+		position: relative
+	&__usluga-bg
+		display: inline-block
+		width: 50%
+		//position: relative
+		background: url("../img/aboutUs__sldier-bg.jpg") no-repeat top left
+		height: 480px
+		position: relative
+	&__slider
+		position: absolute
+		top: 40px
+		left: 8%
+	&__info
+		width: 226px
+		display: inline-block
+		vertical-align: top
+		//vertical-align: middle
+	&__usluga-name
+		color: $main_color-title
+		font-family: $font_PT_Sans-Bold
+		@include fz(22)
+		&:before
+			content: ""
+			@include sprite($tools)
+			vertical-align: bottom
+			display: inline-block
+			margin-right: 10px
+	&__usluga-description
+		color: #000
+		text-align: left
+		@include fz(18)
+	&__slide-img
+		display: inline-block
+		img
+			margin-left: 75px
+			display: inline-block
+			& + img
+				margin-left: 30px
+	.owl-carousel
+		.owl-item
+			img
+				display: inline-block
+				width: inherit
 //	Секция видео
 //	Секция техноологии
 //	Секиця Скидки, форма
@@ -792,3 +846,5 @@ nav[canvas]
 	cursor: pointer
 .section__default-caption
 	@include font($main_color-title, 120, $font_PT_Sans-Bold, 1)
+.box-shadow
+	box-shadow: 0 0 11px 9px rgba(246,246,246,1)
