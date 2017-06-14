@@ -890,6 +890,7 @@ nav[canvas]
 	min-height: 926px
 	background: url("../img/section__technologi-bg.png")no-repeat
 	background-size: cover
+	//position: relative
 	&__main
 		position: relative
 	&__uzor-before
@@ -899,6 +900,7 @@ nav[canvas]
 		display: inline-block
 		top: -45px
 		left: 20px
+		margin-left: 20px
 		&:after
 			bottom: -20px
 			left: -10px
@@ -911,7 +913,7 @@ nav[canvas]
 		position: absolute
 		border-top: $lineUzorColor
 		border-right: $lineUzorColor
-		width: 389px
+		width: 415px
 		height: 53px
 		right: 4%
 		top: 78%
@@ -920,11 +922,13 @@ nav[canvas]
 			top: -10px
 			@include roundUzor()
 
+	//слайдер
 	&__slider-wrap
 		position: relative
 		padding: 38px 0
 		margin-top: 75px
 		background: #fff url("../img/section__technologi_slider-bg.png") no-repeat bottom right
+			box-shadow: 0 0 13px rgba(246,246,246,1)
 	&__description-caption
 		margin: 0 0 20px 0
 		text-align: left
@@ -942,6 +946,31 @@ nav[canvas]
 	.customPrevBtn
 		left: 45%
 		bottom: -20%
+	//Соединительные линии после слайдера
+	&__connecting-wrap
+		position: relative
+	&__connecting-lines
+		margin-top: 160px
+		//display: inline-block
+		position: absolute
+		height: 351px
+		width: 93%
+		left: 3%
+		border-left: $lineUzorColor
+		border-top: $lineUzorColor
+		&:before
+			left: -11px
+			@include roundUzor()
+	&__connecting-lines_right
+		position: absolute
+		height: 172px
+		right: 4%
+		top: -11px
+		border-right: $lineUzorColor
+		&:after
+			@include roundUzor()
+			left: -9px
+			top: -18px
 
 //кнопки управления слйдером
 	//.customNextBtn
