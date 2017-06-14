@@ -51,6 +51,54 @@ p,ul
 	margin: 0
 li
 	list-style: none
+//Общие слили
+.customBtn
+	text-align: center
+	display: inline-block
+	position: absolute
+	z-index: 9999
+	cursor: pointer
+	width: 40px
+	height: 40px
+	border-radius: 50%
+	background-color: $btn_color__slider
+
+	transition: .5s
+	&:hover
+		background-color: $btn_color__slider-hover
+	i
+		font-size: 40px
+.customNextBtn
+	i
+		margin-left: 14px
+.customPrevBtn
+	i
+		margin-left: 11px
+.owl-theme
+	.owl-dots
+		position: absolute
+		z-index: 999
+		display: inline-block
+		.owl-dot
+			span
+				width: 20px
+				height: 20px
+				border: 2px solid #e6e6e6
+				background: transparent
+			&:hover
+				span
+					background: #fba84b
+		.owl-dot.active
+			span
+				width: 20px
+				height: 20px
+				border: 2px solid #fba84b
+				background: transparent
+
+.section__default-caption
+	@include font($main_color-title, 120, $font_PT_Sans-Bold, 1)
+.box-shadow
+	box-shadow: 0 0 11px 9px rgba(246,246,246,1)
 
 .noselect
 	-webkit-touch-callout: none
@@ -455,7 +503,6 @@ li
 		@include font($main_color-text, 20, $font_PT_Sans-Bold)
 		text-decoration: none
 
-
 .header_title
 	margin: auto
 	position: absolute
@@ -471,27 +518,22 @@ li
 	padding: 0 30px
 	.owl-dots
 		display: none
+	.customBtn
+		background: rgba(255, 255, 255, 0.1)
+		&:hover
+			background-color: $btn_color__slider-hover
 	.customNextBtn
-		@include sprite($btn_slider_next)
 		right: -4%
 		top: 50%
-		z-index: 999
+		i
+			margin-left: 11px
 	.customPrevBtn
-		@include sprite($btn_slider_prev)
 		left: -4%
 		top: 50%
-		z-index: 999
-//.header_bot_txt
-//	margin: auto
-//	position: absolute
-//	left: 0
-//	right: 0
-//	bottom: 50px
-//	text-align: center
-//	p
-//		@include fz(25)
-//		color: #fff
-
+		i
+			margin-left: 0
+	.owl-dots
+		display: none
 // Бутерброд
 .no-touch #nav-button-label
 	&:hover .nav-line
@@ -823,26 +865,17 @@ nav[canvas]
 			img
 				display: inline-block
 				width: inherit
+	.customBtn
+		bottom: 16%
+	.customNextBtn
+		left: 22%
+	.customPrevBtn
+		left: 8%
+
 	.owl-nav
+		display: none
 		position: absolute
 		bottom: 7%
-		.owl-prev
-			@include sprite($slider-prev-ic)
-			color: transparent
-			border-radius: 50%
-			&:hover
-				border-radius: 50%
-				@include sprite($slider-prev-ic)
-				color: transparent
-		.owl-next
-			@include sprite($slider-next-ic)
-			color: transparent
-			margin-left: 130px
-			border-radius: 50%
-			&:hover
-				border-radius: 50%
-				color: transparent
-				@include sprite($slider-next-ic)
 	.owl-dots
 		position: absolute
 		z-index: 999
@@ -943,9 +976,14 @@ nav[canvas]
 	.customNextBtn
 		right: 36%
 		bottom: -20%
+		i
+			margin-left: 6px
 	.customPrevBtn
 		left: 45%
 		bottom: -20%
+		i
+			margin-left: 0
+
 	//Соединительные линии после слайдера
 	&__connecting-wrap
 		position: relative
@@ -972,10 +1010,6 @@ nav[canvas]
 			left: -9px
 			top: -18px
 
-//кнопки управления слйдером
-	//.customNextBtn
-
-
 //	Секиця Скидки, форма
 //	Секиция наши работы, слайдер
 //	Секиция цены на басейны
@@ -991,50 +1025,3 @@ nav[canvas]
 	flex: 0 0 auto
 
 
-//Общие слили
-.customBtn
-	display: inline-block
-	position: absolute
-	z-index: 9999
-	cursor: pointer
-	width: 40px
-	height: 40px
-	border-radius: 50%
-	background-color: $btn_color__slider
-	transition: .5s
-	&:hover
-		background-color: $btn_color__slider-hover
-	i
-		font-size: 40px
-.customNextBtn
-	i
-		margin-left: 7px
-.customPrevBtnBtn
-	i
-		margin-right: 5px
-.owl-theme
-	.owl-dots
-		position: absolute
-		z-index: 999
-		display: inline-block
-		.owl-dot
-			span
-				width: 20px
-				height: 20px
-				border: 2px solid #e6e6e6
-				background: transparent
-			&:hover
-				span
-					background: #fba84b
-		.owl-dot.active
-			span
-				width: 20px
-				height: 20px
-				border: 2px solid #fba84b
-				background: transparent
-
-
-.section__default-caption
-	@include font($main_color-title, 120, $font_PT_Sans-Bold, 1)
-.box-shadow
-	box-shadow: 0 0 11px 9px rgba(246,246,246,1)
