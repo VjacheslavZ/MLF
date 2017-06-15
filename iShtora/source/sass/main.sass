@@ -875,7 +875,6 @@ nav[canvas]
 			height: 470px
 			display: block
 			transition: 5s
-			//background-color: rgba(0, 0, 0, 0)
 			&:after
 				content: ' '
 				background-color: #000
@@ -912,6 +911,7 @@ nav[canvas]
 					bottom: 27%
 					z-index: 999
 		.tovar-groups__photo-name
+			transition: .5s
 			position: absolute
 			bottom: 6%
 			left: 0
@@ -942,30 +942,9 @@ nav[canvas]
 			display: flex
 			justify-content: center
 			align-items: center
-//.zoom-photo
-//	background-clip: content-box
-//	display: flex
-//.zoom-photo
-//	position: relative
-//	&:hover
-//		.zoom-photo__icon
-//			display: flex
-//			justify-content: center
-//			align-items: center
-//			color: #fff
-//			transition: all .3s linear
-//			position: absolute
-//			height: 100%
-//			width: 100%
-//			top: 0
-//			bottom: 0
-//			left: 0
-//			background: rgba(0, 0, 0, 0.5)
-//			text-decoration: none
 // секция Хиты продаж
 .best-seiling
 	background: transparent none
-
 	padding: 0
 	.title
 		margin: 34px 0 24px 0
@@ -988,6 +967,7 @@ nav[canvas]
 		padding-bottom: 87px
 	.tovar-groups__photo
 		height: auto
+
 //секция как мы работаем
 .how-we-work
 	background: #feedf0
@@ -1029,7 +1009,7 @@ nav[canvas]
 			@include fz(16)
 	.points-wrap
 		position: absolute
-		top: 13%
+		top: 23px
 		.point
 			display: inline-block
 			width: 22px
@@ -1120,7 +1100,6 @@ nav[canvas]
 		margin-top: 20px
 		padding-left: 20px
 	.ui-accordion-header
-		//padding-top: 20px
 		font-size: 18px
 		line-height: 2
 		background: $main_color_gradient_start
@@ -1130,10 +1109,11 @@ nav[canvas]
 	.ui-accordion-header-active
 		border-radius: 12px 12px 0 0
 		.ui-icon
-			@include sprite($arrow-open)
+			@include sprite($arrow-close)
 			float: right
 			margin-top: 8px
 			margin-right: 11px
+			transform: rotate(90deg)
 	&__title
 		border: transparent
 		background: transparent
@@ -1149,7 +1129,6 @@ nav[canvas]
 			float: right
 	&__content
 		background: transparent
-		//margin-left: 40px
 		height: 138px
 		border: 1px solid #f64f6e
 		border-radius: 0 0 12px 22px
