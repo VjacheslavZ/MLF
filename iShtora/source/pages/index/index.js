@@ -50,15 +50,15 @@ $(document).ready( function() {
 	//   track: true
 	// });
 
-	// скролл по ссылке с атрибутом href
-	// $(".header_nav a[href*='#']").on("click", function(e) {
-	//     e.preventDefault();
-	//     var anchor = $(this);
-	//     $('html, body').stop().animate({
-	//         scrollTop: $(anchor.attr('href')).offset().top
-	//     }, 500);
-	//     return false;
-	// });
+	//скролл по ссылке с атрибутом href
+	$(".header_nav a[href*='#'], .header_top a[href*='#'").on("click", function(e) {
+	    e.preventDefault();
+	    var anchor = $(this);
+	    $('html, body').stop().animate({
+	        scrollTop: $(anchor.attr('href')).offset().top
+	    }, 500);
+	    return false;
+	});
 
 	// Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
 	// $(".scroll_to").on("clcik", function(e) {

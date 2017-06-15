@@ -400,21 +400,23 @@ li
 	//margin-left: 10px
 	ul
 		li
-			border-bottom: 4px solid transparent
-			transition: 0.5s linear
+			border-bottom: 4px solid rgba(0,0,0, 0)
 			list-style: none
 			display: inline-block
 			padding: 33px 10px
-			transition: .5s linear
+			transition: .5s
 			&:hover
-
-				transition: none
-				border-bottom: 4px solid transparent
-				border-image: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
+				//transition: .5s
+				//transition: none
+				//border-bottom: 4px solid transparent
+				border-bottom: 4px solid rgba(249,94,104, 1)
+				//border-image: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
 				border-image-slice: 1
 			&.active
-				border-bottom: 4px solid transparent
-				border-image: linear-gradient(to right, $main_color_gradient_end 0%, $main_color_gradient_start 100%)
+				transition: .5s
+				border-bottom: 4px solid rgba(249,94,104, 1)
+				//border-bottom: 4px solid transparent
+				//border-image: linear-gradient(to right, $main_color_gradient_end 0%, $main_color_gradient_start 100%)
 				border-image-slice: 1
 				a
 					font-family: $raleway-semibold
@@ -867,25 +869,45 @@ nav[canvas]
 	&__item
 		background-clip: content-box
 		display: flex
+		//transition: 1s
 		.tovar-groups__photo
 			position: relative
 			height: 470px
 			display: block
+			transition: 5s
+			//background-color: rgba(0, 0, 0, 0)
+			&:after
+				content: ' '
+				background-color: #000
+				height: 100%
+				left: 0
+				opacity: 0
+				position: absolute
+				top: 0
+				-webkit-transition: opacity 0.3s
+				-moz-transition: opacity 0.3s
+				-o-transition: opacity 0.3s
+				-ms-transition: opacity 0.3s
+				transition: opacity 0.3s
+				width: 100%
+			&:hover:after
+				opacity: .5
 			&:hover
 				.tovar-groups__photo_zoom
 					display: flex
 					justify-content: center
 					align-items: center
 					color: #fff
-					transition: all .3s linear
 					position: absolute
 					height: 100%
 					width: 100%
 					top: 0
 					bottom: 0
 					left: 0
-					background: rgba(0, 0, 0, 0.5)
 					text-decoration: none
+					.fa
+						position: relative
+						z-index: 99999
 				.tovar-groups__photo-name
 					bottom: 27%
 					z-index: 999
@@ -1300,6 +1322,8 @@ nav[canvas]
 	position: absolute
 	top: 34%
 	z-index: 9999
+	&:hover
+		cursor: pointer
 .customNextBtn
 	@include sprite($btn-slider)
 	left: 10px
