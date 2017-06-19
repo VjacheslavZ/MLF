@@ -95,11 +95,16 @@ li
 				border: 2px solid #fba84b
 				background: transparent
 
+//.opacityItem
+//	opacity: 0.1
+//------------------------------------------
 .section__default-caption
 	@include font($main_color-title, 120, $font_PT_Sans-Bold, 1)
 .box-shadow
 	box-shadow: 0 0 11px 9px rgba(246,246,246,1)
-
+.defaul-title
+	@include font($main_color-title, 120,$font_PT_Sans-Bold, 1)
+	margin-left: 16px
 .noselect
 	-webkit-touch-callout: none
 	-webkit-user-select: none
@@ -1006,7 +1011,8 @@ nav[canvas]
 		margin-top: 160px
 		//display: inline-block
 		position: absolute
-		height: 556px
+		z-index: 999
+		height: 558px
 		width: 93%
 		left: 3%
 		border-left: $lineUzorColor
@@ -1025,7 +1031,6 @@ nav[canvas]
 			@include roundUzor()
 			left: -9px
 			top: -18px
-
 
 //	Секиця Скидки, форма
 .discounts
@@ -1055,6 +1060,43 @@ nav[canvas]
 			font-family: $font_PT_Sans-Regular
 			font-size: 18px
 //	Секиция наши работы, слайдер
+.ourWorks
+	//padding: 115px 0 0 0
+	&__wraper
+		width: 98%
+		position: relative
+		margin: 0 auto
+	.owl-carousel
+		display: flex
+		justify-content: space-between
+	.defaul-title
+		margin-bottom: 36px
+	&__slider_slide
+		width: 370px
+		display: inline-block
+		img
+			min-width: 100%
+	&__slider-description
+		padding: 36px 80px
+		color: #000
+	.owl-dots
+		bottom: -82px
+		left: 0
+		right: 0
+	.customBtn
+		bottom: -78px
+	.customNextBtn
+		right: 42%
+		i
+			margin-left: 8px
+	.customPrevBtn
+		left: 42%
+		i
+			margin-left: 0px
+
+
+
+//display: none
 //	Секиция цены на басейны
 //	Секиция скидки на монтаж, форма
 //	Секиция Этапы работы
@@ -1067,4 +1109,5 @@ nav[canvas]
 	height: 200px
 	flex: 0 0 auto
 
+//Общие стили
 

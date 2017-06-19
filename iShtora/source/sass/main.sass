@@ -836,7 +836,10 @@ nav[canvas]
 			span
 				background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
 				margin: 5px 10px
-
+	.tovar-groups__item
+		.tovar-groups__photo
+			height: auto
+			cursor: pointer
 // секция видео
 .player-video
 	background: url("../img/video_bg.jpg") no-repeat
@@ -869,6 +872,7 @@ nav[canvas]
 	&__item
 		background-clip: content-box
 		display: flex
+		cursor: pointer
 		//transition: 1s
 		.tovar-groups__photo
 			position: relative
@@ -1152,9 +1156,6 @@ nav[canvas]
 		background: #fff
 		transform: rotate(169deg)
 	&_metods
-		//background: url("../img/how_contact__ico_bg.jpg") no-repeat
-		//background-size: cover
-		//padding: 98px 0
 		padding-top: 98px
 		padding-bottom: 160px
 		//margin: 101px 0 91px 0
@@ -1173,10 +1174,10 @@ nav[canvas]
 		//display: inline-block
 	&_adress
 		@include font(#333,20,$raleway-light,1.1)
-		//width: 60%
-		//margin: 0 auto
 		text-align: center
-		//display: inline-block
+		&:hover
+			color: #000
+			text-decoration: none
 	&_wrap
 		display: inline-block
 		margin-left: 20px
@@ -1213,8 +1214,10 @@ nav[canvas]
 			display: inline-block
 			text-align: center
 			color: #555fb7
+			transition: .5s
 			&:hover
-				color: #555fb7
+				color: #fff
+				background-color: #555fb7
 			i
 				//vertical-align: -webkit-baseline-middle
 				line-height: 2.3

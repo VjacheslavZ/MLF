@@ -121,7 +121,7 @@ block main
 					//video.video__film(url="video/mov_bbb.mp4")
 					a.video__play-btn
 					//button.player__button
-				//Секция техноологии
+				//Секция техноологии, слайдер
 				section#technoligy.technoligy
 					.container
 						.row
@@ -191,6 +191,43 @@ block main
 											input(type='submit', value='Записаться')
 				//Cекиця наши работы, слайдер
 				section#ourWorks.ourWorks
+
+							.ourWorks__wraper
+								h3.defaul-title.col-lg-12 Наши работы
+								#ourWorks__slider.owl-carousel.owl-theme.clearfix
+									.item.ourWorks__slider_slide.box-shadow
+										img(src=require("../../img/ourWork__slider-slide1.jpg"))
+										p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+									.item.ourWorks__slider_slide.box-shadow
+										img(src=require("../../img/ourWork__slider-slide2.jpg"))
+										p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+									.item.ourWorks__slider_slide.box-shadow
+										img(src=require("../../img/ourWork__slider-slide3.jpg"))
+										p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
+									.item.ourWorks__slider_slide.box-shadow
+										img(src=require("../../img/ourWork__slider-slide4.jpg"))
+										p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
+									.item.ourWorks__slider_slide.box-shadow
+											img(src=require("../../img/ourWork__slider-slide0.jpg"))
+											p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
+									.item.ourWorks__slider_slide.box-shadow
+										img(src=require("../../img/ourWork__slider-slide1.jpg"))
+										p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
+
+								.customNextBtn.customBtn
+									i.fa.fa-angle-right
+								.customPrevBtn.customBtn
+									i.fa.fa-angle-left
 				//Cекиця цены на басейны
 				section#pricePools.pricePools
 				//Cекиця скидки на монтаж, форма

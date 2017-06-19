@@ -165,22 +165,46 @@ block main
 					p.description Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику Вы выбрать всегда успеете!
 					.slider-wrap
 						#one.owl-carousel.owl-theme.slider_ourWorks_slides
-							div
-								img(src=require("../../img/slider_slide_1.jpg"))
-							div
-								img(src=require("../../img/slider_slide_2.jpg"))
-							div
-								img(src=require("../../img/slider_slide_3.jpg"))
-							div
-								img(src=require("../../img/slider_slide_4.jpg"))
-							div
-								img(src=require("../../img/slider_slide_1.jpg"))
-							div
-								img(src=require("../../img/slider_slide_2.jpg"))
-							div
-								img(src=require("../../img/slider_slide_3.jpg"))
-							div
-								img(src=require("../../img/slider_slide_4.jpg"))
+							.tovar-groups__item
+								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_1.jpg")
+									img(src=require("../../img/slider_slide_1.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
+							.tovar-groups__item
+								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_2.jpg")
+									img(src=require("../../img/slider_slide_2.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
+							.tovar-groups__item
+								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_3.jpg")
+									img(src=require("../../img/slider_slide_3.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
+							.tovar-groups__item
+								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_4.jpg")
+									img(src=require("../../img/slider_slide_4.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
+							.tovar-groups__item
+								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_1.jpg")
+									img(src=require("../../img/slider_slide_1.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
+							.tovar-groups__item
+								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_2.jpg")
+									img(src=require("../../img/slider_slide_2.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
+							.tovar-groups__item
+								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_3.jpg")
+									img(src=require("../../img/slider_slide_3.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
+							.tovar-groups__item
+								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_4.jpg")
+									img(src=require("../../img/slider_slide_4.jpg"))
+									a.tovar-groups__photo_zoom
+										i.fa.fa-search
 						.customNextBtn.customBtn
 						.customPrevBtn.customBtn
 		// секция видео
@@ -405,30 +429,16 @@ block main
 						.col-lg-12
 							h2.title Как с нами связаться?
 							span.underline
-						//.col-lg-4
-						//	.how-contact_ic-location
-						//	h3.how-contact_metod Посетите нас по адресу:
-						//	p.how-contact_adress просп. Московский 173 5-й подьезд, офис 105
 						.col-sm-6.col-md-5.col-md-offset-1.col-lg-5.col-lg-offset-1.how-contact_metods-wrap
 							.how-contact_ic-send
 							.how-contact_wrap
 								h3.how-contact_metod Напишите на почту:
-								p.how-contact_adress iShtoraUA@shtora.ua
+								a(href="iShtoraUA@shtora.ua").how-contact_adress iShtoraUA@shtora.ua
 						.col-sm-6.col-md-5.col-md-offset-1.col-lg-5.col-lg-offset-1.how-contact_metods-wrap
 							.how-contact_ic-phone
 							.how-contact_wrap
 								h3.how-contact_metod Позвоните по телефону:
-								p.how-contact_adress +38 099 20 80 655
-
-
-
-
-
-
-
-
-
-
+								a(href="tel:380992080655").how-contact_adress +38 099 20 80 655
 
 		// Секция бесплатный замер
 		section.forma-callBack
