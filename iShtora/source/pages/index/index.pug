@@ -30,7 +30,7 @@ block main
 							li
 								a(href="#howContact") Контакты
 					.header_phone
-						a(href="0992080655") Позвоните нам +38 099 20 80 655
+						a(href="tel:0992080655") Позвоните нам +38 099 20 80 655
 
 	div(canvas='container')
 		header#header_logo(class="header")
@@ -43,9 +43,8 @@ block main
 				.row
 					.header_title
 						h1
-							span Рулонные
-							| шторы под заказ
-						p Бесплатный выезд дизайнера на объект в Киеве и Харькове
+							span Заказать рулонные шторы в Харькове просто!
+						p Оставьте ваше имя и телефон, мы вам перезвоним!
 						.intermediate
 							.intermediate_wrap
 								form
@@ -68,7 +67,7 @@ block main
 									input(type='hidden', name='form_name', value='Бесплатный выезд дизайнера')
 									input(type='hidden', name='form_type', value='normal')
 
-									input.col-md-3(type='submit', value='Вызвать дизайнера')
+									input.col-md-3(type='submit', value='Заказать')
 					//.header_bot_txt
 					//	p Более
 					//		span  400
@@ -76,86 +75,85 @@ block main
 					//		span  8 лет
 					//		|  успешной работы!
 
+		// Секция  наши преимущества
+		section#our_advantages.our__advantages
+			.container
+				.row
+					h2.title 5 аргументов «ЗА» рулонные шторы!
+					span.underline
+					p Надумали купить штору в Харькове, однако не знаете какую выбрать? Гардины, ламбрекены, тюль, портьеры или тканевые роллеты? Мы покажем плюсы новых технологий, а к классике вернуться вы всегда успеете! Тем более что нет надобности делать выбор. Наши клиенты часто берут и рулонную, и обычную штору, так как отказаться от привычной тюли бывает невозможно. Решение за вами, а наш дизайнер поможет сделать его оптимальным и не переплачивать!
+					.clearfix
+						.our__advantages-items_left.col-sm-12.col-md-6
+							h3 Обычная штора
+							.our__advantages-item
+								.our__advantages-description
+									h4 Стирка
+									p Обязательна. Требует много сил, необходимо снять и повесить, аккуратно выложить валуны и складки
+								.our__advantages-img-wash
+									i
+							.our__advantages-item
+								.our__advantages-description
+									h4 Глажка
+									p После каждой стирки, полотно каждой шторы обязательно необходимо прогладить.
+								.our__advantages-img-iron
+									i
+							.our__advantages-item
+								.our__advantages-description
+									h4 Дети  и коты
+									p Шторы обычно шьют с размером от карниза до пола, что дает возможность маленьким деткам и домашним животным в дальнейшем использовать их для игр. В процессе развлечений штора может быть повреждена и требовать ремонта или полной замены.
+								.our__advantages-img-child
+									i
+							.our__advantages-item
+								.our__advantages-description
+									h4 Сроки производства
+									p От 1й до 3х недель
+								.our__advantages-img-time
+									i
+							.our__advantages-item
+								.our__advantages-description
+									h4 Цена
+									p Достаточно дорого! В зависимости от выбранной ткани и количества слоев цена шторы может варьироваться как вверх, так и в низ.
+								.our__advantages-img-price
+									i
 
-	// Секция  наши преимущества
-	section#our_advantages.our__advantages
-		.container
-			.row
-				h2.title Мы покажем плюсы новых технологий
-				span.underline
-				p Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику выбрать вы всегда успеете!
-				.clearfix
-					.our__advantages-items_left.col-sm-12.col-md-6
-						h3 Обычная штора
-						.our__advantages-item
-							.our__advantages-description
-								h4 Стирка
-								p Обязательна. Требует много сил, необходимо снять и повесить, аккуратно выложить валуны и складки.
-							.our__advantages-img-wash
-								i
-						.our__advantages-item
-							.our__advantages-description
-								h4 Глажка
-								p После каждой стирки, полотно каждой шторы обязательно необходимо прогладить.
-							.our__advantages-img-iron
-								i
-						.our__advantages-item
-							.our__advantages-description
-								h4 Дети  и коты
-								p В процессе развлечений детей или домашних животных штора может быть повреждена и требовать ремонта или полной замены.
-							.our__advantages-img-child
-								i
-						.our__advantages-item
-							.our__advantages-description
-								h4 Сроки производства
-								p От 1й до 3х недель.
-							.our__advantages-img-time
-								i
-						.our__advantages-item
-							.our__advantages-description
-								h4 Цена
-								p Достаточно дорого. В зависимости от выбранной ткани и количества слоев цена шторы может варьироваться как вверх, так и в низ.
-							.our__advantages-img-price
-								i
-
-					.our__advantages-items_right.col-sm-12.col-md-6
-						h3 Рулонная штора
-						.our__advantages-item
-							.our__advantages-img-wash
-								i
-							.our__advantages-description
-								h4 Нет надобности в стирке
-								p Ткань пропитана специальным раствором, который не позволяет шторе пачкаться.
-						.our__advantages-item
-							.our__advantages-img-iron
-								i
-							.our__advantages-description
-								h4 Глажка
-								p После каждой стирки, полотно каждой шторы обязательно необходимо прогладить.
-						.our__advantages-item
-							.our__advantages-img-child
-								i
-							.our__advantages-description
-								h4 Дети  и коты
-								p Тканевые роллеты устанавливаются на оконную конструкцию, очерчивая его размер. Таким образом достать до шторы не может ни ребенок, ни кот.
-						.our__advantages-item
-							.our__advantages-img-time
-								i
-							.our__advantages-description
-								h4 Сроки производства
-								p 3 дня.
-						.our__advantages-item
-							.our__advantages-img-time2
-								i
-							.our__advantages-description
-								h4 Цена
-								p Даже если вы выберете самую дорогую ткань, цена рулонной шторы будет в 2-3 раза меньше обычной шторы.
-
+						.our__advantages-items_right.col-sm-12.col-md-6
+							h3 Рулонная штора
+							.our__advantages-item
+								.our__advantages-img-wash
+									i
+								.our__advantages-description
+									h4 Нет надобности в стирке
+									p Нет надобности. Ткань пропитана специальным раствором, который не позволяет шторе пачкаться.
+							.our__advantages-item
+								.our__advantages-img-iron
+									i
+								.our__advantages-description
+									h4 Глажка
+									p Нет надобности. Ткани в рулонной шторе находятся в натяжении, всегда идеально ровные.
+							.our__advantages-item
+								.our__advantages-img-child
+									i
+								.our__advantages-description
+									h4 Дети  и коты
+									p Тканевые ролеты устанавливаются на оконную конструкцию вплотную или на проем, очерчивая его размер. Таким образом достать до шторы не может ни ребенок, ни кот.
+							.our__advantages-item
+								.our__advantages-img-time
+									i
+								.our__advantages-description
+									h4 Сроки производства
+									p 3 дня
+							.our__advantages-item
+								.our__advantages-img-time2
+									i
+								.our__advantages-description
+									h4 Цена
+									p Даже если вы выберете самую дорогую ткань, цена рулонной шторы будет в 2-3 раза меньше обычной шторы.
 
 
 
 
-	section.main_content
+
+		//section.main_content
 		// секция наши работы слайдер
 		section#slider_ourWorks.slider_ourWorks
 			.container
@@ -166,49 +164,65 @@ block main
 					.slider-wrap
 						#one.owl-carousel.owl-theme.slider_ourWorks_slides
 							.tovar-groups__item
-								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_1.jpg")
-									img(src=require("../../img/slider_slide_1.jpg"))
-									a.tovar-groups__photo_zoom
+								div.tovar-groups__photo
+									img.tovar-groups__photo-active(src=require("../../img/slider_slide_1.jpg"))
+									img.tovar-groups__photo-hover(src=require("../../img/slider_slide_2.jpg"))
+									span.tovar-groups__photo-name
+									//a.tovar-groups__photo_zoom
 										i.fa.fa-search
 							.tovar-groups__item
-								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_2.jpg")
-									img(src=require("../../img/slider_slide_2.jpg"))
-									a.tovar-groups__photo_zoom
+								div.tovar-groups__photo
+									img.tovar-groups__photo-active(src=require("../../img/slider_slide_2.jpg"))
+									img.tovar-groups__photo-hover(src=require("../../img/slider_slide_1.jpg"))
+									span.tovar-groups__photo-name
+									//a.tovar-groups__photo_zoom
 										i.fa.fa-search
 							.tovar-groups__item
-								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_3.jpg")
-									img(src=require("../../img/slider_slide_3.jpg"))
-									a.tovar-groups__photo_zoom
+								div.tovar-groups__photo
+									img.tovar-groups__photo-active(src=require("../../img/slider_slide_3.jpg"))
+									img.tovar-groups__photo-hover(src=require("../../img/slider_slide_2.jpg"))
+									span.tovar-groups__photo-name
+									//a.tovar-groups__photo_zoom
 										i.fa.fa-search
 							.tovar-groups__item
-								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_4.jpg")
-									img(src=require("../../img/slider_slide_4.jpg"))
-									a.tovar-groups__photo_zoom
+								div.tovar-groups__photo
+									img.tovar-groups__photo-active(src=require("../../img/slider_slide_4.jpg"))
+									img.tovar-groups__photo-hover(src=require("../../img/slider_slide_2.jpg"))
+									span.tovar-groups__photo-name
+									//a.tovar-groups__photo_zoom
 										i.fa.fa-search
 							.tovar-groups__item
-								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_1.jpg")
-									img(src=require("../../img/slider_slide_1.jpg"))
-									a.tovar-groups__photo_zoom
+								div.tovar-groups__photo
+									img.tovar-groups__photo-active(src=require("../../img/slider_slide_1.jpg"))
+									img.tovar-groups__photo-hover(src=require("../../img/slider_slide_2.jpg"))
+									span.tovar-groups__photo-name
+									//a.tovar-groups__photo_zoom
 										i.fa.fa-search
 							.tovar-groups__item
-								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_2.jpg")
-									img(src=require("../../img/slider_slide_2.jpg"))
-									a.tovar-groups__photo_zoom
+								div.tovar-groups__photo
+									img.tovar-groups__photo-active(src=require("../../img/slider_slide_2.jpg"))
+									img.tovar-groups__photo-hover(src=require("../../img/slider_slide_3.jpg"))
+									span.tovar-groups__photo-name
+									//a.tovar-groups__photo_zoom
 										i.fa.fa-search
 							.tovar-groups__item
-								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_3.jpg")
-									img(src=require("../../img/slider_slide_3.jpg"))
-									a.tovar-groups__photo_zoom
+								div.tovar-groups__photo
+									img.tovar-groups__photo-active(src=require("../../img/slider_slide_3.jpg"))
+									img.tovar-groups__photo-hover(src=require("../../img/slider_slide_4.jpg"))
+									span.tovar-groups__photo-name
+									//a.tovar-groups__photo_zoom
 										i.fa.fa-search
 							.tovar-groups__item
-								div.tovar-groups__photo(data-fancybox data-caption="Римские шторы" href="../../img/slider_slide_4.jpg")
-									img(src=require("../../img/slider_slide_4.jpg"))
-									a.tovar-groups__photo_zoom
+								div.tovar-groups__photo
+									img.tovar-groups__photo-active(src=require("../../img/slider_slide_4.jpg"))
+									img.tovar-groups__photo-hover(src=require("../../img/slider_slide_1.jpg"))
+									span.tovar-groups__photo-name
+									//a.tovar-groups__photo_zoom
 										i.fa.fa-search
 						.customNextBtn.customBtn
 						.customPrevBtn.customBtn
 		// секция видео
-		section.player-video
+		section#player-video.player-video
 			//video.player_video.viewer(src=("../../video/mov_bbb.mp4"))
 			.player-video__btn-paly_wrap
 				a.player-video__btn-paly
@@ -227,13 +241,19 @@ block main
 								i.fa.fa-search
 						.tovar-groups__description
 							h4 Римские шторы
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							p Одна из самых востребованных и известных покупателю штор – римская штора. В нашем рейтинге они также стоят на первых позициях по ряду причин:
+							ul
+								li 1.	Визуально напоминают обычную штору, добавляют мягкость, теплоту интерьеру, наполняют комнату уютом.
+								li 2.	Легко поднимаются и опускаются.
+								li 3.	Не требуют особого ухода.
+								li 4.	Занимают минимум места.
+								li 5.	Штора устанавливаются как на проем, так и на окно.
+							p Римские шторы в Харькове мы устанавливаем уже много лет. Обращаясь в магазин iShtora, вы выбираете профессионалов, которые любят свою работу и отдаются ей на все 100%. Быстро установим ваши шторы или, если вы проживаете не в Харькове, научим монтировать их самостоятельно.
 					.col-lg-12.tovar-groups__item
 						.tovar-groups__description.tovar-groups__description_left
 							h4 Рулонные шторы
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							p На сегодняшний день рулонные шторы день ночь находятся на пике популярности. И это не удивительно, ведь это один из самых практичных видов тканевых ролет. Благодаря особому механизму и ткани, состоящей из чередующихся прозрачных и непрозрачных полос, он совмещает в себе функциональные особенности горизонтальных жалюзи (поэтому их еще называют жалюзи день ночь) и ролл штор. Такие ролеты позволяют как полностью открыть или закрыть окно, так и тонко отрегулировать световой поток.
+							p В ассортименте компании iShtora представлена широкая цветовая гамма ролет, различные фактуры и рисунки. Такое разнообразие удовлетворит самый изысканный и требовательный вкус.
 						.tovar-groups__photo(data-fancybox data-caption="Рулонные шторы" href="../../img/tovar-groups_2.jpg")
 							img(src=require("../../img/tovar-groups_2.jpg"))
 							a.tovar-groups__photo_zoom
@@ -244,15 +264,29 @@ block main
 							a.tovar-groups__photo_zoom
 								i.fa.fa-search
 						.tovar-groups__description
-							h4 День-ночь
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							h4 Шторы-плиссе
+							p Несколько лет назад на рынке тканевых ролет появились необычные шторы плиссе. В чем же их необычность? Они не имеют вала, на который накручивается обычная ролета, сделаны из гофрированной ткани и устанавливаются в световой проем окна. Это еще одна система, которая вобрала в себя достоинства жалюзи и ролеты. Следовательно, их часто называют жалюзи плиссе.
+							p К достоинствам шторы жалюзи можно отнести:
+							ul
+								li 1.	Компактность. В сложенном виде установленная штора займет лишь 5 см светового проема.
+								li 2.	Легко поднимаются и опускаются, при том двигаются как снизу вверх, так и сверху вниз. Что невозможно в стандартных рулонных шторах.
+								li 3.	Не требуют особого ухода. При сильном загрязнении вы всегда можете ее постирать.
+								li 4.	Штора устанавливаются как на окно, так и на проем.
+								li 5.	Идеально подходит для установки на мансардные окна. Существует возможность ручного управления и автоматического с помощью дистанционного пульта.
+								li 6.	Гофрированные шторы закроют любое нестандартное световое пространство. Арки, трапеции, треугольники и другие сложные пространства, которые часто встречаются в коттеджах/частных домах.
+							p Шторы плиссе купить легко именно у нас. Позвоните, запишитесь на бесплатный замер и после консультации приобретайте понравившуюся вам штору.
 
 					.col-lg-12.tovar-groups__item
 						.tovar-groups__description.tovar-groups__description_left
-							h4 Шторы-плиссе
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							h4 Рулонные шторы
+							p Заказать рулонные шторы в Харькове просто и выгодно в нашем магазине, и вот почему:
+							ul
+								li 1.	Предлагаем весь спектр существующих систем: тканевые ролеты открытого типа, тканевые ролеты закрытого типа (отличаются закрытым валом и алюминиевыми направляющими, в которых двигается ткань), жалюзи день ночь, Roman Stily, 3D Shide, мансардные системы, шторы-плиссе и фальш накладки.
+								li 2.	В ассортименте представлены все виды тканей: однотонные в широкой гамме цветом, с рисунком, прозрачные и black-out, гофрированные и ткань-зебра, многослойные нестандартные ткани. Всего более 700 позиций.
+								li 3.	Рулонные шторы (Харьков) являются необходимым элементом современного интерьера. Чтобы выбор был легким и проходил в непринуждённой обстановке мы предлагаем услуги дизайнера с выездом к вам домой. Для наших клиентов данная услуга бесплатна.
+								li 4.	Тканевые ролеты на окна устанавливают специалисты Айшора с опытом работы 5-10 лет. Мы знаем все нюансы в монтаже данных штор и сможем обучить, если вы планируете устанавливать их самостоятельно.
+
+							p Если вы надумали купить рулонные шторы в Харькове, обращайтесь сразу к нам. Мы работаем напрямую с производителем, гарантируем высокое качество сборки шторы ролеты и установим рулонные жалюзи в течение 3х дней с момента заказа.
 						.tovar-groups__photo(data-fancybox data-caption="Шторы-плиссе" href="../../img/tovar-groups_4.jpg")
 							img(src=require("../../img/tovar-groups_4.jpg"))
 							a.tovar-groups__photo_zoom
@@ -326,14 +360,14 @@ block main
 							span.point
 						.col-md-3.item-usluga
 							.item-usluga__consult
-							p Мы предварительно консультируем вас, наш дизайнер бесплатно выезжает к вам на объект в Киеве или Харькове.
+							p Мы предварительно консультируем вас, дизайнер iShtora бесплатно выезжает к вам на объект в Харькове.
 						.points-wrap.points-wrap__consult
 							span.point
 							span.point
 							span.point
 						.col-md-3.item-usluga
 							.item-usluga__settings
-							p Через 3 дня приезжаем и устанавливаем выбранную штору
+							p Ровно через 3 дня наш специалист по установке роллет приезжает и устанавливает выбранную штору.
 						.points-wrap.points-wrap__settings
 							span.point
 							span.point
@@ -350,7 +384,7 @@ block main
 			.container
 				.row
 					h3.forma-callBack__title Хочу купить рулонную штору,<br> когда Ваш дизайнер приедет к нам домой?
-					p.forma-callBack__description Отправьте заявку и наш менеджер свяжется с Вами в течении 10 минут и договорится о времени приезда дизайнера.
+					p.forma-callBack__description Оправьте заявку, наш менеджер свяжется с вами в течение 30 мин и договориться о времени приезда дизайнера.
 					.intermediate
 						.intermediate_wrap
 							form
@@ -373,7 +407,7 @@ block main
 								.modal_form_input_wrap
 								input(type='hidden', name='form_name', value='Заявка на выезд дизайнера')
 								input(type='hidden', name='form_type', value='normal')
-								input.col-md-3(type='submit', value='Вызвать дизайнера')
+								input.col-md-3(type='submit', value='Купить рулонную штору')
 
 		//Секция отзывы
 		section#reviews.reviews
@@ -402,25 +436,35 @@ block main
 						#accordion.accordion
 							h3.often-question__title Как ухаживать за рулонными шторами? Нужно ли их стирать и чистить?
 							div.often-question__content
-								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								p.often-question__description Все просто. Нет надобности стирать или как-то особо ухаживать за ролл шторами, так как все ткани имеют специальную обработку (пропитку), которая не позволяет им пачкаться, мяться, электризоваться. В следствие чего пыль не притягивается, ее легко смахнуть, а легкое загрязнение уйдет с помощью мыльной пены и обычной губки.
+
 							h3.often-question__title Выгорает ли ткань шторы со временем?
 							div.often-question__content
-								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								p.often-question__description Из практики с гордостью говорим, что ткани в рулонных жалюзи, которые провисели на окнах 8-10 лет, не потеряли своего цвета. Причина та же, специальная обработка тканей.
+
 							h3.often-question__title Какую вы даете гарантию на установленное изделие?
 							div.often-question__content
-								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								p.often-question__description Гарантию на изделия дает завод производитель и равна она 1 году.
+
 							h3.often-question__title Когда будет установлена моя штора, если замер вы сделали сегодня?
 							div.often-question__content
-								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								p.often-question__description Срок производства рольшторы в магазине Айштора  3 дня, он учитывает день замера и день установки. Это очень быстро!
+
 							h3.often-question__title Кукую предоплату нужно сделать для запуска шторы в производство?
 							div.often-question__content
-								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								p.often-question__description Купить тканевые ролеты в магазине Айштора можно с 50% предоплатой. Остаток вы отдадите нашему специалисту по монтажу в момент установки шторы.
+
 							h3.often-question__title Почему штора из супермаркета стоит дешевле?
 							div.often-question__content
-								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							h3.often-question__title Я хочу рулонную штору купить у вас, но живу не в Киеве и не Харькове?
+								p.often-question__description Ценообразование конкурентов мы не обсуждаем.)) Однако все мы с детства знаем, что чем дешевле, тем хуже качество. С полной уверенностью мы можем говорить  только о себе. Мы гарантируем европейское происхождение тканей, специальную их обработку, новейшее оборудование для порезки и сборки штор, и отвечаем за руки наших специалистов по замерам и монтажу.
+
+							h3.often-question__title Я хочу рулонную штору купить у вас, но живу не Харькове?
 							div.often-question__content
-								p.often-question__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								p.often-question__description Есть 3 варианта решения:
+								ul.often-question__description_table
+									li 1.	Вы оплачиваете стоимость бензина/газа от Харькова до места проживания.
+									li 2.	Вы забираете нашего дизайнера-замерщика из Харькова, отвозите на место замера, привозите обратно.
+									li 3.	Мы поможем вам сделать замер самостоятельно и отправим любым перевозчиком до указанного склада или курьером по адресу. Позвоните нам по телефону +38 099 20 80 655 и мы попробуем решить эту задачу вместе.
 		//Секция Как с нами связаться?
 		section#howContact.how-contact
 			.container
@@ -433,7 +477,7 @@ block main
 							.how-contact_ic-send
 							.how-contact_wrap
 								h3.how-contact_metod Напишите на почту:
-								a(href="iShtoraUA@shtora.ua").how-contact_adress iShtoraUA@shtora.ua
+								a(href="mailto:iShtoraUA@shtora.ua").how-contact_adress iShtoraUA@shtora.ua
 						.col-sm-6.col-md-5.col-md-offset-1.col-lg-5.col-lg-offset-1.how-contact_metods-wrap
 							.how-contact_ic-phone
 							.how-contact_wrap
@@ -471,6 +515,7 @@ block main
 								input.col-lg-3(type='submit', value='Бесплатный замер')
 
 	//-----------------------------------
+
 	div(off-canvas='id-1 left shift')
 		nav.header_nav_mobile
 			ul.menu

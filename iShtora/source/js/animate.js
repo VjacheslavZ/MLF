@@ -31,6 +31,16 @@ class Animation {
 		if (this.activeSection('header',0, 500)) {
 			this.tl1.resume();
 		}
+
+		if (this.activeSection('tovar-groups',0, 500)) {
+			//this.tl1.resume();
+			console.log("tovar-groups");
+			$('.popup[data-modal=modal-res]').show("fade", 200);
+		} else{
+			$('.popup[data-modal=modal-res]').hide("fade", 200);
+		}
+
+
 	}
 }
 
@@ -48,5 +58,4 @@ $(window).ready(function() {
 		anim.description();
 		anim.play();
 	}
-
 });

@@ -33,7 +33,6 @@ $(document).ready( function() {
 		return 'Не определен';
 	}
 
-
 	if (get_name_browser() == "Trident" || get_name_browser() == "Internet Explorer" || get_name_browser() == "Firefox") {
 		// $(".from_what_is_seo .from_what_is_seo_bot_decor svg").css("bottom", "-217px");
 		// $(".website_promotion .website_promotion_decor").css("bottom", "-177px");
