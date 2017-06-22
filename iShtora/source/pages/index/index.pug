@@ -16,7 +16,6 @@ block main
 				.header_top.col-lg-12
 					.header_logo
 						a(href="#header_logo" class="logo")
-
 					nav#navbar.header_nav
 						ul.nav.nav-tabs.navbar-nav(role="tablist")
 							li
@@ -48,7 +47,7 @@ block main
 						.intermediate
 							.intermediate_wrap
 								form
-									.intermediate_item.col-lg-4.col-md-4.col-sm-4
+									.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
 										.modal_form_input_wrap
 											.modal_input_error
 												| Заполните поле
@@ -56,7 +55,7 @@ block main
 												.modal_error_chest_img
 											i.fa.fa-check
 											input.modal_form_input(name='name', type='text', placeholder='Имя')
-									.intermediate_item.col-lg-4.col-md-4.col-sm-4
+									.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
 										.modal_form_input_wrap
 											.modal_input_error
 												| Заполните поле
@@ -64,10 +63,11 @@ block main
 												.modal_error_chest_img
 											i.fa.fa-check
 											input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
-									input(type='hidden', name='form_name', value='Бесплатный выезд дизайнера')
-									input(type='hidden', name='form_type', value='normal')
-
-									input.col-md-3(type='submit', value='Заказать')
+									.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
+										.modal_form_input_wrap
+											input(type='hidden', name='form_name', value='Бесплатный выезд дизайнера')
+											input(type='hidden', name='form_type', value='normal')
+											input.col-lg-4(type='submit', value='Заказать')
 					//.header_bot_txt
 					//	p Более
 					//		span  400
@@ -226,7 +226,6 @@ block main
 			//video.player_video.viewer(src=("../../video/mov_bbb.mp4"))
 			.player-video__btn-paly_wrap
 				a.player-video__btn-paly
-		//---------------------
 		//секция товарные группы
 		section#tovarGroups.tovar-groups
 			.container
@@ -388,7 +387,7 @@ block main
 					.intermediate
 						.intermediate_wrap
 							form
-								.intermediate_item.col-lg-3.col-md-4.col-sm-4.col-lg-offset-1
+								.intermediate_item.col-md-4.col-sm-4.col-lg-4
 									.modal_form_input_wrap
 										.modal_input_error
 											| Заполните поле
@@ -396,7 +395,7 @@ block main
 											.modal_error_chest_img
 										i.fa.fa-check
 										input.modal_form_input(name='name', type='text', placeholder='Имя')
-								.intermediate_item.col-lg-3.col-md-4.col-sm-4
+								.intermediate_item.col-md-4.col-sm-4.col-lg-4
 									.modal_form_input_wrap
 										.modal_input_error
 											| Заполните поле
@@ -404,10 +403,11 @@ block main
 											.modal_error_chest_img
 										i.fa.fa-check
 										input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
-								.modal_form_input_wrap
-								input(type='hidden', name='form_name', value='Заявка на выезд дизайнера')
-								input(type='hidden', name='form_type', value='normal')
-								input.col-md-3(type='submit', value='Купить рулонную штору')
+								.intermediate_item.col-md-4.col-sm-4.col-lg-4
+									.modal_form_input_wrap
+										input(type='hidden', name='form_name', value='Заявка на выезд дизайнера')
+										input(type='hidden', name='form_type', value='normal')
+										input(type='submit', value='Купить рулонную штору')
 
 		//Секция отзывы
 		section#reviews.reviews

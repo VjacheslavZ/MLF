@@ -39,8 +39,6 @@ class Animation {
 		} else{
 			$('.popup[data-modal=modal-res]').hide("fade", 200);
 		}
-
-
 	}
 }
 
