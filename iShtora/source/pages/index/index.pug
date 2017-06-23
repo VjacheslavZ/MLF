@@ -153,7 +153,7 @@ block main
 
 
 
-		//section.main_content
+
 		// секция наши работы слайдер
 		section#slider_ourWorks.slider_ourWorks
 			.container
@@ -223,9 +223,13 @@ block main
 						.customPrevBtn.customBtn
 		// секция видео
 		section#player-video.player-video
-			//video.player_video.viewer(src=("../../video/mov_bbb.mp4"))
-			.player-video__btn-paly_wrap
-				a.player-video__btn-paly
+				//.player-video__btn-paly_wrap
+				<iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/-aoKriMsjEs" frameborder="0" allowfullscreen></iframe>
+
+				a.player-video__btn-paly.start-video
+
+
+
 		//секция товарные группы
 		section#tovarGroups.tovar-groups
 			.container
@@ -238,7 +242,7 @@ block main
 							img(src=require("../../img/tovar-groups_1.jpg"))
 							a.tovar-groups__photo_zoom
 								i.fa.fa-search
-						.tovar-groups__description
+						.tovar-groups__description.float-left
 							h4 Римские шторы
 							p Одна из самых востребованных и известных покупателю штор – римская штора. В нашем рейтинге они также стоят на первых позициях по ряду причин:
 							ul
@@ -350,34 +354,39 @@ block main
 					span.underline
 					p.how-we-work__title Собрались покупать шторы, но не знаете какую выбрать? Мы покажем плюсы новых технологий, а классику выбрать вы всегда успеете!
 					.how-we-work__icons.clearfix
-						.col-md-3.item-usluga
+						.col-md-2.item-usluga.col-md-offset-1
 							.item-usluga__send
 							p Вы звоните или оставляете заявку на сайте.
 						.points-wrap.points-wrap__send
 							span.point
 							span.point
 							span.point
-						.col-md-3.item-usluga
+						.col-md-2.item-usluga
 							.item-usluga__consult
 							p Мы предварительно консультируем вас, дизайнер iShtora бесплатно выезжает к вам на объект в Харькове.
 						.points-wrap.points-wrap__consult
 							span.point
 							span.point
 							span.point
-						.col-md-3.item-usluga
+						.col-md-2.item-usluga
 							.item-usluga__settings
 							p Ровно через 3 дня наш специалист по установке роллет приезжает и устанавливает выбранную штору.
 						.points-wrap.points-wrap__settings
 							span.point
 							span.point
 							span.point
-						.col-md-3.item-usluga
+						.col-md-2.item-usluga
 							.item-usluga__gift
 							p Вы наслаждаетесь обновленным интерьером и восторженными отзывами соседей и друзей.
+						.points-wrap.points-wrap__gift
+							span.point
+							span.point
+							span.point
+						.col-md-2.item-usluga
+							.item-usluga__like
+							p Мы гордимся вашим отзывом на одной из страниц магазина iShtora в социальных сетях.
 
-
-
-		section.intermediate
+		//section.intermediate
 		//Секция купить рулонную штору,
 		section.forma-callBack
 			.container
@@ -387,7 +396,7 @@ block main
 					.intermediate
 						.intermediate_wrap
 							form
-								.intermediate_item.col-md-4.col-sm-4.col-lg-4
+								.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
 									.modal_form_input_wrap
 										.modal_input_error
 											| Заполните поле
@@ -395,7 +404,7 @@ block main
 											.modal_error_chest_img
 										i.fa.fa-check
 										input.modal_form_input(name='name', type='text', placeholder='Имя')
-								.intermediate_item.col-md-4.col-sm-4.col-lg-4
+								.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
 									.modal_form_input_wrap
 										.modal_input_error
 											| Заполните поле
@@ -403,7 +412,7 @@ block main
 											.modal_error_chest_img
 										i.fa.fa-check
 										input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
-								.intermediate_item.col-md-4.col-sm-4.col-lg-4
+								.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
 									.modal_form_input_wrap
 										input(type='hidden', name='form_name', value='Заявка на выезд дизайнера')
 										input(type='hidden', name='form_type', value='normal')
@@ -420,10 +429,10 @@ block main
 						#two.owl-carousel.owl-theme
 							.item-video(data-merge="1")
 								//h4.item-video-title Александр Николаевич
-								a.owl-video(href="https://www.youtube.com/watch?v=JpxsRwnRwCQ")
+								a.owl-video(href="https://www.youtube.com/watch?v=93K_Y3WpsLA&feature=youtu.be")
 							.item-video(data-merge="1")
 								//h4 Александр Николаевич
-								a.owl-video(href="https://www.youtube.com/watch?v=JpxsRwnRwCQ")
+								a.owl-video(href="https://www.youtube.com/watch?v=93K_Y3WpsLA&feature=youtu.be")
 						.customNextBtn.customBtn
 						.customPrevBtn.customBtn
 		//Секция Часто задаваемые вопросы
@@ -493,7 +502,7 @@ block main
 					.intermediate
 						.intermediate_wrap
 							form
-								.intermediate_item.col-lg-3.col-md-4.col-sm-4.col-lg-offset-1
+								.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
 									.modal_form_input_wrap
 										.modal_input_error
 											| Заполните поле
@@ -501,7 +510,7 @@ block main
 											.modal_error_chest_img
 										i.fa.fa-check
 										input.modal_form_input(name='name', type='text', placeholder='Имя')
-								.intermediate_item.col-lg-3.col-md-4.col-sm-4
+								.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
 									.modal_form_input_wrap
 										.modal_input_error
 											| Заполните поле
@@ -509,12 +518,15 @@ block main
 											.modal_error_chest_img
 										i.fa.fa-check
 										input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
-								input(type='hidden', name='form_name', value='Записаться на бесплатный замер')
-								input(type='hidden', name='form_type', value='normal')
+								.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
+									.modal_form_input_wrap
+										input(type='hidden', name='form_name', value='Записаться на бесплатный замер')
+										input(type='hidden', name='form_type', value='normal')
+										input.col-lg-3(type='submit', value='Бесплатный замер')
 
-								input.col-lg-3(type='submit', value='Бесплатный замер')
 
-	//-----------------------------------
+
+
 
 	div(off-canvas='id-1 left shift')
 		nav.header_nav_mobile
@@ -535,6 +547,27 @@ block main
 	div(off-canvas='id-3 top overlay')
 	div(off-canvas='id-4 bottom shift')
 
+	script.
+		var tag = document.createElement('script');
 
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		var player;
+		function onYouTubeIframeAPIReady() {
+			player = new YT.Player('player', {
+				height: '360',
+				width: '640',
+				videoId: 'M7lc1UVf-VE'
+			});
+		}
+
+		// 5. The API calls this function when the player's state changes.
+		//    The function indicates that when playing a video (state=1),
+		//    the player should play for six seconds and then stop.
+		var done = false;
+		function stopVideo() {
+			player.stopVideo();
+		}
 
 

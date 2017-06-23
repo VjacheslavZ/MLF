@@ -103,6 +103,13 @@ li
 	display: none
 	overflow: auto
 	z-index: 1000
+	.fa-times
+		color: $main_color
+		font-size: 30px
+		position: absolute
+		top: -30px
+		right: -30px
+		cursor: pointer
 	&.pop3
 		.dm-modal
 			width: inherit
@@ -377,6 +384,15 @@ li
 	background: url(../img/header_bg.jpg) no-repeat
 	background-size: cover
 	overflow: hidden
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(0, 0, 0, .5)
 .header
 	.container
 		height: 100%
@@ -633,11 +649,6 @@ body textarea:required:valid
 			background-color: transparent
 nav[canvas]
 	position: fixed
-	//top: 20px
-	//left: 20px
-	//display: none
-	//z-index: 100
-
 	display: block
 	width: 100%
 	top: 0
@@ -650,7 +661,7 @@ nav[canvas]
 [class*=js-open-], [class*=js-toggle-], [class*=js-close-]
 	cursor: pointer
 [off-canvas]
-	z-index: 4
+	//z-index: 4
 	opacity: 1
 	ul
 		&.menu
@@ -827,13 +838,18 @@ nav[canvas]
 		margin-bottom: 56px
 		padding: 0 200px
 	.owl-carousel
+		padding-bottom: 53px
 		.owl-item.active
 		div
 			display: inline-block
 		.owl-nav
 			display: block
 		.owl-dots.owl-dots
-			margin-top: 37px
+			position: absolute
+			bottom: -9px
+			left: 0
+			right: 0
+			//margin-top: 37px
 		.owl-dot.active
 			span
 				background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
@@ -849,30 +865,41 @@ nav[canvas]
 					display: block
 				.tovar-groups__photo-active
 					display: none
+
 			&-hover
 				display: none
 
 
 // секция видео
 .player-video
-	background: url("../img/video_bg.jpg") no-repeat
-
-	background-size: cover
-	min-height: 500px
-	display: flex
-	justify-content: center
-	align-items: center
+	//background: url("../img/video_bg.jpg") no-repeat
+	//background-size: cover
+	//min-height: 500px
+	position: relative
+	//display: flex
+	//justify-content: center
+	//align-items: center
+	iframe
+		width: 100%
+		min-height: 514px
 	&__btn-paly_wrap
-		width: 280px
-		height: 280px
-		cursor: pointer
+		//width: 280px
+		//height: 280px
+		//
 		//margin: 0 auto
 	&__btn-paly
 		@include sprite($btn-play)
 		display: block
+		cursor: pointer
+		position: absolute
+
+		top: calc(50% - 140px)
+		left: calc(50% - 140px)
+
 // секция группы товаров
 .tovar-groups
 	padding: 78px 0 93px 0
+	//background: #fff
 	.title
 		margin-bottom: 23px
 	.underline
@@ -882,17 +909,20 @@ nav[canvas]
 		margin-bottom: 56px
 		padding: 0 200px
 		background-color: transparent
-
 	&__item
 		background-clip: content-box
 		display: flex
-		cursor: pointer
-		//transition: 1s
+
+		//.float-left
+			float: left
+		//.float-right
+			float: left
 		.tovar-groups__photo
 			position: relative
 			height: 470px
 			display: block
-			transition: 5s
+			transition: .5s
+			cursor: pointer
 			&:after
 				content: ' '
 				background-color: #000
@@ -1025,6 +1055,9 @@ nav[canvas]
 		&__gift
 			@include sprite($gift-ico)
 			margin: 0 auto
+		&__like
+			@include sprite($like)
+			margin: 0 auto
 		p
 			margin-top: 20px
 			font-family: $raleway-regular
@@ -1034,18 +1067,20 @@ nav[canvas]
 		top: 23px
 		.point
 			display: inline-block
-			width: 22px
+			width: 13px
 			height: 2px
 			background: linear-gradient(to right, #f64f6e 0%, #ff795e 100%)
 			//border-radius: 50%
 			& + .point
 				margin-left: 20px
 	.points-wrap__send
-		left: 21%
+		left: 22%
 	.points-wrap__consult
-		left: 46%
+		left: 38.5%
 	.points-wrap__settings
-		left: 71%
+		left: 55%
+	.points-wrap__gift
+		left: 71.5%
 //Секция купить рулонную штору,
 .forma-callBack
 	background: url(../img/buy_curtain_bg.jpg) no-repeat
@@ -1053,11 +1088,24 @@ nav[canvas]
 	min-height: 402px
 	padding: 28px 0
 	text-align: center
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(0, 0, 0, .5)
 	&__title
 		@include font($main_bg_color,32,$raleway-bold,1.5)
+		position: relative
+		z-index: 11
 	&__description
 		@include font($main_font_color,16,$raleway-regular,1.6)
 		margin-top: 39px
+		position: relative
+		z-index: 11
 	.intermediate_wrap.intermediate_wrap
 		margin-top: 52px
 //Секция отзывы слайдер
@@ -1084,14 +1132,16 @@ nav[canvas]
 	.customNextBtn
 		@include sprite($btn-slider)
 		left: 10px
-		top: 40%
+
 		z-index: 999
 	.customPrevBtn
 		@include sprite($btn-slider)
 		transform: rotate(180deg)
 		right: 10px
-		top: 40%
+
 		z-index: 999
+	//.customBtn
+		top: calc(50% - 53px)
 	.owl-theme
 		.owl-dots.owl-dots
 			margin-top: 49px
@@ -1321,17 +1371,17 @@ nav[canvas]
 .customBtn
 	display: inline-block
 	position: absolute
-	top: 34%
+	top: calc(50% - 53px)
 	z-index: 9999
 	&:hover
 		cursor: pointer
 .customNextBtn
 	@include sprite($btn-slider)
-	left: 10px
+	left: 13px
 .customPrevBtn
 	@include sprite($btn-slider)
 	transform: rotate(180deg)
-	right: 10px
+	right: 13px
 //--------------
 .intermediate_wrap
 	margin-top: 60px

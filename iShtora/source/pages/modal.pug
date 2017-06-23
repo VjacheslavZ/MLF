@@ -47,6 +47,37 @@
 		.dm-cell
 			.dm-modal
 				p.success_mail Заявка отправлена
+//Модальное окно захвата
+
+.container
+	.row
+		.popup(data-modal='modal-form')
+			.dm-table
+				.dm-cell
+					.dm-modal
+						i.fa.fa-times.close__dm-modal
+						form
+							.intermediate_item.col-sm-12.col-xs-12
+								.modal_form_input_wrap
+									.modal_input_error
+										| Заполните поле
+										.modal_error_triangle
+										.modal_error_chest_img
+									i.fa.fa-check
+									input.modal_form_input(name='name', type='text', placeholder='Имя')
+							.intermediate_item.col-sm-12.col-xs-12
+								.modal_form_input_wrap
+									.modal_input_error
+										| Заполните поле
+										.modal_error_triangle
+										.modal_error_chest_img
+									i.fa.fa-check
+									input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
+							.intermediate_item.col-sm-12.col-xs-12
+								.modal_form_input_wrap
+									input(type='hidden', name='form_name', value='Вызов дизайнера-замерщика к себе домой бесплатно')
+									input(type='hidden', name='form_type', value='normal')
+									input.col-lg-4(type='submit', value='Вызвать бесплатно')
 // вариант меню на мобильном
 .popup.pop3(data-modal='modal-3')
 	.dm-table

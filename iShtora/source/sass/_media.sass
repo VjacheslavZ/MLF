@@ -2,7 +2,7 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
+@media only screen and (max-width : 1199px)
 	/**/
 	// для фиксированного сайта
 	// body
@@ -12,24 +12,37 @@
 	.our__advantages
 		p
 			padding: 0 5%
+
 	.our__advantages-items_left
-		max-height: 800px
+		max-height: 830px
 		background-size: contain
+		background: url(../img/our_advantages_bg.png) no-repeat right 54px top 130px
 		.our__advantages-description
 			width: 69%
+		.our__advantages-item + .our__advantages-item
+			margin-top: 50px
+		.our__advantages-item
+			&:nth-child(4)
+				.our__advantages-description
+					margin-bottom: 20px
 	.our__advantages-items_right
-		max-height: 800px
+		max-height: 830px
 		background-size: contain
+		background: url("../img/our_advantages_bg-2.png") no-repeat  left 54px top 130px
 		.our__advantages-description
 			width: 69%
+		.our__advantages-item + .our__advantages-item
+			margin-top: 50px
+		.our__advantages-item
+			&:nth-child(4)
+				.our__advantages-description
+					margin-bottom: 20px
 	.intermediate
 		.intermediate_wrap
 			margin-bottom: 20px
 			.intermediate_item
 				display: block
-				//margin: 30px auto 30px
 			.modal_form_input_wrap
-				//display: inline-block
 	//Секция отзывы слайдер
 	.reviews
 		padding-bottom: 0
@@ -47,6 +60,7 @@
 	.best-seiling
 		&:before
 			height: 60%
+
 	//секция товарные группы
 	#tovarGroups
 		.description
@@ -101,9 +115,11 @@
 		&_metods
 			padding-top: 50px
 			padding-bottom: 80px
+
+	.customBtn
+		top: calc(50% - 65px)
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
+@media only screen and (max-width : 991px)
 
 	.header_title
 		top: calc(30% - 71px)
@@ -129,6 +145,8 @@
 		display: block
 	/**/
 	// Секция our_advantages
+	.our__advantages
+		padding-bottom: 65px
 	.our__advantages-items_left
 		background: none
 		max-height: inherit
@@ -139,10 +157,15 @@
 				margin-right: 0
 			&:nth-child(4)
 				margin-right: 0
+				.our__advantages-description
+					margin-bottom: 0px
+				p
+					height: auto
 			&:nth-child(5)
 				margin-right: 0
 		.our__advantages-description
 			width: 80%
+
 	.our__advantages-items_right
 		margin-top: 30px
 		background: none
@@ -155,8 +178,14 @@
 				margin-left: 0
 			&:nth-child(4)
 				margin-left: 0
+				.our__advantages-description
+					margin-bottom: 0px
+				p
+					height: auto
 			&:nth-child(5)
 				margin-left: 0
+
+
 	#tovarGroups
 		.tovar-groups__item
 			.tovar-groups__photo
@@ -190,8 +219,8 @@
 	//Общие классы
 	.customNextBtn
 		left: 19px
-	.customBtn
-		top: 30%
+	//.customBtn
+	//	top: 30%
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
@@ -323,6 +352,8 @@
 				text-align: center
 
 @media only screen and (max-width : 600px)
+	.dm-modal
+		width: 90%
 	.accordion
 		.ui-accordion-header
 			font-size: 10px
@@ -347,10 +378,11 @@
 			.ui-icon
 				margin-top: 16px
 	.dm-modal
-		width: 100%
+		//width: 100%
+		padding: 50px 5px 50px 5px
 	.dm-modal
 		input[type=submit]
-			width: 100%
+			min-width: 100%
 	.how-contact
 		&:before
 			width: 120%
@@ -387,27 +419,6 @@
 			font-size: 1rem
 
 /*==========  Mobile First Method  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	/**/
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
 	.container

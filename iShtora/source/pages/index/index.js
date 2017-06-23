@@ -78,7 +78,7 @@ $(document).ready( function() {
 	    loop: true,
 	    items: 4,
 	    dots: true,
-		margin: 30,
+		margin: 20,
 		autoplay: false,
 		autoplayTimeout: 4000,
 		responsive: {
@@ -206,6 +206,24 @@ $(document).ready( function() {
 			}
 		});
 	}
+
+
+	var close = $(".close__dm-modal"),
+		popUpForm = $('[data-modal="modal-form"]');
+	
+	function closePopUp() {
+		popUpForm.css({"display": "none"});
+		sessionStorage.setItem("pupUp", "Closed");
+	}
+	
+	close.on("click", closePopUp);
+
+
+
+	$(document).on('click', '.start-video', function () {
+		$(this).fadeOut('normal');
+		player.playVideo();
+	});
 });
 
 //фиксированная шапка
