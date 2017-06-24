@@ -1,6 +1,6 @@
 extends ../base
 block title
-	| Index page
+	| iShtora
 block main
 	include ../modal
 	nav(canvas="header_top" class="header_top")
@@ -223,10 +223,49 @@ block main
 						.customPrevBtn.customBtn
 		// секция видео
 		section#player-video.player-video
-				//.player-video__btn-paly_wrap
-				<iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/-aoKriMsjEs" frameborder="0" allowfullscreen></iframe>
+			#player
+			script.
+				var tag = document.createElement('script');
 
-				a.player-video__btn-paly.start-video
+				tag.src = "https://www.youtube.com/iframe_api";
+				var firstScriptTag = document.getElementsByTagName('script')[0];
+				firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+
+				var player;
+
+				function onYouTubeIframeAPIReady() {
+					player = new YT.Player('player', {
+						height: '360',
+						width: '640',
+						videoId: '-aoKriMsjEs',
+						events: {
+							'onReady': onPlayerReady,
+							'onStateChange': onPlayerStateChange
+						}
+					});
+				}
+				var done = false;
+				function onPlayerStateChange(event) {
+					if (event.data == YT.PlayerState.PLAYING && !done) {
+						//setTimeout(stopVideo, 6000);
+						done = true;
+					}
+				}
+
+				function onPlayerReady(event) {
+					event.target.playVideo();
+				}
+
+				function stopVideo() {
+					player.stopVideo();
+				}
+
+			a.player-video__btn-paly.start-video
+				//.player-video__btn-paly_wrap
+				//<iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/-aoKriMsjEs" frameborder="0" allowfullscreen></iframe>
+
+
+
 
 
 
@@ -547,27 +586,5 @@ block main
 	div(off-canvas='id-3 top overlay')
 	div(off-canvas='id-4 bottom shift')
 
-	script.
-		var tag = document.createElement('script');
-
-		tag.src = "https://www.youtube.com/iframe_api";
-		var firstScriptTag = document.getElementsByTagName('script')[0];
-		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-		var player;
-		function onYouTubeIframeAPIReady() {
-			player = new YT.Player('player', {
-				height: '360',
-				width: '640',
-				videoId: 'M7lc1UVf-VE'
-			});
-		}
-
-		// 5. The API calls this function when the player's state changes.
-		//    The function indicates that when playing a video (state=1),
-		//    the player should play for six seconds and then stop.
-		var done = false;
-		function stopVideo() {
-			player.stopVideo();
-		}
 
 

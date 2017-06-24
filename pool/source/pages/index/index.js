@@ -93,12 +93,12 @@ $(document).ready( function() {
 		dots: true,
 		nav: true
 	});
+
 	$("#ourWorks__slider.owl-carousel").owlCarousel({
 		loop: true,
-		items: 3,
+		items: 5,
 		dots: true,
 		nav: false,
-		center: false,
 		autoWidth: true
 	});
 

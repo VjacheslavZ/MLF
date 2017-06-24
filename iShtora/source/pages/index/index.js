@@ -140,6 +140,7 @@ $(document).ready( function() {
 			}
 		}
 	});
+
 	// Кастомные кнопки управления слайдером
 	var owl1 = $('#one.owl-carousel');
 	var owl2 = $('#two.owl-carousel');
@@ -207,23 +208,26 @@ $(document).ready( function() {
 		});
 	}
 
-
 	var close = $(".close__dm-modal"),
 		popUpForm = $('[data-modal="modal-form"]');
-	
 	function closePopUp() {
 		popUpForm.css({"display": "none"});
 		sessionStorage.setItem("pupUp", "Closed");
 	}
-	
+
 	close.on("click", closePopUp);
 
 
 
 	$(document).on('click', '.start-video', function () {
-		$(this).fadeOut('normal');
-		player.playVideo();
+		//$(this).fadeOut('normal');
+		//player.stopVideo();
+		player.playVideo()
 	});
+
+
+	//youTube
+
 });
 
 //фиксированная шапка
