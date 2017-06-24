@@ -68,13 +68,6 @@ block main
 											input(type='hidden', name='form_name', value='Бесплатный выезд дизайнера')
 											input(type='hidden', name='form_type', value='normal')
 											input.col-lg-4(type='submit', value='Заказать')
-					//.header_bot_txt
-					//	p Более
-					//		span  400
-					//		|   довольных клиентов за
-					//		span  8 лет
-					//		|  успешной работы!
-
 		// Секция  наши преимущества
 		section#our_advantages.our__advantages
 			.container
@@ -239,7 +232,6 @@ block main
 						width: '640',
 						videoId: '-aoKriMsjEs',
 						events: {
-							'onReady': onPlayerReady,
 							'onStateChange': onPlayerStateChange
 						}
 					});
@@ -247,28 +239,23 @@ block main
 				var done = false;
 				function onPlayerStateChange(event) {
 					if (event.data == YT.PlayerState.PLAYING && !done) {
-						//setTimeout(stopVideo, 6000);
-						done = true;
+					}
+					if(event.data == YT.PlayerState.PLAYING){
+					}
+					if (event.data == YT.PlayerState.PAUSED) {
 					}
 				}
 
-				function onPlayerReady(event) {
-					event.target.playVideo();
-				}
 
+				function onPlayerReady(event) {
+					event.target.stopVideo();
+				}
 				function stopVideo() {
 					player.stopVideo();
 				}
-
-			a.player-video__btn-paly.start-video
+			//a.player-video__btn-paly.start-video
 				//.player-video__btn-paly_wrap
 				//<iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/-aoKriMsjEs" frameborder="0" allowfullscreen></iframe>
-
-
-
-
-
-
 		//секция товарные группы
 		section#tovarGroups.tovar-groups
 			.container
@@ -562,6 +549,7 @@ block main
 										input(type='hidden', name='form_name', value='Записаться на бесплатный замер')
 										input(type='hidden', name='form_type', value='normal')
 										input.col-lg-3(type='submit', value='Бесплатный замер')
+
 
 
 

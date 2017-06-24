@@ -6,7 +6,6 @@ class Animation {
 		this.tl1 = new TimelineMax();
 		this.tl1.pause();
 	}
-
 	description() {
 		this.tl1.from('.header_title', 0.7, {
 			y: -100,
@@ -26,24 +25,18 @@ class Animation {
 			}
 		}
 	}
-
 	play() {
 		if (this.activeSection('header',0, 500)) {
 			this.tl1.resume();
 		}
 
-
-
 		if (! sessionStorage.getItem("pupUp")) {
-
 			if (this.activeSection('tovar-groups',0, 500)) {
 				$('.popup[data-modal=modal-form]').show("fade", 200);
 			} else{
 				$('.popup[data-modal=modal-form]').hide("fade", 200);
 			}
 		}
-		
-
 	}
 }
 
@@ -55,8 +48,7 @@ $(window).scroll(function() {
 	}
 });
 
-$(window).ready(function() {	
-
+$(window).ready(function() {
 	if (document.documentElement.clientWidth >= 320) {
 		anim.description();
 		anim.play();

@@ -453,7 +453,7 @@ li
 	left: 0
 	right: 0
 .header_nav
-	display: inline-block
+	//display: inline-block
 	position: relative
 	margin-left: 10px
 	ul
@@ -470,29 +470,54 @@ li
 				@include fz(14)
 				text-decoration: none
 				transition: .5s
+				&:hover
+					color: $btn_color__slider-hover
+	.adress
+		li + li
+			margin-left: 45px
+	.social-networks
+		li
+			width: 19px
+			height: 19px
+			border-radius: 50%
+			color: $text-color-IC
+			background: #fff
+			line-height: 1.4
+			font-size: 13px
+			cursor: pointer
+			transition: .5s
+			&:hover
+				color: #fff
+				background: $btn_color__slider-hover
+
+	.phones
+		li + li
+			margin-left: 32px
+
 .header_nav-main-menu
-	display: inline-block
+	//display: inline-block
 	position: relative
+	display: block
 	ul
-		padding: 20px 85px 46px 85px
+		padding-top: 46px
 		li
 			list-style: none
 			display: inline-block
-			//& + li:not([class="logo"])
-			//	margin-left: 60px
-			.logo
-				@include sprite($logo)
-				display: inline-block
-				vertical-align: middle
-				margin-left: 200px
-				margin-right: 114px
+			& + li
+				margin-left: 60px
 			a
 				color: $main_color-text
-				@include fz(18)
+				font-size: 18px
 				text-decoration: none
 				transition: .5s
-	.header_nav-main-menu_item
-		margin-left: 60px
+				&:hover
+					color: $btn_color__slider-hover
+	.logo
+		@include sprite($logo)
+		display: inline-block
+		vertical-align: middle
+		height: 77px
+		margin: 20px 0 47px 0
 
 .header_modal
 	margin-top: 52px

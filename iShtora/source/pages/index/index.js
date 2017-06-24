@@ -38,12 +38,12 @@ $(document).ready( function() {
 		// $(".website_promotion .website_promotion_decor").css("bottom", "-177px");
 		// $(".cost_of_online_store .cost_of_online_store_links_item").css("margin-right", "72px");
 	}
-	if (get_name_browser() == "Safari") {
-		console.log("Это Сафари");
-	}
-	if (get_name_browser() == "Google Chrome") {
-		console.log("Это Хром");
-	}
+	// if (get_name_browser() == "Safari") {
+	// 	console.log("Это Сафари");
+	// }
+	// if (get_name_browser() == "Google Chrome") {
+	// 	console.log("Это Хром");
+	// }
 	// для инициализации tooltips
 	// $( document ).tooltip({
 	//   track: true
@@ -167,7 +167,7 @@ $(document).ready( function() {
 		collapsible: true
 	});
 
-	$('body').scrollspy({ target: '#navbar-example' })
+	$('body').scrollspy({ target: '#navbar' });
 
 	$('[data-spy="scroll"]').each(function () {
 		var $spy = $(this).scrollspy('refresh')
@@ -210,6 +210,7 @@ $(document).ready( function() {
 
 	var close = $(".close__dm-modal"),
 		popUpForm = $('[data-modal="modal-form"]');
+
 	function closePopUp() {
 		popUpForm.css({"display": "none"});
 		sessionStorage.setItem("pupUp", "Closed");
@@ -218,16 +219,12 @@ $(document).ready( function() {
 	close.on("click", closePopUp);
 
 
+	let customBtnVideo = $(".start-video");
 
-	$(document).on('click', '.start-video', function () {
-		//$(this).fadeOut('normal');
-		//player.stopVideo();
-		player.playVideo()
+	$(document).on('click', customBtnVideo, function () {
+		//player.playVideo();
+		customBtnVideo.fadeOut('normal');
 	});
-
-
-	//youTube
-
 });
 
 //фиксированная шапка
