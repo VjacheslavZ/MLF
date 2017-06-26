@@ -103,7 +103,7 @@ $(document).ready( function() {
 		dots: true,
 		responsive:{
 			1200:{
-				items: 5
+				items: 4
 			}
 		}
 	});
@@ -140,13 +140,17 @@ $(document).ready( function() {
 		ourWorks__slider_owl4.trigger('next.owl.carousel', [700]);
 	});
 
-	// function opacityItems() {
-	// 	var items = $(".ourWorks .owl-stage .active");
-	//
-	// 	items.removeClass("opacityItem");
-	// 	items.first().addClass("opacityItem");
-	// 	items.last().addClass("opacityItem");
-	// }
+	function opacityItems() {
+		var items = $(".ourWorks .owl-stage .active:not(.cloned)");
+		console.log(items);
+
+		items.removeClass("opacityItem");
+
+		items.first().addClass("opacityItem");
+		items.last().addClass("opacityItem");
+	}
+	
+	opacityItems()
 });
 
 $(window).resize(function() {
