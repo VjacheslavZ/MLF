@@ -95,11 +95,17 @@ $(document).ready( function() {
 	});
 
 	$("#ourWorks__slider.owl-carousel").owlCarousel({
-		loop: true,
-		items: 5,
+		//center: true,
+		//items: 4,
+		margin: 30,
+		loop:true,
+		autoWidth: true,
 		dots: true,
-		nav: false,
-		autoWidth: true
+		responsive:{
+			1200:{
+				items: 5
+			}
+		}
 	});
 
 	//инициализаиця header_title слайдер

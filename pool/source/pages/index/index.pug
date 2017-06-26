@@ -124,8 +124,46 @@ block main
 										i.fa.fa-angle-left
 				//Секция видео
 				section#video.video
+					section#player-video.player-video
+						#player
+						script.
+							var tag = document.createElement('script');
+
+							tag.src = "https://www.youtube.com/iframe_api";
+							var firstScriptTag = document.getElementsByTagName('script')[0];
+							firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+
+							var player;
+
+							function onYouTubeIframeAPIReady() {
+								player = new YT.Player('player', {
+									height: '360',
+									width: '640',
+									videoId: '-aoKriMsjEs',
+									events: {
+										'onStateChange': onPlayerStateChange
+									}
+								});
+							}
+							var done = false;
+							function onPlayerStateChange(event) {
+								if (event.data == YT.PlayerState.PLAYING && !done) {
+								}
+								if (event.data == YT.PlayerState.PLAYING) {
+								}
+								if (event.data == YT.PlayerState.PAUSED) {
+								}
+							}
+
+
+							function onPlayerReady(event) {
+								event.target.stopVideo();
+							}
+							function stopVideo() {
+								player.stopVideo();
+							}
 					//video.video__film(url="video/mov_bbb.mp4")
-					a.video__play-btn
+					//a.video__play-btn
 					//button.player__button
 				//Секция техноологии, слайдер
 				section#technoligy.technoligy
@@ -198,42 +236,42 @@ block main
 				//Cекиця наши работы, слайдер
 				section#ourWorks.ourWorks
 
-							.ourWorks__wraper
-								h3.defaul-title.col-lg-12 Наши работы
-								#ourWorks__slider.owl-carousel.owl-theme.clearfix
-									.item.ourWorks__slider_slide.box-shadow
-										img(src=require("../../img/ourWork__slider-slide1.jpg"))
-										p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+					.ourWorks__wraper
+						h3.defaul-title.col-lg-12 Наши работы
+						#ourWorks__slider.owl-carousel.owl-theme.clearfix
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide1.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
-									.item.ourWorks__slider_slide.box-shadow
-										img(src=require("../../img/ourWork__slider-slide2.jpg"))
-										p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide2.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
-									.item.ourWorks__slider_slide.box-shadow
-										img(src=require("../../img/ourWork__slider-slide3.jpg"))
-										p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-
-
-									.item.ourWorks__slider_slide.box-shadow
-										img(src=require("../../img/ourWork__slider-slide4.jpg"))
-										p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide3.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
 
-									.item.ourWorks__slider_slide.box-shadow
-											img(src=require("../../img/ourWork__slider-slide0.jpg"))
-											p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide4.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
 
-									.item.ourWorks__slider_slide.box-shadow
-										img(src=require("../../img/ourWork__slider-slide1.jpg"))
-										p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide0.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide1.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
 
 
-								.customNextBtn.customBtn
-									i.fa.fa-angle-right
-								.customPrevBtn.customBtn
-									i.fa.fa-angle-left
+						.customNextBtn.customBtn
+							i.fa.fa-angle-right
+						.customPrevBtn.customBtn
+							i.fa.fa-angle-left
 				//Cекиця цены на басейны
 				section#pricePools.pricePools
 				//Cекиця скидки на монтаж, форма
@@ -345,35 +383,6 @@ block main
 							input(type='hidden', name='form_name', value='')
 							input(type='hidden', name='form_type', value='normal')
 							input.col-lg-3(type='submit', value='Записаться')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 			// Секция footer

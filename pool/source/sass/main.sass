@@ -712,31 +712,6 @@ nav[canvas]
 			padding: 0
 			display: block
 			list-style: none
-// Секция our_advantages
-//.our_advantages
-//	min-height: 630px
-//	background-color: #fff
-//	h2
-//		margin-top: 75px
-//		color: #626262
-//		text-align: center
-//		font-size: 35px
-//	.our_advantages_item
-//		margin-bottom: 55px
-//		min-height: 230px
-//		h3
-//			font-size: 27px
-//			text-align: center
-//		p
-//			margin-top: 15px
-//			@include fz(16)
-//			line-height: 1.2
-//			text-align: center
-//		.our_advantages_item_img
-//			text-align: center
-//			i
-//				@include fz(72)
-//				color: #00b6f4
 // Секция main_content
 .main_content
 	text-align: center
@@ -942,34 +917,27 @@ nav[canvas]
 
 //	Секция видео
 .video
-	display: flex
-	justify-content: center
-	align-items: center
-	background: url("../img/section_video-bg.jpg") no-repeat
-	background-size: cover
-	height: 657px
-	position: relative
-	&:after
-		content: ""
-		position: absolute
-		left: 0
-		right: 0
+	.player-video
+		position: relative
+	iframe
 		width: 100%
-		height: 100%
-		background: rgba(0,0,0,0.5)
-	&__play-btn
-		@include sprite($btn-video-play)
-		display: inline-block
-		cursor: pointer
-		z-index: 99999
+		min-height: 514px
+	//&__btn-paly
+	//	@include sprite($btn-play)
+	//	display: block
+	//	cursor: pointer
+	//	position: absolute
+	//	top: calc(50% - 140px)
+	//	left: calc(50% - 140px)
 
 //	Секция техноологии
 .technoligy
+	margin-top: -7px
 	margin-bottom: 56px
 	min-height: 926px
 	background: url("../img/section__technologi-bg.png")no-repeat
 	background-size: cover
-	//position: relative
+	position: relative
 	&__main
 		position: relative
 	&__uzor-before
@@ -1089,12 +1057,13 @@ nav[canvas]
 .ourWorks
 	//padding: 115px 0 0 0
 	&__wraper
-		width: 98%
+		//max-width: 100%
 		position: relative
-		margin: 0 auto
+		//margin: 0 auto
+		overflow: hidden
 	.owl-carousel
 		display: flex
-		justify-content: space-between
+		//justify-content: space-between
 	.defaul-title
 		margin-bottom: 36px
 	&__slider_slide
@@ -1118,11 +1087,10 @@ nav[canvas]
 	.customPrevBtn
 		left: 42%
 		i
-			margin-left: 0px
+			margin-left: 0
+	.owl-stage-outer
+		//overflow: hidden
 
-
-
-//display: none
 //	Секиция цены на басейны
 //	Секиция скидки на монтаж, форма
 //	Секиция Этапы работы
