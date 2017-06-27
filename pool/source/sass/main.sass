@@ -95,8 +95,8 @@ li
 				border: 2px solid #fba84b
 				background: transparent
 
-//.opacityItem
-//	opacity: 0.1
+.opacityItem
+	opacity: 0.1
 //------------------------------------------
 .section__default-caption
 	@include font($main_color-title, 120, $font_PT_Sans-Bold, 1)
@@ -999,14 +999,14 @@ nav[canvas]
 			margin-left: 0
 
 	//Соединительные линии после слайдера
+.connecting
 	&__connecting-wrap
 		position: relative
 	&__connecting-lines
 		margin-top: 160px
 		//display: inline-block
 		position: absolute
-		z-index: 999
-		height: 558px
+		height: 188px
 		width: 93%
 		left: 3%
 		border-left: $lineUzorColor
@@ -1015,11 +1015,12 @@ nav[canvas]
 			top: 100px
 			left: -11px
 			@include roundUzor()
+			background-color: #fff;
 	&__connecting-lines_right
 		position: absolute
-		height: 172px
+		height: 124px
 		right: 4%
-		top: -11px
+		top: 39px
 		border-right: $lineUzorColor
 		&:after
 			@include roundUzor()
@@ -1063,7 +1064,7 @@ nav[canvas]
 		overflow: hidden
 	.owl-carousel
 		display: flex
-		//justify-content: space-between
+		margin-left: 15px
 	.defaul-title
 		margin-bottom: 36px
 	&__slider_slide
@@ -1092,6 +1093,41 @@ nav[canvas]
 		margin-bottom: 5px
 
 //	Секиция цены на басейны
+.pricePools
+	padding-top: 91px
+	min-height: 983px
+	background: #fff url("../img/section__price_bg.png") no-repeat
+	background-size: cover
+	&__caption
+		@include font($main_color-title, 87, $font_PT_Sans-Bold, 1)
+		margin: 0 0 83px 0
+	&__type-pool
+		background: $main_color url("../img/section__price-price-bg.png") no-repeat bottom
+		background-size: cover
+		box-shadow: 0 0 11px 11px #f6f6f6
+		//  height убрать
+		//height: 480px
+		padding: 33px 57px 40px
+	&__name
+		@include font($text-color_label, 32, $font_PT_Sans-Bold, 1)
+		margin: 0
+	&__price
+		@include font($main_color-title, 60, $font_PT_Sans-Bold, 1)
+		margin: 28px 0 46px
+		display: block
+	&__description
+		@include font($main_color-text2, 18, $font_PT_Sans-Regular, 1.3)
+	&__btn
+		@include font($main_color, 20, $font_PT_Sans-Bold, 1)
+		padding: 18px 97px
+		background: $btn_color__slider-hover
+		border: none
+		border-radius: 15px
+		margin-top: 55px
+		transition: .5s
+		&:hover
+			background: $btn_color__sliderOur-works-next
+
 //	Секиция скидки на монтаж, форма
 //	Секиция Этапы работы
 //	Секиця отзывы, слайдер

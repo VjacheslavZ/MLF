@@ -142,6 +142,22 @@
 	nav[canvas]
 		display: block
 	/**/
+
+
+	// Секция товарные группы
+	.tovar-groups
+		&__description
+			h4
+				margin-top: 15px
+				text-align: center
+	.tovar-groups__item
+		flex-direction: column
+		align-items: center
+	.reverse
+		flex-direction: column !important
+
+
+
 	// Секция our_advantages
 	.our__advantages
 		padding-bottom: 65px
@@ -192,6 +208,7 @@
 				img
 					width: 266px
 					height: 200px
+
 	// Секция как мы работаем
 	.how-we-work
 		.item-usluga
@@ -246,6 +263,8 @@
 		padding-bottom: 40px
 	.tovar-groups__item
 		.tovar-groups__photo
+			display: none
+		.lightgallery
 			display: none
 	//Секция Наши работы слайдер
 	.slider_ourWorks

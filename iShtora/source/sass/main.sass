@@ -8,7 +8,7 @@
 @import "../libs/owl.theme.default.min.css"
 @import "../libs/jquery-ui.min.css"
 @import "../libs/jquery.fancybox.min.css"
-
+@import "../libs/lightgallery.min.css"
 
 html, body
 	font-size: 16px
@@ -225,10 +225,22 @@ li
 		border-radius: 5px
 		box-shadow: 0 1px 0 rgba(0,0,2,.28)
 		transition: 1s
+		outline: -webkit-focus-ring-color auto 0px
 		&:focus
 			outline: 0
+			-moz-outline: 0
+			-webkit-outline: 0
+			outline-width: 0
 			box-shadow: 0 1px 0 rgba(255,81,46,.88)
-
+			outline-width: 0
+			outline: -webkit-focus-ring-color auto 0px
+		&:active
+			-o-outline: 0
+			-moz-outline: 0
+			-webkit-outline: 0
+			outline-width: 0
+			outline: 0
+			outline: -webkit-focus-ring-color auto 0px
 	.success_mail
 		display: none
 		color: #000
@@ -607,7 +619,8 @@ body textarea:focus:required:invalid
 body input:required:valid,
 body textarea:required:valid
 	color: #666
-
+input
+	outline: -webkit-focus-ring-color auto 0px
 // Оформление слайдбара
 .header_nav_mobile
 	text-align: center
@@ -899,7 +912,6 @@ nav[canvas]
 // секция группы товаров
 .tovar-groups
 	padding: 78px 0 93px 0
-	//background: #fff
 	.title
 		margin-bottom: 23px
 	.underline
@@ -912,11 +924,6 @@ nav[canvas]
 	&__item
 		background-clip: content-box
 		display: flex
-
-		//.float-left
-			float: left
-		//.float-right
-			float: left
 		.tovar-groups__photo
 			position: relative
 			height: 470px
@@ -994,6 +1001,8 @@ nav[canvas]
 			display: flex
 			justify-content: center
 			align-items: center
+	.reverse
+		flex-direction: row-reverse
 // секция Хиты продаж
 .best-seiling
 	background: transparent none
@@ -1175,6 +1184,9 @@ nav[canvas]
 	.often-question__title
 		margin-top: 20px
 		padding-left: 20px
+		outline: -webkit-focus-ring-color auto 0px
+		&:focus
+			outline: -webkit-focus-ring-color auto 0px
 	.ui-accordion-header
 		font-size: 18px
 		line-height: 2
@@ -1433,3 +1445,32 @@ nav[canvas]
 
 body
 	position: relative
+
+.lightgallery
+	position: relative
+	height: 470px
+	display: block
+	transition: .5s
+	cursor: pointer
+	a
+		& + a
+			img
+				display: none
+	.fa-search
+		opacity: 0
+		transition: all 0.25s linear
+		position: absolute
+		top: calc(50% - 25px)
+		left: calc(50% - 25px)
+		color: #fff
+	&:hover
+		.demo-gallery-poster
+			position: absolute
+			background-color: rgba(0, 0, 0, 0.5)
+			bottom: 0
+			left: 0
+			right: 0
+			top: 0
+			transition: all 0.25s linear
+		.fa-search
+			opacity: 1

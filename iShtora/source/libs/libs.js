@@ -30,3 +30,11 @@ exports.bootstrap = function () {
 exports.fancyBox = function () {
 	return require("../libs/jquery.fancybox.min.js")
 };
+
+exports.lightgallery = function () {
+	return require("../libs/lightgallery.min.js")
+};
+
+exports.lg_thumbnail = function () {
+	return require("../libs/lg-thumbnail")
+};

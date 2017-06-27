@@ -96,16 +96,16 @@ $(document).ready( function() {
 
 	$("#ourWorks__slider.owl-carousel").owlCarousel({
 		//center: true,
-		//items: 4,
+		items: 5,
 		margin: 30,
-		loop:true,
+		// loop:true,
 		autoWidth: true,
 		dots: true,
-		responsive:{
-			1200:{
-				items: 4
-			}
-		}
+		// responsive:{
+		// 	1200:{
+		// 		items: 5
+		// 	}
+		// }
 	});
 
 	//инициализаиця header_title слайдер
@@ -131,6 +131,8 @@ $(document).ready( function() {
 		owl2.trigger('next.owl.carousel', [700]);
 		owl3.trigger('next.owl.carousel', [700]);
 		ourWorks__slider_owl4.trigger('next.owl.carousel', [700]);
+
+		removeOpacityItems()
 	});
 
 	$('.customPrevBtn').click(function() {
@@ -138,19 +140,28 @@ $(document).ready( function() {
 		owl2.trigger('prev.owl.carousel', [700]);
 		owl3.trigger('prev.owl.carousel', [700]);
 		ourWorks__slider_owl4.trigger('next.owl.carousel', [700]);
+
+		removeOpacityItems()
 	});
-
+	
 	function opacityItems() {
-		var items = $(".ourWorks .owl-stage .active:not(.cloned)");
-		console.log(items);
-
-		items.removeClass("opacityItem");
+		var items = $(".ourWorks .owl-stage .active");
 
 		items.first().addClass("opacityItem");
 		items.last().addClass("opacityItem");
 	}
+
+	opacityItems();
+
+	function removeOpacityItems() {
+
+		var items = $(".ourWorks .owl-stage .active");
+
+		items.removeClass("opacityItem");
+
+		opacityItems();
+	}
 	
-	opacityItems()
 });
 
 $(window).resize(function() {

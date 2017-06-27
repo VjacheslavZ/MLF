@@ -10,6 +10,9 @@ require("../../libs/libs").Animate_css();
 require("../../libs/libs").owl_carousel_min_js();
 require("../../libs/libs").bootstrap();
 require("../../libs/libs").fancyBox();
+
+require("../../libs/libs").lightgallery();
+require("../../libs/libs").lg_thumbnail();
 import animate from '../../js/animate';
 import functions from '../../js/_functions.js';
 
@@ -175,10 +178,30 @@ $(document).ready( function() {
 
 	//FancyBox
 	$("[data-fancybox]").fancybox({
-		loop     : true,
-		selector : '[data-fancybox="images"]',
-		afterClose : $(".tovar-groups__photo").css("display: block")
+		loop     : false,
+		infobar : true,
+		selector : '[data-fancybox="group"]',
+		afterClose : $(".tovar-groups__item").css("display: block"),
+		buttons : [
+			'slideShow',
+			'fullScreen',
+			'thumbs',
+			'close',
+		],
 	});
+	//lightgallery
+	$(document).ready(function() {
+		$(".lightgallery").lightGallery();
+	});
+
+	var $customEvents = $('.lightgallery');
+	$customEvents.lightGallery();
+
+	var colours = ['rgba(0, 0, 0, 0.5)', '#81575E', '#9C5043', '#8F655D'];
+	$customEvents.on('onBeforeSlide.lg', function(event, prevIndex, index){
+		$('.lg-outer').css('background-color', colours["rgba(0, 0, 0, 0.5)"])
+	});
+
 	//плейс холдер для IE9
 	if(get_name_browser() == 'Internet Explorer'){
 		$(function() {
@@ -222,7 +245,6 @@ $(document).ready( function() {
 	let customBtnVideo = $(".start-video");
 
 	$(document).on('click', customBtnVideo, function () {
-		//player.playVideo();
 		customBtnVideo.fadeOut('normal');
 	});
 });
