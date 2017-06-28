@@ -489,7 +489,6 @@ li
 			&:hover
 				color: #fff
 				background: $btn_color__slider-hover
-
 	.phones
 		li + li
 			margin-left: 32px
@@ -922,14 +921,6 @@ nav[canvas]
 	iframe
 		width: 100%
 		min-height: 514px
-	//&__btn-paly
-	//	@include sprite($btn-play)
-	//	display: block
-	//	cursor: pointer
-	//	position: absolute
-	//	top: calc(50% - 140px)
-	//	left: calc(50% - 140px)
-
 //	Секция техноологии
 .technoligy
 	margin-top: -7px
@@ -956,18 +947,8 @@ nav[canvas]
 		margin-top: 88px
 		margin-left: 88px
 		text-align-last: left
-	&__uzor-after
-		position: absolute
-		border-top: $lineUzorColor
-		border-right: $lineUzorColor
-		width: 415px
-		height: 53px
-		right: 4%
-		top: 78%
-		&:before
-			left: -20px
-			top: -10px
-			@include roundUzor()
+
+
 
 	//слайдер
 	&__slider-wrap
@@ -998,7 +979,7 @@ nav[canvas]
 		i
 			margin-left: 0
 
-	//Соединительные линии после слайдера
+//Соединительные линии после слайдера
 .connecting
 	&__connecting-wrap
 		position: relative
@@ -1015,7 +996,7 @@ nav[canvas]
 			top: 100px
 			left: -11px
 			@include roundUzor()
-			background-color: #fff;
+			background-color: #fff
 	&__connecting-lines_right
 		position: absolute
 		height: 124px
@@ -1027,6 +1008,19 @@ nav[canvas]
 			left: -9px
 			top: -18px
 
+.connecting
+	&__uzor-after
+		position: absolute
+		border-top: $lineUzorColor
+		border-right: $lineUzorColor
+		width: 415px
+		height: 53px
+		right: 4%
+		top: 78%
+		&:before
+			left: -20px
+			top: -10px
+			@include roundUzor()
 //	Секиця Скидки, форма
 .discounts
 	background: url("../img/section__discounts-bg.jpg") no-repeat
@@ -1137,6 +1131,26 @@ nav[canvas]
 .discounts__second-form
 	margin-top: 40px
 //	Секиция Этапы работы
+.stageOfWork
+	padding-top: 100px
+	&__caption
+		position: relative
+	h3
+		margin: 0
+	.connecting
+		&__uzor-after
+			width: 142px
+			height: 79px
+			top: 40px
+			right: 52px
+			&:after
+				@include roundUzor()
+				bottom: 0
+				right: -11px
+				background: #fff
+	&__stages-bg
+		margin-top: 95px
+
 //	Секиця отзывы, слайдер
 //	Секиця скидки на монтаж терассной доски при заказе через сайт, фрма
 
