@@ -98,6 +98,7 @@ $auxiliary_txt_color: #443133
 	white-space: nowrap
 	overflow: hidden
 	text-overflow: ellipsis
+
 @mixin roundUzor()
 	content: ""
 	position: absolute
@@ -107,6 +108,15 @@ $auxiliary_txt_color: #443133
 	border-radius: 50%
 	background-color: transparent
 
+@mixin icStage($beforePx)
+	width: 123px
+	height: 123px
+	border-radius: 50%
+	display: inline-block
+	border: 5px solid $main_bg_color
+	background-color: $main_color-description
+	&:before
+		margin-left: $beforePx
 
 .main_btn
 	min-width: 272px
