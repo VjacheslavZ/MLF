@@ -1304,7 +1304,7 @@ nav[canvas]
 	&__position
 		@include font($main_color-text2, 16, $font_PT_Sans-Regular, 1)
 	.social-networks
-		margin-top: 10px;
+		margin-top: 10px
 		li
 			background: $main_color-text2
 			display: inline-block
@@ -1316,7 +1316,50 @@ nav[canvas]
 			color: $main_color
 			text-decoration: none
 //	Секиця отзывы, слайдер
-//	Секиця скидки на монтаж терассной доски при заказе через сайт, фрма
+.reviews
+	padding-top: 100px
+	padding-bottom: 170px
+	background: #fff url("../img/reviews__bg.png") no-repeat
+	background-size: cover
+	&__main-content
+		position: relative
+	.section__default-caption
+		text-align-last: left
+		margin: 0 0 59px 0
+	&__autor
+		position: absolute
+		z-index: 1
+		top: 60px
+		left: 15px
+	.box-shadow
+		box-shadow: -5px 4px 13px 1px #f6f6f6
+	&__wrap
+		padding: 100px 100px 146px 100px
+		background: #fff
+	&__autor_photo
+		border-radius: 50%
+	&__autor_name
+		@include font($main_color-text2, 20, $font_PT_Sans-Bold, 1)
+		margin: 36px 0 13px
+	&__position
+		@include font($main_color-text2, 18, $font_PT_Sans-Regular, 1)
+	&__text
+		background: $section__reviews-bg
+		padding: 120px 75px 150px 200px
+		text-align: left
+		@include font($main_color-text, 18, $font_PT_Sans-Italic, 1.1)
+	.owl-theme .owl-nav.disabled+.owl-dots
+		margin-top: 115px
+	.customBtn
+		bottom: 20px
+	.customPrevBtn
+		left: 45%
+		i
+			margin-left: 0px
+	.customNextBtn
+		right: 41%
+		i
+			margin-left: 0px
 
 // Секия footer 
 .footer
