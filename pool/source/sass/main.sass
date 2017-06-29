@@ -117,6 +117,24 @@ li
 	> *
 		display: inline-block
 		vertical-align: middle
+
+.social-networks
+	li
+		background: #fff
+		width: 19px
+		height: 19px
+		cursor: pointer
+		border-radius: 50%
+		line-height: 1.4
+		font-size: 13px
+		transition: .5s
+		&:hover
+			color: #fff
+			background: $btn_color__slider-hover
+		a
+			color: $text-color-IC
+			margin-left: 0
+
 //-----------------------------
 .noselect
 	-webkit-touch-callout: none
@@ -490,21 +508,20 @@ li
 			margin-left: 45px
 	.social-networks
 		li
-			width: 19px
-			height: 19px
-			border-radius: 50%
-			color: $text-color-IC
-			background: #fff
-			line-height: 1.4
-			font-size: 13px
-			cursor: pointer
-			transition: .5s
 			&:hover
-				color: #fff
-				background: $btn_color__slider-hover
+				color: $btn_color__slider-hover
+				//background: #000
+		a
+			color: #000
+			margin-left: 0
+			&:hover
+				color: #000
+
+
 	.phones
 		li + li
 			margin-left: 32px
+
 
 .header_nav-main-menu
 	//display: inline-block
@@ -1261,13 +1278,43 @@ nav[canvas]
 	//узор после блока
 	.connecting__wrap
 		height: 262px
+		position: absolute
+		left: 13%
+		margin: 0 auto
+		width: 71%
+		bottom: -220px
 		.connecting__connecting-lines
+			height: 80px
 			&:before
 				top: 60px
 			//margin-top: 201px
 		.connecting__connecting-lines_right
 			height: 164px
 			top: -2px
+//Cекция наша команда
+.ourTeam
+	margin-top: 180px
+	.wrap
+		padding-bottom: 30px
+	.section__default-caption
+		margin: 0 0 105px 0
+	&__name
+		margin: 22px 0 6px 0
+		@include font($main_color-text2, 20, $font_PT_Sans-Regular, 1)
+	&__position
+		@include font($main_color-text2, 16, $font_PT_Sans-Regular, 1)
+	.social-networks
+		margin-top: 10px;
+		li
+			background: $main_color-text2
+			display: inline-block
+			width: 21px
+			height: 21px
+			line-height: 1.5
+		a
+			cursor: pointer
+			color: $main_color
+			text-decoration: none
 //	Секиця отзывы, слайдер
 //	Секиця скидки на монтаж терассной доски при заказе через сайт, фрма
 

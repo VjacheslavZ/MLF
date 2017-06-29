@@ -27,12 +27,19 @@ block main
 							li
 								i.fa.fa-clock-o
 								a(href="#") Пн-Пт: 9:00-20:00
+
 						ul.col-lg-4.center.social-networks
-							li.fa.fa-linkedin(aria-hidden="true")
-							li.fa.fa-google-plus(aria-hidden="true")
-							li.fa.fa-instagram(aria-hidden="true")
-							li.fa.fa-facebook(aria-hidden="true")
-							li.fa.fa-vk(aria-hidden="true")
+							li
+								a.fa.fa-linkedin(href="#" target="_blank" aria-hidden="true")
+							li
+								a.fa.fa-google-plus(href="#" target="_blank" aria-hidden="true")
+							li
+								a.fa.fa-instagram(href="#" target="_blank" aria-hidden="true")
+							li
+								a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
+							li
+								a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
+
 						ul.col-lg-4.right.phones
 							li
 								i.fa.fa-phone
@@ -357,6 +364,60 @@ block main
 							.col-lg-12.clearfix.connecting__wrap
 								span.connecting__connecting-lines
 								span.connecting__connecting-lines_right
+				//Cекция наша команда
+				section#ourTeam.ourTeam
+					.container
+						.row
+							h3.section__default-caption Наша команда
+							.col-lg-4
+								.wrap.box-shadow
+									img.ourTeam__photo(src=require("../../img/annaBelik.jpg"))
+									h4.ourTeam__name Анна Белик
+									p.ourTeam__position Менеджер
+									ul.ourTeam__pageInsocialNetwork.social-networks
+										li
+											a.fa.fa-linkedin(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-google-plus(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-instagram(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
+							.col-lg-4
+								.wrap.box-shadow
+									img.ourTeam__photo(src=require("../../img/ulaKoruma.jpg"))
+									h4.ourTeam__name Юлия Корума
+									p.ourTeam__position Менеджер
+									ul.ourTeam__pageInsocialNetwork.social-networks
+										li
+											a.fa.fa-linkedin(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-google-plus(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-instagram(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
+							.col-lg-4
+								.wrap.box-shadow
+									img.ourTeam__photo(src=require("../../img/olegIvanow.jpg"))
+									h4.ourTeam__name Олег Иванов
+									p.ourTeam__position Директор
+									ul.ourTeam__pageInsocialNetwork.social-networks
+										li
+											a.fa.fa-linkedin(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-google-plus(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-instagram(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
+
 				//Секиця отзывы, слайдер
 				section#reviews.reviews
 				//Секиця скидки на монтаж терассной доски при заказе через сайт, фрма
