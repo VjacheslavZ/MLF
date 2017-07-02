@@ -93,26 +93,21 @@ $(document).ready( function() {
 		dots: true,
 		nav: true
 	});
-	$("#ourWorks__slider.owl-carousel").owlCarousel({
-		//center: true,
+	$("#ourWorks__slider.owl-carousel.owl-theme").owlCarousel({
+		loop: true,
 		items: 5,
+		//dots: false,
+		//nav: false,
 		margin: 30,
-		// loop:true,
-		autoWidth: true,
-		dots: true,
-		// responsive:{
-		// 	1200:{
-		// 		items: 5
-		// 	}
-		// }
+		//autoWidth: false
 	});
 	$("#reviews__slider.owl-carousel").owlCarousel({
 		loop: true,
 		items: 1,
-		margin: 0,
-		autoWidth: false,
 		dots: true,
+		nav: true
 	});
+
 	//инициализаиця header_title слайдер
 	var one = $("#one");
 	var owl1 = $('#one.owl-carousel');
@@ -141,37 +136,36 @@ $(document).ready( function() {
 		owl3.trigger('next.owl.carousel', [700]);
 		ourWorks__slider_owl4.trigger('next.owl.carousel', [700]);
 		reviews__slider_owl4.trigger('next.owl.carousel', [700]);
-		//removeOpacityItems()
+
+		opacityItems();
 	});
 
 	$('.customPrevBtn').click(function() {
 		owl1.trigger('prev.owl.carousel', [700]);
 		owl2.trigger('prev.owl.carousel', [700]);
 		owl3.trigger('prev.owl.carousel', [700]);
-		ourWorks__slider_owl4.trigger('next.owl.carousel', [700]);
-		reviews__slider_owl4.trigger('next.owl.carousel', [700]);
-		//removeOpacityItems()
+		ourWorks__slider_owl4.trigger('prev.owl.carousel', [700]);
+		reviews__slider_owl4.trigger('prev.owl.carousel', [700]);
+
+		opacityItems();
 	});
-	//
-	// function opacityItems() {
-	// 	var items = $(".ourWorks .owl-stage .active");
-	//
-	// 	items.first().addClass("opacityItem");
-	// 	items.last().addClass("opacityItem");
-	// }
-	//
-	// opacityItems();
-	//
-	// function removeOpacityItems() {
-	//
-	// 	var items = $(".ourWorks .owl-stage .active");
-	//
-	// 	items.removeClass("opacityItem");
-	//
-	// 	opacityItems();
-	// }
-	
+
+	$(".ourWorks .owl-dots").click(function(){
+		opacityItems();
+	});
+
+	function opacityItems() {
+		var items = $(".ourWorks .owl-stage .active");
+
+		items.removeClass("opacityItem");
+		items.first().addClass("opacityItem");
+		items.last().addClass("opacityItem");
+	}
+	opacityItems();
 });
+
+
+
 
 $(window).resize(function() {
 

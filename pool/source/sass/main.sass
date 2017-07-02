@@ -7,6 +7,7 @@
 @import "../libs/owl.carousel.min.css"
 @import "../libs/owl.theme.default.min.css"
 
+
 html, body
 	font-size: 16px
 	&.flex-footer
@@ -96,7 +97,9 @@ li
 				background: transparent
 
 .opacityItem
+	transition: .3s
 	opacity: 0.1
+	box-shadow: none
 //dafault calses
 .section__default-caption
 	@include font($main_color-title, 120, $font_PT_Sans-Bold, 1)
@@ -143,29 +146,29 @@ li
 	-moz-user-select: none
 	-ms-user-select: none
 	user-select: none
-// html .loader
-// 	background: none repeat scroll 0 0 #ffffff
-// 	bottom: 0
-// 	height: 100%
-// 	left: 0
-// 	position: fixed
-// 	right: 0
-// 	top: 0
-// 	width: 100%
-// 	z-index: 9999
-// 	.loader_inner
-// 		background-image: url("../img/preloader.gif")
-// 		background-size: cover
-// 		background-repeat: no-repeat
-// 		background-position: center center
-// 		background-color: #fff
-// 		height: 60px
-// 		width: 60px
-// 		margin-top: -30px
-// 		margin-left: -30px
-// 		left: 50%
-// 		top: 50%
-// 		position: absolute
+//html .loader
+ 	background: none repeat scroll 0 0 #ffffff
+ 	bottom: 0
+ 	height: 100%
+ 	left: 0
+ 	position: fixed
+ 	right: 0
+ 	top: 0
+ 	width: 100%
+ 	z-index: 9999
+ 	//.loader_inner
+ 		background-image: url("../img/preloader.gif")
+ 		background-size: cover
+ 		background-repeat: no-repeat
+ 		background-position: center center
+ 		background-color: #fff
+ 		height: 60px
+ 		width: 60px
+ 		margin-top: -30px
+ 		margin-left: -30px
+ 		left: 50%
+ 		top: 50%
+ 		position: absolute
 .hidden
 	display: none
 // Модальное окно
@@ -1092,10 +1095,14 @@ nav[canvas]
 	.defaul-title
 		margin-bottom: 36px
 	&__slider_slide
-		width: 370px
-		display: inline-block
-		img
-			min-width: 100%
+		//img
+			width: 100%
+		//width: 370px
+		//display: inline-block
+		//img
+	  		width: auto
+			//height: 100%
+			//min-width: 100%
 	&__slider-description
 		padding: 36px 80px
 		color: #000
@@ -1311,16 +1318,21 @@ nav[canvas]
 			width: 21px
 			height: 21px
 			line-height: 1.5
-		a
-			cursor: pointer
-			color: $main_color
-			text-decoration: none
+			&:hover
+				background: $btn_color__slider-hover
+				a
+					color: #000
+			a
+				cursor: pointer
+				color: $main_color
+				text-decoration: none
+
 //	Секиця отзывы, слайдер
 .reviews
+	position: relative
 	padding-top: 100px
 	padding-bottom: 170px
-	background: #fff url("../img/reviews__bg.png") no-repeat
-	background-size: cover
+	background: #fff url("../img/reviews__bg.png") no-repeat bottom
 	&__main-content
 		position: relative
 	.section__default-caption
@@ -1361,6 +1373,41 @@ nav[canvas]
 		i
 			margin-left: 0px
 
+//	Секиця новости, слайдер
+.news
+	position: relative
+	padding-top: 145px
+	&__title
+		position: relative
+		margin-bottom: 45px
+	.section__default-caption
+		display: inline-block
+		margin: 0
+	&__slider_slide
+		display: inline-block
+		max-width: 370px
+		img
+			width: 100%
+		p
+			@include font($main_color-text2, 18, $font_PT_Sans-Regular, 1)
+			padding: 36px 70px 36px
+	.connecting__uzor-after
+		width: 171px
+		height: 88px
+		right: 229px
+		top: 0px
+		&:before
+			left: 0
+			top: -11px
+			background: $main_color
+		&:after
+			@include roundUzor
+			right: -10px
+			bottom: 0
+			background: $main_color
+	//&__slider
+		display: flex
+		justify-content: space-between
 // Секия footer 
 .footer
 	background-color: #333
