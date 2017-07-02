@@ -832,7 +832,7 @@ nav[canvas]
 					background-color: $btn_color__slider-hover
 //	Секция о нас
 .aboutUs
-	padding: 33px 0 65px 0
+	padding: 40px 0 80px 0
 	background-color: $main_bg_color
 	text-align-last: left
 	&__uzor
@@ -874,7 +874,7 @@ nav[canvas]
 		position: relative
 	&__usluga-bg
 		display: inline-block
-		width: 50%
+		width: 49%
 		//position: relative
 		background: url("../img/aboutUs__sldier-bg.jpg") no-repeat top left
 		height: 480px
@@ -914,13 +914,13 @@ nav[canvas]
 				display: inline-block
 				width: inherit
 	.customBtn
-		bottom: 16%
+		bottom: 66px
 	.customNextBtn
-		left: 22%
+		left: 316px
 		i
 			margin-left: 14px
 	.customPrevBtn
-		left: 8%
+		left: 100px
 		i
 			margin-left: 11px
 	.owl-nav
@@ -931,8 +931,8 @@ nav[canvas]
 		position: absolute
 		z-index: 999
 		display: inline-block
-		left: 7%
-		bottom: 7%
+		left: 80px
+		bottom: 15px
 		.owl-dot
 			span
 				width: 20px
@@ -966,14 +966,14 @@ nav[canvas]
 	&__uzor-before
 		position: absolute
 		border-left: $lineUzorColor
-		height: 196px
+		height: 140px
 		display: inline-block
-		top: -45px
+		//top: -45px
 		left: 20px
 		margin-left: 20px
 		&:after
 			bottom: -20px
-			left: -10px
+			left: -11px
 			@include roundUzor()
 	&__caption
 		margin-top: 88px
@@ -1001,12 +1001,12 @@ nav[canvas]
 		right: 0
 	.customNextBtn
 		right: 40%
-		bottom: -20%
+		bottom: -80px
 		i
 			margin-left: 6px
 	.customPrevBtn
 		left: 40%
-		bottom: -20%
+		bottom: -80px
 		i
 			margin-left: 0
 
@@ -1081,7 +1081,7 @@ nav[canvas]
 			font-size: 18px
 //	Секиция наши работы, слайдер
 .ourWorks
-	//padding: 115px 0 0 0
+	padding-top: 114px
 	&__wraper
 		//max-width: 100%
 		position: relative
@@ -1091,7 +1091,7 @@ nav[canvas]
 		display: flex
 		//margin-left: 15px
 	.defaul-title
-		margin-bottom: 36px
+		margin: 0 0 49px 0
 	&__slider-description
 		padding: 36px 80px
 		color: #000
@@ -1114,8 +1114,8 @@ nav[canvas]
 
 //	Секиция цены на басейны
 .pricePools
-	padding-top: 91px
-	min-height: 983px
+	padding-top: 101px
+	min-height: 993px
 	background: #fff url("../img/section__price_bg.png") no-repeat
 	background-size: cover
 	&__caption
@@ -1158,7 +1158,7 @@ nav[canvas]
 	margin-top: 40px
 //	Секиция Этапы работы
 .stageOfWork
-	padding-top: 100px
+	padding-top: 111px
 	position: relative
 	&__caption
 		position: relative
@@ -1176,8 +1176,7 @@ nav[canvas]
 				right: -11px
 				background: #fff
 	&__stages-bg
-		margin-top: 75px
-		//margin-bottom: 17px
+		margin-top: 85px
 		background: $main_bg_color url("../img/stageOfWork__stages-bg.png") no-repeat center
 		min-height: 510px
 		position: relative
@@ -1294,7 +1293,7 @@ nav[canvas]
 	&__wrap
 		padding-bottom: 30px
 	.section__default-caption
-		margin: 0 0 105px 0
+		margin: 0 0 85px 0
 	&__name
 		margin: 22px 0 6px 0
 		@include font($main_color-text2, 20, $font_PT_Sans-Regular, 1)
@@ -1320,14 +1319,14 @@ nav[canvas]
 //	Секиця отзывы, слайдер
 .reviews
 	position: relative
-	padding-top: 100px
+	padding-top: 107px
 	padding-bottom: 170px
 	background: #fff url("../img/reviews__bg.png") no-repeat bottom
 	&__main-content
 		position: relative
 	.section__default-caption
 		text-align-last: left
-		margin: 0 0 59px 0
+		margin: 0 0 54px 0
 	&__autor
 		position: absolute
 		z-index: 1
@@ -1371,7 +1370,7 @@ nav[canvas]
 	padding-top: 145px
 	&__title
 		position: relative
-		margin-bottom: 45px
+		margin-bottom: 18px
 	.section__default-caption
 		display: inline-block
 		margin: 0
@@ -1437,7 +1436,7 @@ nav[canvas]
 	.section__default-caption
 		@include fz(87)
 		margin-top: 0
-		margin-bottom: 15px
+		margin-bottom: 25px
 	&__service_description
 		@include font($main_color-text2, 20, $font_PT_Sans-Regular, 1)
 		padding: 46px 0 48px 0
@@ -1445,9 +1444,56 @@ nav[canvas]
 		margin-top: 60px
 // Секия footer 
 .footer
-	background-color: #333
-	height: 200px
-	flex: 0 0 auto
+	background: #fff url("../img/footer__bg.jpg") no-repeat
+	background-size: cover
+	padding: 30px 0 56px 0
+	&__service
+		font-size: 18px
+		li + li
+			margin-top: 20px
+		a
+			color: $main_color-text
+			text-decoration: none
+			transition: .5s
+			&:hover
+				color: $btn_color__slider-hover
 
-//Общие стили
-
+	&__pageInsocialNetwork
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		margin-top: 119px
+		li
+			width: 24px
+			height: 24px
+			display: flex
+			align-items: center
+			justify-content: center
+			a
+				color: #1b5aa8
+				font-size: 19px
+				text-decoration: none
+	&__contacts
+		li + li
+			margin-top: 20px
+		.fa
+			width: 16px
+		a
+			@include font($main_color-text, 13, $font_PT_Sans-Regular, 1)
+			color:
+			text-decoration: none
+			transition: .5s
+			margin-left: 10px
+			&:hover
+				color: $btn_color__slider-hover
+	&__logo
+		text-align: right
+		margin-top: 70px
+		p
+			@include font($main_color-text, 14, $font_PT_Sans-Regular,1)
+			display: inline-block
+			//padding: 0 75px
+			margin: 0 21px 0 0
+		a
+			@include sprite($melfori)
+			display: inline-block
