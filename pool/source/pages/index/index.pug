@@ -244,7 +244,6 @@ block main
 				section#ourWorks.ourWorks
 					.ourWorks__wraper
 						h3.defaul-title.col-lg-12 Наши работы
-
 						#ourWorks__slider.owl-carousel.owl-theme
 							.item.ourWorks__slider_slide.box-shadow
 								img(src=require("../../img/ourWork__slider-slide1.jpg"))
@@ -375,8 +374,8 @@ block main
 					.container
 						.row
 							h3.section__default-caption Наша команда
-							.col-lg-4
-								.wrap.box-shadow
+							.col-lg-4.ourTeam__photo-cart
+								.ourTeam__wrap.box-shadow
 									img.ourTeam__photo(src=require("../../img/annaBelik.jpg"))
 									h4.ourTeam__name Анна Белик
 									p.ourTeam__position Менеджер
@@ -391,8 +390,8 @@ block main
 											a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
 										li
 											a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
-							.col-lg-4
-								.wrap.box-shadow
+							.col-lg-4.ourTeam__photo-cart
+								.ourTeam__wrap.box-shadow
 									img.ourTeam__photo(src=require("../../img/ulaKoruma.jpg"))
 									h4.ourTeam__name Юлия Корума
 									p.ourTeam__position Менеджер
@@ -407,8 +406,8 @@ block main
 											a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
 										li
 											a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
-							.col-lg-4
-								.wrap.box-shadow
+							.col-lg-4.ourTeam__photo-cart
+								.ourTeam__wrap.box-shadow
 									img.ourTeam__photo(src=require("../../img/olegIvanow.jpg"))
 									h4.ourTeam__name Олег Иванов
 									p.ourTeam__position Директор
@@ -520,22 +519,64 @@ block main
 					.news__title
 						h3.section__default-caption Новости
 						span.connecting__uzor-after
-					.newsSlider#newsSlider.owl-carousel.owl-theme
-						.news__slider_slide.box-shadow
+					#news__slider.owl-carousel.owl-theme
+						.item.ourWorks__slider_slide.box-shadow
 							img(src=require("../../img/ourWork__slider-slide1.jpg"))
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit
-						.news__slider_slide.box-shadow
-							img(src=require("../../img/ourWork__slider-slide1.jpg"))
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit
-						.news__slider_slide.box-shadow
+							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+						.item.ourWorks__slider_slide.box-shadow
 							img(src=require("../../img/ourWork__slider-slide2.jpg"))
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit
-						.news__slider_slide.box-shadow
+							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+						.item.ourWorks__slider_slide.box-shadow
 							img(src=require("../../img/ourWork__slider-slide3.jpg"))
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit
-						.news__slider_slide.box-shadow
+							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+						.item.ourWorks__slider_slide.box-shadow
 							img(src=require("../../img/ourWork__slider-slide3.jpg"))
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+						.item.ourWorks__slider_slide.box-shadow
+							img(src=require("../../img/ourWork__slider-slide3.jpg"))
+							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
+						.item.ourWorks__slider_slide.box-shadow
+							img(src=require("../../img/ourWork__slider-slide3.jpg"))
+							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
+						.item.ourWorks__slider_slide.box-shadow
+							img(src=require("../../img/ourWork__slider-slide3.jpg"))
+							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+						.item.ourWorks__slider_slide.box-shadow
+							img(src=require("../../img/ourWork__slider-slide3.jpg"))
+							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
+						.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide3.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
+						.item.ourWorks__slider_slide.box-shadow
+							img(src=require("../../img/ourWork__slider-slide3.jpg"))
+							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
+						.item.ourWorks__slider_slide.box-shadow
+							img(src=require("../../img/ourWork__slider-slide3.jpg"))
+							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
+						.item.ourWorks__slider_slide.box-shadow
+							img(src=require("../../img/ourWork__slider-slide3.jpg"))
+							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+					.customNextBtn.customBtn
+						i.fa.fa-angle-right
+					.customPrevBtn.customBtn
+						i.fa.fa-angle-left
+
+
+
 				section#discountsInstallation-TerraceBoard.discountsInstallation-TerraceBoard
 			// Секция  our_advantages
 			//section#our_advantages.our_a	dvantages

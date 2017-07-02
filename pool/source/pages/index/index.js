@@ -93,19 +93,26 @@ $(document).ready( function() {
 		dots: true,
 		nav: true
 	});
+
 	$("#ourWorks__slider.owl-carousel.owl-theme").owlCarousel({
 		loop: true,
 		items: 5,
-		//dots: false,
-		//nav: false,
 		margin: 30,
-		//autoWidth: false
+		mouseDrag: false,
 	});
+
 	$("#reviews__slider.owl-carousel").owlCarousel({
 		loop: true,
 		items: 1,
 		dots: true,
-		nav: true
+		nav: false
+	});
+
+	$("#news__slider.owl-carousel.owl-theme").owlCarousel({
+		loop: true,
+		items: 5,
+		margin: 30,
+		mouseDrag: false,
 	});
 
 	//инициализаиця header_title слайдер
@@ -124,11 +131,14 @@ $(document).ready( function() {
 	var reviews__slider = $("#reviews__slider");
 	var reviews__slider_owl4 = $('#reviews__slider.owl-carousel');
 
+	var news__slider = $("#news__slider");
+	var news__slider_owl4 = $('#news__slider.owl-carousel');
 
 	owl1.owlCarousel();//карусель
 	owl2.owlCarousel();//карусель
 	owl3.owlCarousel();//карусель
 	ourWorks__slider_owl4.owlCarousel();
+	news__slider_owl4.owlCarousel();
 
 	$('.customNextBtn').click(function() {
 		owl1.trigger('next.owl.carousel', [700]);
@@ -136,6 +146,7 @@ $(document).ready( function() {
 		owl3.trigger('next.owl.carousel', [700]);
 		ourWorks__slider_owl4.trigger('next.owl.carousel', [700]);
 		reviews__slider_owl4.trigger('next.owl.carousel', [700]);
+		news__slider_owl4.trigger('next.owl.carousel', [700]);
 
 		opacityItems();
 	});
@@ -146,6 +157,7 @@ $(document).ready( function() {
 		owl3.trigger('prev.owl.carousel', [700]);
 		ourWorks__slider_owl4.trigger('prev.owl.carousel', [700]);
 		reviews__slider_owl4.trigger('prev.owl.carousel', [700]);
+		news__slider_owl4.trigger('prev.owl.carousel', [700]);
 
 		opacityItems();
 	});
@@ -154,13 +166,23 @@ $(document).ready( function() {
 		opacityItems();
 	});
 
-	function opacityItems() {
-		var items = $(".ourWorks .owl-stage .active");
+	$(".news .owl-dots").click(function(){
+		opacityItems();
+	});
 
-		items.removeClass("opacityItem");
-		items.first().addClass("opacityItem");
-		items.last().addClass("opacityItem");
+	function opacityItems() {
+		var ourWorksItems = $(".ourWorks .owl-stage .active");
+		var newsItems = $(".news .owl-stage .active");
+
+		ourWorksItems.removeClass("opacityItem");
+		ourWorksItems.first().addClass("opacityItem");
+		ourWorksItems.last().addClass("opacityItem");
+
+		newsItems.removeClass("opacityItem");
+		newsItems.first().addClass("opacityItem");
+		newsItems.last().addClass("opacityItem");
 	}
+
 	opacityItems();
 });
 

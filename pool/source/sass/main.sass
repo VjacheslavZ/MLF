@@ -71,10 +71,10 @@ li
 		font-size: 40px
 .customNextBtn
 	i
-		margin-left: 14px
+		//margin-left: 14px
 .customPrevBtn
 	i
-		margin-left: 11px
+		//margin-left: 11px
 .owl-theme
 	.owl-dots
 		position: absolute
@@ -887,7 +887,6 @@ nav[canvas]
 		width: 226px
 		display: inline-block
 		vertical-align: top
-		//vertical-align: middle
 	&__usluga-name
 		color: $main_color-title
 		font-family: $font_PT_Sans-Bold
@@ -909,9 +908,6 @@ nav[canvas]
 			display: inline-block
 			& + img
 				margin-left: 30px
-	//.owl-theme
-	//	.owl-nav [class*=owl-]
-	//		background: transparent
 	.owl-carousel
 		.owl-item
 			img
@@ -921,9 +917,12 @@ nav[canvas]
 		bottom: 16%
 	.customNextBtn
 		left: 22%
+		i
+			margin-left: 14px
 	.customPrevBtn
 		left: 8%
-
+		i
+			margin-left: 11px
 	.owl-nav
 		display: none
 		position: absolute
@@ -980,9 +979,6 @@ nav[canvas]
 		margin-top: 88px
 		margin-left: 88px
 		text-align-last: left
-
-
-
 	//слайдер
 	&__slider-wrap
 		position: relative
@@ -1001,13 +997,15 @@ nav[canvas]
 		display: none
 	.owl-dots
 		bottom: -120px
+		left: 0%
+		right: 0
 	.customNextBtn
-		right: 36%
+		right: 40%
 		bottom: -20%
 		i
 			margin-left: 6px
 	.customPrevBtn
-		left: 45%
+		left: 40%
 		bottom: -20%
 		i
 			margin-left: 0
@@ -1091,18 +1089,9 @@ nav[canvas]
 		overflow: hidden
 	.owl-carousel
 		display: flex
-		margin-left: 15px
+		//margin-left: 15px
 	.defaul-title
 		margin-bottom: 36px
-	&__slider_slide
-		//img
-			width: 100%
-		//width: 370px
-		//display: inline-block
-		//img
-	  		width: auto
-			//height: 100%
-			//min-width: 100%
 	&__slider-description
 		padding: 36px 80px
 		color: #000
@@ -1113,11 +1102,11 @@ nav[canvas]
 	.customBtn
 		bottom: 1px
 	.customNextBtn
-		right: 42%
+		right: 40%
 		i
 			margin-left: 8px
 	.customPrevBtn
-		left: 42%
+		left: 40%
 		i
 			margin-left: 0
 	.owl-item.active
@@ -1301,7 +1290,9 @@ nav[canvas]
 //Cекция наша команда
 .ourTeam
 	margin-top: 180px
-	.wrap
+	&__photo-cart
+		padding-bottom: 7px
+	&__wrap
 		padding-bottom: 30px
 	.section__default-caption
 		margin: 0 0 105px 0
@@ -1362,16 +1353,18 @@ nav[canvas]
 		@include font($main_color-text, 18, $font_PT_Sans-Italic, 1.1)
 	.owl-theme .owl-nav.disabled+.owl-dots
 		margin-top: 115px
+		left: 0
+		right: 0
 	.customBtn
 		bottom: 20px
 	.customPrevBtn
-		left: 45%
+		left: 40%
 		i
-			margin-left: 0px
+			margin-left: 0
 	.customNextBtn
-		right: 41%
+		right: 42%
 		i
-			margin-left: 0px
+			margin-left: 0
 
 //	Секиця новости, слайдер
 .news
@@ -1405,9 +1398,25 @@ nav[canvas]
 			right: -10px
 			bottom: 0
 			background: $main_color
-	//&__slider
-		display: flex
-		justify-content: space-between
+	.section__default-caption
+		margin-bottom: 64px
+	.owl-stage-outer
+		margin-bottom: 375px
+		position: relative
+		.owl-item
+			padding-bottom: 7px
+	.owl-dots
+		position: absolute
+		bottom: -126px
+		left: 0
+		right: 0
+	.customBtn
+		bottom: -121px
+	.customPrevBtn
+		left: 40%
+	.customNextBtn
+		right: 40%
+
 // Секия footer 
 .footer
 	background-color: #333
