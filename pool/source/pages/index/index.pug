@@ -574,8 +574,43 @@ block main
 						i.fa.fa-angle-right
 					.customPrevBtn.customBtn
 						i.fa.fa-angle-left
+					.container
+						.row
+							.col-lg-12.clearfix.connecting__wrap
+								span.connecting__connecting-lines
+								span.connecting__connecting-lines_right
 
 
+				//Секция скидки при заказе через сайт
+				section#discountsInstallation2.discounts.intermediate.discounts__third-form
+					.container
+						.row
+							.intermediate_title.clo-lg-10.col-lg-offset-1
+								h3 Скидки на монтаж терассной доски при заказе через сайт
+								p Мы свяжемся с Вами для консультации и уточнения деталей
+							.intermediate_wrap
+								form
+									.intermediate_item.col-lg-4.col-md-4.col-sm-4
+										.modal_form_input_wrap
+											.modal_input_error
+												| Заполните поле
+												.modal_error_triangle
+												.modal_error_chest_img
+											i.fa.fa-check
+											input.modal_form_input(name='name', type='text', placeholder='Имя')
+									.intermediate_item.col-lg-4.col-md-4.col-sm-4
+										.modal_form_input_wrap
+											.modal_input_error
+												| Заполните поле
+												.modal_error_triangle
+												.modal_error_chest_img
+											i.fa.fa-check
+											input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
+									.intermediate_item.col-lg-4.col-md-4.col-sm-4
+										.modal_form_input_wrap
+											input(type='hidden', name='form_name', value='')
+											input(type='hidden', name='form_type', value='normal')
+											input(type='submit', value='Записаться')
 
 				section#discountsInstallation-TerraceBoard.discountsInstallation-TerraceBoard
 			// Секция  our_advantages
