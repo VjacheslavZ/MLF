@@ -227,12 +227,12 @@ block main
 				section#discounts.discounts.intermediate
 					.container
 						.row
-							.intermediate_title.clo-lg-10.col-lg-offset-1
+							.intermediate_title
 								h3 Скидки на монтаж терассной доски при заказе через сайт
 								p Мы свяжемся с Вами для консультации и уточнения деталей
 							.intermediate_wrap
 								form
-									.intermediate_item.col-lg-4.col-md-4.col-sm-4
+									.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
 										.modal_form_input_wrap
 											.modal_input_error
 												| Заполните поле
@@ -240,7 +240,7 @@ block main
 												.modal_error_chest_img
 											i.fa.fa-check
 											input.modal_form_input(name='name', type='text', placeholder='Имя')
-									.intermediate_item.col-lg-4.col-md-4.col-sm-4
+									.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
 										.modal_form_input_wrap
 											.modal_input_error
 												| Заполните поле
@@ -248,11 +248,11 @@ block main
 												.modal_error_chest_img
 											i.fa.fa-check
 											input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
-									.intermediate_item.col-lg-4.col-md-4.col-sm-4
+									.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
 										.modal_form_input_wrap
 											input(type='hidden', name='form_name', value='форма №2 уточнить название')
 											input(type='hidden', name='form_type', value='normal')
-											input(type='submit', value='Отправить')
+											input.col-lg-4(type='submit', value='Отправить')
 				//Cекиця наши работы, слайдер
 				section#ourWorks.ourWorks
 					.ourWorks__wraper
