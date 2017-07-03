@@ -10,7 +10,6 @@ require("../../libs/libs").Animate_css();
 //карусель
 require("../../libs/libs").owl_carousel_min_js();
 
-
 import animate from '../../js/animate';
 import functions from '../../js/_functions.js';
 import common from '../../js/common';
@@ -55,17 +54,17 @@ $(document).ready( function() {
 	//   track: true
 	// });
 
-	// скролл по ссылке с атрибутом href
-	// $(".header_nav a[href*='#']").on("click", function(e) {
-	//     e.preventDefault();
-	//     var anchor = $(this);
-	//     $('html, body').stop().animate({
-	//         scrollTop: $(anchor.attr('href')).offset().top
-	//     }, 500);
-	//     return false;
-	// });
+	//скролл по ссылке с атрибутом href
+	$(".header_nav-main-menu a[href*='#']").on("click", function(e) {
+	    e.preventDefault();
+	    var anchor = $(this);
+	    $('html, body').stop().animate({
+	        scrollTop: $(anchor.attr('href')).offset().top
+	    }, 500);
+	    return false;
+	});
 
-	// Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
+	//Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
 	// $(".scroll_to").on("clcik", function(e) {
 	//     e.preventDefault();
 	//     var anchor = $(this);
@@ -186,6 +185,21 @@ $(document).ready( function() {
 	opacityItems();
 });
 
+
+(function ($){
+	var mainFixedMenu = $(".header_mainMenu"),
+		windowHeight = $(window).height();
+
+	$(window).on('scroll', function(){
+		var scrollTop = $(window).scrollTop();
+
+		if( scrollTop  > windowHeight/30){
+			mainFixedMenu.addClass('haeder_scroll')
+		}else{
+			mainFixedMenu.removeClass('haeder_scroll')
+		}
+	});
+})(jQuery);
 
 
 

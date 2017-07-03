@@ -26,6 +26,8 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.6
+	padding-right: 0 !important
+	overflow: auto !important
 	font-family: $font_PT_Sans-Regular
 	overflow-x: hidden
 	color: $main_color-text
@@ -37,9 +39,9 @@ body
 	&::-webkit-scrollbar
 		width: 12px
 	&::-webkit-scrollbar-thumb
-		background-color: $main_color
+		background-color: $main_color-title
 		&:hover
-			background-color: darken($main_color, 10%)
+			background-color: darken($main_color-title, 10%)
 	&::-webkit-scrollbar-track-piece
 		background-color: transparent
 //-webkit-font-smoothing: antialiased
@@ -209,8 +211,9 @@ li
 					color: #fff
 .dm-table
 	display: table
-	width: 100%
+	width: 430px
 	height: 100%
+	margin: 0 auto
 .overlay
 	width: 100%
 	height: 100%
@@ -235,7 +238,8 @@ li
 	position: relative
 	animation: fade .8s
 	background-color: #fff
-	//border-radius: 20px
+	padding: 40px 30px 40px
+	border-radius: 20px
 	z-index: 1002
 	.modal_form_input_wrap
 		position: relative
@@ -310,13 +314,25 @@ li
 		border-radius: 5px
 		box-shadow: 0 1px 0 rgba(0,0,2,.28)
 		transition: 1s
+		outline: -webkit-focus-ring-color auto 0px
 		&:focus
 			outline: 0
+			-moz-outline: 0
+			-webkit-outline: 0
+			outline-width: 0
 			box-shadow: 0 1px 0 rgba(25,103,165, .88)
+			outline: -webkit-focus-ring-color auto 0px
+		&:active
+			-o-outline: 0
+			-moz-outline: 0
+			-webkit-outline: 0
+			outline-width: 0
+			outline: 0
+			outline: -webkit-focus-ring-color auto 0px
 
 	.success_mail
 		display: none
-		color: $main_color
+		color: $main_color-title
 		@include fz(24)
 		font-family: $font_PT_Sans-Regular
 		&.active
@@ -513,7 +529,6 @@ li
 		li
 			&:hover
 				color: $btn_color__slider-hover
-				//background: #000
 		a
 			color: #000
 			margin-left: 0
@@ -525,12 +540,13 @@ li
 		li + li
 			margin-left: 32px
 
-
+.mainFixedMenu
+	background: rgba(0, 0, 0, 0.5)
 .header_nav-main-menu
-	//display: inline-block
 	position: relative
 	display: block
 	ul
+		transition: .5s
 		padding-top: 46px
 		li
 			list-style: none
@@ -545,12 +561,29 @@ li
 				&:hover
 					color: $btn_color__slider-hover
 	.logo
-		@include sprite($logo)
+		transition: .5s
 		display: inline-block
-		vertical-align: middle
 		height: 77px
 		margin: 20px 0 47px 0
+.header_mainMenu
+	position: absolute
+	top: 51px
+	z-index: 99
+	left: 0
+	right: 0
+	background: rgba(0, 0, 0, 0.5)
+.haeder_scroll
+	.header_nav-main-menu
+		ul
+			padding-top: 24px
+		.logo
+			margin: 0px 0 4px 0
 
+.haeder_scroll
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
 .header_modal
 	margin-top: 52px
 	display: inline-block
@@ -1147,6 +1180,14 @@ nav[canvas]
 		transition: .5s
 		&:hover
 			background: $btn_color__sliderOur-works-next
+		&:focus
+			outline: 0
+			-moz-outline: 0
+			-webkit-outline: 0
+			outline-width: 0
+			box-shadow: 0 1px 0 rgba(25,103,165, .88)
+			outline: -webkit-focus-ring-color auto 0px
+			outline-color: initial
 	.connecting
 		&__connecting-lines
 			height: 114px
