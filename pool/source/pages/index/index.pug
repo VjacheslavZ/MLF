@@ -19,34 +19,35 @@ block main
 		#header_nav-wrap.header_nav-wrap
 			.container
 				.row
-					nav.header_nav
-						ul.col-lg-4.adress
-							li
-								i.fa.fa-map-marker
-								a(href="#") прос. Московский 195
-							li
-								i.fa.fa-clock-o
-								a(href="#") Пн-Пт: 9:00-20:00
-
-						ul.col-lg-4.center.social-networks
-							li
-								a.fa.fa-linkedin(href="#" target="_blank" aria-hidden="true")
-							li
-								a.fa.fa-google-plus(href="#" target="_blank" aria-hidden="true")
-							li
-								a.fa.fa-instagram(href="#" target="_blank" aria-hidden="true")
-							li
-								a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
-							li
-								a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
-
-						ul.col-lg-4.right.phones
-							li
-								i.fa.fa-phone
-								a(href="tel:0962222222") 096 222 22 22
-							li
-								i.fa.fa-phone
-								a(href="tel:0931111111") 093 111 11 11
+					nav.header_nav.clearfix
+						.col-lg-4
+							ul.adress
+								li
+									i.fa.fa-map-marker
+									a(href="#") прос. Московский 195
+								li
+									i.fa.fa-clock-o
+									a(href="#") Пн-Пт: 9:00-20:00
+						.col-lg-4
+							ul.center.social-networks
+								li
+									a.fa.fa-linkedin(href="#" target="_blank" aria-hidden="true")
+								li
+									a.fa.fa-google-plus(href="#" target="_blank" aria-hidden="true")
+								li
+									a.fa.fa-instagram(href="#" target="_blank" aria-hidden="true")
+								li
+									a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
+								li
+									a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
+						.col-lg-4
+							ul.right.phones
+								li
+									i.fa.fa-phone
+									a(href="tel:0962222222") 096 222 22 22
+								li
+									i.fa.fa-phone
+									a(href="tel:0931111111") 093 111 11 11
 		.header_mainMenu
 			.container
 				.row
@@ -70,7 +71,7 @@ block main
 			header(class="header")
 				.container
 					.row
-						.header_title
+						.header_title.col-lg-12
 							.slider-wrap
 								#one.owl-carousel.owl-theme
 									.item
@@ -108,39 +109,39 @@ block main
 									h2.section__default-caption Немного о нас
 									p.aboutUs__description Компания ASTPOOL выполняет широкий спектр услуг:
 							.col-lg-12.aboutUs__slider-wrap
-									.aboutUs__usluga-bg.box-shadow
-									#two.owl-carousel.owl-theme.aboutUs__slider
-										.item
-											.aboutUs__info
-												h3.aboutUs__usluga-name Реконструкция
-												p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-											.aboutUs__slide-img
-												img(src=require("../../img/slider2_1-1.jpg"))
-												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
-										.item
-											.aboutUs__info
-												h3.aboutUs__usluga-name Реконструкция
-												p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-											.aboutUs__slide-img
-												img(src=require("../../img/slider2_1-1.jpg"))
-												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+								.aboutUs__usluga-bg.box-shadow
+								#two.owl-carousel.owl-theme.aboutUs__slider
+									.item
+										.aboutUs__info
+											h3.aboutUs__usluga-name Реконструкция
+											p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+										.aboutUs__slide-img
+											img(src=require("../../img/slider2_1-1.jpg"))
+											img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+									.item
+										.aboutUs__info
+											h3.aboutUs__usluga-name Реконструкция
+											p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+										.aboutUs__slide-img
+											img(src=require("../../img/slider2_1-1.jpg"))
+											img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
 
 
 
-										.item
-											.aboutUs__info
-												h3.aboutUs__usluga-name Реконструкция
-												p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-											.aboutUs__slide-img
-												img(src=require("../../img/slider2_1-1.jpg"))
-												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+									.item
+										.aboutUs__info
+											h3.aboutUs__usluga-name Реконструкция
+											p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+										.aboutUs__slide-img
+											img(src=require("../../img/slider2_1-1.jpg"))
+											img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
 
 
 
-									.customNextBtn.customBtn
-										i.fa.fa-angle-right
-									.customPrevBtn.customBtn
-										i.fa.fa-angle-left
+								.customNextBtn.customBtn
+									i.fa.fa-angle-right
+								.customPrevBtn.customBtn
+									i.fa.fa-angle-left
 				//Секция видео
 				section#video.video
 					section#player-video.player-video
@@ -269,8 +270,8 @@ block main
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
 							.item.ourWorks__slider_slide.box-shadow
-									img(src=require("../../img/ourWork__slider-slide3.jpg"))
-									p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+								img(src=require("../../img/ourWork__slider-slide3.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 							.item.ourWorks__slider_slide.box-shadow
 								img(src=require("../../img/ourWork__slider-slide3.jpg"))
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
@@ -324,33 +325,33 @@ block main
 				//Cекиця скидки на монтаж, форма
 				section#discountsInstallation.discounts.intermediate.discounts__second-form
 					.container
-							.row
-								.intermediate_title.clo-lg-10.col-lg-offset-1
-									h3 Скидки на монтаж терассной доски при заказе через сайт
-									p Мы свяжемся с Вами для консультации и уточнения деталей
-								.intermediate_wrap
-									form
-										.intermediate_item.col-lg-4.col-md-4.col-sm-4
-											.modal_form_input_wrap
-												.modal_input_error
-													| Заполните поле
-													.modal_error_triangle
-													.modal_error_chest_img
-												i.fa.fa-check
-												input.modal_form_input(name='name', type='text', placeholder='Имя')
-										.intermediate_item.col-lg-4.col-md-4.col-sm-4
-											.modal_form_input_wrap
-												.modal_input_error
-													| Заполните поле
-													.modal_error_triangle
-													.modal_error_chest_img
-												i.fa.fa-check
-												input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
-										.intermediate_item.col-lg-4.col-md-4.col-sm-4
-											.modal_form_input_wrap
-												input(type='hidden', name='form_name', value='форма №3 уточнить название')
-												input(type='hidden', name='form_type', value='normal')
-												input(type='submit', value='Записаться')
+						.row
+							.intermediate_title.clo-lg-10.col-lg-offset-1
+								h3 Скидки на монтаж терассной доски при заказе через сайт
+								p Мы свяжемся с Вами для консультации и уточнения деталей
+							.intermediate_wrap
+								form
+									.intermediate_item.col-lg-4.col-md-4.col-sm-4
+										.modal_form_input_wrap
+											.modal_input_error
+												| Заполните поле
+												.modal_error_triangle
+												.modal_error_chest_img
+											i.fa.fa-check
+											input.modal_form_input(name='name', type='text', placeholder='Имя')
+									.intermediate_item.col-lg-4.col-md-4.col-sm-4
+										.modal_form_input_wrap
+											.modal_input_error
+												| Заполните поле
+												.modal_error_triangle
+												.modal_error_chest_img
+											i.fa.fa-check
+											input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
+									.intermediate_item.col-lg-4.col-md-4.col-sm-4
+										.modal_form_input_wrap
+											input(type='hidden', name='form_name', value='форма №3 уточнить название')
+											input(type='hidden', name='form_type', value='normal')
+											input(type='submit', value='Записаться')
 				//Секиция Этапы работы
 				section#stagesOfWork.stageOfWork
 					.container
@@ -566,8 +567,8 @@ block main
 
 
 						.item.ourWorks__slider_slide.box-shadow
-								img(src=require("../../img/ourWork__slider-slide3.jpg"))
-								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							img(src=require("../../img/ourWork__slider-slide3.jpg"))
+							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
 
 						.item.ourWorks__slider_slide.box-shadow
@@ -806,8 +807,6 @@ block main
 							input(type='hidden', name='form_name', value='')
 							input(type='hidden', name='form_type', value='normal')
 							input.col-lg-3(type='submit', value='Записаться')
-
-
 			// Секция footer
 			//footer.footer
 		div(off-canvas='id-1 left shift')
@@ -825,5 +824,3 @@ block main
 			<script src="libs/html5shiv/html5shiv.min.js"></script>
 			<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>`
 			<script src="libs/respond/respond.min.js"></script>
-
-

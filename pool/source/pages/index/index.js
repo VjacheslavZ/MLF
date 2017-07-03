@@ -194,9 +194,9 @@ $(document).ready( function() {
 		var scrollTop = $(window).scrollTop();
 
 		if( scrollTop  > windowHeight/30){
-			mainFixedMenu.addClass('haeder_scroll')
+			mainFixedMenu.addClass('header_scroll')
 		}else{
-			mainFixedMenu.removeClass('haeder_scroll')
+			mainFixedMenu.removeClass('header_scroll')
 		}
 	});
 })(jQuery);

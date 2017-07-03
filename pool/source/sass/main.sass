@@ -73,10 +73,10 @@ li
 		font-size: 40px
 .customNextBtn
 	i
-		//margin-left: 14px
+//margin-left: 14px
 .customPrevBtn
 	i
-		//margin-left: 11px
+//margin-left: 11px
 .owl-theme
 	.owl-dots
 		position: absolute
@@ -479,6 +479,7 @@ li
 	height: 100vh
 	background: url(../img/header_bg.jpg) no-repeat
 	background-size: cover
+	overflow: hidden
 .header
 	.container
 		height: 100%
@@ -506,9 +507,10 @@ li
 	//display: inline-block
 	position: relative
 	margin-left: 10px
+	border-bottom: 1px solid rgba(255,255,255, 0.2)
 	ul
 		padding: 13px 0 12px 0
-		border-bottom: 1px solid rgba(255,255,255, 0.2)
+
 		li
 			list-style: none
 			display: inline-block
@@ -539,6 +541,7 @@ li
 	.phones
 		li + li
 			margin-left: 32px
+
 
 .mainFixedMenu
 	background: rgba(0, 0, 0, 0.5)
@@ -572,18 +575,16 @@ li
 	left: 0
 	right: 0
 	background: rgba(0, 0, 0, 0.5)
-.haeder_scroll
+.header_scroll
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
 	.header_nav-main-menu
 		ul
 			padding-top: 24px
 		.logo
 			margin: 0px 0 4px 0
-
-.haeder_scroll
-	position: fixed
-	top: 0
-	left: 0
-	right: 0
 .header_modal
 	margin-top: 52px
 	display: inline-block
@@ -612,7 +613,7 @@ li
 		@include fz(18)
 		color: $main_color-text
 .slider-wrap
-	padding: 0 30px
+	padding: 0 40px
 	.owl-dots
 		display: none
 	.customBtn
@@ -620,12 +621,12 @@ li
 		&:hover
 			background-color: $btn_color__slider-hover
 	.customNextBtn
-		right: -4%
+		right: 17px
 		top: 50%
 		i
 			margin-left: 11px
 	.customPrevBtn
-		left: -4%
+		left: 17px
 		top: 50%
 		i
 			margin-left: 0
@@ -763,7 +764,7 @@ body textarea:required:valid
 		&::-webkit-scrollbar-track-piece
 			background-color: transparent
 nav[canvas]
-	position: fixed	
+	position: fixed
 	top: 20px
 	left: 20px
 	display: none
@@ -780,6 +781,7 @@ nav[canvas]
 // Секция main_content
 .main_content
 	text-align: center
+	overflow: hidden
 // Пример checkbox
 .check, .radio
 	display: inline-block
@@ -825,7 +827,7 @@ nav[canvas]
 			margin: 30px 30px
 			text-transform: uppercase
 			@include fz(24)
-			//color: #052243
+	//color: #052243
 	.intermediate_wrap
 		margin-top: 55px
 		.modal_input_error
@@ -837,7 +839,7 @@ nav[canvas]
 				border-radius: 10px
 				width: 100%
 				height: 52px
-				display: inline-block	
+				display: inline-block
 				border: 1px solid transparent
 				background: #fff
 				color: $text-color_place-нolder
@@ -1122,11 +1124,11 @@ nav[canvas]
 		overflow: hidden
 	.owl-carousel
 		display: flex
-		//margin-left: 15px
+	//margin-left: 15px
 	.defaul-title
 		margin: 0 0 49px 0
 	&__slider-description
-		padding: 36px 80px
+		padding: 36px 5px
 		color: #000
 	.owl-dots
 		bottom: -82px
