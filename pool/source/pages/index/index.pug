@@ -20,7 +20,7 @@ block main
 			.container
 				.row
 					nav.header_nav.clearfix
-						.col-lg-4
+						.col-sm-4
 							ul.adress
 								li
 									i.fa.fa-map-marker
@@ -28,7 +28,7 @@ block main
 								li
 									i.fa.fa-clock-o
 									a(href="#") Пн-Пт: 9:00-20:00
-						.col-lg-4
+						.col-sm-4
 							ul.center.social-networks
 								li
 									a.fa.fa-linkedin(href="#" target="_blank" aria-hidden="true")
@@ -40,7 +40,7 @@ block main
 									a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
 								li
 									a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
-						.col-lg-4
+						.col-sm-4
 							ul.right.phones
 								li
 									i.fa.fa-phone
@@ -52,16 +52,16 @@ block main
 			.container
 				.row
 					nav.header_nav-main-menu.clearfix
-						ul.col-lg-4.center
+						ul.col-sm-4.center
 							li
 								a(href="#aboutUs") О нас
 							li.header_nav-main-menu_item
 								a(href="#technoligy") Технологии
-						div.col-lg-4.center
+						div.col-sm-4.center
 							//a.logo.center(href="header_logo")
 							a.logo(href="#header_nav-wrap")
 								img(src=require("../../img/logo.png"))
-						ul.col-lg-4.left
+						ul.col-sm-4.left
 							li
 								a(href="#pricePools") Наши тарифы
 							li.header_nav-main-menu_item
@@ -108,7 +108,7 @@ block main
 								.aboutUs__default-wrap
 									h2.section__default-caption Немного о нас
 									p.aboutUs__description Компания ASTPOOL выполняет широкий спектр услуг:
-							.col-lg-12.aboutUs__slider-wrap
+							.col-sm-12.aboutUs__slider-wrap
 								.aboutUs__usluga-bg.box-shadow
 								#two.owl-carousel.owl-theme.aboutUs__slider
 									.item
@@ -197,21 +197,21 @@ block main
 						.technoligy__slider-wrap
 							#three.owl-carousel.owl-theme
 								.item.clearfix
-									.col-lg-offset-1.col-lg-6.text-left.technoligy__slider
+									.col-sm-offset-1.col-sm-6.text-left.technoligy__slider
 										img(src=require("../../img/section__technologi_slider-slide.jpg"))
-									.col-lg-offset-1.col-lg-3.technoligy__description
+									.col-sm-offset-1.col-sm-3.technoligy__description
 										h3.technoligy__description-caption Бассейн Инфинити
 										p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
 								.item.clearfix
-									.col-lg-offset-1.col-lg-6.text-left.technoligy__slider
+									.col-sm-offset-1.col-sm-6.text-left.technoligy__slider
 										img(src=require("../../img/section__technologi_slider-slide.jpg"))
-									.col-lg-offset-1.col-lg-3.technoligy__description
+									.col-sm-offset-1.col-sm-3.technoligy__description
 										h3.technoligy__description-caption Бассейн Инфинити
 										p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
 								.item.clearfix
-									.col-lg-offset-1.col-lg-6.text-left.technoligy__slider
+									.col-sm-offset-1.col-sm-6.text-left.technoligy__slider
 										img(src=require("../../img/section__technologi_slider-slide.jpg"))
-									.col-lg-offset-1.col-lg-3.technoligy__description
+									.col-sm-offset-1.col-sm-3.technoligy__description
 										h3.technoligy__description-caption Бассейн Инфинити
 										p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
 							.customNextBtn.customBtn
@@ -299,20 +299,20 @@ block main
 					.container
 						.row
 							h3.pricePools__caption Цены на бассейны под ключ
-							.col-lg-4
+							.col-md-4
 								.pricePools__type-pool
 									h4.pricePools__name Семейный
 									span.pricePools__price 1500 ₴
 									p.pricePools__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
 									button.pricePools__btn(data-modal="modal-2" data-info="Басейн за 1500" href="#" class="modal active") Купить
 
-							.col-lg-4
+							.col-md-4
 								.pricePools__type-pool
 									h4.pricePools__name Оптимальный
 									span.pricePools__price 3000 ₴
 									p.pricePools__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
 									button.pricePools__btn(data-modal="modal-2" data-info="Басейн за 1500" href="#" class="modal active") Купить
-							.col-lg-4
+							.col-md-4
 								.pricePools__type-pool
 									h4.pricePools__name Бизнес
 									span.pricePools__price 8000 ₴
@@ -362,7 +362,7 @@ block main
 
 							.stageOfWork__stages-bg
 								.stageOfWork__stages-logo
-								ul.stageOfWork__stages.col-lg-5
+								ul.stageOfWork__stages.col-lg-5.col-md-6.stageOfWork__items-left
 									li.vertical-align
 										p.text-right Сдача объекта. Подписание акта выполненых работ
 										.stage4.vertical-align
@@ -371,7 +371,7 @@ block main
 										p.text-right Заключение договора, внесение предоплаты. Начало строительства бассейна
 										.stage3.vertical-align
 											a
-								ul.stageOfWork__stages.col-lg-5.col-lg-offset-2
+								ul.stageOfWork__stages.col-lg-5.col-lg-offset-2.col-md-6.stageOfWork__items-right
 									li.vertical-align
 										.stage1.vertical-align
 											a

@@ -504,13 +504,11 @@ li
 	left: 0
 	right: 0
 .header_nav
-	//display: inline-block
 	position: relative
 	margin-left: 10px
 	border-bottom: 1px solid rgba(255,255,255, 0.2)
 	ul
 		padding: 13px 0 12px 0
-
 		li
 			list-style: none
 			display: inline-block
@@ -519,7 +517,7 @@ li
 			a
 				margin-left: 10px
 				color: $main_color-text
-				@include fz(14)
+				font-size: 14px
 				text-decoration: none
 				transition: .5s
 				&:hover
@@ -536,8 +534,6 @@ li
 			margin-left: 0
 			&:hover
 				color: #000
-
-
 	.phones
 		li + li
 			margin-left: 32px
@@ -622,7 +618,7 @@ li
 			background-color: $btn_color__slider-hover
 	.customNextBtn
 		right: 17px
-		top: 50%
+		top: calc(50% - 10px)
 		i
 			margin-left: 11px
 	.customPrevBtn
@@ -820,14 +816,11 @@ nav[canvas]
 	min-height: 300px
 	background-color: #00b6f4
 	.intermediate_title
-		//max-width: 650px
 		margin: auto
-		//color: #052243
 		h3
 			margin: 30px 30px
 			text-transform: uppercase
-			@include fz(24)
-	//color: #052243
+			@include fz(36)
 	.intermediate_wrap
 		margin-top: 55px
 		.modal_input_error
@@ -918,6 +911,10 @@ nav[canvas]
 		position: absolute
 		top: 40px
 		left: 8%
+	.item
+		//display: flex
+		//flex-direction: row
+		//justify-content: space-around
 	&__info
 		width: 226px
 		display: inline-block
@@ -938,8 +935,10 @@ nav[canvas]
 		@include fz(18)
 	&__slide-img
 		display: inline-block
+		margin-left: 75px
 		img
-			margin-left: 75px
+			width: 100%
+			height: auto
 			display: inline-block
 			& + img
 				margin-left: 30px
@@ -990,12 +989,13 @@ nav[canvas]
 		min-height: 514px
 //	Секция техноологии
 .technoligy
-	margin-top: -7px
+	//margin-top: -7px
 	margin-bottom: 56px
 	min-height: 926px
 	background: url("../img/section__technologi-bg.png")no-repeat
 	background-size: cover
 	position: relative
+	padding-top: 88px
 	&__main
 		position: relative
 	&__uzor-before
@@ -1003,7 +1003,7 @@ nav[canvas]
 		border-left: $lineUzorColor
 		height: 140px
 		display: inline-block
-		//top: -45px
+		top: -95px
 		left: 20px
 		margin-left: 20px
 		&:after
@@ -1011,9 +1011,10 @@ nav[canvas]
 			left: -11px
 			@include roundUzor()
 	&__caption
-		margin-top: 88px
 		margin-left: 88px
 		text-align-last: left
+	.connecting__uzor-after
+		top: 73px
 	//слайдер
 	&__slider-wrap
 		position: relative
@@ -1059,7 +1060,7 @@ nav[canvas]
 		border-left: $lineUzorColor
 		border-top: $lineUzorColor
 		&:before
-			top: 100px
+			top: 72px
 			left: -11px
 			@include roundUzor()
 			background-color: #fff
@@ -1079,7 +1080,7 @@ nav[canvas]
 		position: absolute
 		border-top: $lineUzorColor
 		border-right: $lineUzorColor
-		width: 415px
+		width: 390px
 		height: 53px
 		right: 4%
 		top: 78%
@@ -1108,7 +1109,7 @@ nav[canvas]
 	.intermediate_title
 		h3
 			font-family: $font_PT_Sans-Bold
-			font-size: 36px
+			//font-size: 36px
 			margin: 0
 		p
 			margin-top: 49px
@@ -1160,9 +1161,7 @@ nav[canvas]
 		background: $main_color url("../img/section__price-price-bg.png") no-repeat bottom
 		background-size: cover
 		box-shadow: 0 0 11px 11px #f6f6f6
-		//  height убрать
-		//height: 480px
-		padding: 33px 57px 40px
+		padding: 33px 50px 40px
 	&__name
 		@include font($text-color_label, 32, $font_PT_Sans-Bold, 1)
 		margin: 0
@@ -1192,9 +1191,9 @@ nav[canvas]
 			outline-color: initial
 	.connecting
 		&__connecting-lines
-			height: 114px
+			height: 91px
 			&:before
-				top: 73px
+				top: 50px
 
 //	Секиция скидки на монтаж, форма
 .discounts__second-form
@@ -1394,12 +1393,14 @@ nav[canvas]
 		padding: 120px 75px 150px 200px
 		text-align: left
 		@include font($main_color-text, 18, $font_PT_Sans-Italic, 1.1)
+	.owl-stage-outer
+		padding-bottom: 80px
 	.owl-theme .owl-nav.disabled+.owl-dots
-		margin-top: 115px
+		margin-top: 22px
 		left: 0
 		right: 0
 	.customBtn
-		bottom: 20px
+		bottom: 113px
 	.customPrevBtn
 		left: 40%
 		i
@@ -1412,7 +1413,7 @@ nav[canvas]
 //	Секиця новости, слайдер
 .news
 	position: relative
-	padding-top: 145px
+	padding-top: 45px
 	&__title
 		position: relative
 		margin-bottom: 18px
@@ -1533,7 +1534,7 @@ nav[canvas]
 				color: $btn_color__slider-hover
 	&__logo
 		text-align: right
-		margin-top: 70px
+		margin-top: 80px
 		p
 			@include font($main_color-text, 14, $font_PT_Sans-Regular,1)
 			display: inline-block

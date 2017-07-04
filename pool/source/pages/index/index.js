@@ -85,6 +85,7 @@ $(document).ready( function() {
 		items: 1,
 		dots: true,
 		nav: true
+
 	});
 	$("#three.owl-carousel").owlCarousel({
 		loop: true,
@@ -92,21 +93,18 @@ $(document).ready( function() {
 		dots: true,
 		nav: true
 	});
-
 	$("#ourWorks__slider.owl-carousel.owl-theme").owlCarousel({
 		loop: true,
 		items: 5,
 		margin: 30,
 		mouseDrag: false,
 	});
-
 	$("#reviews__slider.owl-carousel").owlCarousel({
 		loop: true,
 		items: 1,
 		dots: true,
 		nav: false
 	});
-
 	$("#news__slider.owl-carousel.owl-theme").owlCarousel({
 		loop: true,
 		items: 5,
