@@ -89,8 +89,8 @@ block main
 								.customNextBtn.customBtn
 									i.fa.fa-angle-right
 
-							.header_modal
-								a(data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active") Заказать обратный звонок
+							.header_modal(data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active")
+								a Заказать обратный звонок
 						//.header_bot_txt
 						//	p Более
 						//		span  400
@@ -108,36 +108,25 @@ block main
 								.aboutUs__default-wrap
 									h2.section__default-caption Немного о нас
 									p.aboutUs__description Компания ASTPOOL выполняет широкий спектр услуг:
-							.col-sm-12.aboutUs__slider-wrap
+							.aboutUs__slider-wrap
 								.aboutUs__usluga-bg.box-shadow
-								#two.owl-carousel.owl-theme.aboutUs__slider
-									.item
-										.aboutUs__info
-											h3.aboutUs__usluga-name Реконструкция
-											p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										.aboutUs__slide-img
-											img(src=require("../../img/slider2_1-1.jpg"))
-											img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
-									.item
-										.aboutUs__info
-											h3.aboutUs__usluga-name Реконструкция
-											p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										.aboutUs__slide-img
-											img(src=require("../../img/slider2_1-1.jpg"))
-											img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+								.row
 
-
-
-									.item
-										.aboutUs__info
-											h3.aboutUs__usluga-name Реконструкция
-											p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										.aboutUs__slide-img
-											img(src=require("../../img/slider2_1-1.jpg"))
-											img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
-
-
-
+										#two.owl-carousel.owl-theme.aboutUs__slider.col-sm-12
+											.item
+												.aboutUs__info
+													h3.aboutUs__usluga-name Реконструкция
+													p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+												.aboutUs__slide-img
+													img(src=require("../../img/slider2_1-1.jpg"))
+													img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+											.item
+												.aboutUs__info
+													h3.aboutUs__usluga-name Реконструкция
+													p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+												.aboutUs__slide-img
+													img(src=require("../../img/slider2_1-1.jpg"))
+													img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
 								.customNextBtn.customBtn
 									i.fa.fa-angle-right
 								.customPrevBtn.customBtn
@@ -290,19 +279,6 @@ block main
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
 
-							.item.ourWorks__slider_slide.box-shadow
-								img(src=require("../../img/ourWork__slider-slide3.jpg"))
-								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-							.item.ourWorks__slider_slide.box-shadow
-								img(src=require("../../img/ourWork__slider-slide3.jpg"))
-								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-
-
-							.item.ourWorks__slider_slide.box-shadow
-								img(src=require("../../img/ourWork__slider-slide3.jpg"))
-								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-
-
 						.customNextBtn.customBtn
 							i.fa.fa-angle-right
 						.customPrevBtn.customBtn
@@ -312,20 +288,20 @@ block main
 					.container
 						.row
 							h3.pricePools__caption Цены на бассейны под ключ
-							.col-md-4.col-sm-4.col-xs-8.col-xs-offset-2
+							.col-md-4.col-sm-4.col-xs-12
 								.pricePools__type-pool
 									h4.pricePools__name Семейный
 									span.pricePools__price 1500 ₴
 									p.pricePools__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
 									button.pricePools__btn(data-modal="modal-2" data-info="Басейн cемейный" href="#" class="modal active") Купить
 
-							.col-md-4.col-sm-4.col-xs-8.col-xs-offset-2
+							.col-md-4.col-sm-4.col-xs-12
 								.pricePools__type-pool
 									h4.pricePools__name Оптимальный
 									span.pricePools__price 3000 ₴
 									p.pricePools__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
 									button.pricePools__btn(data-modal="modal-2" data-info="Басейн оптимальный" href="#" class="modal active") Купить
-							.col-md-4.col-sm-4.col-xs-8.col-xs-offset-2
+							.col-md-4.col-sm-4.col-xs-12
 								.pricePools__type-pool
 									h4.pricePools__name Бизнес
 									span.pricePools__price 8000 ₴
@@ -401,7 +377,7 @@ block main
 					.container
 						.row
 							h3.section__default-caption Наша команда
-							.col-sm-4.ourTeam__photo-cart
+							.col-sm-4.col-xs-12.ourTeam__photo-cart
 								.ourTeam__wrap.box-shadow
 									img.ourTeam__photo(src=require("../../img/annaBelik.jpg"))
 									h4.ourTeam__name Анна Белик
@@ -417,7 +393,7 @@ block main
 											a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
 										li
 											a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
-							.col-sm-4.ourTeam__photo-cart
+							.col-sm-4.col-xs-12.ourTeam__photo-cart
 								.ourTeam__wrap.box-shadow
 									img.ourTeam__photo(src=require("../../img/ulaKoruma.jpg"))
 									h4.ourTeam__name Юлия Корума
@@ -433,7 +409,7 @@ block main
 											a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
 										li
 											a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
-							.col-sm-4.ourTeam__photo-cart
+							.col-sm-4.col-xs-12.ourTeam__photo-cart
 								.ourTeam__wrap.box-shadow
 									img.ourTeam__photo(src=require("../../img/olegIvanow.jpg"))
 									h4.ourTeam__name Олег Иванов
@@ -454,53 +430,32 @@ block main
 				section#reviews.reviews
 					.container
 						h3.section__default-caption Отзывы
-						.row.reviews__main-content#reviews__slider.owl-carousel.owl-theme
-							.item
-								.reviews__autor
-									.reviews__wrap.box-shadow
-										img.reviews__autor_photo(src=require("../../img/igorBorisow.png"))
-										h5.reviews__autor_name Игорь Борисов
-										p.reviews__position Предприниматель
-								.col-sm-offset-2.col-sm-10
-									p.reviews__text «Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.»
-							.item
-								.reviews__autor
-									.reviews__wrap.box-shadow
-										img.reviews__autor_photo(src=require("../../img/igorBorisow.png"))
-										h5.reviews__autor_name Игорь Борисов
-										p.reviews__position Предприниматель
-								.col-sm-offset-2.col-sm-10
-									p.reviews__text «Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.»
-							.item
-								.reviews__autor
-									.reviews__wrap.box-shadow
-										img.reviews__autor_photo(src=require("../../img/igorBorisow.png"))
-										h5.reviews__autor_name Игорь Борисов
-										p.reviews__position Предприниматель
-								.col-sm-offset-2.col-sm-10
-									p.reviews__text «Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.»
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+						.row
+							.reviews__main-content#reviews__slider.owl-carousel.owl-theme
+								.item.clearfix
+									.reviews__autor
+										.reviews__wrap.box-shadow
+											img.reviews__autor_photo(src=require("../../img/igorBorisow.png"))
+											h5.reviews__autor_name Игорь Борисов
+											p.reviews__position Предприниматель
+									.col-sm-offset-2.col-sm-10.col-xs-offset-2
+										p.reviews__text «Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.»
+								.item.clearfix
+									.reviews__autor
+										.reviews__wrap.box-shadow
+											img.reviews__autor_photo(src=require("../../img/igorBorisow.png"))
+											h5.reviews__autor_name Игорь Борисов
+											p.reviews__position Предприниматель
+									.col-sm-offset-2.col-sm-10.col-xs-offset-2
+										p.reviews__text «Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.»
+								.item.clearfix
+									.reviews__autor
+										.reviews__wrap.box-shadow
+											img.reviews__autor_photo(src=require("../../img/igorBorisow.png"))
+											h5.reviews__autor_name Игорь Борисов
+											p.reviews__position Предприниматель
+									.col-sm-offset-2.col-sm-10.col-xs-offset-2
+										p.reviews__text «Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.»
 						.customNextBtn.customBtn
 							i.fa.fa-angle-right
 						.customPrevBtn.customBtn
@@ -615,9 +570,9 @@ block main
 			.footer
 				.container
 					.row
-						.col-lg-6.footer__map.col-sm-6
+						.col-lg-6.footer__map.col-sm-6.col-xs-12
 							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2036.0536712027183!2d36.232229212677765!3d49.987599444282395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1499009966645" width="570" height="314" frameborder="0" style="border:0" allowfullscreen></iframe>
-						.col-lg-2.col-lg-offset-1.col-sm-3
+						.col-lg-2.col-lg-offset-1.col-sm-3.col-xs-6
 							ul.footer__service
 								li
 									a(href="#aboutUs") О нас
@@ -640,7 +595,7 @@ block main
 								li
 									a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
 
-						.col-lg-3.col-sm-3
+						.col-lg-3.col-sm-3.col-xs-6
 							ul.footer__contacts
 								li
 									i.fa.fa-map-marker

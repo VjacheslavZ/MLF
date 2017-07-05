@@ -38,6 +38,12 @@
 					display: none
 		.owl-dots
 			left: 100px
+		&__slider-wrap
+			.item
+				.aboutUs__slide-img
+					img
+						margin: 0 auto
+						display: block
 	//Секция видео
 	//Секция техноологии, слайдер
 	.technoligy
@@ -129,6 +135,9 @@
 		margin-top: 40px
 	nav[canvas]
 		display: block
+	.modal_form_input_wrap
+		.modal_input_error
+			right: 0
 	.header
 		&_mainMenu
 			position: fixed
@@ -147,8 +156,18 @@
 			bottom: 60px
 		.customPrevBtn
 			left: 61px
+		.customNextBtn
+			left: 283px
 		.owl-dots
 			left: 99px
+		//&__slide-img
+			margin-left: 0
+		//&__slider-wrap
+			.item
+				.aboutUs__slide-img
+					img
+						margin: 0 auto
+						display: block
 	.technoligy
 		margin-bottom: 0
 		min-height: 729px
@@ -214,13 +233,14 @@
 			margin-bottom: 45px
 	.reviews
 		&__wrap
-			padding: 100px 40px 146px 40px
+			padding: 50px 40px 146px 40px
 		&__text
 			padding: 63px 65px 150px 200px
+			font-size: 13px
 		.customPrevBtn
 			right: 60%
 		.customNextBtn
-			left: 56%
+			left: 60%
 	.news
 		.connecting__uzor-after
 			width: 96px
@@ -236,7 +256,7 @@
 				font-size: 12px
 		&__logo
 			margin-top: 106px
-@media only screen and (max-width : 768px)
+@media only screen and (max-width : 767px)
 	body, html
 		font-size: 10px
 	.animated
@@ -263,6 +283,26 @@
 		margin-top: 40px
 	[off-canvas*=left]
 		width: 255px
+	.opacityItem
+		opacity: 1
+	.news
+		.connecting__uzor-after
+			display: none
+	.aboutUs
+		&__info
+			width: 30%
+		&__slide-img
+			img
+				width: 65%
+			//margin-left: 0
+		//&__slider-wrap
+			.item
+				.aboutUs__slide-img
+						img
+							margin: 0 auto
+							display: block
+	.technoligy
+		min-height: 717px
 	.discounts
 		padding-top: 30px
 		.intermediate_title
@@ -270,8 +310,14 @@
 				margin-top: 25px
 		.intermediate_item + .intermediate_item
 			margin-top: 25px
+	.ourWorks
+		&__slider-description
+			font-size: 12px
 	.pricePools
 		&__type-pool
+
+			width: 80%
+			margin: 0 auto
 			margin-top: 40px
 	.stageOfWork
 		&__stages-bg
@@ -323,7 +369,82 @@
 			.stage4
 				a:before
 					right: 69px
-
+	.ourTeam
+		&__wrap
+			width: 80%
+			margin: 0 auto
+		&__photo-cart + .ourTeam__photo-cart
+			margin-top: 40px
+	.weReadyOffer
+		padding-bottom: 60px
+		&__service
+			width: 80%
+			margin: 0 auto
+	.footer
+		padding-bottom: 15px
+		&__service
+			li + li
+				margin-top: 5px
+		&__pageInsocialNetwork
+			justify-content: inherit
+			margin-top: 40px
+			li + li
+				margin-left: 10px
+		&__logo
+			margin-top: 0
+@media only screen and (max-width : 700px)
+	.technoligy
+		min-height: 690px
+	.reviews
+		&__text
+			padding: 63px 65px 95px 200px
+	.aboutUs
+		padding-bottom: 140px
+		&__slider-wrap
+			margin-top: 0
+		&__usluga-description
+			text-align: center
+		&__usluga-bg
+			background: none
+			box-shadow: none
+		&__info
+			width: 100%
+			text-align: center
+			margin-bottom: 15px
+		&__slide-img
+			display: block
+			margin: 0 auto
+		&__slider
+			left: 0
+		.owl-dots
+			left: 0
+			right: 0
+			bottom: -50px
+		.customBtn
+			bottom: -113px
+		.customPrevBtn
+			left: 35%
+		.customNextBtn
+			right: 35%
+			left: auto
+@media only screen and (max-width : 640px)
+	.aboutUs__uzor
+		display: none
+	.technoligy
+		&__uzor-before
+			display: none
+		.connecting__uzor-after
+			display: none
+		.connecting__connecting-lines
+			display: none
+	.stageOfWork
+		.connecting__uzor-after
+			display: none
+		.connecting__wrap
+			display: none
+	.news
+		.connecting__wrap
+			display: none
 @media only screen and (max-width : 520px)
 	.dm-modal
 		width: 100%

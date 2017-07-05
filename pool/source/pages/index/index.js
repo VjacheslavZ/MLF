@@ -109,6 +109,9 @@ $(document).ready( function() {
 		mouseDrag: false,
 		responsive : {
 			0 : {
+				items: 2
+			},
+			768 : {
 				items: 3
 			},
 			991 : {
@@ -119,13 +122,14 @@ $(document).ready( function() {
 			}
 		}
 	});
+
 	$("#reviews__slider.owl-carousel").owlCarousel({
 		loop: true,
 		items: 1,
 		dots: true,
 		nav: false,
-
 	});
+
 	$("#news__slider.owl-carousel.owl-theme").owlCarousel({
 		loop: true,
 		items: 5,
@@ -133,10 +137,13 @@ $(document).ready( function() {
 		mouseDrag: false,
 		responsive : {
 			0 : {
+				items: 2
+			},
+			768 : {
 				items: 3
 			},
 			991 : {
-				items: 3
+				items: 4
 			},
 			1200 : {
 				items: 5
