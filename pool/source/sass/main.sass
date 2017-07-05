@@ -261,7 +261,8 @@ li
 			right: -25px
 			top: 40px
 			padding-left: 10px
-			@include fz(15)
+			//@include fz(15)
+
 			line-height: 35px
 			font-family: $font_PT_Sans-Regular
 			background-color: #F4F4F4
@@ -439,7 +440,7 @@ li
 		right: -25px
 		top: 40px
 		padding-left: 10px
-		@include fz(15)
+		font-size: 15px
 		line-height: 35px
 		font-family: $font_PT_Sans-Regular
 		background-color: #F4F4F4
@@ -840,7 +841,8 @@ nav[canvas]
 				color: $text-color_place-нolder
 				//margin: 0 10px
 				padding: 0 0 0 20px
-				@include fz(20)
+				//@include fz(20)
+				font-size: 20px
 				transition: .5s
 				&::-webkit-input-placeholder
 					color: $text-color_place-нolder
@@ -872,7 +874,6 @@ nav[canvas]
 		display: inline-block
 		width: 149px
 		height: 60px
-		//border-left: 2px solid #e8f0f6
 		border-top: 2px solid #e8f0f6
 		position: relative
 		&:before
@@ -907,7 +908,6 @@ nav[canvas]
 	&__usluga-bg
 		display: inline-block
 		width: 49%
-		//position: relative
 		background: url("../img/aboutUs__sldier-bg.jpg") no-repeat top left
 		height: 480px
 		position: relative
@@ -926,7 +926,7 @@ nav[canvas]
 	&__usluga-name
 		color: $main_color-title
 		font-family: $font_PT_Sans-Bold
-		@include fz(22)
+		font-size: 22px
 		&:before
 			content: ""
 			@include sprite($tools)
@@ -936,7 +936,8 @@ nav[canvas]
 	&__usluga-description
 		color: #000
 		text-align: left
-		@include fz(18)
+		//@include fz(18)
+		font-size: 18px
 	&__slide-img
 		display: inline-block
 		margin-left: 75px
@@ -1015,10 +1016,9 @@ nav[canvas]
 			@include roundUzor()
 	&__caption
 		margin-left: 88px
-		text-align-last: left
+		text-align: left
 	.connecting__uzor-after
 		top: 73px
-	//слайдер
 	&__slider-wrap
 		position: relative
 		padding: 38px 0
@@ -1030,6 +1030,7 @@ nav[canvas]
 		text-align: left
 		font-family: $font_PT_Sans-Bold
 		color: $main_color-title
+		font-size: 22px
 	.aboutUs__usluga-description
 		line-height: 1.4
 	.owl-nav
@@ -1372,7 +1373,7 @@ nav[canvas]
 	&__main-content
 		position: relative
 	.section__default-caption
-		text-align-last: left
+		text-align: left
 		margin: 0 0 54px 0
 	&__autor
 		position: absolute
@@ -1388,15 +1389,16 @@ nav[canvas]
 		border-radius: 50%
 	&__autor_name
 		@include font($main_color-text2, 20, $font_PT_Sans-Bold, 1)
+		font-size: 20px
 		margin: 36px 0 13px
 	&__position
 		@include font($main_color-text2, 18, $font_PT_Sans-Regular, 1)
+		font-size: 18px
 	&__text
 		background: $section__reviews-bg
 		padding: 120px 75px 150px 200px
 		text-align: left
 		@include font($main_color-text, 18, $font_PT_Sans-Italic, 1.1)
-
 	.owl-stage-outer
 		padding-bottom: 80px
 	.owl-theme .owl-nav.disabled+.owl-dots
@@ -1546,6 +1548,7 @@ nav[canvas]
 		p
 			@include font($main_color-text, 14, $font_PT_Sans-Regular,1)
 			display: inline-block
+			font-size: 14px
 			//padding: 0 75px
 			margin: 0 21px 0 0
 		a

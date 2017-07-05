@@ -375,6 +375,14 @@
 			margin: 0 auto
 		&__photo-cart + .ourTeam__photo-cart
 			margin-top: 40px
+	.reviews
+		&__autor
+			top: 0
+			left: 0
+		&__wrap
+			padding: 20px 20px 145px 20px
+		&__text
+			padding: 20px 10px 95px 200px
 	.weReadyOffer
 		padding-bottom: 60px
 		&__service
@@ -394,16 +402,27 @@
 			margin-top: 0
 @media only screen and (max-width : 700px)
 	.technoligy
-		min-height: 690px
-	.reviews
-		&__text
-			padding: 63px 65px 95px 200px
+		min-height: 882px
+	.technoligy__slider-wrap
+		margin-top: 0
+		.item
+			display: flex
+			flex-direction: column-reverse
+		.technoligy__description-caption
+			text-align: center
+		.technoligy__description
+			display: block
+			width: 100%
+
+
 	.aboutUs
-		padding-bottom: 140px
+		padding-bottom: 200px
 		&__slider-wrap
 			margin-top: 0
 		&__usluga-description
 			text-align: center
+			min-height: 90px
+			font-size: 16px
 		&__usluga-bg
 			background: none
 			box-shadow: none
@@ -421,36 +440,105 @@
 			right: 0
 			bottom: -50px
 		.customBtn
-			bottom: -113px
+			bottom: -187px
 		.customPrevBtn
 			left: 35%
 		.customNextBtn
 			right: 35%
 			left: auto
+	.pricePools
+		&__caption
+			margin-bottom: 0
 @media only screen and (max-width : 640px)
-	.aboutUs__uzor
-		display: none
+	body, html
+		font-size: 9px
+	.aboutUs
+		&__usluga-description
+			font-size: 13px
+		.customPrevBtn
+			left: 28%
+		.customNextBtn
+			right: 28%
+		&__uzor
+			display: none
+	.discounts
+		.intermediate_wrap
+			margin-top: 10px
 	.technoligy
+		min-height: 760px
+		&__caption
+			margin-left: 0
+			text-align: center
 		&__uzor-before
 			display: none
 		.connecting__uzor-after
 			display: none
 		.connecting__connecting-lines
 			display: none
+		.connecting__connecting-lines_right
+			display: none
+	.ourWorks
+		.customPrevBtn
+			right: 65%
+		.customNextBtn
+			left: 65%
 	.stageOfWork
 		.connecting__uzor-after
 			display: none
 		.connecting__wrap
 			display: none
+	.reviews
+		.section__default-caption
+			text-align: center
+			margin-bottom: 20px
+		.box-shadow
+			box-shadow: none
+		&__autor
+			position: relative
+		&__autor_name
+			margin: 10px 0 10px
+		&__position
+			margin-bottom: 5px
+		&__wrap
+			padding: 0
+		&__text
+			padding: 20px 10px 30px 10px
+		.owl-stage-outer
+			padding-bottom: 0
+		.owl-carousel
+			.owl-item
+				img
+					width: auto
+					display: inline-block
+		.customPrevBtn
+			right: 65%
+		.customNextBtn
+			left: 65%
 	.news
 		.connecting__wrap
 			display: none
+		.customPrevBtn
+			right: 65%
+		.customNextBtn
+			left: 65%
+
 @media only screen and (max-width : 520px)
 	.dm-modal
 		width: 100%
 	.dm-modal
 		input[type=submit]
 			width: 100%
+	.ourWorks
+		.customPrevBtn
+			right: 80%
+		.customNextBtn
+			left: 80%
+	.news
+		.customPrevBtn
+			right: 80%
+		.customNextBtn
+			left: 80%
+
 @media only screen and (max-width : 480px)
 	.our_advantages .our_advantages_item .our_advantages_item_img i
 		font-size: 37px

@@ -109,6 +109,9 @@ $(document).ready( function() {
 		mouseDrag: false,
 		responsive : {
 			0 : {
+				items: 1
+			},
+			521 : {
 				items: 2
 			},
 			768 : {
@@ -137,6 +140,9 @@ $(document).ready( function() {
 		mouseDrag: false,
 		responsive : {
 			0 : {
+				items: 1
+			},
+			521 : {
 				items: 2
 			},
 			768 : {
