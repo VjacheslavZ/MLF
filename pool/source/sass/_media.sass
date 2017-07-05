@@ -230,10 +230,15 @@
 			right: 60%
 		.customNextBtn
 			left: 60%
-	.footer__contacts
-		a
-			font-size: 12px
+	.footer
+		&__contacts
+			a
+				font-size: 12px
+		&__logo
+			margin-top: 106px
 @media only screen and (max-width : 768px)
+	body, html
+		font-size: 10px
 	.animated
 		-o-transition-property: none !important
 		-moz-transition-property: none !important
@@ -258,6 +263,67 @@
 		margin-top: 40px
 	[off-canvas*=left]
 		width: 255px
+	.discounts
+		padding-top: 30px
+		.intermediate_title
+			p
+				margin-top: 25px
+		.intermediate_item + .intermediate_item
+			margin-top: 25px
+	.pricePools
+		&__type-pool
+			margin-top: 40px
+	.stageOfWork
+		&__stages-bg
+			display: flex
+			flex-direction: column
+			background: none
+			padding-top: 20px
+			&:after
+				display: none
+		&__stages
+			li + li
+				margin-top: 0
+		&__items-left
+			display: flex
+			flex-direction: column-reverse
+			order: 2
+			li
+				display: flex
+				flex-direction: row-reverse
+				justify-content: center
+				padding-right: 0
+				align-items: center
+				p
+					text-align: left !important
+			.text-right
+				margin-right: 0
+		&__items-right
+			order: 1
+			li
+				padding-left: 0
+			.text-left
+				margin-left: 0
+		&__stages
+			.stage1
+				a:before
+					left: auto
+					right: 61px
+				a:after
+					display: none
+			.stage2
+				a:before
+					left: auto
+					right: 70px
+			.stage3
+				a:before
+					right: 80px
+				a:after
+					display: none
+			.stage4
+				a:before
+					right: 69px
+
 @media only screen and (max-width : 520px)
 	.dm-modal
 		width: 100%
