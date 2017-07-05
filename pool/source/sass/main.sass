@@ -84,6 +84,7 @@ li
 		display: inline-block
 		.owl-dot
 			span
+				transition: .5s
 				width: 20px
 				height: 20px
 				border: 2px solid #e6e6e6
@@ -606,7 +607,7 @@ li
 	h1
 		margin-bottom: 36px
 	p
-		@include fz(18)
+		font-size: 18px
 		color: $main_color-text
 .slider-wrap
 	padding: 0 40px
@@ -948,7 +949,7 @@ nav[canvas]
 				display: inline-block
 				width: inherit
 	.customBtn
-		bottom: 66px
+		bottom: 64px
 	.customNextBtn
 		left: 316px
 		i
@@ -989,7 +990,6 @@ nav[canvas]
 		min-height: 514px
 //	Секция техноологии
 .technoligy
-	//margin-top: -7px
 	margin-bottom: 56px
 	min-height: 926px
 	background: url("../img/section__technologi-bg.png")no-repeat
@@ -1036,12 +1036,12 @@ nav[canvas]
 		left: 0%
 		right: 0
 	.customNextBtn
-		right: 40%
+		left: 55%
 		bottom: -80px
 		i
 			margin-left: 6px
 	.customPrevBtn
-		left: 40%
+		right: 55%
 		bottom: -80px
 		i
 			margin-left: 0
@@ -1088,7 +1088,7 @@ nav[canvas]
 			left: -20px
 			top: -10px
 			@include roundUzor()
-//	Секиця Скидки, форма
+//Секиця Скидки, форма
 .discounts
 	background: url("../img/section__discounts-bg.jpg") no-repeat
 	background-size: cover
@@ -1115,7 +1115,7 @@ nav[canvas]
 			margin-top: 49px
 			font-family: $font_PT_Sans-Regular
 			font-size: 18px
-//	Секиция наши работы, слайдер
+//Секиция наши работы, слайдер
 .ourWorks
 	padding-top: 114px
 	&__wraper
@@ -1138,17 +1138,17 @@ nav[canvas]
 	.customBtn
 		bottom: 1px
 	.customNextBtn
-		right: 40%
+		left: 55%
 		i
 			margin-left: 8px
 	.customPrevBtn
-		left: 40%
+		right: 55%
 		i
 			margin-left: 0
 	.owl-item.active
 		margin-bottom: 5px
 
-//	Секиция цены на басейны
+//Секиция цены на басейны
 .pricePools
 	padding-top: 101px
 	min-height: 993px
@@ -1191,14 +1191,14 @@ nav[canvas]
 			outline-color: initial
 	.connecting
 		&__connecting-lines
-			height: 91px
+			height: 113px
 			&:before
 				top: 50px
 
-//	Секиция скидки на монтаж, форма
+//Секиция скидки на монтаж, форма
 .discounts__second-form
 	margin-top: 40px
-//	Секиция Этапы работы
+//Секиция Этапы работы
 .stageOfWork
 	padding-top: 111px
 	position: relative
@@ -1360,7 +1360,7 @@ nav[canvas]
 				color: $main_color
 				text-decoration: none
 
-//	Секиця отзывы, слайдер
+//Секиця отзывы, слайдер
 .reviews
 	position: relative
 	padding-top: 107px
@@ -1402,15 +1402,15 @@ nav[canvas]
 	.customBtn
 		bottom: 113px
 	.customPrevBtn
-		left: 40%
+		right: 57%
 		i
 			margin-left: 0
 	.customNextBtn
-		right: 42%
+		left: 54%
 		i
 			margin-left: 0
 
-//	Секиця новости, слайдер
+//Секиця новости, слайдер
 .news
 	position: relative
 	padding-top: 45px
@@ -1457,9 +1457,9 @@ nav[canvas]
 	.customBtn
 		bottom: 253px
 	.customPrevBtn
-		left: 40%
+		right: 55%
 	.customNextBtn
-		right: 40%
+		left: 55%
 	.connecting__wrap
 		height: 262px
 		position: absolute
@@ -1476,7 +1476,7 @@ nav[canvas]
 			height: 164px
 			top: -2px
 
-// Секция Мы готовы предложить
+//Секция Мы готовы предложить
 .weReadyOffer
 	padding: 105px 0 124px 0
 	.section__default-caption
@@ -1488,11 +1488,15 @@ nav[canvas]
 		padding: 46px 0 48px 0
 	.weReadyOffer__service
 		margin-top: 60px
-// Секия footer 
+		img
+			width: 100%
+//Секия footer
 .footer
 	background: #fff url("../img/footer__bg.jpg") no-repeat
 	background-size: cover
 	padding: 30px 0 56px 0
+	iframe
+		width: 100%
 	&__service
 		font-size: 18px
 		li + li
@@ -1526,6 +1530,7 @@ nav[canvas]
 			width: 16px
 		a
 			@include font($main_color-text, 13, $font_PT_Sans-Regular, 1)
+			font-size: 13px
 			color:
 			text-decoration: none
 			transition: .5s

@@ -52,16 +52,16 @@ block main
 			.container
 				.row
 					nav.header_nav-main-menu.clearfix
-						ul.col-sm-4.center
+						ul.col-md-4.center
 							li
 								a(href="#aboutUs") О нас
 							li.header_nav-main-menu_item
 								a(href="#technoligy") Технологии
-						div.col-sm-4.center
+						div.col-md-4.center
 							//a.logo.center(href="header_logo")
 							a.logo(href="#header_nav-wrap")
 								img(src=require("../../img/logo.png"))
-						ul.col-sm-4.left
+						ul.col-md-4.left
 							li
 								a(href="#pricePools") Наши тарифы
 							li.header_nav-main-menu_item
@@ -103,7 +103,7 @@ block main
 				section#aboutUs.aboutUs
 					.container
 						.row
-							.clo-lg-12.aboutUs__title
+							.clo-sm-12.aboutUs__title
 								span.aboutUs__uzor
 								.aboutUs__default-wrap
 									h2.section__default-caption Немного о нас
@@ -197,21 +197,21 @@ block main
 						.technoligy__slider-wrap
 							#three.owl-carousel.owl-theme
 								.item.clearfix
-									.col-sm-offset-1.col-sm-6.text-left.technoligy__slider
+									.col-md-offset-1.col-md-6.col-sm-8.ext-left.technoligy__slider
 										img(src=require("../../img/section__technologi_slider-slide.jpg"))
-									.col-sm-offset-1.col-sm-3.technoligy__description
+									.col-md-offset-1.col-md-3.col-sm-4.technoligy__description
 										h3.technoligy__description-caption Бассейн Инфинити
 										p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
 								.item.clearfix
-									.col-sm-offset-1.col-sm-6.text-left.technoligy__slider
+									.col-md-offset-1.col-md-6.col-sm-8.ext-left.technoligy__slider
 										img(src=require("../../img/section__technologi_slider-slide.jpg"))
-									.col-sm-offset-1.col-sm-3.technoligy__description
+									.col-md-offset-1.col-md-3.col-sm-4.technoligy__description
 										h3.technoligy__description-caption Бассейн Инфинити
 										p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
 								.item.clearfix
-									.col-sm-offset-1.col-sm-6.text-left.technoligy__slider
+									.col-md-offset-1.col-md-6.col-sm-8.ext-left.technoligy__slider
 										img(src=require("../../img/section__technologi_slider-slide.jpg"))
-									.col-sm-offset-1.col-sm-3.technoligy__description
+									.col-md-offset-1.col-md-3.col-sm-4.technoligy__description
 										h3.technoligy__description-caption Бассейн Инфинити
 										p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
 							.customNextBtn.customBtn
@@ -290,6 +290,19 @@ block main
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
 
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide3.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide3.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide3.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
 						.customNextBtn.customBtn
 							i.fa.fa-angle-right
 						.customPrevBtn.customBtn
@@ -299,20 +312,20 @@ block main
 					.container
 						.row
 							h3.pricePools__caption Цены на бассейны под ключ
-							.col-md-4
+							.col-md-4.col-sm-4
 								.pricePools__type-pool
 									h4.pricePools__name Семейный
 									span.pricePools__price 1500 ₴
 									p.pricePools__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
 									button.pricePools__btn(data-modal="modal-2" data-info="Басейн за 1500" href="#" class="modal active") Купить
 
-							.col-md-4
+							.col-md-4.col-sm-4
 								.pricePools__type-pool
 									h4.pricePools__name Оптимальный
 									span.pricePools__price 3000 ₴
 									p.pricePools__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
 									button.pricePools__btn(data-modal="modal-2" data-info="Басейн за 1500" href="#" class="modal active") Купить
-							.col-md-4
+							.col-md-4.col-sm-4
 								.pricePools__type-pool
 									h4.pricePools__name Бизнес
 									span.pricePools__price 8000 ₴
@@ -362,7 +375,7 @@ block main
 
 							.stageOfWork__stages-bg
 								.stageOfWork__stages-logo
-								ul.stageOfWork__stages.col-lg-5.col-md-6.stageOfWork__items-left
+								ul.stageOfWork__stages.col-lg-5.col-sm-6.stageOfWork__items-left
 									li.vertical-align
 										p.text-right Сдача объекта. Подписание акта выполненых работ
 										.stage4.vertical-align
@@ -371,7 +384,7 @@ block main
 										p.text-right Заключение договора, внесение предоплаты. Начало строительства бассейна
 										.stage3.vertical-align
 											a
-								ul.stageOfWork__stages.col-lg-5.col-lg-offset-2.col-md-6.stageOfWork__items-right
+								ul.stageOfWork__stages.col-lg-5.col-lg-offset-2.col-sm-6.stageOfWork__items-right
 									li.vertical-align
 										.stage1.vertical-align
 											a
@@ -388,7 +401,7 @@ block main
 					.container
 						.row
 							h3.section__default-caption Наша команда
-							.col-lg-4.ourTeam__photo-cart
+							.col-sm-4.ourTeam__photo-cart
 								.ourTeam__wrap.box-shadow
 									img.ourTeam__photo(src=require("../../img/annaBelik.jpg"))
 									h4.ourTeam__name Анна Белик
@@ -404,7 +417,7 @@ block main
 											a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
 										li
 											a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
-							.col-lg-4.ourTeam__photo-cart
+							.col-sm-4.ourTeam__photo-cart
 								.ourTeam__wrap.box-shadow
 									img.ourTeam__photo(src=require("../../img/ulaKoruma.jpg"))
 									h4.ourTeam__name Юлия Корума
@@ -420,7 +433,7 @@ block main
 											a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
 										li
 											a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
-							.col-lg-4.ourTeam__photo-cart
+							.col-sm-4.ourTeam__photo-cart
 								.ourTeam__wrap.box-shadow
 									img.ourTeam__photo(src=require("../../img/olegIvanow.jpg"))
 									h4.ourTeam__name Олег Иванов
@@ -448,59 +461,23 @@ block main
 										img.reviews__autor_photo(src=require("../../img/igorBorisow.png"))
 										h5.reviews__autor_name Игорь Борисов
 										p.reviews__position Предприниматель
-								.col-lg-offset-2.col-lg-10
+								.col-sm-offset-2.col-sm-10
 									p.reviews__text «Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.»
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 							.item
 								.reviews__autor
 									.reviews__wrap.box-shadow
 										img.reviews__autor_photo(src=require("../../img/igorBorisow.png"))
 										h5.reviews__autor_name Игорь Борисов
 										p.reviews__position Предприниматель
-								.col-lg-offset-2.col-lg-10
+								.col-sm-offset-2.col-sm-10
 									p.reviews__text «Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.»
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 							.item
 								.reviews__autor
 									.reviews__wrap.box-shadow
 										img.reviews__autor_photo(src=require("../../img/igorBorisow.png"))
 										h5.reviews__autor_name Игорь Борисов
 										p.reviews__position Предприниматель
-								.col-lg-offset-2.col-lg-10
+								.col-sm-offset-2.col-sm-10
 									p.reviews__text «Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.»
 
 
@@ -564,33 +541,13 @@ block main
 						.item.ourWorks__slider_slide.box-shadow
 							img(src=require("../../img/ourWork__slider-slide3.jpg"))
 							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-
-
-						.item.ourWorks__slider_slide.box-shadow
-							img(src=require("../../img/ourWork__slider-slide3.jpg"))
-							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-
-
-						.item.ourWorks__slider_slide.box-shadow
-							img(src=require("../../img/ourWork__slider-slide3.jpg"))
-							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-
-
-						.item.ourWorks__slider_slide.box-shadow
-							img(src=require("../../img/ourWork__slider-slide3.jpg"))
-							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-
-
-						.item.ourWorks__slider_slide.box-shadow
-							img(src=require("../../img/ourWork__slider-slide3.jpg"))
-							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 					.customNextBtn.customBtn
 						i.fa.fa-angle-right
 					.customPrevBtn.customBtn
 						i.fa.fa-angle-left
 					.container
 						.row
-							.col-lg-12.clearfix.connecting__wrap
+							.col-md-12.connecting__wrap
 								span.connecting__connecting-lines
 								span.connecting__connecting-lines_right
 
@@ -658,9 +615,9 @@ block main
 			.footer
 				.container
 					.row
-						.col-lg-6.footer__map
+						.col-lg-6.footer__map.col-sm-6
 							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2036.0536712027183!2d36.232229212677765!3d49.987599444282395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1499009966645" width="570" height="314" frameborder="0" style="border:0" allowfullscreen></iframe>
-						.col-lg-2.col-lg-offset-1
+						.col-lg-2.col-lg-offset-1.col-sm-3
 							ul.footer__service
 								li
 									a(href="#aboutUs") О нас
@@ -669,7 +626,7 @@ block main
 								li
 									a(href="#pricePools") Наши тарифы
 								li
-									a(href="#stageOfWork") Этапы работы
+									a(href="#stagesOfWork") Этапы работы
 
 							ul.footer__pageInsocialNetwork.social-networks
 								li
@@ -683,7 +640,7 @@ block main
 								li
 									a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
 
-						.col-lg-3
+						.col-lg-3.col-sm-3
 							ul.footer__contacts
 								li
 									i.fa.fa-map-marker

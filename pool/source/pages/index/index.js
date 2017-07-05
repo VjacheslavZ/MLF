@@ -64,6 +64,15 @@ $(document).ready( function() {
 	    return false;
 	});
 
+	$(".footer__service a[href*='#']").on("click", function(e) {
+		e.preventDefault();
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top
+		}, 500);
+		return false;
+	});
+
 	//Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
 	// $(".scroll_to").on("clcik", function(e) {
 	//     e.preventDefault();
@@ -98,18 +107,41 @@ $(document).ready( function() {
 		items: 5,
 		margin: 30,
 		mouseDrag: false,
+		responsive : {
+			0 : {
+				items: 3
+			},
+			991 : {
+				items: 4
+			},
+			1200 : {
+				items: 5
+			}
+		}
 	});
 	$("#reviews__slider.owl-carousel").owlCarousel({
 		loop: true,
 		items: 1,
 		dots: true,
-		nav: false
+		nav: false,
+
 	});
 	$("#news__slider.owl-carousel.owl-theme").owlCarousel({
 		loop: true,
 		items: 5,
 		margin: 30,
 		mouseDrag: false,
+		responsive : {
+			0 : {
+				items: 3
+			},
+			991 : {
+				items: 3
+			},
+			1200 : {
+				items: 5
+			}
+		}
 	});
 
 	//инициализаиця header_title слайдер
@@ -190,11 +222,16 @@ $(document).ready( function() {
 
 	$(window).on('scroll', function(){
 		var scrollTop = $(window).scrollTop();
+		var windowWidht = $( window ).width();
+		console.log(windowWidht);
+		if(windowWidht >= 979){
 
-		if( scrollTop  > windowHeight/30){
-			mainFixedMenu.addClass('header_scroll')
-		}else{
-			mainFixedMenu.removeClass('header_scroll')
+
+			if( scrollTop  > windowHeight/30){
+				mainFixedMenu.addClass('header_scroll')
+			}else{
+				mainFixedMenu.removeClass('header_scroll')
+			}
 		}
 	});
 })(jQuery);
