@@ -73,6 +73,15 @@ $(document).ready( function() {
 		return false;
 	});
 
+	$(".header_nav_mobile a[href*='#']").on("click", function(e) {
+		e.preventDefault();
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top
+		}, 500);
+		return false;
+	});
+
 	//Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
 	// $(".scroll_to").on("clcik", function(e) {
 	//     e.preventDefault();
@@ -233,13 +242,14 @@ $(document).ready( function() {
 	var mainFixedMenu = $(".header_mainMenu"),
 		windowHeight = $(window).height();
 
+	console.log(mainFixedMenu);
+
+
 	$(window).on('scroll', function(){
 		var scrollTop = $(window).scrollTop();
-		var windowWidht = $( window ).width();
-		console.log(windowWidht);
-		if(windowWidht >= 979){
+		var windowWidth = $( window ).width();
 
-
+		if(windowWidth >= 979){
 			if( scrollTop  > windowHeight/30){
 				mainFixedMenu.addClass('header_scroll')
 			}else{

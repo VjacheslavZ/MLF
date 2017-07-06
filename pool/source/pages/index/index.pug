@@ -8,7 +8,7 @@ block main
 				.loader_inner
 					include ../../img/preloader.svg
 		include ../modal
-		nav(canvas="" class="")
+		nav(canvas="header_top" class="header_top")
 			.mnu_btn
 				label(id="nav-button-label")
 					#nav-lines
@@ -16,108 +16,59 @@ block main
 						i.nav-line
 						i.nav-line
 						i.nav-line
-		//#header_nav-wrap.header_nav-wrap
-			.container
-				.row
-					nav.header_nav.clearfix
-						.col-sm-4
-							ul.adress
-								li
-									i.fa.fa-map-marker
-									a(href="#") прос. Московский 195
-								li
-									i.fa.fa-clock-o
-									a(href="#") Пн-Пт: 9:00-20:00
-						.col-sm-4
-							ul.center.social-networks
-								li
-									a.fa.fa-linkedin(href="#" target="_blank" aria-hidden="true")
-								li
-									a.fa.fa-google-plus(href="#" target="_blank" aria-hidden="true")
-								li
-									a.fa.fa-instagram(href="#" target="_blank" aria-hidden="true")
-								li
-									a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
-								li
-									a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
-						.col-sm-4
-							ul.right.phones
-								li
-									i.fa.fa-phone
-									a(href="tel:0962222222") 096 222 22 22
-								li
-									i.fa.fa-phone
-									a(href="tel:0931111111") 093 111 11 11
-		//.header_mainMenu
-			.container
-				.row
-					nav.header_nav-main-menu.clearfix
-						ul.col-md-4.center
-							li
-								a(href="#aboutUs") О нас
-							li.header_nav-main-menu_item
-								a(href="#technoligy") Технологии
-						div.col-md-4.center
-							//a.logo.center(href="header_logo")
-							a.logo(href="#header_nav-wrap")
-								img(src=require("../../img/logo.png"))
-						ul.col-md-4.left
-							li
-								a(href="#pricePools") Наши тарифы
-							li.header_nav-main-menu_item
-								a(href="#stagesOfWork") Этапы работы
 
 		div(canvas='container')
 			#header_nav-wrap.header_nav-wrap
-				.container
-					.row
-						nav.header_nav.clearfix
-							.col-sm-4
-								ul.adress
-									li
-										i.fa.fa-map-marker
-										a(href="#") прос. Московский 195
-									li
-										i.fa.fa-clock-o
-										a(href="#") Пн-Пт: 9:00-20:00
-							.col-sm-4
-								ul.center.social-networks
-									li
-										a.fa.fa-linkedin(href="#" target="_blank" aria-hidden="true")
-									li
-										a.fa.fa-google-plus(href="#" target="_blank" aria-hidden="true")
-									li
-										a.fa.fa-instagram(href="#" target="_blank" aria-hidden="true")
-									li
-										a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
-									li
-										a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
-							.col-sm-4
-								ul.right.phones
-									li
-										i.fa.fa-phone
-										a(href="tel:0962222222") 096 222 22 22
-									li
-										i.fa.fa-phone
-										a(href="tel:0931111111") 093 111 11 11
+					.container
+						.row
+							nav.header_nav.clearfix
+								.col-sm-4
+									ul.adress
+										li
+											i.fa.fa-map-marker
+											a(href="#") прос. Московский 195
+										li
+											i.fa.fa-clock-o
+											a(href="#") Пн-Пт: 9:00-20:00
+								.col-sm-4
+									ul.center.social-networks
+										li
+											a.fa.fa-linkedin(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-google-plus(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-instagram(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-facebook(href="#" target="_blank" aria-hidden="true")
+										li
+											a.fa.fa-vk(href="#" target="_blank" aria-hidden="true")
+								.col-sm-4
+									ul.right.phones
+										li
+											i.fa.fa-phone
+											a(href="tel:0962222222") 096 222 22 22
+										li
+											i.fa.fa-phone
+											a(href="tel:0931111111") 093 111 11 11
 			.header_mainMenu
-				.container
-					.row
-						nav.header_nav-main-menu.clearfix
-							ul.col-md-4.center
-								li
-									a(href="#aboutUs") О нас
-								li.header_nav-main-menu_item
-									a(href="#technoligy") Технологии
-							div.col-md-4.center
-								//a.logo.center(href="header_logo")
-								a.logo(href="#header_nav-wrap")
-									img(src=require("../../img/logo.png"))
-							ul.col-md-4.left
-								li
-									a(href="#pricePools") Наши тарифы
-								li.header_nav-main-menu_item
-									a(href="#stagesOfWork") Этапы работы
+					.container
+						.row
+							nav.header_nav-main-menu.clearfix
+								ul.col-md-4.center
+									li
+										a(href="#aboutUs") О нас
+									li.header_nav-main-menu_item
+										a(href="#technoligy") Технологии
+								div.col-md-4.center
+									//a.logo.center(href="header_logo")
+									a.logo(href="#header_nav-wrap")
+										img(src=require("../../img/logo.png"))
+								ul.col-md-4.left
+									li
+										a(href="#pricePools") Наши тарифы
+									li.header_nav-main-menu_item
+										a(href="#stagesOfWork") Этапы работы
+
 			header(class="header")
 				.container
 					.row
@@ -177,6 +128,15 @@ block main
 												.aboutUs__slide-img
 													img(src=require("../../img/slider2_1-1.jpg"))
 													img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+											.item
+												.aboutUs__info
+													h3.aboutUs__usluga-name Реконструкция
+													p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+												.aboutUs__slide-img
+													img(src=require("../../img/slider2_1-1.jpg"))
+													img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+
+							.customBtn__wrap
 								.customNextBtn.customBtn
 									i.fa.fa-angle-right
 								.customPrevBtn.customBtn
@@ -756,7 +716,7 @@ block main
 		div(off-canvas='id-1 left shift')
 			nav.header_nav_mobile
 				ul.menu
-					-var obj1 = [{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'7 38 425 961 68', href:'tel:73842596168'},{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'Примеры', href:'#'}];
+					-var obj1 = [{title:'О нас', href:'#aboutUs'}, {title:'Технологии', href:'#technoligy'}, {title:'Наши тарифы', href:'#pricePools'}, {title:'Этапы работы', href:'#stagesOfWork'}, {title:'096 222 22 22', href:'tel:0962222222'}, {title:'093 111 11 11', href:'tel:0931111111'}];
 					each i in obj1
 						li
 							a(href=i.href)= i.title

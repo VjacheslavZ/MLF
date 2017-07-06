@@ -7,7 +7,6 @@
 @import "../libs/owl.carousel.min.css"
 @import "../libs/owl.theme.default.min.css"
 
-
 html, body
 	font-size: 16px
 	&.flex-footer
@@ -16,12 +15,6 @@ html, body
 		width: 100%
 		overflow: hidden !important
 body
-	//background: url("../img/Pool_maket.png") no-repeat
-	//background-size: cover
-	//width: 1200px
-	//z-index: 1
-	//height: 10000px
-	//opacity: 0.3
 	margin: 0
 	min-width: 320px
 	position: relative
@@ -65,18 +58,11 @@ li
 	height: 40px
 	border-radius: 50%
 	background-color: $btn_color__slider
-
 	transition: .5s
 	&:hover
 		background-color: $btn_color__slider-hover
 	i
 		font-size: 40px
-.customNextBtn
-	i
-//margin-left: 14px
-.customPrevBtn
-	i
-//margin-left: 11px
 .owl-theme
 	.owl-dots
 		position: absolute
@@ -98,12 +84,10 @@ li
 				height: 20px
 				border: 2px solid #fba84b
 				background: transparent
-
 .opacityItem
 	transition: .3s
 	opacity: 0.1
 	box-shadow: none
-//dafault calses
 .section__default-caption
 	@include font($main_color-title, 120, $font_PT_Sans-Bold, 1)
 .box-shadow
@@ -140,6 +124,8 @@ li
 		a
 			color: $text-color-IC
 			margin-left: 0
+
+
 
 //-----------------------------
 .noselect
@@ -685,13 +671,13 @@ label
 .nav-line
 	display: block
 	height: 3px
-	background: #fff
+	background: #000
 	position: absolute
 	left: 0
 	width: 100%
 	transition: 2s
 	&.active
-		background: $main_color
+		background: #000
 	&:nth-child(2)
 		-webkit-transition: .5s
 		-o-transition: .5s
@@ -736,6 +722,8 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 // Оформление слайдбара
+[canvas]
+	transform: none
 [off-canvas]
 	transition: transform 0.4s
 	overflow: auto
@@ -773,10 +761,17 @@ nav[canvas]
 [off-canvas]
 	ul
 		&.menu
-			margin: 0
+			margin: 0 0 0 15px
 			padding: 0
 			display: block
 			list-style: none
+			a
+				color: $main_color
+				font-size: 19px
+				transition: .5s
+				&:hover
+					text-decoration: none
+					color: $btn_color__slider-hover
 // Секция main_content
 .main_content
 	text-align: center
@@ -869,6 +864,7 @@ nav[canvas]
 	padding: 40px 0 80px 0
 	background-color: $main_bg_color
 	text-align: left
+	position: relative
 	&__uzor
 		margin-right: 10px
 		display: inline-block
@@ -952,16 +948,15 @@ nav[canvas]
 			img
 				display: inline-block
 				width: inherit
+	.customBtn__wrap
+		position: absolute
 	.customBtn
-		bottom: 64px
+		bottom: 145px
 	.customNextBtn
 		left: 316px
-		//i
-			margin-left: 14px
+
 	.customPrevBtn
 		left: 100px
-		//i
-			margin-left: 11px
 	.owl-nav
 		display: none
 		position: absolute
