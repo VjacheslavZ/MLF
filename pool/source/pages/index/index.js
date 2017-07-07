@@ -16,44 +16,6 @@ import common from '../../js/common';
 import App from '../../js/react';
 
 $(document).ready( function() {
-
-	// Определения браузера
-	function get_name_browser() {
-		// получаем данные userAgent
-		var ua = navigator.userAgent;
-		// с помощью регулярок проверяем наличие текста,
-		// соответствующие тому или иному браузеру
-		if (ua.search(/Chrome/) > 0) return 'Google Chrome';
-		if (ua.search(/Firefox/) > 0) return 'Firefox';
-		if (ua.search(/Opera/) > 0) return 'Opera';
-		if (ua.search(/Safari/) > 0) return 'Safari';
-		if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
-		if (ua.search(/Trident/) > 0) return 'Trident';
-		// условий может быть и больше.
-		// сейчас сделаны проверки только
-		// для популярных браузеров
-		return 'Не определен';
-	}
-
-	if (get_name_browser() == "Trident" || get_name_browser() == "Internet Explorer" || get_name_browser() == "Firefox") {
-		// $(".from_what_is_seo .from_what_is_seo_bot_decor svg").css("bottom", "-217px");
-		// $(".website_promotion .website_promotion_decor").css("bottom", "-177px");
-		// $(".cost_of_online_store .cost_of_online_store_links_item").css("margin-right", "72px");
-	}
-	if (get_name_browser() == "Safari") {
-		//console.log("Это Сафари");
-	}
-	if (get_name_browser() == "Google Chrome") {
-		//console.log("Это Хром");
-	}
-	if (get_name_browser() == "Firefox") {
-		//console.log("Это Firefox");
-	}
-	// для инициализации tooltips
-	// $( document ).tooltip({
-	//   track: true
-	// });
-
 	//скролл по ссылке с атрибутом href
 	$(".header_nav-main-menu a[href*='#']").on("click", function(e) {
 	    e.preventDefault();
@@ -82,36 +44,32 @@ $(document).ready( function() {
 		return false;
 	});
 
-	//Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
-	// $(".scroll_to").on("clcik", function(e) {
-	//     e.preventDefault();
-	//     var anchor = $(this);
-	//     $('html, body').stop().animate({
-	//         scrollTop: $("#" + anchor.data('scroll')).offset().top
-	//     }, 500);
-	//     return false;
-	// });
 
-	 //Активация слайдера
-	$("#one.owl-carousel").owlCarousel({
+	var headerSlider = $("#headerSlider.owl-carousel");
+	headerSlider.owlCarousel({
 		loop: true,
 		items: 1,
 		dots: true
 	});
-	$("#two.owl-carousel").owlCarousel({
-		loop: true,
-		items: 1,
-		dots: true,
-		nav: true
 
-	});
-	$("#three.owl-carousel").owlCarousel({
+	let aboutUsSlider = $("#aboutUsSlider.owl-carousel");
+	aboutUsSlider.owlCarousel({
 		loop: true,
 		items: 1,
 		dots: true,
 		nav: true
 	});
-	$("#ourWorks__slider.owl-carousel.owl-theme").owlCarousel({
+
+	let technoligySlider = $("#technoligySlider.owl-carousel");
+	technoligySlider.owlCarousel({
+		loop: true,
+		items: 1,
+		dots: true,
+		nav: true
+	});
+
+	let ourWorks__slider = $("#ourWorks__slider.owl-carousel.owl-theme");
+	ourWorks__slider.owlCarousel({
 		loop: true,
 		items: 5,
 		margin: 30,
@@ -135,14 +93,16 @@ $(document).ready( function() {
 		}
 	});
 
-	$("#reviews__slider.owl-carousel").owlCarousel({
+	let reviews__slider = $("#reviews__slider.owl-carousel");
+	reviews__slider.owlCarousel({
 		loop: true,
 		items: 1,
 		dots: true,
 		nav: false,
 	});
 
-	$("#news__slider.owl-carousel.owl-theme").owlCarousel({
+	let news__slider = $("#news__slider.owl-carousel.owl-theme");
+	news__slider.owlCarousel({
 		loop: true,
 		items: 5,
 		margin: 30,
@@ -166,52 +126,72 @@ $(document).ready( function() {
 		}
 	});
 
-	//инициализаиця header_title слайдер
-	var one = $("#one");
-	var owl1 = $('#one.owl-carousel');
+	let header__slider_Owl1 = $('#headerSlider.owl-carousel');
+	let about__usSlider_Owl2 = $('#aboutUsSlider.owl-carousel');
+	let technology__slider_Owl3 = $('#technoligySlider.owl-carousel');
+	let ourWorks__slider_owl4 = $('#ourWorks__slider.owl-carousel');
+	let reviews__slider_owl4 = $('#reviews__slider.owl-carousel');
+	let news__slider_owl4 = $('#news__slider.owl-carousel');
 
-	var two = $("#two");
-	var owl2 = $('#two.owl-carousel');
+	//header__slider_Owl1 .owlCarousel();
+	//owl2.owlCarousel();
+	//owl3.owlCarousel();
+	//ourWorks__slider_owl4.owlCarousel();
+	//news__slider_owl4.owlCarousel();
+	let headerCustomNextBtn =  $('.header .customNextBtn');
+	let headerCustomPrevBtn =  $('.header .customPrevBtn');
 
-	var three = $("#three");
-	var owl3 = $('#three.owl-carousel');
+	headerCustomNextBtn.click(function() {
+		header__slider_Owl1.trigger('next.owl.carousel', [700]);
+	});
+	headerCustomPrevBtn.click(function() {
+		header__slider_Owl1.trigger('prev.owl.carousel', [700]);
+	});
 
-	var ourWorks__slider = $("#ourWorks__slider");
-	var ourWorks__slider_owl4 = $('#ourWorks__slider.owl-carousel');
+	let technoligyCustomNextBtn =  $('.technoligy .customNextBtn');
+	let technoligyCustomPrevBtn =  $('.technoligy .customPrevBtn');
 
-	var reviews__slider = $("#reviews__slider");
-	var reviews__slider_owl4 = $('#reviews__slider.owl-carousel');
+	technoligyCustomNextBtn.click(function() {
+		technology__slider_Owl3.trigger('next.owl.carousel', [700]);
+	});
+	technoligyCustomPrevBtn.click(function() {
+		technology__slider_Owl3.trigger('prev.owl.carousel', [700]);
+	});
 
-	var news__slider = $("#news__slider");
-	var news__slider_owl4 = $('#news__slider.owl-carousel');
+	let ourWorksCustomNextBtn =  $('.ourWorks .customNextBtn');
+	let ourWorksCustomPrevBtn =  $('.ourWorks .customPrevBtn');
 
-	owl1.owlCarousel();//карусель
-	owl2.owlCarousel();//карусель
-	owl3.owlCarousel();//карусель
-	ourWorks__slider_owl4.owlCarousel();
-	news__slider_owl4.owlCarousel();
-
-	$('.customNextBtn').click(function() {
-		owl1.trigger('next.owl.carousel', [700]);
-		owl2.trigger('next.owl.carousel', [700]);
-		owl3.trigger('next.owl.carousel', [700]);
+	ourWorksCustomNextBtn.click(function() {
 		ourWorks__slider_owl4.trigger('next.owl.carousel', [700]);
-		reviews__slider_owl4.trigger('next.owl.carousel', [700]);
-		news__slider_owl4.trigger('next.owl.carousel', [700]);
-
 		opacityItems();
 	});
-
-	$('.customPrevBtn').click(function() {
-		owl1.trigger('prev.owl.carousel', [700]);
-		owl2.trigger('prev.owl.carousel', [700]);
-		owl3.trigger('prev.owl.carousel', [700]);
+	ourWorksCustomPrevBtn.click(function() {
 		ourWorks__slider_owl4.trigger('prev.owl.carousel', [700]);
-		reviews__slider_owl4.trigger('prev.owl.carousel', [700]);
-		news__slider_owl4.trigger('prev.owl.carousel', [700]);
-
 		opacityItems();
 	});
+
+	let reviewsCustomNextBtn =  $('.reviews .customNextBtn');
+	let reviewsCustomPrevBtn =  $('.reviews .customPrevBtn');
+
+	reviewsCustomNextBtn.click(function() {
+		reviews__slider_owl4.trigger('next.owl.carousel', [700]);
+	});
+	reviewsCustomPrevBtn.click(function() {
+		reviews__slider_owl4.trigger('prev.owl.carousel', [700]);
+	});
+
+	let newsCustomNextBtn =  $('.news .customNextBtn');
+	let newsCustomPrevBtn =  $('.news .customPrevBtn');
+
+	newsCustomNextBtn.click(function() {
+		news__slider_owl4.trigger('next.owl.carousel', [700]);
+		opacityItems();
+	});
+	newsCustomPrevBtn.click(function() {
+		news__slider_owl4.trigger('prev.owl.carousel', [700]);
+		opacityItems();
+	});
+
 
 	$(".ourWorks .owl-dots").click(function(){
 		opacityItems();
@@ -233,7 +213,6 @@ $(document).ready( function() {
 		newsItems.first().addClass("opacityItem");
 		newsItems.last().addClass("opacityItem");
 	}
-
 	opacityItems();
 });
 
@@ -241,9 +220,6 @@ $(document).ready( function() {
 (function ($){
 	var mainFixedMenu = $(".header_mainMenu"),
 		windowHeight = $(window).height();
-
-	console.log(mainFixedMenu);
-
 
 	$(window).on('scroll', function(){
 		var scrollTop = $(window).scrollTop();
@@ -258,16 +234,6 @@ $(document).ready( function() {
 		}
 	});
 })(jQuery);
-
-
-
-$(window).resize(function() {
-
-});
-
-$(window).scroll(function() {
-
-});
 
 $(".loader_inner").fadeOut();
 $(".loader").fadeOut("fast");

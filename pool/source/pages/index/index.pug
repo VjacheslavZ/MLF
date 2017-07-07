@@ -1,6 +1,6 @@
 extends ../base
 block title
-	| Index page
+	| ASTPOOL
 block main
 	body.index
 		div
@@ -26,10 +26,10 @@ block main
 									ul.adress
 										li
 											i.fa.fa-map-marker
-											a(href="#") прос. Московский 195
+											a(href="#") Полтавский шлях 31 оф.414
 										li
 											i.fa.fa-clock-o
-											a(href="#") Пн-Пт: 9:00-20:00
+											a(href="#") Пн-Пт: 10:00-17:00
 								.col-sm-4
 									ul.center.social-networks
 										li
@@ -46,10 +46,8 @@ block main
 									ul.right.phones
 										li
 											i.fa.fa-phone
-											a(href="tel:0962222222") 096 222 22 22
-										li
-											i.fa.fa-phone
-											a(href="tel:0931111111") 093 111 11 11
+											a(href="tel:0501533339") 050 153 33 39
+
 			.header_mainMenu
 					.container
 						.row
@@ -74,7 +72,7 @@ block main
 					.row
 						.header_title.col-lg-12
 							.slider-wrap
-								#one.owl-carousel.owl-theme
+								#headerSlider.owl-carousel.owl-theme
 									.item
 										h1
 											span Строительство и обслуживание бассейнов на
@@ -112,35 +110,57 @@ block main
 							.aboutUs__slider-wrap
 								.aboutUs__usluga-bg.box-shadow
 								.row
+									#aboutUsSlider.owl-carousel.owl-theme.aboutUs__slider
+										.item
+											.aboutUs__info
+												h3.aboutUs__usluga-name Для частных лиц
+												p.aboutUs__usluga-description Строительство бассейна в частных домах и коттеджах (на улице и помещении). Индивидуальные, уникальные проекты любой сложности. Установка и подключение всех элементов бассейна, в сжатые сроки.
+											.aboutUs__slide-img
+												img(src=require("../../img/slider2_1-1.jpg"))
+												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+										.item
+											.aboutUs__info
+												h3.aboutUs__usluga-name Коммерческие объекты
+												p.aboutUs__usluga-description Гостиницы, турбазы, развлекательные центры на природе, рестораны с летней площадкой. Бассейн станет приятным дополнением, для Вашего бизнеса и будет стимулировать клиентов возвращаться к вам снова и снова.
+											.aboutUs__slide-img
+												img(src=require("../../img/slider2_1-1.jpg"))
+												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+										.item
+											.aboutUs__info
+												h3.aboutUs__usluga-name Реконструкция и модернизация
+												p.aboutUs__usluga-description Вернем к жизни старый бассейн. Не нужно спешить ставить крест на старом бассейне, его можно реконструировать и снова испытать все прелести личного бассейна. Так же делаем модернизацию бассейна, для повышения комфорта, при его использовании.
+											.aboutUs__slide-img
+												img(src=require("../../img/slider2_1-1.jpg"))
+												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+										.item
+											.aboutUs__info
+												h3.aboutUs__usluga-name Обслуживание
+												p.aboutUs__usluga-description Профессиональное обслуживание бассейнов всех типов. Вам не нужно тратить много времени и сил на чистку бассейна, мы сделаем все за вас. Вам останется только наслаждаться купанием в чистом и ухоженном бассейне.
+											.aboutUs__slide-img
+												img(src=require("../../img/slider2_1-1.jpg"))
+												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+										.item
+											.aboutUs__info
+												h3.aboutUs__usluga-name Оборудование и химия
+												p.aboutUs__usluga-description Осуществляем продажу специализированного оборудования и химии для обслуживания бассейнов. Все товары высокого качества. Если не знаете, что Вам подойдет, мы посоветуем оптимальные товары, специально для Вашего бассейна.
+											.aboutUs__slide-img
+												img(src=require("../../img/slider2_1-1.jpg"))
+												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+										.item
+											.aboutUs__info
+												h3.aboutUs__usluga-name Сотрудничество
+												p.aboutUs__usluga-description Сотрудничаем со строительными компаниями и архитекторами, которые занимаются постройкой коттеджей и частных домов. Предлагаем выгодные условия сотрудничества, предоставляем гарантию качества.
+											.aboutUs__slide-img
+												img(src=require("../../img/slider2_1-1.jpg"))
+												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+										.item
+											.aboutUs__info
+												h3.aboutUs__usluga-name Для фитнес-центров
+												p.aboutUs__usluga-description Установка бассейнов на улице и в помещении. Высокое качество с гарантией. Ваш фитнес-центр будет выгодно выделяться среди конкурентов. Это приведет к росту посещаемости, а значит и к росту прибыли.
+											.aboutUs__slide-img
+												img(src=require("../../img/slider2_1-1.jpg"))
+												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
 
-										#two.owl-carousel.owl-theme.aboutUs__slider.col-sm-12
-											.item
-												.aboutUs__info
-													h3.aboutUs__usluga-name Реконструкция
-													p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-												.aboutUs__slide-img
-													img(src=require("../../img/slider2_1-1.jpg"))
-													img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
-											.item
-												.aboutUs__info
-													h3.aboutUs__usluga-name Реконструкция
-													p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-												.aboutUs__slide-img
-													img(src=require("../../img/slider2_1-1.jpg"))
-													img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
-											.item
-												.aboutUs__info
-													h3.aboutUs__usluga-name Реконструкция
-													p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-												.aboutUs__slide-img
-													img(src=require("../../img/slider2_1-1.jpg"))
-													img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
-
-							.customBtn__wrap
-								.customNextBtn.customBtn
-									i.fa.fa-angle-right
-								.customPrevBtn.customBtn
-									i.fa.fa-angle-left
 				//Секция видео
 				section#video.video
 					section#player-video.player-video
@@ -192,32 +212,30 @@ block main
 								span.technoligy__uzor-before
 								h2.technoligy__caption.section__default-caption Технологии
 								span.connecting__uzor-after
-						//начало слайдера
 						.technoligy__slider-wrap
-							#three.owl-carousel.owl-theme
+							#technoligySlider.owl-carousel.owl-theme
 								.item.clearfix
 									.col-md-offset-1.col-md-6.col-sm-8.col-xs-12.technoligy__slider
 										img(src=require("../../img/section__technologi_slider-slide.jpg"))
 									.col-md-offset-1.col-md-3.col-sm-4.col-xs-12.technoligy__description
 										h3.technoligy__description-caption Бассейн Инфинити
-										p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+										p.aboutUs__usluga-description Поистине захватывающий, вызывающий восторг. Еще называют: бесконечный или безбортный бассейн. Это достигается тем, что вода переливается через один или несколько бортов, создавая впечатление, что водная гладь не имеет границ.
 								.item.clearfix
 									.col-md-offset-1.col-md-6.col-sm-8.col-xs-12.technoligy__slider
-										img(src=require("../../img/section__technologi_slider-slide.jpg"))
+										img(src=require("../../img/section__technologi_slider-slide-1.jpg"))
 									.col-md-offset-1.col-md-3.col-sm-4.col-xs-12.technoligy__description
-										h3.technoligy__description-caption Бассейн Инфинити
-										p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+										h3.technoligy__description-caption Переливной бассейн
+										p.aboutUs__usluga-description По периметру бассейна располагаются переливные решетки. Через которые происходит циркуляция воды. Вода находится на одном уровне с бортом. Самый практичный и распространенный вид бассейнов.
 								.item.clearfix
 									.col-md-offset-1.col-md-6.col-sm-8.col-xs-12.technoligy__slider
-										img(src=require("../../img/section__technologi_slider-slide.jpg"))
+										img(src=require("../../img/section__technologi_slider-slide-2.jpg"))
 									.col-md-offset-1.col-md-3.col-sm-4.col-xs-12.technoligy__description
-										h3.technoligy__description-caption Бассейн Инфинити
-										p.aboutUs__usluga-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+										h3.technoligy__description-caption Скиммерный бассейн
+										p.aboutUs__usluga-description Основное отличие такого типа бассейнов: вода находиться ниже уровня борта, а забор воды осуществляется с помощью специальных скиммеров, окон в стенках бассейна. Такая технология дешевле остальных.
 							.customNextBtn.customBtn
 								i.fa.fa-angle-right
 							.customPrevBtn.customBtn
 								i.fa.fa-angle-left
-
 						.row
 							.col-lg-12.connecting__wrap
 								span.connecting__connecting-lines
@@ -348,7 +366,6 @@ block main
 							.stageOfWork__caption
 								h3.section__default-caption Этапы работы
 								span.connecting__uzor-after
-
 							.stageOfWork__stages-bg
 								.stageOfWork__stages-logo
 								ul.stageOfWork__stages.col-lg-5.col-sm-6.col-xs-12.stageOfWork__items-left
@@ -497,8 +514,6 @@ block main
 							.col-md-12.connecting__wrap
 								span.connecting__connecting-lines
 								span.connecting__connecting-lines_right
-
-
 				//Секция скидки при заказе через сайт
 				section#discountsInstallation2.discounts.intermediate.discounts__third-form
 					.container
@@ -536,34 +551,40 @@ block main
 						.row
 							h3.section__default-caption Мы готовы предложить
 							.col-sm-4
-								.weReadyOffer__service.box-shadow
-									img.weReadyOffer__service_picture(src=require("../../img/weReadyOfer__service_1.jpg"))
+								a(href="#").weReadyOffer__link.box-shadow
+									.weReadyOffer__service
+										img.weReadyOffer__service_picture(src=require("../../img/weReadyOfer__service_1.jpg"))
 									p.weReadyOffer__service_description Строительство саун
 							.col-sm-4
-								.weReadyOffer__service.box-shadow
-									img.weReadyOffer__service_picture(src=require("../../img/weReadyOfer__service_2.jpg"))
+								a(href="#").weReadyOffer__link.box-shadow
+									.weReadyOffer__service
+										img.weReadyOffer__service_picture(src=require("../../img/weReadyOfer__service_2.jpg"))
 									p.weReadyOffer__service_description Строительство хаммама
 							.col-sm-4
-								.weReadyOffer__service.box-shadow
-									img.weReadyOffer__service_picture(src=require("../../img/weReadyOfer__service_3.jpg"))
+								a(href="#").weReadyOffer__link.box-shadow
+									.weReadyOffer__service
+										img.weReadyOffer__service_picture(src=require("../../img/weReadyOfer__service_3.jpg"))
 									p.weReadyOffer__service_description Построим пруд
 							.col-sm-4
-								.weReadyOffer__service.box-shadow
-									img.weReadyOffer__service_picture(src=require("../../img/weReadyOfer__service_4.jpg"))
+								a(href="#").weReadyOffer__link.box-shadow
+									.weReadyOffer__service
+										img.weReadyOffer__service_picture(src=require("../../img/weReadyOfer__service_4.jpg"))
 									p.weReadyOffer__service_description Создадим террасу
 							.col-sm-4
-								.weReadyOffer__service.box-shadow
-									img.weReadyOffer__service_picture(src=require("../../img/weReadyOfer__service_5.jpg"))
+								a(href="#").weReadyOffer__link.box-shadow
+									.weReadyOffer__service
+										img.weReadyOffer__service_picture(src=require("../../img/weReadyOfer__service_5.jpg"))
 									p.weReadyOffer__service_description Посетите наш блог
 							.col-sm-4
-								.weReadyOffer__service.box-shadow
-									img.weReadyOffer__service_picture(src=require("../../img/weReadyOfer__service_6.jpg"))
+								a(href="#").weReadyOffer__link.box-shadow
+									.weReadyOffer__service
+										img.weReadyOffer__service_picture(src=require("../../img/weReadyOfer__service_6.jpg"))
 									p.weReadyOffer__service_description Наш интернет-магазин
 			.footer
 				.container
 					.row
 						.col-lg-6.footer__map.col-sm-6.col-xs-12
-							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2036.0536712027183!2d36.232229212677765!3d49.987599444282395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1499009966645" width="570" height="314" frameborder="0" style="border:0" allowfullscreen></iframe>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2565.278490346681!2d36.21467091558348!3d49.98738802850304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a057d436ef1f%3A0x5ba90ea43af9ab4e!2z0LLRg9C70LjRhtGPINCf0L7Qu9GC0LDQstGB0YzQutC40Lkg0KjQu9GP0YUsIDMxLCDQpdCw0YDQutGW0LIsINCl0LDRgNC60ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGM!5e0!3m2!1sru!2sua!4v1499350020130" width="570" height="314" frameborder="0" style="border:0" allowfullscreen></iframe>
 						.col-lg-2.col-lg-offset-1.col-sm-3.col-xs-6.foolWidth
 							ul.footer__service
 								li
@@ -591,132 +612,29 @@ block main
 							ul.footer__contacts
 								li
 									i.fa.fa-map-marker
-									a(href="#") прос. Московский 195
+									a(href="#") Полтавский шлях 31 оф.414
 								li
 									i.fa.fa-clock-o
-									a(href="#") Пн-Пт: 9:00-20:00
+									a(href="#") Пн-Пт: 10:00-17:00
 								li
 									i.fa.fa-envelope
-									a(href="mailtoemailadres@gmail.com") emailadres@gmail.com
+									a(href="admin@astpool.com.ua") admin@astpool.com.ua
 								li
 									i.fa.fa-phone
-									a(href="tel:0962222222") 096 222 22 22
-								li
-									i.fa.fa-phone
-									a(href="tel:0931111111") 093 111 11 11
+									a(href="tel:0501533339") 050 153 33 39
 
 							.footer__logo.vertical-align
 								p Разработка </br> лендинга
 								a(href="http://melfori.com/")
-
-			//	section#discountsInstallation-TerraceBoard.discountsInstallation-TerraceBoard
-			// Секция  our_advantages
-			//section#our_advantages.our_a	dvantages
-				.container
-					.row
-						h2 Наши преимущества
-						.clearfix
-							.our_advantages_item.col-lg-4.col-md-6
-								.our_advantages_item_img
-									i.fa.fa-users
-								h3 Заголовок
-								p Индивидуальный подход к каждому клиенту
-							.our_advantages_item.col-lg-4.col-md-6
-								.our_advantages_item_img
-									i.fa.fa-diamond
-								h3 Заголовок
-								p Неповторимость и практичность каждого проекта мебели
-							.our_advantages_item.col-lg-4.col-md-6
-								.our_advantages_item_img
-									i.fa.fa-list-ol
-								h3 Заголовок
-								p Многообразие материалов и стилевых решений
-							.our_advantages_item.col-lg-4.col-md-6
-								.our_advantages_item_img
-									i.fa.fa-pencil
-								h3 Заголовок
-								p Для вас бесплатно: замер, дизайн-проект, доставка и монтаж
-							.our_advantages_item.col-lg-4.col-md-6
-								.our_advantages_item_img
-									i.fa.fa-credit-card-alt
-								h3 Заголовок
-								p Возможность оформления мебели в кредит
-							.our_advantages_item.col-lg-4.col-md-6
-								.our_advantages_item_img
-									i.fa.fa-wrench
-								h3 Заголовок
-								p Изготовление мебели только из высококачественных материалов
-			// Тест react
 			section.react
 				.container
 					.row
 						#app
-			// Секция main_content
-			//section.main_content
-				.container
-					.row
-						div Пример checkbox
-						label.check.noselect
-							input(type='checkbox')
-							i.fa.fa-1.fa-square-o
-							i.fa.fa-2.fa-check-square-o
-							span первый чек
-						label.check.noselect
-							input(type='checkbox')
-							i.fa.fa-1.fa-square-o
-							i.fa.fa-2.fa-check-square-o
-							span второй чек
-						div Пример radio button
-						label.radio.noselect
-							input(type='radio', name='radio')
-							i.fa.fa-1.fa-square-o
-							i.fa.fa-2.fa-check-square-o
-							span первый чек
-						label.radio.noselect
-							input(type='radio', name='radio', checked='')
-							i.fa.fa-1.fa-square-o
-							i.fa.fa-2.fa-check-square-o
-							span второй чек
-			// Секция  ask-form-title
-			//section.intermediate
-				.container
-					.intermediate_title
-						h3 Заполните форму и мы бесплатно перезвоним и ответим на ваши вопросы
-					.intermediate_wrap
-						form
-							.intermediate_item.col-lg-3.col-md-4.col-sm-4
-								.modal_form_input_wrap
-									.modal_input_error
-										| Заполните поле
-										.modal_error_triangle
-										.modal_error_chest_img
-									i.fa.fa-check
-									input.modal_form_input(name='name', type='text', placeholder='Имя')
-							.intermediate_item.col-lg-3.col-md-4.col-sm-4
-								.modal_form_input_wrap
-									.modal_input_error
-										| Заполните поле
-										.modal_error_triangle
-										.modal_error_chest_img
-									i.fa.fa-check
-									input.modal_form_email(name='email', type='text', placeholder='Почта')
-							.intermediate_item.col-lg-3.col-md-4.col-sm-4
-								.modal_form_input_wrap
-									.modal_input_error
-										| Заполните поле
-										.modal_error_triangle
-										.modal_error_chest_img
-									i.fa.fa-check
-									input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
-							input(type='hidden', name='form_name', value='')
-							input(type='hidden', name='form_type', value='normal')
-							input.col-lg-3(type='submit', value='Записаться')
-			// Секция footer
 			//footer.footer
 		div(off-canvas='id-1 left shift')
 			nav.header_nav_mobile
 				ul.menu
-					-var obj1 = [{title:'О нас', href:'#aboutUs'}, {title:'Технологии', href:'#technoligy'}, {title:'Наши тарифы', href:'#pricePools'}, {title:'Этапы работы', href:'#stagesOfWork'}, {title:'096 222 22 22', href:'tel:0962222222'}, {title:'093 111 11 11', href:'tel:0931111111'}];
+					-var obj1 = [{title:'О нас', href:'#aboutUs'}, {title:'Технологии', href:'#technoligy'}, {title:'Наши тарифы', href:'#pricePools'}, {title:'Этапы работы', href:'#stagesOfWork'}, {title:'50 153 33 39', href:'tel:501533339'}];
 					each i in obj1
 						li
 							a(href=i.href)= i.title

@@ -1,14 +1,17 @@
 @media only screen and (max-width : 1199px)
 	body, html
 		font-size: 14px
+	.header_nav
+		ul
+			li
+				a
+					font-size: 12px
 	.header_modal
 		margin-top: 20px
 	.intermediate
 		.intermediate_wrap
-			//margin-bottom: 20px
 			.intermediate_item
 				display: block
-				//margin: 30px auto 30px
 			.modal_form_input_wrap
 				display: block
 	.header_nav
@@ -36,16 +39,18 @@
 			.owl-item
 				img + img
 					display: none
+		.owl-nav
+			width: 34%
+			bottom: -43px
 		.owl-dots
-			left: 100px
-			bottom: 22px
+			left: calc(17% - 120px)
+			bottom: -38px
 		&__slider-wrap
 			.item
 				.aboutUs__slide-img
 					img
 						margin: 0 auto
 						display: block
-	//Секция видео
 	//Секция техноологии, слайдер
 	.technoligy
 		min-height: 807px
@@ -78,18 +83,36 @@
 	//Секиция Этапы работы
 	.stageOfWork
 		padding-top: 50px
+		&__stages-bg
+			padding-top: 100px
 		.connecting__uzor-after
 			width: 74px
 		&__items-left
 			li
 				padding-right: 90px
 			.text-right
-				margin-right: 12px
+				margin-right: 10px
+				padding: 0 10px
+				text-align: center
 		&__items-right
 			li
 				padding-left: 90px
 			.text-left
 				margin-left: 10px
+				padding: 0 10px
+				text-align: center
+		.stage1
+			width: 100px
+			height: 100px
+		.stage2
+			width: 100px
+			height: 100px
+		.stage3
+			width: 100px
+			height: 100px
+		.stage4
+			width: 100px
+			height: 100px
 	//Cекция наша команда
 	//Секиця отзывы, слайдер
 	.reviews
@@ -122,7 +145,7 @@
 	//footer
 	.footer
 		&__logo
-			margin-top: 94px
+			margin-top: 130px
 
 @media only screen and (max-width : 991px)
 	body, html
@@ -131,9 +154,6 @@
 		font-size: 80px
 	.header_nav
 		display: none
-	//.header_logo
-		display: block
-		margin-top: 0
 	.header_modal
 		margin-top: 40px
 	nav[canvas]
@@ -156,17 +176,13 @@
 			width: 63px
 		.owl-dots
 			left: 116px
-		.customBtn
-			bottom: 60px
-		.customPrevBtn
-			left: 61px
-		.customNextBtn
-			left: 283px
 		.owl-dots
-			left: 84px
+			left: 73px
+		.owl-nav
+			width: 50%
 	.technoligy
 		margin-bottom: 0
-		min-height: 729px
+		min-height: 800px
 		.connecting__connecting-lines
 			margin-top: 110px
 		.connecting__connecting-lines_right
@@ -179,6 +195,8 @@
 			left: 67%
 	.pricePools
 		min-height: 810px
+		&__btn
+			padding: 12px 59px
 		.connecting
 			&__connecting-lines
 				margin-top: 80px
@@ -190,6 +208,11 @@
 	.stageOfWork
 		&__stages-bg
 			padding-top: 87px
+		&__stages
+			p
+				font-size: 13px
+			li + li
+				margin-top: 110px
 		.connecting__uzor-after
 			width: 19px
 		&__stages-bg
@@ -219,6 +242,8 @@
 			.connecting__connecting-lines_right
 				height: 98px
 	.ourWorks
+		.defaul-title
+			font-size: 80px
 		.customPrevBtn
 			right: 60%
 		.customNextBtn
@@ -251,7 +276,7 @@
 			a
 				font-size: 12px
 		&__logo
-			margin-top: 106px
+			margin-top: 128px
 @media only screen and (max-width : 767px)
 	body, html
 		font-size: 10px
@@ -283,19 +308,55 @@
 		width: 255px
 	.opacityItem
 		opacity: 1
+		transition: none
 	.news
 		.connecting__uzor-after
 			display: none
 	.aboutUs
-		&__info
-			width: 30%
-		&__slide-img
-			img
-				width: 65%
+		padding-bottom: 200px
+		&__uzor
+			display: none
+		&__slider-wrap
+			margin-top: 0
 		&__usluga-description
-			font-size: 17px
+			text-align: center
+			min-height: 90px
+			font-size: 16px
+		&__usluga-bg
+			background: none
+			box-shadow: none
+		&__info
+			width: 100%
+			text-align: center
+			margin-bottom: 15px
+		&__slide-img
+			display: block
+			margin: 0 auto
+		&__slider
+			left: 0
+		.owl-dots
+			left: calc(50% - 128px)
+			bottom: -50px
+		.owl-nav
+			bottom: -52px
+			width: calc(100% - 15px)
+			.owl-prev
+				float: inherit
+				margin-right: 235px
+			.owl-next
+				float: inherit
 	.technoligy
-		min-height: 717px
+		min-height: 882px
+	.technoligy__slider-wrap
+		margin-top: 0
+		.item
+			display: flex
+			flex-direction: column-reverse
+		.technoligy__description-caption
+			text-align: center
+		.technoligy__description
+			display: block
+			width: 100%
 	.discounts
 		padding-top: 30px
 		.intermediate_title
@@ -308,7 +369,6 @@
 			font-size: 12px
 	.pricePools
 		&__type-pool
-
 			width: 80%
 			margin: 0 auto
 			margin-top: 40px
@@ -337,12 +397,15 @@
 					text-align: left !important
 			.text-right
 				margin-right: 0
+				padding: 0
 		&__items-right
 			order: 1
 			li
 				padding-left: 0
 			.text-left
 				margin-left: 0
+				padding: 0
+				text-align: left
 		&__stages
 			.stage1
 				a:before
@@ -379,7 +442,7 @@
 	.weReadyOffer
 		padding-bottom: 60px
 		&__service
-			width: 80%
+			//width: 80%
 			margin: 0 auto
 	.footer
 		padding-bottom: 15px
@@ -392,26 +455,14 @@
 			li + li
 				margin-left: 10px
 		&__logo
-			margin-top: 0
+			margin-top: 36px
 @media only screen and (max-width : 700px)
 	.section__default-caption
 		font-size: 60px
-	.technoligy
-		min-height: 882px
-	.technoligy__slider-wrap
-		margin-top: 0
-		.item
-			display: flex
-			flex-direction: column-reverse
-		.technoligy__description-caption
-			text-align: center
-		.technoligy__description
-			display: block
-			width: 100%
-
-
 	.aboutUs
 		padding-bottom: 200px
+		&__uzor
+			display: none
 		&__slider-wrap
 			margin-top: 0
 		&__usluga-description
@@ -430,17 +481,10 @@
 			margin: 0 auto
 		&__slider
 			left: 0
-		.owl-dots
+		//.owl-dots
 			left: 0
 			right: 0
 			bottom: -50px
-		.customBtn
-			bottom: -187px
-		.customPrevBtn
-			left: 35%
-		.customNextBtn
-			right: 35%
-			left: auto
 	.pricePools
 		&__caption
 			margin-bottom: 0
@@ -462,7 +506,7 @@
 		.intermediate_wrap
 			margin-top: 10px
 	.technoligy
-		min-height: 760px
+		min-height: 750px
 		&__caption
 			margin-left: 0
 			text-align: center
@@ -475,11 +519,15 @@
 		.connecting__connecting-lines_right
 			display: none
 	.ourWorks
+		.defaul-title
+			font-size: 60px
 		.customPrevBtn
 			right: 65%
 		.customNextBtn
 			left: 65%
 	.stageOfWork
+		&__stages-bg
+			min-height: 439px
 		.connecting__uzor-after
 			display: none
 		.connecting__wrap
@@ -521,8 +569,9 @@
 			right: 65%
 		.customNextBtn
 			left: 65%
-
 @media only screen and (max-width : 520px)
+	.technoligy
+		min-height: 665px
 	.section__default-caption
 		font-size: 40px
 	.dm-modal
@@ -545,6 +594,9 @@
 			right: 80%
 		.customNextBtn
 			left: 80%
+	.dm-table
+		width: 90%
+//@media only screen and (max-width : 520px)
 
 @media only screen and (max-width : 480px)
 	.section__default-caption
@@ -553,6 +605,9 @@
 		margin-bottom: 0
 	.our_advantages .our_advantages_item .our_advantages_item_img i
 		font-size: 37px
+	.ourWorks
+		.defaul-title
+			font-size: 30px
 	.header_title
 		h1
 			padding-left: 15px
@@ -565,9 +620,39 @@
 		.intermediate_title
 			h3
 				font-size: 20px
+	.technoligy
+		min-height: 625px
+	.pricePools
+		&__caption
+			font-size: 30px
+	.weReadyOffer
+		.section__default-caption
+			font-size: 30px
 @media only screen and (max-width : 400px)
+	.dm-modal input[type=submit]
+		min-width: auto
+	.technoligy
+		min-height: 613px
 	.aboutUs__slider-wrap .item .aboutUs__slide-img img
 				width: 100%
+	.aboutUs
+		.owl-nav
+			bottom: -57px
+			width: calc(100% - 3px)
+			.owl-prev
+				margin-right: 180px
+
+		.owl-dots
+			left: calc(50% - 90px)
+			.owl-dot.active
+				span
+					width: 15px
+					height: 15px
+			.owl-dot
+				span
+					width: 15px
+					height: 15px
+					margin: 5px 5px
 	.footer
 		&__service
 			display: none
@@ -586,38 +671,14 @@
 		&__logo
 			text-align: center
 			margin-top: 20px
-//@media only screen and (max-width : 320px)
+@media only screen and (max-width : 320px)
+	.aboutUs
+		&__usluga-bg
+			height: 400px
+		.owl-nav
+			bottom: 13px
 
-
-
-
-
-/*=========  Mobile First Method  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	/**/
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
-/* Large Devices, Wide Screens */
-//@media only screen and (min-width : 1200px)
-//	.container
-//		width: 1200px
-
-
-
+		.owl-dots
+			bottom: 19px
+	.technoligy
+		min-height: 593px

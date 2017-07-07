@@ -20,7 +20,7 @@ body
 	position: relative
 	line-height: 1.6
 	padding-right: 0 !important
-	//overflow: auto !important
+	overflow: auto !important
 	font-family: $font_PT_Sans-Regular
 	overflow-x: hidden
 	color: $main_color-text
@@ -28,7 +28,6 @@ body
 	//внешний вид скроллбара
 	scrollbar-base-color: $main_color   //для IE
 	scrollbar-arrow-color: $main_color	//для IE
-	//внешний вид скроллбара для -webkit- остальное тут https://poselab.com/en/blog/custom-scrollbars-in-webkit/
 	&::-webkit-scrollbar
 		width: 12px
 	&::-webkit-scrollbar-thumb
@@ -37,9 +36,6 @@ body
 			background-color: darken($main_color-title, 10%)
 	&::-webkit-scrollbar-track-piece
 		background-color: transparent
-//-webkit-font-smoothing: antialiased
-//-moz-osx-font-smoothing: grayscale
-
 h1
 	@include font($main_color, 28, $font_PT_Sans-Bold, 1.2)
 p,ul
@@ -63,6 +59,51 @@ li
 		background-color: $btn_color__slider-hover
 	i
 		font-size: 40px
+.owl-carousel
+	.owl-nav
+		.owl-prev,.owl-next
+			width: 40px
+			height: 40px
+			color: transparent
+			border-radius: 50%
+			transition: .5s
+			position: relative
+			background: #e8f0f6
+			&:after
+				content: ""
+				bottom: 13px
+				position: absolute
+				z-index: 999
+				background: #74787b
+				width: 15px
+				display: block
+				height: 3px
+			&:before
+				content: ""
+				top: 13px
+				position: absolute
+				z-index: 999
+				background: #74787b
+				width: 15px
+				display: block
+				height: 3px
+			&:hover
+				background: $btn_color__slider-hover
+				color: transparent
+		.owl-prev
+			&:before
+				transform: rotate(125deg)
+				left: calc(50% - 7px)
+			&:after
+				transform: rotate(-125deg)
+				left: calc(50% - 7px)
+		.owl-next
+			&:before
+				transform: rotate(-125deg)
+				right: calc(50% - 7px)
+			&:after
+				transform: rotate(125deg)
+				right: calc(50% - 7px)
 .owl-theme
 	.owl-dots
 		position: absolute
@@ -95,7 +136,6 @@ li
 .defaul-title
 	@include font($main_color-title, 120,$font_PT_Sans-Bold, 1)
 	margin-left: 16px
-
 .vertical-align
 	&:before
 		content: ''
@@ -107,7 +147,6 @@ li
 	> *
 		display: inline-block
 		vertical-align: middle
-
 .social-networks
 	li
 		background: #fff
@@ -124,10 +163,6 @@ li
 		a
 			color: $text-color-IC
 			margin-left: 0
-
-
-
-//-----------------------------
 .noselect
 	-webkit-touch-callout: none
 	-webkit-user-select: none
@@ -213,13 +248,7 @@ li
 	padding: 0 1em
 	vertical-align: middle
 	text-align: center
-
 .dm-modal
-	//width: 470px
-	//max-width: 50em
-	//display: inline-block
-	//padding: 50px 46px 50px 46px
-	//border: 3px solid $main_color
 	color: #000
 	text-align: center
 	position: relative
@@ -247,8 +276,6 @@ li
 			right: -25px
 			top: 40px
 			padding-left: 10px
-			//@include fz(15)
-
 			line-height: 35px
 			font-family: $font_PT_Sans-Regular
 			background-color: #F4F4F4
@@ -286,7 +313,7 @@ li
 		text-align: left
 		display: block
 		font-family: $font_PT_Sans-Regular
-		@include fz(14)
+		font-size: 14px
 		color: $text-color_label
 		&.active
 			color: $text-color_label
@@ -303,6 +330,7 @@ li
 		box-shadow: 0 1px 0 rgba(0,0,2,.28)
 		transition: 1s
 		outline: -webkit-focus-ring-color auto 0px
+		font-size: 14px
 		&:focus
 			outline: 0
 			-moz-outline: 0
@@ -317,7 +345,6 @@ li
 			outline-width: 0
 			outline: 0
 			outline: -webkit-focus-ring-color auto 0px
-
 	.success_mail
 		display: none
 		color: $main_color-title
@@ -331,6 +358,7 @@ li
 		padding-left: 0
 		padding-right: 0
 		@extend .main_btn
+		font-size: 17px
 		&:focus
 			outline: 0
 	.select
@@ -357,6 +385,7 @@ li
 				cursor: pointer
 				display: block
 				@include font($auxiliary_txt_color, 18,  $font_PT_Sans-Regular, 1.2)
+				font-size: 18px
 				padding: 7px 15px 7px 25px
 				&:hover
 					background-color: rgba(0,0,0,0.2)
@@ -371,6 +400,7 @@ li
 			margin-bottom: 30px
 			display: block
 			@include font(#000, 18,  $font_PT_Sans-Regular, 1.2)
+			font-size: 18px
 			background-color: #F4F4F4
 			line-height: 40px
 			box-shadow: 0 1px 0 rgba(0,0,2,.28)
@@ -384,13 +414,13 @@ li
 			&.active
 				color: #000
 				background-color: #F4F4F4
-
 		.slct_arrow
 			position: absolute
 			top: 5px
 			right: 10px
 			.fa
 				@include fz(24)
+				font-size: 24px
 				color: #000
 				position: relative
 				z-index: 10
@@ -400,7 +430,7 @@ li
 .close
 	position: absolute
 	right: 25px
-	top: 25px
+	top: -45px
 	width: 35px
 	height: 36px
 	display: block
@@ -458,8 +488,6 @@ li
 		left: 0
 		height: 9px
 	.modal_error_triangle
-
-
 // Header
 .header
 	text-align: center
@@ -473,7 +501,6 @@ li
 		height: 100%
 		min-height: 100%
 		position: relative
-
 .header_logo
 	display: inline-block
 	margin-top: 49px
@@ -512,7 +539,7 @@ li
 					color: $btn_color__slider-hover
 	.adress
 		li + li
-			margin-left: 45px
+			margin-left: 20px
 	.social-networks
 		li
 			&:hover
@@ -525,8 +552,6 @@ li
 	.phones
 		li + li
 			margin-left: 32px
-
-
 .mainFixedMenu
 	background: rgba(0, 0, 0, 0.5)
 .header_nav-main-menu
@@ -555,7 +580,8 @@ li
 .header_mainMenu
 	position: absolute
 	top: 51px
-	z-index: 99
+	//-moz-top: 71px
+	z-index: 99999
 	left: 0
 	right: 0
 	background: rgba(0, 0, 0, 0.5)
@@ -585,7 +611,6 @@ li
 
 		@include font($main_color-text, 20, $font_PT_Sans-Bold)
 		text-decoration: none
-
 .header_title
 	margin: auto
 	position: absolute
@@ -633,7 +658,6 @@ li
 	position: relative
 	z-index: 1002
 	pointer-events: all
-
 .nav-on .nav-line:first-child,
 .nav-on .nav-line:last-child
 	transition: .5s
@@ -667,7 +691,6 @@ label
 	max-width: 100%
 	margin-bottom: 5px
 	font-weight: 700
-
 .nav-line
 	display: block
 	height: 3px
@@ -698,23 +721,18 @@ label
 		-o-transition: .5s
 		transition: .5s
 		top: 14px
-
 *::-webkit-input-placeholder
 	color: #666
 	opacity: 1
-
 *:-moz-placeholder
 	color: #666
 	opacity: 1
-
 *::-moz-placeholder
 	color: #666
 	opacity: 1
-
 *:-ms-input-placeholder
 	color: #666
 	opacity: 1
-
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: #666
@@ -741,7 +759,6 @@ body textarea:required:valid
 		//внешний вид скроллбара
 		scrollbar-base-color: $main_color   //для IE
 		scrollbar-arrow-color: $main_color	//для IE
-		//внешний вид скроллбара для -webkit- остальное тут https://poselab.com/en/blog/custom-scrollbars-in-webkit/
 		&::-webkit-scrollbar
 			width: 12px
 		&::-webkit-scrollbar-thumb
@@ -817,7 +834,6 @@ nav[canvas]
 		margin: auto
 		h3
 			margin: 30px 30px
-			//text-transform: uppercase
 			@include fz(36)
 	.intermediate_wrap
 		margin-top: 55px
@@ -839,6 +855,7 @@ nav[canvas]
 				//@include fz(20)
 				font-size: 20px
 				transition: .5s
+				outline: -webkit-focus-ring-color auto 0px
 				&::-webkit-input-placeholder
 					color: $text-color_place-нolder
 				&:-moz-placeholder
@@ -856,6 +873,7 @@ nav[canvas]
 				transition: .5s
 				color: #fff
 				background-color: $btn_color__slider-hover
+				outline: -webkit-focus-ring-color auto 0px
 				&:hover
 					color: $main_color-text2
 					background-color: #fff
@@ -905,18 +923,14 @@ nav[canvas]
 		display: inline-block
 		width: 49%
 		background: url("../img/aboutUs__sldier-bg.jpg") no-repeat top left
-		height: 480px
+		height: 500px
 		position: relative
 	&__slider
 		position: absolute
 		top: 40px
 		left: 8%
-	.item
-		//display: flex
-		//flex-direction: row
-		//justify-content: space-around
 	&__info
-		width: 226px
+		width: 275px
 		display: inline-block
 		vertical-align: top
 	&__usluga-name
@@ -932,11 +946,10 @@ nav[canvas]
 	&__usluga-description
 		color: #000
 		text-align: left
-		//@include fz(18)
 		font-size: 18px
 	&__slide-img
 		display: inline-block
-		margin-left: 75px
+		margin-left: 20px
 		img
 			width: 100%
 			height: auto
@@ -948,25 +961,20 @@ nav[canvas]
 			img
 				display: inline-block
 				width: inherit
-	.customBtn__wrap
-		position: absolute
-	.customBtn
-		bottom: 145px
-	.customNextBtn
-		left: 316px
-
-	.customPrevBtn
-		left: 100px
 	.owl-nav
-		display: none
 		position: absolute
-		bottom: 7%
+		bottom: -55px
+		width: 30%
+		.owl-prev
+			float: left
+		.owl-next
+			float: right
 	.owl-dots
 		position: absolute
 		z-index: 999
 		display: inline-block
-		left: 80px
-		bottom: 15px
+		left: calc(15% - 120px)
+		bottom: -53px
 		.owl-dot
 			span
 				width: 20px
@@ -982,6 +990,7 @@ nav[canvas]
 
 //	Секция видео
 .video
+	background-color: #fff
 	.player-video
 		position: relative
 	iframe
@@ -991,7 +1000,7 @@ nav[canvas]
 .technoligy
 	margin-bottom: 56px
 	min-height: 926px
-	background: url("../img/section__technologi-bg.png")no-repeat
+	background: #fff url("../img/section__technologi-bg.png")no-repeat
 	background-size: cover
 	position: relative
 	padding-top: 88px
@@ -1116,6 +1125,7 @@ nav[canvas]
 			font-size: 18px
 //Секиция наши работы, слайдер
 .ourWorks
+	background-color: #fff
 	padding-top: 114px
 	&__wraper
 		//max-width: 100%
@@ -1146,10 +1156,10 @@ nav[canvas]
 			margin-left: 0
 	.owl-item.active
 		margin-bottom: 5px
-
 //Секиция цены на басейны
 .pricePools
 	padding-top: 101px
+	padding-bottom: 40px
 	min-height: 993px
 	background: #fff url("../img/section__price_bg.png") no-repeat
 	background-size: cover
@@ -1173,6 +1183,7 @@ nav[canvas]
 		font-size: 18px
 	&__btn
 		@include font($main_color, 20, $font_PT_Sans-Bold, 1)
+		font-size: 20px
 		padding: 18px 97px
 		background: $btn_color__slider-hover
 		border: none
@@ -1194,14 +1205,14 @@ nav[canvas]
 			height: 113px
 			&:before
 				top: 50px
-
 //Секиция скидки на монтаж, форма
 .discounts__second-form
-	margin-top: 40px
+	background-color: #fff
 //Секиция Этапы работы
 .stageOfWork
 	padding-top: 111px
 	position: relative
+	background-color: #fff
 	&__caption
 		position: relative
 	h3
@@ -1249,16 +1260,17 @@ nav[canvas]
 			width: 63%
 		.text-right
 			text-align: right
-			margin-right: 44px
+			margin-right: 40px
 		.text-left
 			text-align: left
-			margin-left: 44px
+			margin-left: 40px
 		.stage4
 			@include icStage(3px)
 			a
 				@include sprite($stage-ofwork-stage-4)
 				display: inline-block
 				position: relative
+				text-decoration: none
 				&:before
 					position: absolute
 					content: "4"
@@ -1271,6 +1283,7 @@ nav[canvas]
 				@include sprite($stage-of-work-stage-3)
 				display: inline-block
 				position: relative
+				text-decoration: none
 				&:before
 					content: "3"
 					position: absolute
@@ -1289,6 +1302,7 @@ nav[canvas]
 				@include sprite($stage-of-work-stage-1)
 				display: inline-block
 				position: relative
+				text-decoration: none
 				&:before
 					content: "1"
 					position: absolute
@@ -1307,13 +1321,13 @@ nav[canvas]
 				@include sprite($stage-of-work-stage-2)
 				display: inline-block
 				position: relative
+				text-decoration: none
 				&:before
 					content: "2"
 					position: absolute
 					@include font($main_color-title, 93, $font_PT_Sans-Bold, 1)
 					bottom: 13px
 					left: 71px
-	//узор после блока
 	.connecting__wrap
 		height: 262px
 		position: absolute
@@ -1331,6 +1345,7 @@ nav[canvas]
 //Cекция наша команда
 .ourTeam
 	margin-top: 180px
+	background-color: #fff
 	&__photo-cart
 		padding-bottom: 7px
 	&__photo
@@ -1360,7 +1375,6 @@ nav[canvas]
 				cursor: pointer
 				color: $main_color
 				text-decoration: none
-
 //Секиця отзывы, слайдер
 .reviews
 	position: relative
@@ -1409,7 +1423,7 @@ nav[canvas]
 		i
 			margin-left: 0
 	.customNextBtn
-		left: 54%
+		left: 57%
 		i
 			margin-left: 0
 //Секиця новости, слайдер
@@ -1418,7 +1432,7 @@ nav[canvas]
 	padding-top: 45px
 	&__title
 		position: relative
-		margin-bottom: 18px
+		background-color: #fff
 	.section__default-caption
 		display: inline-block
 		margin: 0
@@ -1444,6 +1458,11 @@ nav[canvas]
 			right: -10px
 			bottom: 0
 			background: $main_color
+	.owl-stage-outer
+		background-color: #fff
+	.owl-carousel
+		background-color: #fff
+		padding-top: 18px
 	.section__default-caption
 		margin-bottom: 64px
 	.owl-stage-outer
@@ -1470,6 +1489,7 @@ nav[canvas]
 		margin: 0 auto
 		width: 60%
 		bottom: 0
+		background-color: #fff
 		.connecting__connecting-lines
 			height: 103px
 			&:before
@@ -1477,21 +1497,35 @@ nav[canvas]
 		.connecting__connecting-lines_right
 			height: 164px
 			top: -2px
-
 //Секция Мы готовы предложить
 .weReadyOffer
+	a
+		text-decoration: none
+		//overflow: hidden
+		transition: .5s
+		&:hover
+			img
+				transform: scale(1.1)
+			.weReadyOffer__service_description
+				color: $btn_color_hover
+	&__link
+		display: block
 	padding: 105px 0 124px 0
+	background-color: #fff
 	.section__default-caption
-		@include fz(87)
+		@include font($main_color-title, 87, $font_PT_Sans-Bold, 1)
 		margin-top: 0
 		margin-bottom: 25px
 	&__service_description
+		transition: .5s
 		@include font($main_color-text2, 20, $font_PT_Sans-Regular, 1)
 		font-size: 20px
 		padding: 46px 0 48px 0
 	.weReadyOffer__service
+		overflow: hidden
 		margin-top: 60px
 		img
+			transition: .5s
 			width: 100%
 //Секия footer
 .footer
@@ -1510,7 +1544,6 @@ nav[canvas]
 			transition: .5s
 			&:hover
 				color: $btn_color__slider-hover
-
 	&__pageInsocialNetwork
 		display: flex
 		flex-direction: row
@@ -1542,12 +1575,11 @@ nav[canvas]
 				color: $btn_color__slider-hover
 	&__logo
 		text-align: right
-		margin-top: 80px
+		margin-top: 123px
 		p
 			@include font($main_color-text, 14, $font_PT_Sans-Regular,1)
 			display: inline-block
 			font-size: 14px
-			//padding: 0 75px
 			margin: 0 21px 0 0
 		a
 			@include sprite($melfori)
