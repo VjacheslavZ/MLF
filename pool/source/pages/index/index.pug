@@ -26,7 +26,7 @@ block main
 									ul.adress
 										li
 											i.fa.fa-map-marker
-											a(href="#") Полтавский шлях 31 оф.414
+											a(href="https://www.google.ru/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9+%D0%A8%D0%BB%D1%8F%D1%85,+31,+%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2,+%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0/@49.9873727,36.2154323,18.06z/data=!4m5!3m4!1s0x4127a0562b4612a7:0x81630a0309fc3b52!8m2!3d49.9874002!4d36.2163753" target="_blank") Полтавский шлях 31 оф.414
 										li
 											i.fa.fa-clock-o
 											a(href="#") Пн-Пт: 10:00-17:00
@@ -113,53 +113,56 @@ block main
 									#aboutUsSlider.owl-carousel.owl-theme.aboutUs__slider
 										.item
 											.aboutUs__info
-												h3.aboutUs__usluga-name Для частных лиц
+												h3.aboutUs__usluga-name.aboutUs__usluga-building Для частных лиц
 												p.aboutUs__usluga-description Строительство бассейна в частных домах и коттеджах (на улице и помещении). Индивидуальные, уникальные проекты любой сложности. Установка и подключение всех элементов бассейна, в сжатые сроки.
 											.aboutUs__slide-img
 												img(src=require("../../img/slider2_1-1.jpg"))
 												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
 										.item
 											.aboutUs__info
-												h3.aboutUs__usluga-name Коммерческие объекты
+												h3.aboutUs__usluga-name.aboutUs__usluga-hotel Коммерческие объекты
 												p.aboutUs__usluga-description Гостиницы, турбазы, развлекательные центры на природе, рестораны с летней площадкой. Бассейн станет приятным дополнением, для Вашего бизнеса и будет стимулировать клиентов возвращаться к вам снова и снова.
 											.aboutUs__slide-img
 												img(src=require("../../img/slider2_1-1.jpg"))
 												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
 										.item
 											.aboutUs__info
-												h3.aboutUs__usluga-name Реконструкция и модернизация
-												p.aboutUs__usluga-description Вернем к жизни старый бассейн. Не нужно спешить ставить крест на старом бассейне, его можно реконструировать и снова испытать все прелести личного бассейна. Так же делаем модернизацию бассейна, для повышения комфорта, при его использовании.
-											.aboutUs__slide-img
-												img(src=require("../../img/slider2_1-1.jpg"))
-												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
-										.item
-											.aboutUs__info
-												h3.aboutUs__usluga-name Обслуживание
-												p.aboutUs__usluga-description Профессиональное обслуживание бассейнов всех типов. Вам не нужно тратить много времени и сил на чистку бассейна, мы сделаем все за вас. Вам останется только наслаждаться купанием в чистом и ухоженном бассейне.
-											.aboutUs__slide-img
-												img(src=require("../../img/slider2_1-1.jpg"))
-												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
-										.item
-											.aboutUs__info
-												h3.aboutUs__usluga-name Оборудование и химия
-												p.aboutUs__usluga-description Осуществляем продажу специализированного оборудования и химии для обслуживания бассейнов. Все товары высокого качества. Если не знаете, что Вам подойдет, мы посоветуем оптимальные товары, специально для Вашего бассейна.
-											.aboutUs__slide-img
-												img(src=require("../../img/slider2_1-1.jpg"))
-												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
-										.item
-											.aboutUs__info
-												h3.aboutUs__usluga-name Сотрудничество
+												h3.aboutUs__usluga-name.aboutUs__usluga-cooperation Сотрудничество
 												p.aboutUs__usluga-description Сотрудничаем со строительными компаниями и архитекторами, которые занимаются постройкой коттеджей и частных домов. Предлагаем выгодные условия сотрудничества, предоставляем гарантию качества.
 											.aboutUs__slide-img
 												img(src=require("../../img/slider2_1-1.jpg"))
 												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
 										.item
 											.aboutUs__info
-												h3.aboutUs__usluga-name Для фитнес-центров
+												h3.aboutUs__usluga-name.aboutUs__usluga-fitnes Для фитнес-центров
 												p.aboutUs__usluga-description Установка бассейнов на улице и в помещении. Высокое качество с гарантией. Ваш фитнес-центр будет выгодно выделяться среди конкурентов. Это приведет к росту посещаемости, а значит и к росту прибыли.
 											.aboutUs__slide-img
 												img(src=require("../../img/slider2_1-1.jpg"))
 												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+										.item
+											.aboutUs__info
+												h3.aboutUs__usluga-name.aboutUs__usluga-reconstruction Реконструкция и модернизация
+												p.aboutUs__usluga-description Вернем к жизни старый бассейн. Не нужно спешить ставить крест на старом бассейне, его можно реконструировать и снова испытать все прелести личного бассейна. Так же делаем модернизацию бассейна, для повышения комфорта, при его использовании.
+											.aboutUs__slide-img
+												img(src=require("../../img/slider2_1-1.jpg"))
+												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+										.item
+											.aboutUs__info
+												h3.aboutUs__usluga-name.aboutUs__usluga-service Обслуживание
+												p.aboutUs__usluga-description Профессиональное обслуживание бассейнов всех типов. Вам не нужно тратить много времени и сил на чистку бассейна, мы сделаем все за вас. Вам останется только наслаждаться купанием в чистом и ухоженном бассейне.
+											.aboutUs__slide-img
+												img(src=require("../../img/slider2_1-1.jpg"))
+												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+										.item
+											.aboutUs__info
+												h3.aboutUs__usluga-name.aboutUs__usluga-sale Оборудование и химия
+												p.aboutUs__usluga-description Осуществляем продажу специализированного оборудования и химии для обслуживания бассейнов. Все товары высокого качества. Если не знаете, что Вам подойдет, мы посоветуем оптимальные товары, специально для Вашего бассейна.
+											.aboutUs__slide-img
+												img(src=require("../../img/slider2_1-1.jpg"))
+												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+
+
+
 
 				//Секция видео
 				section#video.video

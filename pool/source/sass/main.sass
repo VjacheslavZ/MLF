@@ -605,7 +605,7 @@ li
 	cursor: pointer
 	&:hover
 		border: 1px solid #FFF
-		background-color: $btn_color_hover
+		background-color: $btn_color__slider-hover
 		color: #fff
 	a
 
@@ -939,10 +939,30 @@ nav[canvas]
 		font-size: 22px
 		&:before
 			content: ""
-			@include sprite($tools)
 			vertical-align: bottom
 			display: inline-block
 			margin-right: 10px
+	&__usluga-building
+		&:before
+			@include sprite($building)
+	&__usluga-hotel
+		&:before
+			@include sprite($hotel)
+	&__usluga-cooperation
+		&:before
+			@include sprite($cooperation)
+	&__usluga-fitnes
+		&:before
+			@include sprite($fitnes)
+	&__usluga-reconstruction
+		&:before
+			@include sprite($reconstruction)
+	&__usluga-service
+		&:before
+			@include sprite($service)
+	&__usluga-sale
+		&:before
+			@include sprite($sale)
 	&__usluga-description
 		color: #000
 		text-align: left
