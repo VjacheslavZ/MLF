@@ -116,29 +116,29 @@ block main
 												h3.aboutUs__usluga-name.aboutUs__usluga-building Для частных лиц
 												p.aboutUs__usluga-description Строительство бассейна в частных домах и коттеджах (на улице и помещении). Индивидуальные, уникальные проекты любой сложности. Установка и подключение всех элементов бассейна, в сжатые сроки.
 											.aboutUs__slide-img
-												img(src=require("../../img/slider2_1-1.jpg"))
-												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+												img(src=require("../../img/BuildingPools__pool_1.jpg"))
+												img.box-shadow(src=require("../../img/BuildingPools__pool_2.jpg"))
 										.item
 											.aboutUs__info
 												h3.aboutUs__usluga-name.aboutUs__usluga-hotel Коммерческие объекты
 												p.aboutUs__usluga-description Гостиницы, турбазы, развлекательные центры на природе, рестораны с летней площадкой. Бассейн станет приятным дополнением, для Вашего бизнеса и будет стимулировать клиентов возвращаться к вам снова и снова.
 											.aboutUs__slide-img
-												img(src=require("../../img/slider2_1-1.jpg"))
-												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+												img(src=require("../../img/commerce__pool_1.jpg"))
+												img.box-shadow(src=require("../../img/commerce__pool_2.jpg"))
 										.item
 											.aboutUs__info
 												h3.aboutUs__usluga-name.aboutUs__usluga-cooperation Сотрудничество
 												p.aboutUs__usluga-description Сотрудничаем со строительными компаниями и архитекторами, которые занимаются постройкой коттеджей и частных домов. Предлагаем выгодные условия сотрудничества, предоставляем гарантию качества.
 											.aboutUs__slide-img
-												img(src=require("../../img/slider2_1-1.jpg"))
-												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+												img(src=require("../../img/cooperation__pool_1.jpg"))
+												img.box-shadow(src=require("../../img/cooperation__pool_2.jpg"))
 										.item
 											.aboutUs__info
 												h3.aboutUs__usluga-name.aboutUs__usluga-fitnes Для фитнес-центров
 												p.aboutUs__usluga-description Установка бассейнов на улице и в помещении. Высокое качество с гарантией. Ваш фитнес-центр будет выгодно выделяться среди конкурентов. Это приведет к росту посещаемости, а значит и к росту прибыли.
 											.aboutUs__slide-img
-												img(src=require("../../img/slider2_1-1.jpg"))
-												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+												img(src=require("../../img/fitnes__pool_1.jpg"))
+												img.box-shadow(src=require("../../img/fitnes__pool_2.jpg"))
 										.item
 											.aboutUs__info
 												h3.aboutUs__usluga-name.aboutUs__usluga-reconstruction Реконструкция и модернизация
@@ -151,21 +151,21 @@ block main
 												h3.aboutUs__usluga-name.aboutUs__usluga-service Обслуживание
 												p.aboutUs__usluga-description Профессиональное обслуживание бассейнов всех типов. Вам не нужно тратить много времени и сил на чистку бассейна, мы сделаем все за вас. Вам останется только наслаждаться купанием в чистом и ухоженном бассейне.
 											.aboutUs__slide-img
-												img(src=require("../../img/slider2_1-1.jpg"))
-												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+												img(src=require("../../img/service__pool_1.jpg"))
+												img.box-shadow(src=require("../../img/service__pool_2.jpg"))
 										.item
 											.aboutUs__info
 												h3.aboutUs__usluga-name.aboutUs__usluga-sale Оборудование и химия
 												p.aboutUs__usluga-description Осуществляем продажу специализированного оборудования и химии для обслуживания бассейнов. Все товары высокого качества. Если не знаете, что Вам подойдет, мы посоветуем оптимальные товары, специально для Вашего бассейна.
 											.aboutUs__slide-img
-												img(src=require("../../img/slider2_1-1.jpg"))
-												img.box-shadow(src=require("../../img/slider2_1-2.jpg"))
+												img(src=require("../../img/chemistry__pool_1.jpg"))
+												img.box-shadow(src=require("../../img/chemistry__pool_2.jpg"))
 
 
 
 
 				//Секция видео
-				section#video.video
+				//section#video.video
 					section#player-video.player-video
 						#player
 						script.
@@ -181,7 +181,7 @@ block main
 								player = new YT.Player('player', {
 									height: '360',
 									width: '640',
-									videoId: '-aoKriMsjEs',
+									videoId: 'OxQZxGst52U',
 									events: {
 										'onStateChange': onPlayerStateChange
 									}
@@ -207,6 +207,9 @@ block main
 					//video.video__film(url="video/mov_bbb.mp4")
 					//a.video__play-btn
 					//button.player__button
+				section#video.video
+					video(controls="controls")
+						source(src=("../../video/mov_bbb.mp4") type='video/mp4')
 				//Секция техноологии, слайдер
 				section#technoligy.technoligy
 					.container
