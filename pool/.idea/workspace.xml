@@ -17,14 +17,14 @@
     <favorites_list name="pool" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5374698">
+    <splitter split-orientation="horizontal" split-proportion="0.48660713">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="index.pug" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/source/pages/index/index.pug">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="190">
-                  <caret line="210" column="82" lean-forward="false" selection-start-line="210" selection-start-column="82" selection-end-line="210" selection-end-column="82" />
+                  <caret line="210" column="30" lean-forward="false" selection-start-line="210" selection-start-column="30" selection-end-line="210" selection-end-column="30" />
                   <folding>
                     <element signature="n#div#1;n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
                     <element signature="n#header#0;n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
@@ -63,31 +63,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/webpack.config.js">
+          <file leaf-file-name="libs.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/source/libs/libs.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="646">
-                  <caret line="38" column="48" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="48" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="images.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/webpack/images.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="280">
-                  <caret line="14" column="6" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="2" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="video.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/webpack/video.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+                <state relative-caret-position="117">
+                  <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="37" />
                   <folding />
                 </state>
               </provider>
@@ -100,11 +80,12 @@
           <file leaf-file-name="main.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/source/sass/main.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="6740">
-                  <caret line="331" column="8" lean-forward="false" selection-start-line="331" selection-start-column="8" selection-end-line="331" selection-end-column="50" />
+                <state relative-caret-position="380">
+                  <caret line="1030" column="41" lean-forward="false" selection-start-line="1030" selection-start-column="41" selection-end-line="1030" selection-end-column="41" />
                   <folding>
                     <element signature="e#15570#16087#0" expanded="false" />
                     <element signature="e#16125#17302#0" expanded="false" />
+                    <element signature="e#17328#19810#0" expanded="false" />
                     <element signature="e#19137#19275#0" expanded="false" />
                   </folding>
                 </state>
@@ -124,9 +105,25 @@
           <file leaf-file-name="_vars.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/source/sass/_vars.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-260">
+                <state relative-caret-position="-220">
                   <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="24" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/source/pages/index/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="851">
+                  <caret line="231" column="0" lean-forward="true" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#679#862#0" expanded="false" />
+                    <element signature="e#926#1088#0" expanded="false" />
+                    <element signature="e#1154#1316#0" expanded="false" />
+                    <element signature="e#2166#2224#0" expanded="false" />
+                    <element signature="e#2317#2550#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -186,14 +183,14 @@
         <option value="$PROJECT_DIR$/source/libs/libs.js" />
         <option value="$PROJECT_DIR$/source/pages/index/index.sass" />
         <option value="$PROJECT_DIR$/source/sass/_vars.sass" />
-        <option value="$PROJECT_DIR$/source/pages/index/index.js" />
         <option value="$PROJECT_DIR$/source/sass/_media.sass" />
         <option value="$PROJECT_DIR$/source/pages/modal.pug" />
-        <option value="$PROJECT_DIR$/source/sass/main.sass" />
         <option value="$PROJECT_DIR$/webpack/videos.js" />
         <option value="$PROJECT_DIR$/webpack/video.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/source/pages/index/index.js" />
         <option value="$PROJECT_DIR$/source/pages/index/index.pug" />
+        <option value="$PROJECT_DIR$/source/sass/main.sass" />
       </list>
     </option>
   </component>
@@ -223,9 +220,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1432" />
-    <option name="y" value="43" />
-    <option name="width" value="1616" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
     <option name="height" value="886" />
   </component>
   <component name="ProjectView">
@@ -267,7 +264,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webpack" />
+              <option name="myItemId" value="source" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -282,6 +279,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -463,12 +486,12 @@
       <workItem from="1499773287204" duration="578000" />
       <workItem from="1499778383330" duration="2279000" />
       <workItem from="1499799503127" duration="2194000" />
-      <workItem from="1499837728520" duration="1177000" />
+      <workItem from="1499837728520" duration="8406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="361184000" />
+    <option name="totallyTimeSpent" value="368413000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -480,14 +503,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1432" y="43" width="1616" height="886" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14828898" sideWeight="0.43171114" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24682651" sideWeight="0.43171114" order="3" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49746513" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52819806" sideWeight="0.51140684" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35213205" sideWeight="0.48859316" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16093536" sideWeight="0.48859316" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10646388" sideWeight="0.56828886" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24920534" sideWeight="0.47566718" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32462174" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -541,6 +564,7 @@
           <folding>
             <element signature="e#15570#16087#0" expanded="false" />
             <element signature="e#16125#17302#0" expanded="false" />
+            <element signature="e#17328#19810#0" expanded="false" />
             <element signature="e#19137#19275#0" expanded="false" />
           </folding>
         </state>
@@ -644,6 +668,7 @@
           <folding>
             <element signature="e#15570#16087#0" expanded="false" />
             <element signature="e#16125#17302#0" expanded="false" />
+            <element signature="e#17328#19810#0" expanded="false" />
             <element signature="e#19137#19275#0" expanded="false" />
           </folding>
         </state>
@@ -728,13 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/libs/libs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/libs/jquery-ui.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -788,6 +806,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -826,48 +845,6 @@
         <state relative-caret-position="136">
           <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1526">
-          <caret line="129" column="28" lean-forward="false" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="28" />
-          <folding>
-            <element signature="e#1#31#0" expanded="false" />
-            <element signature="e#384#423#0" expanded="false" />
-            <element signature="e#679#862#0" expanded="false" />
-            <element signature="e#926#1088#0" expanded="false" />
-            <element signature="e#1154#1316#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/sass/_vars.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-260">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/sass/_media.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8840">
-          <caret line="442" column="28" lean-forward="false" selection-start-line="442" selection-start-column="28" selection-end-line="442" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/sass/main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6740">
-          <caret line="331" column="8" lean-forward="false" selection-start-line="331" selection-start-column="8" selection-end-line="331" selection-end-column="50" />
-          <folding>
-            <element signature="e#15570#16087#0" expanded="false" />
-            <element signature="e#16125#17302#0" expanded="false" />
-            <element signature="e#19137#19275#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -959,10 +936,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/libs/libs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/sass/_vars.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/sass/_media.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8840">
+          <caret line="442" column="28" lean-forward="false" selection-start-line="442" selection-start-column="28" selection-end-line="442" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="231" column="0" lean-forward="true" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+          <folding>
+            <element signature="e#679#862#0" expanded="false" />
+            <element signature="e#926#1088#0" expanded="false" />
+            <element signature="e#1154#1316#0" expanded="false" />
+            <element signature="e#2166#2224#0" expanded="false" />
+            <element signature="e#2317#2550#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/pages/index/index.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="210" column="82" lean-forward="false" selection-start-line="210" selection-start-column="82" selection-end-line="210" selection-end-column="82" />
+          <caret line="210" column="30" lean-forward="false" selection-start-line="210" selection-start-column="30" selection-end-line="210" selection-end-column="30" />
           <folding>
             <element signature="n#div#1;n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
             <element signature="n#header#0;n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
@@ -996,6 +1011,19 @@
             <element signature="n#section#12;n#section#0;n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
             <element signature="n#section#1;n#div#1;n#body#0;n#block#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/sass/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="1030" column="41" lean-forward="false" selection-start-line="1030" selection-start-column="41" selection-end-line="1030" selection-end-column="41" />
+          <folding>
+            <element signature="e#15570#16087#0" expanded="false" />
+            <element signature="e#16125#17302#0" expanded="false" />
+            <element signature="e#17328#19810#0" expanded="false" />
+            <element signature="e#19137#19275#0" expanded="false" />
           </folding>
         </state>
       </provider>

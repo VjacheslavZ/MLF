@@ -1010,12 +1010,34 @@ nav[canvas]
 
 //	Секция видео
 .video
-	background-color: #fff
-	.player-video
-		position: relative
-	iframe
-		width: 100%
-		min-height: 514px
+	display: flex
+	background-size: cover
+	position: relative
+	.video__bg
+		background: url("../img/section_video-bg.jpg") no-repeat
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		transition: .5s
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: rgba(0, 0, 0, 0.7)
+	&__play-pause
+		z-index: 1
+		position: absolute
+		top: calc(50% - 70px)
+		left: calc(50% - 70px)
+		background: transparent
+		@include sprite($video-play-pause)
+		display: inline-block
+		cursor: pointer
 //	Секция техноологии
 .technoligy
 	margin-bottom: 56px
