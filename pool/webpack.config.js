@@ -12,6 +12,7 @@ const extractCSS = require('./webpack/css.extract');
 const uglifyJS = require('./webpack/js.uglify');
 const images = require('./webpack/images');
 const sprite = require('./webpack/sprite');
+const video = require('./webpack/video');
 
 const PATHS = {
 	source: path.join(__dirname, 'source'),
@@ -39,7 +40,8 @@ const common = merge([
 				'img': path.resolve(__dirname, 'source/img/'),
 				'fonts': path.resolve(__dirname, 'source/fonts/'),
 				'sass': path.resolve(__dirname, 'source/sass/'),
-				'owlImage': path.resolve(__dirname, 'source/img/')
+				'owlImage': path.resolve(__dirname, 'source/img/'),
+				'video': path.resolve(__dirname, 'source/video/'),
 			}
 		},
 		plugins: [
@@ -68,7 +70,8 @@ const common = merge([
 	pug(),
 	sprite(),
 	images(),
-	fonts()
+	fonts(),
+	video()
 ]);
 
 module.exports = function(env) {

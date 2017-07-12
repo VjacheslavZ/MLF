@@ -208,8 +208,10 @@ block main
 					//a.video__play-btn
 					//button.player__button
 				section#video.video
-					video(controls="controls")
-						source(src=("../../video/mov_bbb.mp4") type='video/mp4')
+					video(src=require("../../video/video.mp4") controls="controls")
+						//source(src=("../../video/mov_bbb.mp4") type='video/mp4')
+						//source(src=("../../video/video.mp4") type='video/mp4')
+
 				//Секция техноологии, слайдер
 				section#technoligy.technoligy
 					.container
