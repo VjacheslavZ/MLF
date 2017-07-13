@@ -8,6 +8,7 @@ $(function() {
 	//  });
 	// };
 });
+
 //изменяется - для плавной обратной анимации animate.css*/
 $(window).scroll(function() {
 	// для правильной рабоы надо прописать в блок которому присваивается анимация атрибут data-anim="fadeInLeft" с названием анимации
@@ -306,6 +307,24 @@ $(document).ready(function() {
 			};
 			// console.log(error[i]);
 		}
+
+		var close = $(".close__dm-modal"),
+			popUpForm = $('[data-modal="modal-form"]'),
+			popUpBtn = $(".dm-modal input[type=submit]");
+
+		function closePopUp() {
+			popUpForm.css({"display": "none"});
+			sessionStorage.setItem("pupUp", "Closed");
+		}
+
+		close.on("click", closePopUp);
+
+		let customBtnVideo = $(".start-video");
+
+		$(document).on('click', customBtnVideo, function () {
+			customBtnVideo.fadeOut('normal');
+		});
+
 		//console.log(erorr_finish);
 		var size = error.length - 1;
 		if (erorr_finish > size) { // в зависимости от полей которые проверяются (в нашем случае 3 поля)
@@ -328,11 +347,13 @@ $(document).ready(function() {
 							$('.dm-modal .close').hide();
 							form.trigger('reset');
 							$('.dm-modal .success_mail').addClass('active'); //пишем что всё ок
+
 							setTimeout(function() {
 								form.parents('.popup').hide("fade", 500);
 								$('.dm-modal .success_mail').removeClass('active');
 								$('.dm-modal .modal_form_input_wrap i').hide();
 								$('.dm-modal .close').show("fade", 2000);
+
 								//$("body").css({ "overflow": "inherit", "padding-right": "0" });
 							}, 3000);
 						}
@@ -345,6 +366,7 @@ $(document).ready(function() {
 								$('.popup[data-modal=modal-res]').hide("fade", 500);
 								$('.dm-modal .success_mail').removeClass('active', 500);
 								$('.dm-modal .modal_form_input_wrap i').hide();
+								closePopUp();
 								//$("body").css({ "overflow": "inherit", "padding-right": "0" });
 							}, 3000);
 						}

@@ -88,9 +88,9 @@
 	//Секция Часто задаваемые вопросы
 	.accordion
 		margin-right: 15px
-		.often-question
-			&__content
-				height: auto
+		//.often-question
+			//&__content
+				//height: inherit !important
 		.ui-accordion-header
 			font-size: 15px
 	// Секция как мы работаем
@@ -146,6 +146,7 @@
 
 	// Секция товарные группы
 	.tovar-groups
+		padding-bottom: 40px
 		&__description
 			h4
 				margin-top: 15px
@@ -153,6 +154,11 @@
 	.tovar-groups__item
 		flex-direction: column
 		align-items: center
+	.best-seiling
+		&:before
+			width: 145%
+		.best-seiling__wrap
+			padding-bottom: 40px
 	.reverse
 		flex-direction: column !important
 
@@ -227,6 +233,8 @@
 	.often-question
 		.title
 			margin-top: 20px
+		#accordion
+			margin-bottom: 40px
 	//Общие классы
 	.customNextBtn
 		left: 19px

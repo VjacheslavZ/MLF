@@ -69,6 +69,7 @@ $(document).ready( function() {
 	});
 
 	let ourWorks__slider = $("#ourWorks__slider.owl-carousel.owl-theme");
+
 	ourWorks__slider.owlCarousel({
 		loop: true,
 		items: 5,
@@ -213,6 +214,7 @@ $(document).ready( function() {
 		newsItems.first().addClass("opacityItem");
 		newsItems.last().addClass("opacityItem");
 	}
+
 	opacityItems();
 	
 	//video

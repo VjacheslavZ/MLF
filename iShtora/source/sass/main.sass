@@ -27,17 +27,17 @@ body
 	color: $main_txt_color
 	-webkit-tap-highlight-color: transparent
 	//внешний вид скроллбара
-	scrollbar-base-color: $main_color   //для IE
-	scrollbar-arrow-color: $main_color	//для IE
+	scrollbar-base-color: $main_color_gradient_start   //для IE
+	scrollbar-arrow-color: $main_color_gradient_start	//для IE
 	//внешний вид скроллбара для -webkit- остальное тут https://poselab.com/en/blog/custom-scrollbars-in-webkit/
 	&::-webkit-scrollbar
 		width: 12px
 	&::-webkit-scrollbar-thumb
-		background-color: $main_color
+		background-color: $main_color_gradient_start
 		&:hover
-			background-color: darken($main_color, 10%)
+			background-color: ($main_color_gradient_start, 10%)
 	&::-webkit-scrollbar-track-piece
-		background-color: transparent
+		background-color: $main_color
 //-webkit-font-smoothing: antialiased
 //-moz-osx-font-smoothing: grayscale
 
@@ -103,6 +103,8 @@ li
 	display: none
 	overflow: auto
 	z-index: 1000
+	.ofer
+		padding-bottom: 20px
 	.fa-times
 		color: $main_color
 		font-size: 30px
@@ -123,6 +125,7 @@ li
 				a
 					font-size: 30px
 					color: #000
+
 .dm-table
 	display: table
 	width: 100%
@@ -687,7 +690,7 @@ nav[canvas]
 // Секция наши преимущества
 .our__advantages
 	min-height: 630px
-	background: url("../img/ourAdvantages_bg.jpg") no-repeat
+	background: #fff url("../img/ourAdvantages_bg.jpg") no-repeat
 	padding-top: 81px
 	padding-bottom: 132px
 	.title
@@ -870,18 +873,22 @@ nav[canvas]
 	.tovar-groups__item
 		.tovar-groups__photo
 			height: auto
-			cursor: pointer
+			cursor: inherit
+			transition: all .3s
 			&:after
 				background-color: transparent
 			&:hover
+				transition: all .3s
 				.tovar-groups__photo-hover
 					display: block
+					//opacity: 1
+					//transition: all .3s
 				.tovar-groups__photo-active
-					display: none
-
+					//display: none
+					//opacity: 0
+					//transition: all .3s
 			&-hover
 				display: none
-
 
 // секция видео
 .player-video
@@ -912,6 +919,7 @@ nav[canvas]
 // секция группы товаров
 .tovar-groups
 	padding: 78px 0 93px 0
+	background: #fff
 	.title
 		margin-bottom: 23px
 	.underline
@@ -984,6 +992,7 @@ nav[canvas]
 			text-align: left
 			padding: 10px 8px 0 30px
 			display: block
+			z-index: 1
 			h4
 				margin-top: 0
 			p + p
@@ -1009,6 +1018,8 @@ nav[canvas]
 	padding: 0
 	.title
 		margin: 34px 0 24px 0
+		position: relative
+		z-index: 2
 	&:before
 		content: ' '
 		display: block
@@ -1016,13 +1027,15 @@ nav[canvas]
 		width: 120%
 		height: 100%
 		top: -136px
-		z-index: -1
+		z-index: 0
 		background: #feedf0
 		transform: rotate(165deg)
 	.underline
 		margin-bottom: 35px
 	.description
 		margin-bottom: 56px
+		position: relative
+		z-index: 2
 	.best-seiling__wrap
 		background: #feedf0
 		padding-bottom: 87px
@@ -1228,6 +1241,7 @@ nav[canvas]
 //Секция Как с нами связаться?
 .how-contact
 	//background: url("../img/how_contact_bg.jpg") no-repeat
+	background: #fff
 	//background-size: cover
 	position: relative
 	&:before
@@ -1452,6 +1466,7 @@ body
 	display: block
 	transition: .5s
 	cursor: pointer
+	z-index: 1
 	a
 		& + a
 			img

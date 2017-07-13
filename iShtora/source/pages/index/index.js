@@ -232,7 +232,8 @@ $(document).ready( function() {
 	}
 
 	var close = $(".close__dm-modal"),
-		popUpForm = $('[data-modal="modal-form"]');
+		popUpForm = $('[data-modal="modal-form"]'),
+		popUpBtn = $(".dm-modal input[type=submit]");
 
 	function closePopUp() {
 		popUpForm.css({"display": "none"});
@@ -240,7 +241,6 @@ $(document).ready( function() {
 	}
 
 	close.on("click", closePopUp);
-
 
 	let customBtnVideo = $(".start-video");
 
