@@ -53,7 +53,7 @@ $(document).ready( function() {
 	// });
 
 	//скролл по ссылке с атрибутом href
-	$(".header_nav a[href*='#'], .header_top a[href*='#'").on("click", function(e) {
+	$(".header_nav a[href*='#'], .header_top a[href*='#']").on("click", function(e) {
 	    e.preventDefault();
 	    var anchor = $(this);
 	    $('html, body').stop().animate({
@@ -78,7 +78,7 @@ $(document).ready( function() {
 	var three = $("#three");
 	//наши работы
 	one.owlCarousel({
-	    loop: true,
+	    loop: false,
 	    items: 4,
 	    dots: true,
 		margin: 20,
@@ -275,7 +275,6 @@ $(window).resize(function() {
 $(window).scroll(function() {
 
 });
-
 
 $(".loader_inner").fadeOut();
 $(".loader").fadeOut("fast");

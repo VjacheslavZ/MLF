@@ -685,8 +685,6 @@ nav[canvas]
 			padding: 0
 			display: block
 			list-style: none
-
-
 // Секция наши преимущества
 .our__advantages
 	min-height: 630px
@@ -843,10 +841,28 @@ nav[canvas]
 	background-size: cover
 	position: relative
 	text-align: center
+	&_slides
+		div:nth-child(1)
+			.tovar-groups__photo
+				background: url("../img/slider_slide_4.jpg") no-repeat
+		div:nth-child(2)
+			.tovar-groups__photo
+				background: url("../img/slider_slide_3.jpg") no-repeat
+		div:nth-child(3)
+			.tovar-groups__photo
+				background: url("../img/slider_slide_2.jpg") no-repeat
+		div:nth-child(4)
+			.tovar-groups__photo
+				background: url("../img/slider_slide_1.jpg") no-repeat
+		div:nth-child(5)
+			.tovar-groups__photo
+				background: url("../img/slider_slide_4.jpg") no-repeat
+	.tovar-groups__photo-active
+		transition: all .5s
+		opacity: 1
 	.container
 		overflow: hidden
 	.title
-		//margin-top: 76px
 		margin-bottom: 24px
 	.underline
 		margin-bottom: 36px
@@ -855,7 +871,6 @@ nav[canvas]
 		padding: 0 200px
 	.owl-carousel
 		padding-bottom: 53px
-		.owl-item.active
 		div
 			display: inline-block
 		.owl-nav
@@ -865,31 +880,21 @@ nav[canvas]
 			bottom: -9px
 			left: 0
 			right: 0
-			//margin-top: 37px
 		.owl-dot.active
 			span
 				background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
 				margin: 5px 10px
+
 	.tovar-groups__item
 		.tovar-groups__photo
 			height: auto
 			cursor: inherit
-			transition: all .3s
 			&:after
 				background-color: transparent
 			&:hover
-				transition: all .3s
-				.tovar-groups__photo-hover
-					display: block
-					//opacity: 1
-					//transition: all .3s
 				.tovar-groups__photo-active
-					//display: none
-					//opacity: 0
-					//transition: all .3s
-			&-hover
-				display: none
-
+					opacity: 0
+					transition: all .5s
 // секция видео
 .player-video
 	//background: url("../img/video_bg.jpg") no-repeat
