@@ -13,6 +13,7 @@ const uglifyJS = require('./webpack/js.uglify');
 const images = require('./webpack/images');
 const sprite = require('./webpack/sprite');
 const video = require('./webpack/video');
+const data_src =  require('./webpack/images');
 
 const PATHS = {
 	source: path.join(__dirname, 'source'),

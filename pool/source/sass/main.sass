@@ -6,6 +6,7 @@
 //карусель
 @import "../libs/owl.carousel.min.css"
 @import "../libs/owl.theme.default.min.css"
+@import "../libs/lightgallery.min.css"
 
 html, body
 	font-size: 16px
@@ -493,7 +494,7 @@ li
 	text-align: center
 	min-height: 600px
 	height: 100vh
-	background: url(../img/header_bg.jpg) no-repeat
+	background: url(../img/header_bg.jpg) no-repeat center center fixed
 	background-size: cover
 	overflow: hidden
 .header
@@ -1086,12 +1087,12 @@ nav[canvas]
 		left: 0%
 		right: 0
 	.customNextBtn
-		left: 55%
+		left: 58%
 		bottom: -80px
 		i
 			margin-left: 6px
 	.customPrevBtn
-		right: 55%
+		right: 58%
 		bottom: -80px
 		i
 			margin-left: 0
@@ -1173,6 +1174,22 @@ nav[canvas]
 		position: relative
 		padding-bottom: 80px
 		overflow: hidden
+	.owl-item:not(.opacityItem)
+		cursor: pointer
+		position: relative
+		i
+			position: absolute
+			width: 40px
+			height: 40px
+			top: calc(36% - 25px)
+			left: calc(50% - 20px)
+			opacity: 0
+			transition: opacity .5s
+			color: #000
+			font-size: 40px
+		&:hover
+			i
+				opacity: 1
 	.owl-carousel
 		display: flex
 	.defaul-title
@@ -1187,14 +1204,14 @@ nav[canvas]
 	.customBtn
 		bottom: 1px
 	.customNextBtn
-		left: 55%
+		left: 57%
 		i
 			margin-left: 8px
 	.customPrevBtn
-		right: 55%
+		right: 57%
 		i
 			margin-left: 0
-	.owl-item.active
+	//.owl-item.active
 		margin-bottom: 5px
 //Секиция цены на басейны
 .pricePools
@@ -1470,25 +1487,13 @@ nav[canvas]
 .news
 	position: relative
 	padding-top: 45px
+	width: 100%
 	&__title
 		position: relative
 		background-color: #fff
 	.section__default-caption
 		display: inline-block
 		margin: 0
-	//&__wraper
-	//	overflow: hidden
-	//	position: relative
-	//.owl-carousel
-	//	display: flex
-	//&__slider_slide
-		display: inline-block
-		max-width: 370px
-		img
-			width: 100%
-		p
-			@include font($main_color-text2, 18, $font_PT_Sans-Regular, 1)
-			padding: 36px 70px 36px
 	.connecting__uzor-after
 		width: 171px
 		height: 88px
@@ -1542,6 +1547,9 @@ nav[canvas]
 		.connecting__connecting-lines_right
 			height: 164px
 			top: -2px
+	.owl-item:not(.opacityItem)
+		cursor: pointer
+		position: relative
 //Секция Мы готовы предложить
 .weReadyOffer
 	a
@@ -1619,7 +1627,7 @@ nav[canvas]
 			&:hover
 				color: $btn_color__slider-hover
 	&__logo
-		text-align: right
+		//text-align: center
 		margin-top: 123px
 		p
 			@include font($main_color-text, 14, $font_PT_Sans-Regular,1)

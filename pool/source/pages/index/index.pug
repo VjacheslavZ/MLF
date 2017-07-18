@@ -209,7 +209,7 @@ block main
 					//button.player__button
 				section#video.video
 					.video__bg
-					video(src=require("../../video/video.mp4") width="100%" height="657px")
+					video(src=require("../../video/video.mp4") width="100%" height="550")
 
 					a.video__play-pause(type="button" id="play-pause")
 				//Секция техноологии, слайдер
@@ -240,6 +240,12 @@ block main
 									.col-md-offset-1.col-md-3.col-sm-4.col-xs-12.technoligy__description
 										h3.technoligy__description-caption Скиммерный бассейн
 										p.aboutUs__usluga-description Основное отличие такого типа бассейнов: вода находиться ниже уровня борта, а забор воды осуществляется с помощью специальных скиммеров, окон в стенках бассейна. Такая технология дешевле остальных.
+								.item.clearfix
+									.col-md-offset-1.col-md-6.col-sm-8.col-xs-12.technoligy__slider
+										img(src=require("../../img/section__technologi_slider-slide-3.jpg"))
+									.col-md-offset-1.col-md-3.col-sm-4.col-xs-12.technoligy__description
+										h3.technoligy__description-caption Композитный басейн
+										p.aboutUs__usluga-description Преимущество композитного бассейна, в его полной готовности к установке. Представляет собой цельную чашу, из многослойного композитного материала. Отлично подходит для загородных домов и дач.
 							.customNextBtn.customBtn
 								i.fa.fa-angle-right
 							.customPrevBtn.customBtn
@@ -282,51 +288,88 @@ block main
 				section#ourWorks.ourWorks
 					.ourWorks__wraper
 						h3.defaul-title.col-lg-12 Наши работы
-						#ourWorks__slider.owl-carousel.owl-theme
-							.item.ourWorks__slider_slide.box-shadow
+						#ourWorks__slider.owl-carousel.owl-theme.lightgallery
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_1_big.jpg" data-sub-html="text")
 								img(src=require("../../img/our__works_slide_1.jpg"))
+								i.fa.fa-search-plus
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
-							.item.ourWorks__slider_slide.box-shadow
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_2_big.jpg" data-sub-html="text")
 								img(src=require("../../img/our__works_slide_2.jpg"))
+								i.fa.fa-search-plus
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
-							.item.ourWorks__slider_slide.box-shadow
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_3_big.jpg" data-sub-html="text")
 								img(src=require("../../img/our__works_slide_3.jpg"))
+								i.fa.fa-search-plus
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-							.item.ourWorks__slider_slide.box-shadow
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_4_big.jpg" data-sub-html="text")
 								img(src=require("../../img/our__works_slide_4.jpg"))
+								i.fa.fa-search-plus
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-
-
-							.item.ourWorks__slider_slide.box-shadow
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_5_big.jpg" data-sub-html="text")
 								img(src=require("../../img/our__works_slide_5.jpg"))
+								i.fa.fa-search-plus
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-							.item.ourWorks__slider_slide.box-shadow
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_6_big.jpg" data-sub-html="text")
 								img(src=require("../../img/our__works_slide_6.jpg"))
+								i.fa.fa-search-plus
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-							.item.ourWorks__slider_slide.box-shadow
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_7_big.jpg" data-sub-html="text")
 								img(src=require("../../img/our__works_slide_7.jpg"))
+								i.fa.fa-search-plus
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-							.item.ourWorks__slider_slide.box-shadow
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_8_big.jpg" data-sub-html="text")
 								img(src=require("../../img/our__works_slide_8.jpg"))
+								i.fa.fa-search-plus
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-							.item.ourWorks__slider_slide.box-shadow
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_9_big.jpg" data-sub-html="text")
 								img(src=require("../../img/our__works_slide_9.jpg"))
+								i.fa.fa-search-plus
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-							.item.ourWorks__slider_slide.box-shadow
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_10_big.jpg" data-sub-html="text")
 								img(src=require("../../img/our__works_slide_10.jpg"))
+								i.fa.fa-search-plus
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-							.item.ourWorks__slider_slide.box-shadow
-								img(src=require("../../img/our__works_slide_11.jpg"))
-								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-							.item.ourWorks__slider_slide.box-shadow
+							//.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_11_big.jpg")
+							//	img(src=require("../../img/our__works_slide_11.jpg"))
+							//	p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_12_big.jpg" data-sub-html="text")
 								img(src=require("../../img/our__works_slide_12.jpg"))
+								i.fa.fa-search-plus
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-							.item.ourWorks__slider_slide.box-shadow
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_13_big.jpg" data-sub-html="text")
 								img(src=require("../../img/our__works_slide_13.jpg"))
+								i.fa.fa-search-plus
 								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_14_big.jpg" data-sub-html="text")
+								img(src=require("../../img/our__works_slide_14.jpg"))
+								i.fa.fa-search-plus
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_15_big.jpg" data-sub-html="text")
+								img(src=require("../../img/our__works_slide_15.jpg"))
+								i.fa.fa-search-plus
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_16_big.jpg" data-sub-html="text")
+								img(src=require("../../img/our__works_slide_16.jpg"))
+								i.fa.fa-search-plus
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_17_big.jpg" data-sub-html="text")
+								img(src=require("../../img/our__works_slide_17.jpg"))
+								i.fa.fa-search-plus
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_18_big.jpg" data-sub-html="text")
+								img(src=require("../../img/our__works_slide_18.jpg"))
+								i.fa.fa-search-plus
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_19_big.jpg" data-sub-html="text")
+								img(src=require("../../img/our__works_slide_19.jpg"))
+								i.fa.fa-search-plus
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow(data-src="../../img/our__works_slide_20_big.jpg" data-sub-html="text")
+								img(src=require("../../img/our__works_slide_20.jpg"))
+								i.fa.fa-search-plus
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 						.customNextBtn.customBtn
 							i.fa.fa-angle-right
 						.customPrevBtn.customBtn
@@ -509,47 +552,48 @@ block main
 							i.fa.fa-angle-left
 				//Сектця новости
 				section#news.news
-					.news__title
-						h3.section__default-caption Новости
-						span.connecting__uzor-after
-					#news__slider.owl-carousel.owl-theme
-						.item.ourWorks__slider_slide.box-shadow
-							img(src=require("../../img/ourWork__slider-slide1.jpg"))
-							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-						.item.ourWorks__slider_slide.box-shadow
-							img(src=require("../../img/ourWork__slider-slide2.jpg"))
-							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+					.news__wraper
+						.news__title
+							h3.section__default-caption Новости
+							span.connecting__uzor-after
+						#news__slider.owl-carousel.owl-theme
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide1.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide2.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
-						.item.ourWorks__slider_slide.box-shadow
-							img(src=require("../../img/ourWork__slider-slide3.jpg"))
-							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide3.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
-						.item.ourWorks__slider_slide.box-shadow
-							img(src=require("../../img/ourWork__slider-slide3.jpg"))
-							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-						.item.ourWorks__slider_slide.box-shadow
-							img(src=require("../../img/ourWork__slider-slide3.jpg"))
-							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide3.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide3.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
 
-						.item.ourWorks__slider_slide.box-shadow
-							img(src=require("../../img/ourWork__slider-slide3.jpg"))
-							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-						.item.ourWorks__slider_slide.box-shadow
-							img(src=require("../../img/ourWork__slider-slide3.jpg"))
-							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-						.item.ourWorks__slider_slide.box-shadow
-							img(src=require("../../img/ourWork__slider-slide3.jpg"))
-							p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
-					.customNextBtn.customBtn
-						i.fa.fa-angle-right
-					.customPrevBtn.customBtn
-						i.fa.fa-angle-left
-					.container
-						.row
-							.col-md-12.connecting__wrap
-								span.connecting__connecting-lines
-								span.connecting__connecting-lines_right
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide3.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide3.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+							.item.ourWorks__slider_slide.box-shadow
+								img(src=require("../../img/ourWork__slider-slide3.jpg"))
+								p.ourWorks__slider-description Lorem ipsum dolor sit amet, consectetur adipisicing elit
+						.customNextBtn.customBtn
+							i.fa.fa-angle-right
+						.customPrevBtn.customBtn
+							i.fa.fa-angle-left
+						.container
+							.row
+								.col-md-12.connecting__wrap
+									span.connecting__connecting-lines
+									span.connecting__connecting-lines_right
 				//Секция скидки при заказе через сайт
 				section#discountsInstallation2.discounts.intermediate.discounts__third-form
 					.container

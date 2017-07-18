@@ -31,7 +31,7 @@ class Animation {
 		}
 
 		if (! sessionStorage.getItem("pupUp")) {
-			if (this.activeSection('tovar-groups',0, 500)) {
+			if (this.activeSection('player-video',0, 0) || this.activeSection('tovar-groups',0, 400)) {
 				$('.popup[data-modal=modal-form]').show("fade", 200);
 			} else{
 				$('.popup[data-modal=modal-form]').hide("fade", 200);

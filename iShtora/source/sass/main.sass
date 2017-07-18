@@ -27,8 +27,8 @@ body
 	color: $main_txt_color
 	-webkit-tap-highlight-color: transparent
 	//внешний вид скроллбара
-	scrollbar-base-color: $main_color_gradient_start   //для IE
-	scrollbar-arrow-color: $main_color_gradient_start	//для IE
+	scrollbar-base-color: $main_color   //для IE
+	scrollbar-arrow-color: $main_color	//для IE
 	//внешний вид скроллбара для -webkit- остальное тут https://poselab.com/en/blog/custom-scrollbars-in-webkit/
 	&::-webkit-scrollbar
 		width: 12px
@@ -396,7 +396,10 @@ li
 	text-align: center
 	min-height: 600px
 	height: 100vh
-	background: url(../img/header_bg.jpg) no-repeat
+	background: url(../img/header_bg.jpg) no-repeat center center fixed
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
 	background-size: cover
 	overflow: hidden
 	position: relative
@@ -413,6 +416,8 @@ li
 		height: 100%
 		min-height: 100%
 		position: relative
+	.intermediate_wrap
+		padding-top: 100px
 .header_logo
 	display: inline-block
 	padding: 19px 0
@@ -498,7 +503,7 @@ li
 	position: absolute
 	left: 0
 	right: 0
-	top: calc(50% - 71px)
+	top: calc(32% - 71px)
 	span
 		display: block
 	p
@@ -857,6 +862,12 @@ nav[canvas]
 		div:nth-child(5)
 			.tovar-groups__photo
 				background: url("../img/slider_slide_4.jpg") no-repeat
+	.tovar-groups__photo-name
+		background: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
+		background:	-ms-linear-gradient(top, $main_color_gradient_start 99%, transparent 100%) /* IE10+ */
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		font-size: 16px
 	.tovar-groups__photo-active
 		transition: all .5s
 		opacity: 1
@@ -1043,9 +1054,11 @@ nav[canvas]
 		z-index: 2
 	.best-seiling__wrap
 		background: #feedf0
-		padding-bottom: 87px
+		padding-bottom: 101px
 	.tovar-groups__photo
 		height: auto
+	.owl-item
+		cursor: pointer
 	.tovar-groups__item
 		.tovar-groups__photo:after
 			background-color: #000
@@ -1137,7 +1150,7 @@ nav[canvas]
 		margin-top: 39px
 		position: relative
 		z-index: 11
-	.intermediate_wrap.intermediate_wrap
+	.intermediate_wrap
 		margin-top: 52px
 //Секция отзывы слайдер
 .reviews
@@ -1469,7 +1482,7 @@ body
 	position: relative
 	height: 470px
 	display: block
-	transition: .5s
+	transition: background-color .5s
 	cursor: pointer
 	z-index: 1
 	a
@@ -1487,10 +1500,10 @@ body
 		.demo-gallery-poster
 			position: absolute
 			background-color: rgba(0, 0, 0, 0.5)
+			transition: background-color .5s
 			bottom: 0
-			left: 0
-			right: 0
+			left: 15px
+			right: 15px
 			top: 0
-			transition: all 0.25s linear
 		.fa-search
 			opacity: 1

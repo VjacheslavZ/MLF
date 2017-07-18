@@ -9,6 +9,9 @@ require("../../libs/libs").waypoint();
 require("../../libs/libs").Animate_css();
 //карусель
 require("../../libs/libs").owl_carousel_min_js();
+require("../../libs/libs").lightgallery();
+require("../../libs/libs").lg_thumbnail();
+require("../../libs/libs").lg_thumbnail_full();
 
 import animate from '../../js/animate';
 import functions from '../../js/_functions.js';
@@ -69,7 +72,6 @@ $(document).ready( function() {
 	});
 
 	let ourWorks__slider = $("#ourWorks__slider.owl-carousel.owl-theme");
-
 	ourWorks__slider.owlCarousel({
 		loop: true,
 		items: 5,
@@ -213,6 +215,8 @@ $(document).ready( function() {
 		newsItems.removeClass("opacityItem");
 		newsItems.first().addClass("opacityItem");
 		newsItems.last().addClass("opacityItem");
+		console.log("sdasda");
+
 	}
 
 	opacityItems();
@@ -242,6 +246,18 @@ $(document).ready( function() {
 			videoBg.css({"opacity":"1"});
 		}
 	});
+
+	//lightgallery
+
+
+	$(".lightgallery").lightGallery({
+		selector: '.item'
+	});
+
+
+	var $customEvents = $('.lightgallery');
+	$customEvents.lightGallery();
+
 });
 
 
