@@ -396,7 +396,7 @@ li
 	text-align: center
 	min-height: 600px
 	height: 100vh
-	background: url(../img/header_bg.jpg) no-repeat center center fixed
+	background: url(../img/header_bg_2.jpg) no-repeat center center fixed
 	-webkit-background-size: cover
 	-moz-background-size: cover
 	-o-background-size: cover
@@ -411,13 +411,13 @@ li
 		left: 0
 		right: 0
 		background-color: rgba(0, 0, 0, .5)
-.header
 	.container
 		height: 100%
 		min-height: 100%
 		position: relative
-	.intermediate_wrap
-		padding-top: 100px
+	.owl-carousel
+		.owl-dot.active span
+				background: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
 .header_logo
 	display: inline-block
 	padding: 19px 0
@@ -503,14 +503,35 @@ li
 	position: absolute
 	left: 0
 	right: 0
-	top: calc(32% - 71px)
+	top: calc(50% - 71px)
+	//top: calc(32% - 71px)
+	.item
+		padding: 0 5px
 	span
 		display: block
+	.share-title
+		margin-bottom: 0
+	.share
+		display: inline
+	.text-underline
+		//padding-bottom: 5px
+		border-bottom: 3px solid #fff
+	.share-text
+		font-size: 22px
+		margin-bottom: 40px
+		padding: 0 20px
 	p
 		@include fz(18)
 		color: #fff
 		padding-top: 10px
 		font-family: raleway-medium
+	.photo-cloth
+		padding: 0 20px
+		li
+			width: 150px
+			display: inline-block
+			& + li
+				margin-left: 10px
 .header_bot_txt
 	margin: auto
 	position: absolute
@@ -948,6 +969,8 @@ nav[canvas]
 	&__item
 		background-clip: content-box
 		display: flex
+		//img
+			width: 100%
 		.tovar-groups__photo
 			position: relative
 			height: 470px
@@ -1503,7 +1526,7 @@ body
 			transition: background-color .5s
 			bottom: 0
 			left: 15px
-			right: 15px
+			right: 0
 			top: 0
 		.fa-search
 			opacity: 1

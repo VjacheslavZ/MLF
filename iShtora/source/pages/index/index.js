@@ -73,12 +73,20 @@ $(document).ready( function() {
 	// });
 
 	 //Активация слайдера
+	let header__slider_Owl1 = $('#headerSlider.owl-carousel');
 	var one = $("#one");
 	var two = $("#two");
 	var three = $("#three");
+	//heder slider
+	var headerSlider = $("#headerSlider.owl-carousel");
+	headerSlider.owlCarousel({
+		loop: true,
+		items: 1,
+		dots: true
+	});
 	//наши работы
 	one.owlCarousel({
-	    loop: false,
+	    loop: true,
 	    items: 4,
 	    dots: true,
 		margin: 20,
@@ -145,9 +153,19 @@ $(document).ready( function() {
 	});
 
 	// Кастомные кнопки управления слайдером
+	let headerCustomNextBtn =  $('.header .customNextBtn');
+	let headerCustomPrevBtn =  $('.header .customPrevBtn');
 	var owl1 = $('#one.owl-carousel');
 	var owl2 = $('#two.owl-carousel');
 	var owl3 = $('#three.owl-carousel');
+
+	headerCustomNextBtn.click(function() {
+		header__slider_Owl1.trigger('next.owl.carousel', [700]);
+	});
+	headerCustomPrevBtn.click(function() {
+		header__slider_Owl1.trigger('prev.owl.carousel', [700]);
+	});
+
 
 	owl1.owlCarousel();
 	//owl2.owlCarousel();
@@ -233,7 +251,8 @@ $(document).ready( function() {
 
 	var close = $(".close__dm-modal"),
 		popUpForm = $('[data-modal="modal-form"]'),
-		popUpBtn = $(".dm-modal input[type=submit]");
+		popUpBtn = $(".dm-modal input[type=submit]"),
+		overLay = $(".overlay");
 
 	function closePopUp() {
 		popUpForm.css({"display": "none"});
@@ -241,6 +260,7 @@ $(document).ready( function() {
 	}
 
 	close.on("click", closePopUp);
+	overLay.on("click", closePopUp);
 
 	let customBtnVideo = $(".start-video");
 

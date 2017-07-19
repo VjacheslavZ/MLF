@@ -41,33 +41,55 @@ block main
 			.container
 				.row
 					.header_title
-						h1
-							span Заказать рулонные шторы в Харькове просто!
-						p Оставьте ваше имя и телефон, мы вам перезвоним!
-						.intermediate
-							.intermediate_wrap
-								form
-									.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
-										.modal_form_input_wrap
-											.modal_input_error
-												| Заполните поле
-												.modal_error_triangle
-												.modal_error_chest_img
-											i.fa.fa-check
-											input.modal_form_input(name='name', type='text', placeholder='Имя')
-									.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
-										.modal_form_input_wrap
-											.modal_input_error
-												| Заполните поле
-												.modal_error_triangle
-												.modal_error_chest_img
-											i.fa.fa-check
-											input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
-									.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
-										.modal_form_input_wrap
-											input(type='hidden', name='form_name', value='Заказ рулонной шторы')
-											input(type='hidden', name='form_type', value='normal')
-											input.col-lg-4(type='submit', value='Заказать')
+						.slider-wrap
+							#headerSlider.owl-carousel.owl-theme
+								.item
+									h1
+										span Заказать рулонные шторы в Харькове просто!
+									p Оставьте ваше имя и телефон, мы вам перезвоним!
+									.intermediate
+										.intermediate_wrap
+											form
+												.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
+													.modal_form_input_wrap
+														.modal_input_error
+															| Заполните поле
+															.modal_error_triangle
+															.modal_error_chest_img
+														i.fa.fa-check
+														input.modal_form_input(name='name', type='text', placeholder='Имя')
+												.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
+													.modal_form_input_wrap
+														.modal_input_error
+															| Заполните поле
+															.modal_error_triangle
+															.modal_error_chest_img
+														i.fa.fa-check
+														input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
+												.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
+													.modal_form_input_wrap
+														input(type='hidden', name='form_name', value='Заказ рулонной шторы')
+														input(type='hidden', name='form_type', value='normal')
+														input.col-lg-4(type='submit', value='Заказать')
+								.item
+									h1.share-title С 
+										span.share.text-underline 20.07. по 31.08.2017
+										span.share  скидка 15% на рулонные шторы!
+									p.share-text В акции участвуют ткани: Madagaskar-BO, Air Gold, Liana Gold, Liana Apricot, Bohema Orange, Bohema Blue
+									ul.photo-cloth
+										li
+											img(src=require("../../img/photo-cloth-1.png"))
+										li
+											img(src=require("../../img/photo-cloth-2.png"))
+										li
+											img(src=require("../../img/photo-cloth-3.png"))
+										li
+											img(src=require("../../img/photo-cloth-4.png"))
+										li
+											img(src=require("../../img/photo-cloth-5.png"))
+
+							.customNextBtn.customBtn
+							.customPrevBtn.customBtn
 		// Секция  наши преимущества
 		section#our_advantages.our__advantages
 			.container
@@ -240,8 +262,8 @@ block main
 
 					.tovar-groups__item
 						.col-lg-6.lightgallery
-							a(href="../../img/tovar-groups_4.jpg")
-								img(src=require("../../img/tovar-groups_1.jpg"))
+							a(href="../../img/tovar-groups_2.jpg")
+								img(src=require("../../img/tovar-groups_2.jpg"))
 								.demo-gallery-poster.clearfix
 									.fa.fa-search
 							//a(href="../../img/tovar-groups_2.jpg")

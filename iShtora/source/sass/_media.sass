@@ -3,6 +3,23 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
+	.lightgallery
+		&:hover
+			.demo-gallery-poster
+				position: absolute
+				background-color: rgba(0, 0, 0, 0.5)
+				transition: background-color .5s
+				bottom: 0
+				left: 15px
+				right: 15px
+				top: 0
+	.header
+		.share-title
+			font-size: 26px
+		.header_title .photo-cloth li
+			width: 130px
+		.slider-wrap
+			padding: 0 10px 20px 10px
 	.header_modal
 		margin-top: 20px
 	.our__advantages
@@ -75,6 +92,8 @@
 					margin-top: 0
 				p + p
 					padding-top: 10px
+
+
 	//cекция Хиты продаж
 	.best-seiling
 		.tovar-groups__item
@@ -120,7 +139,7 @@
 @media only screen and (max-width : 991px)
 
 	.header_title
-		top: calc(30% - 71px)
+		top: calc(25% - 71px)
 	.intermediate_item + .intermediate_item
 		margin-top: 0px
 	input[type=submit]
@@ -384,6 +403,9 @@
 	.forma-callBack
 		&__title
 			font-size: 1.3rem
+	.header .photo-cloth
+		li +li
+			display: none
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 520px)
 	/**/
@@ -417,6 +439,9 @@
 	.header_title
 		h1
 			font-size: 26px
+	.header .photo-cloth
+		li
+			display: none
 	.modal_form_input_wrap
 		.modal_input_error
 			right: 0px
@@ -441,9 +466,15 @@
 		&__title
 			font-size: 1rem
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px)
+	.intermediate .intermediate_wrap
+		margin-top: 35px
+@media only screen and (max-height : 600px)
+	.dm-modal
+		padding: 5px 46px
 /*==========  Mobile First Method  ==========*/
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
+//@media only screen and (min-width : 1200px)
 	.container
 		width: 1200px
 

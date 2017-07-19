@@ -51,7 +51,8 @@ $(document).ready( function() {
 	var headerSlider = $("#headerSlider.owl-carousel");
 	headerSlider.owlCarousel({
 		loop: true,
-		items: 1,
+
+	items: 1,
 		dots: true
 	});
 
@@ -141,6 +142,7 @@ $(document).ready( function() {
 	//owl3.owlCarousel();
 	//ourWorks__slider_owl4.owlCarousel();
 	//news__slider_owl4.owlCarousel();
+
 	let headerCustomNextBtn =  $('.header .customNextBtn');
 	let headerCustomPrevBtn =  $('.header .customPrevBtn');
 
