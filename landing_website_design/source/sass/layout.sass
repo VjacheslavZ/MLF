@@ -1,0 +1,118 @@
+//	section header top
+// Header
+.header
+	min-height: 600px
+	height: 100vh
+	background: url(../img/header_bg.jpg) no-repeat center center fixed
+	background-size: cover
+	.container
+		height: 100%
+		min-height: 100%
+		position: relative
+.header__top-bg
+	background-color: $main_bg_color_dark
+.header__wrap
+	display: flex
+	justify-content: space-between
+	align-items: center
+.header__logo
+	display: inline-block
+	a
+		font-family: $latoThin
+		font-size: 30px
+		color: #fff
+		&:hover
+			text-decoration: none
+.header__nav
+	display: inline-block
+	position: relative
+	vertical-align: text-bottom
+	ul
+		li
+			list-style: none
+			display: inline-block
+			a
+				font-family: $latoRegular
+				font-size: 14px
+				color: $main_txt_color
+				text-decoration: none
+				transition: .5s
+				padding-bottom: 8px
+				border-bottom: 1px solid transparent
+				&:hover
+					border-bottom: 1px solid $header_nav-hover
+		li + li
+			margin-left: 55px
+		li:nth-child(5)
+			position: relative
+			&:before
+				content: ""
+				position: absolute
+				left: -41px
+				@include sprite($mail-to)
+		li:nth-child(6)
+			position: relative
+			&:before
+				content: ""
+				position: absolute
+				left: -41px
+				bottom: -2px
+				@include sprite($phone)
+.header_modal
+	display: inline-block
+	padding: 18px 20px
+	@include btnDefault(61px)
+	//background-image: linear-gradient(to bottom, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
+	//background-size: 100%
+	//position: relative
+	//z-index: 100
+	//transition: all .5s
+	//cursor: pointer
+	//&:before
+	//	content: ''
+	//	height: 61px
+	//	top: 0
+	//	left: 0
+	//	width: 100%
+	//	opacity: 0
+	//	transition: opacity 0.45s
+	//	z-index: -100
+	//	position: absolute
+	//	background-image: linear-gradient(to bottom, $main_color_gradient_end 0%, $main_color_gradient_end 100%)
+	//&:hover
+	//	box-shadow: $btn_shadow-hover
+	//	&:before
+	//		opacity: 1
+
+	//&.last for mob menu
+	&.last
+		a
+			color: $main_txt_color
+			&:after
+				@include css-triangle(#fff,up,10px)
+				top: calc(50% - 5px)
+				right: -20px
+				transition: 0.5s
+			&:hover:after
+				transform: rotate(180deg)
+	a
+		font-family: $latoRegular
+		font-size: 16px
+		color: $main_txt_color !important
+		text-decoration: none
+		transition: .5s
+		position: relative
+
+
+//	section header main
+//	section say No
+//	section five tasks
+//	section my design
+//	section with me very comfort
+//	section make good design
+//	section create premium design
+//	section how i make premium design
+//	section portfolio? examples my works
+//	section price of my service
+//	section reviews
+//	section my slogan

@@ -53,7 +53,7 @@ $(document).ready( function() {
 	// });
 
 	//скролл по ссылке с атрибутом href
-	$(".header_nav a[href*='#'], .header_top a[href*='#']").on("click", function(e) {
+	$(".header_nav_mobile a[href*='#'], .header_top a[href*='#']").on("click", function(e) {
 	    e.preventDefault();
 	    var anchor = $(this);
 	    $('html, body').stop().animate({

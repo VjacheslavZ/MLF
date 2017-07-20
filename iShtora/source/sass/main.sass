@@ -386,6 +386,7 @@ li
 	.modal_error_triangle
 
 .header_top
+	transition: .5s
 	text-align: center
 	display: flex
 	justify-content: space-between
@@ -420,13 +421,13 @@ li
 				background: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
 .header_logo
 	display: inline-block
-	padding: 19px 0
+	padding: 0 0
 	vertical-align: middle
 	a
 		//@include font($main_font_color, 36,$raleway-regular,1.6)
 		background: url(../img/Logo.png) no-repeat
 		width: 111px
-		height: 39px
+		height: 56px
 		display: block
 		&:hover
 			text-decoration: none
@@ -475,7 +476,7 @@ li
 //стили для шапки при скролле
 .header_top.haeder_scroll
 	height: auto
-	min-height: 63px
+	min-height: 57px
 .haeder_scroll
 	.header_logo
 		padding: 0
@@ -559,8 +560,19 @@ li
 	position: relative
 	z-index: 1002
 	pointer-events: all
+.nav-on .nav-line:first-child
+	transition: .5s
+	width: 0
+	opacity: 0
+	left: 50%
+	top: 11px
+	//transition: .5s
+	//margin-top: 6px
+	//cursor: pointer
+	//position: relative
+	//z-index: 1002
+	//pointer-events: all
 
-.nav-on .nav-line:first-child,
 .nav-on .nav-line:last-child
 	transition: .5s
 	width: 0
