@@ -31,16 +31,40 @@
 		li
 			list-style: none
 			display: inline-block
+			position: relative
 			a
 				font-family: $latoRegular
 				font-size: 14px
 				color: $main_txt_color
 				text-decoration: none
-				transition: .5s
 				padding-bottom: 8px
-				border-bottom: 1px solid transparent
-				&:hover
-					border-bottom: 1px solid $header_nav-hover
+
+				&:before
+					content: " "
+					position: absolute
+					left: 0
+					bottom: 0
+					height: 1px
+					width: 0
+					background-color: $header_nav-hover
+					transition: width 0.2s ease-in-out
+				&:after
+					content: " "
+					position: absolute
+					right: 0
+					bottom: 0
+					height: 1px
+					width: 0
+					background-color: $header_nav-hover
+					transition: width 0.2s ease-in-out
+				&:hover,&:focus
+					&:before
+						width: 50%
+					&:after
+						width: 50%
+
+
+
 		li + li
 			margin-left: 55px
 		li:nth-child(5)
@@ -62,27 +86,6 @@
 	display: inline-block
 	padding: 18px 20px
 	@include btnDefault(61px)
-	//background-image: linear-gradient(to bottom, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
-	//background-size: 100%
-	//position: relative
-	//z-index: 100
-	//transition: all .5s
-	//cursor: pointer
-	//&:before
-	//	content: ''
-	//	height: 61px
-	//	top: 0
-	//	left: 0
-	//	width: 100%
-	//	opacity: 0
-	//	transition: opacity 0.45s
-	//	z-index: -100
-	//	position: absolute
-	//	background-image: linear-gradient(to bottom, $main_color_gradient_end 0%, $main_color_gradient_end 100%)
-	//&:hover
-	//	box-shadow: $btn_shadow-hover
-	//	&:before
-	//		opacity: 1
 
 	//&.last for mob menu
 	&.last
