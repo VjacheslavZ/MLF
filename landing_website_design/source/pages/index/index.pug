@@ -86,9 +86,9 @@ block main
 							.say-no__video-bg
 								a.video__play-pause(type="button" id="play-pause")
 							video(src=require("../../video/video.mp4") width="564px" height="100%")
-						.say-no__show-more_shadow-outer
-							.say-no__show-more_shadow-inner
-								button.say-no__show-more Посмотрите что я умею
+						.btn-big__shadow-outer
+							.btn-big__shadow-inner
+								button.btn-big__show-more Посмотрите что я умею
 
 
 			// Тест react
@@ -97,9 +97,47 @@ block main
 					#app
 			// Секция main_content
 			section.main_content
-				.container
-					//	section say No
-					//	section five tasks
+				//	section five tasks
+				section.five-tasks
+					.container
+						h1.default-title 5 задач, которые
+						p.five-tasks__description решает мой дизайн сайта:
+						span.line
+						.five-tasks__items
+							.five-tasks__item
+								.five-tasks__item_box-shadow-outer
+									.five-tasks__item_box-shadow-inner
+										.five-tasks__item_logo
+											.five-tasks__item_logo1
+								p.five-tasks__item_description Привлечение внимания
+							.five-tasks__item
+								.five-tasks__item_box-shadow-outer
+									.five-tasks__item_box-shadow-inner
+										.five-tasks__item_logo
+											.five-tasks__item_logo2
+								p.five-tasks__item_description Удержание аудитории
+							.five-tasks__item
+								.five-tasks__item_box-shadow-outer
+									.five-tasks__item_box-shadow-inner
+										.five-tasks__item_logo
+											.five-tasks__item_logo3
+								p.five-tasks__item_description Положительное впечатление
+							//.five-tasks__items
+							.five-tasks__item
+								.five-tasks__item_box-shadow-outer
+									.five-tasks__item_box-shadow-inner
+										.five-tasks__item_logo
+											.five-tasks__item_logo4
+								p.five-tasks__item_description Побуждение к совершению покупки
+							.five-tasks__item
+								.five-tasks__item_box-shadow-outer
+									.five-tasks__item_box-shadow-inner
+										.five-tasks__item_logo
+											.five-tasks__item_logo5
+								p.five-tasks__item_description Формирование положитеьного иммиджа
+							.five-tasks__item.text-mask
+								.text-mask let's make a unicorn
+
 					//	section my design
 					//	section with me very comfort
 					//	section make good design
@@ -108,45 +146,45 @@ block main
 					//	section portfolio? examples my works
 					//	section price of my service
 					//	section reviews
-					div Пример checkbox
-					label.check.noselect
-						input(type='checkbox')
-						i.fa.fa-1.fa-square-o
-						i.fa.fa-2.fa-check-square-o
-						span первый чек
-					label.check.noselect
-						input(type='checkbox')
-						i.fa.fa-1.fa-square-o
-						i.fa.fa-2.fa-check-square-o
-						span второй чек
-					div Пример radio button
-					label.radio.noselect
-						input(type='radio', name='radio')
-						i.fa.fa-1.fa-square-o
-						i.fa.fa-2.fa-check-square-o
-						span первый чек
-					label.radio.noselect
-						input(type='radio', name='radio', checked='')
-						i.fa.fa-1.fa-square-o
-						i.fa.fa-2.fa-check-square-o
-						span второй чек
-					h3 Пример Select на плагине Select2
-						h4 с тегами
-							.select2-container
-								select.select2-tags.form-control(multiple)
-									option angular
-									option react
-									option vui
-									option(disabled) ember
-									option backbone
-						h4 обычный
-							.select2-container
-								select.select2
-									option angular
-									option react
-									option vui
-									option(disabled) ember
-									option backbone
+					//div Пример checkbox
+					//label.check.noselect
+					//	input(type='checkbox')
+					//	i.fa.fa-1.fa-square-o
+					//	i.fa.fa-2.fa-check-square-o
+					//	span первый чек
+					//label.check.noselect
+					//	input(type='checkbox')
+					//	i.fa.fa-1.fa-square-o
+					//	i.fa.fa-2.fa-check-square-o
+					//	span второй чек
+					//div Пример radio button
+					//label.radio.noselect
+					//	input(type='radio', name='radio')
+					//	i.fa.fa-1.fa-square-o
+					//	i.fa.fa-2.fa-check-square-o
+					//	span первый чек
+					//label.radio.noselect
+					//	input(type='radio', name='radio', checked='')
+					//	i.fa.fa-1.fa-square-o
+					//	i.fa.fa-2.fa-check-square-o
+					//	span второй чек
+					//h3 Пример Select на плагине Select2
+					//	h4 с тегами
+					//		.select2-container
+					//			select.select2-tags.form-control(multiple)
+					//				option angular
+					//				option react
+					//				option vui
+					//				option(disabled) ember
+					//				option backbone
+					//	h4 обычный
+					//		.select2-container
+					//			select.select2
+					//				option angular
+					//				option react
+					//				option vui
+					//				option(disabled) ember
+					//				option backbone
 			// Секция  ask-form-title
 			//	section my slogan
 			section.intermediate

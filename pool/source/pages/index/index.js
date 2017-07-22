@@ -250,8 +250,6 @@ $(document).ready( function() {
 	});
 
 	//lightgallery
-
-
 	$(".lightgallery").lightGallery({
 		selector: '.item'
 	});

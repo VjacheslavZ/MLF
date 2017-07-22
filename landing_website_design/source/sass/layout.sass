@@ -45,7 +45,7 @@
 					content: " "
 					position: absolute
 					left: 0
-					bottom: 0
+					top: 23px
 					height: 1px
 					width: 0
 					background-color: $header_nav-hover
@@ -54,7 +54,7 @@
 					content: " "
 					position: absolute
 					right: 0
-					bottom: 0
+					top: 23px
 					height: 1px
 					width: 0
 					background-color: $header_nav-hover
@@ -176,7 +176,7 @@
 	width: 564px
 	@include section-mask()
 	transition: .5s
-
+	cursor: pointer
 	&:after
 		content: ""
 		position: absolute
@@ -188,53 +188,75 @@
 	right: 0
 	opacity: 0
 	transition: .5s
-//--------------------------------
-.say-no__show-more_shadow-outer
-	box-shadow: 0px 0px 11px 14px rgba(86, 58, 110, 0.9)
-	margin: 88px auto 0
-	transition: all .5s
-	&:hover
-		box-shadow: 0px 0px 5px 5px rgba(86, 58, 110, 0.9)
-		.say-no__show-more
-			&:before
-				opacity: 1
-		.say-no__show-more_shadow-inner
-			border: 2px solid transparent
-			border-image: linear-gradient(to left, $main_color_gradient_end 0%, $main_color_gradient_end 100%)
-			border-image-slice: 2
-			box-shadow: inset 0px 0px 5px 5px rgba(86, 58, 110, 0.9)
-
-.say-no__show-more_shadow-inner
-	transition: box-shadow .5s
-	padding: 10px 10px
-	border: 2px solid transparent
-	border-image: linear-gradient(to left, $main_color_gradient_end 0%, $main_color_gradient_start 100%)
-	border-image-slice: 2
-	box-shadow: inset 0px 0px 10px 10px rgba(86, 58, 110, 0.9)
-.say-no__show-more
-	background-image: linear-gradient(to bottom, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
-	background-size: 100%
-	position: relative
-	z-index: 100
-	transition: all .5s
-	border: none
-	padding: 9px 104px
-	color: $main_txt_color
-	font-size: 15px
-	font-family: $latoRegular
-	&:before
-		content: ''
-		height: 41px
-		top: 0
-		left: 0
-		width: 100%
-		opacity: 0
-		transition: opacity 0.45s
-		z-index: -100
-		position: absolute
-		background-image: linear-gradient(to bottom, $main_color_gradient_end 0%, $main_color_gradient_end 100%)
-//-----------------------------------------------------------------------
+@include btnbig()
 //	section five tasks
+.five-tasks
+	background-color: $main_bg_color_darkest
+	padding: 178px 0 175px 0
+	.default-title
+		text-align: left
+	&__description
+		text-align: left
+		font-size: 46px
+		font-family: $latoBlack
+	.line
+		margin: 50px 0 0 0
+	&__items
+		display: flex
+		flex-wrap: wrap
+		flex-direction: row
+		justify-content: space-between
+	&__item
+		display: inline-block
+		max-width: 270px
+		margin-top: 100px
+		& + .five-tasks__item
+			margin-left: 25px
+		&:hover
+			.five-tasks__item_box-shadow-outer
+				box-shadow: 0px 0px 29px 3px rgba(241, 58, 115, 0.9)
+			.five-tasks__item_box-shadow-inner
+				box-shadow: inset 0px 0px 29px 3px rgba(241, 58, 115, 0.9)
+	&__item_box-shadow-outer
+		transition: box-shadow .5s
+		width: 270px
+		height: 270px
+		border-radius: 50%
+		border: 1px solid $border_color_five-tasks_item
+		display: flex
+		align-items: center
+		justify-content: center
+		box-shadow: 0px 0px 0px 0px rgba(241, 58, 115, 0.9)
+	&__item_box-shadow-inner
+		transition: box-shadow .5s
+		padding: 24px
+		border-radius: 50%
+		border: 1px solid transparent
+		box-shadow: inset 0px 0px 0px 0px rgba(241, 58, 115, 0.9)
+	&__item_logo
+		width: 220px
+		height: 220px
+		border-radius: 50%
+		border: 6px solid $border_color_five-tasks_item
+		display: flex
+		justify-content: center
+		align-items: center
+	&__item_description
+		margin-top: 30px
+		font-size: 24px
+	&__item_logo1
+		@include sprite($five_task_1)
+	&__item_logo2
+		@include sprite($five_task_2)
+	&__item_logo3
+		@include sprite($five_task_3)
+	&__item_logo4
+		@include sprite($five_task_4)
+	&__item_logo5
+		@include sprite($five_task_5)
+	.five-tasks__item.text-mask
+		.text-mask
+			margin-top: 124px
 //	section my design
 //	section with me very comfort
 //	section make good design
