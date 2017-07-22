@@ -12,6 +12,7 @@ const extractCSS = require('./webpack/css.extract');
 const uglifyJS = require('./webpack/js.uglify');
 const images = require('./webpack/images');
 const sprite = require('./webpack/sprite');
+const video = require('./webpack/video');
 
 const PATHS = {
 	source: path.join(__dirname, 'source'),
@@ -38,7 +39,8 @@ const common = merge([
 				'sprite': path.resolve(__dirname, 'source/spritesmith/'),
 				'img': path.resolve(__dirname, 'source/img/'),
 				'fonts': path.resolve(__dirname, 'source/fonts/'),
-				'sass': path.resolve(__dirname, 'source/sass/')
+				'sass': path.resolve(__dirname, 'source/sass/'),
+				'video': path.resolve(__dirname, 'source/video/'),
 			}
 		},
 		plugins: [
@@ -67,7 +69,8 @@ const common = merge([
 	pug(),
 	sprite(),
 	images(),
-	fonts()
+	fonts(),
+	video()
 ]);
 
 module.exports = function(env) {

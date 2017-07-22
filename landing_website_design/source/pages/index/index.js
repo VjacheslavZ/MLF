@@ -33,6 +33,41 @@ $(document).ready(function () {
 	});
 	// Инициализация маски в input
 	$(".mask").mask("+38(999) 999-99-99");
+
+	//video
+	let playButton = $("#play-pause"),
+		video = $(".say-no__video video"),
+		videoBg = $(".say-no__video-bg");
+
+	//console.log(playButton, video, videoBg);
+
+
+	videoBg.click(function() {
+
+
+		video[0].volume = 0;
+
+		if(video[0].paused){
+			video[0].play();
+			//playButton.fadeOut();
+			videoBg.css({"opacity":"0"});
+			video.css({"opacity":"1"});
+		}else{
+			video[0].pause();
+			videoBg.css({"opacity":"1"});
+			video.css({"opacity":"0"});
+		}
+	});
+
+	// video.click(function() {
+	// 	console.log("sdasd");
+	// 	if(this.play()){
+	// 		this.pause();
+	// 		//playButton.fadeIn();
+	// 		videoBg.css({"opacity":"1"});
+	// 		video.css({"opacity":"0"});
+	// 	}
+	// });
 });
 
 $(window).resize(function () {

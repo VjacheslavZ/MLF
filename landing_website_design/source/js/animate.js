@@ -8,7 +8,7 @@ class Animation {
 	}
 
 	description() {
-		this.tl1.from('.header_title', 0.7, {
+		this.tl1.from('.header__content_wrap', 0.7, {
 			y: -100,
 			opacity: 0,
 			ease: Power4.easeOut

@@ -43,53 +43,54 @@ block main
 								a(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup3" class="open-popup-link active" title='Вызов примера модального окна, в виде навигации.') Мобильное меню
 					//header main
 				.container
-					.header_title
-						h1
-							span ФУНКЦИОНАЛЬНЫЕ
-							|  ЛЕНДИНГИ НА ЗАКАЗ
-						p для максимального удобства
-					.header_bot_txt
-						p Более
-							span  400
-							|   довольных клиентов за
-							span  8 лет
-							|  успешной работы!
+					.header__content_wrap
+						.header__text.col-lg-6
+							h1.defaul-title Приветствую Вас!
+							p.header__about-me Я Meagan Fisher - частный веб-дизайнер
+							p.header__about-me UI/UX дизайн
+							span.header__description Оказываю полный спектр услуг по дизайну: сайтов, landing page и уникальных проектов
+							span.line
+						.header__form.col-lg-6
+							p.header__form_title Давайте познакомимся поближе:
+							form#form-file.clearfix
+								.input_wrap
+									i.fa.fa-check
+									input(name='name', type='text', placeholder='Ваше имя')
+								.input_wrap
+									i.fa.fa-check
+									input(name='phone_mask', type='text', placeholder='Ваш контактный телефон').mask
+								.input_wrap
+									i.fa.fa-check
+									input(name='email', type='text', placeholder='Ваш e-mail адрес')
+								.input_wrap
+									i.fa.fa-check
+									textarea(name='text-mail', placeholder='Что хотели бы обсудить?' rows="")
+								input(type='hidden', name='form_name', value='')
+								input(type='hidden', name='form_type', value='normal')
+								.intermediate_item
+									button(type='submit', value='Записаться') Записаться
+
 
 			//	section say No
-			section#our_advantages.our_advantages
+			section#say-no.say-no
 				.container
-					h2 Наши преимущества
 					.row
-						.our_advantages_item.col-lg-4.col-md-6
-							.our_advantages_item_img
-								i.fa.fa-users
-							h3 Заголовок
-							p Индивидуальный подход к каждому клиенту
-						.our_advantages_item.col-lg-4.col-md-6
-							.our_advantages_item_img
-								i.fa.fa-diamond
-							h3 Заголовок
-							p Неповторимость и практичность каждого проекта мебели
-						.our_advantages_item.col-lg-4.col-md-6
-							.our_advantages_item_img
-								i.fa.fa-list-ol
-							h3 Заголовок
-							p Многообразие материалов и стилевых решений
-						.our_advantages_item.col-lg-4.col-md-6
-							.our_advantages_item_img
-								i.fa.fa-pencil
-							h3 Заголовок
-							p Для вас бесплатно: замер, дизайн-проект, доставка и монтаж
-						.our_advantages_item.col-lg-4.col-md-6
-							.our_advantages_item_img
-								i.fa.fa-credit-card-alt
-							h3 Заголовок
-							p Возможность оформления мебели в кредит
-						.our_advantages_item.col-lg-4.col-md-6
-							.our_advantages_item_img
-								i.fa.fa-wrench
-							h3 Заголовок
-							p Изготовление мебели только из высококачественных материалов
+						.say-no__text.col-lg-5
+							span.text-mask best design maker
+							h1.defaul-title Скажи НЕТ
+							p.say-no__text-slogan серому и скучному
+							p.say-no__text-slogan дизайну сайтов
+							span.line
+							p.say-no__description Делаю яркие и запоминающиеся сайты, которые действительно продают!
+						.say-no__video.col-lg-7
+							.say-no__video-bg
+								a.video__play-pause(type="button" id="play-pause")
+							video(src=require("../../video/video.mp4") width="564px" height="100%")
+						.say-no__show-more_shadow-outer
+							.say-no__show-more_shadow-inner
+								button.say-no__show-more Посмотрите что я умею
+
+
 			// Тест react
 			section.react
 				.container
@@ -153,7 +154,7 @@ block main
 					.intermediate_title
 						h3 Заполните форму и мы бесплатно перезвоним и ответим на ваши вопросы
 					.intermediate_wrap
-						form#form-file.clearfix
+						//form#form-file.clearfix
 							.file_wrap
 								input(type='file' name='field')
 							.row

@@ -44,11 +44,15 @@ body
 //-webkit-font-smoothing: antialiased
 //-moz-osx-font-smoothing: grayscale
 
-h1
-	@include font($main_color_old, 70, $latoBlack, 1.2)
-p,ul
+h2,h3,h4,h5,h6
+	color: $main_txt_color
+	line-height: 1
+
+p,ul,span
 	padding: 0
 	margin: 0
+	color: $main_txt_color
+	line-height: 1
 li
 	list-style: none
 
@@ -280,22 +284,14 @@ li
 		right: 16px
 		font-size: 14px
 		color: #35be70
-#form-file
+//#form-file
 	.file_wrap
 		margin-bottom: 20px
 
 
 
 
-.header_title
-	margin: auto
-	position: absolute
-	left: 0
-	right: 0
-	top: calc(50% - 71px)
-	p
-		@include fz(30)
-		color: #fff
+
 
 .header_bot_txt
 	margin: auto
@@ -412,6 +408,8 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 // Оформление слайдбара
+[canvas]
+	transform: inherit
 [off-canvas]
 	transition: transform 0.4s
 	overflow: auto
@@ -453,30 +451,9 @@ nav[canvas]
 			display: block
 			list-style: none
 // Секция our_advantages
-.our_advantages
-	min-height: 630px
-	background-color: #fff
-	h2
-		margin-top: 75px
-		color: #626262
-		text-align: center
-		font-size: 35px
-	.our_advantages_item
-		margin-bottom: 30px
-		min-height: 230px
-		h3
-			font-size: 26px
-			text-align: center
-		p
-			margin-top: 15px
-			@include fz(16)
-			line-height: 1.2
-			text-align: center
-		.our_advantages_item_img
-			text-align: center
-			i
-				@include fz(72)
-				color: #00b6f4
+
+
+
 // Секция main_content
 .main_content
 	text-align: center
@@ -529,30 +506,78 @@ nav[canvas]
 			text-transform: uppercase
 			@include fz(24)
 			color: #052243
-	.intermediate_wrap
+	//.intermediate_wrap
 		margin-top: 40px
-		form
-		.intermediate_item
-			margin-bottom: 20px
-			input
-				width: 100%
-				display: inline-block
-				border: 1px solid #a2b6c9
-				background: #fff
-				color: #43637f
-				height: 40px
-				padding: 0 0 0 9px
-				&::-webkit-input-placeholder
-					color: #43637f
-				&:-moz-placeholder
-					color: #43637f
-				&::-moz-placeholder
-					color: #43637f
-				&:-ms-input-placeholder
-					color: #43637f
-			input[type=submit]
-				background: #fff
-				color: #43637f
+form
+	.input_wrap + .input_wrap
+		margin-top: 20px
+	input
+		width: 100%
+		outline: none
+		display: inline-block
+		//border: 2px dashed $main_color_gradient_start
+		background-color: transparent
+		background: url("../img/input_border.png") no-repeat
+		background-size: cover
+		border: transparent
+		transition: .5s
+		&:hover,&:focus
+			opacity: 1
+			background: url("../img/input_border-hover.png") no-repeat
+			background-size: cover
+			//border-image-source: linear-gradient($main_color_gradient_start, $main_color_gradient_end)
+			//border-width: 2px
+			//border-image-slice: 1
+		color: $main_txt_color
+		font-size: 14px
+		font-family: $latoRegular
+		height: 42px
+		padding: 0 0 0 18px
+		&::-webkit-input-placeholder
+			color: $main_txt_color
+		&:-moz-placeholder
+			color: $main_txt_color
+		&::-moz-placeholder
+			color: $main_txt_color
+		&:-ms-input-placeholder
+			color: $main_txt_color
+	textarea
+		width: 100%
+		outline: none
+		resize: none
+		background-color: transparent
+		background: url("../img/textarea_border.png") no-repeat
+		background-size: cover
+		border: transparent
+		transition: .5s
+		min-height: 102px
+		padding: 13px 0 0 18px
+		font-size: 14px
+		font-family: $latoRegular
+		color: $main_txt_color
+		&:hover,&:focus
+			opacity: 1
+			background: url("../img/textarea_border.png") no-repeat
+			background-size: cover
+		&::-webkit-input-placeholder
+			color: $main_txt_color
+		&:-moz-placeholder
+			color: $main_txt_color
+		&::-moz-placeholder
+			color: $main_txt_color
+		&:-ms-input-placeholder
+			color: $main_txt_color
+	button[type=submit]
+		border: none
+		width: 100%
+		background: #fff
+		height: 41px
+		color: $main_txt_color
+		padding: 0
+		margin-top: 12px
+		@include btnDefault(41px)
+.react
+	display: none
 //--------------------------------------------------------------------------------------//
 //	Секция 
 //	Секция
