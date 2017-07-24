@@ -320,6 +320,36 @@ block main
 							.btn-big__shadow-outer
 								.btn-big__shadow-inner
 									button.btn-big__show-more Посмотреть расценки
+				//	section create premium design
+				section#premium-design.premium-design
+					.container
+						.row
+							.col-lg-6
+								h1.defaul-title Создаю премиум
+								p.premium-design__for дизайн для лидеров!
+								span.line
+						
+								p.premium-design__description Я специализируюсь на дизайне, который взрывет мозг, вызывает эмоции и воспитывает чувства.
+								p.premium-design__description Мой стиль - это современный, утонченный веб-дизайн, который идеально подходит под нынешние реалии.
+								p.premium-design__description Хотите эксклюзивный дизайн для сайта? Обращайтесь ко мне!
+								p.premium-design__description Хотите продуманный и продающий сайт? Вам опять ко мне!
+								p.premium-design__description До сих пор не определились? Просто оставьте заявку!
+							.col-lg-6
+								.premium-design__form-wrap
+									p.premium-design__form-text Для того, чтобы уточнить детали по дизайну собственного сайта, оставьте свои данные и я перезвоню.
+									form#form-file.clearfix
+										.input_wrap
+											i.fa.fa-check
+											input(name='name', type='text', placeholder='Ваше имя')
+										.input_wrap
+											i.fa.fa-check
+											input(name='phone_mask', type='text', placeholder='Ваш контактный телефон').mask
+
+										input(type='hidden', name='form_name', value='секция премиум дизайн')
+										input(type='hidden', name='form_type', value='normal')
+										.intermediate_item
+											button(type='submit', value='Записаться') Записаться
+									span.text-mask be a leader
 
 
 			footer.footer

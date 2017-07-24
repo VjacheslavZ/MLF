@@ -432,6 +432,39 @@
 			@include sprite($good-design-personal)
 
 //	section create premium design
+.premium-design
+	padding: 180px 0 180px 0
+	background: url("../img/premium-design__bg.jpg") no-repeat
+	background-size: cover
+	position: relative
+	@include section-mask()
+	&__for
+		font-family: $latoBlack
+		font-size: 55px
+	.line
+		margin: 67px 0 79px 0
+	&__description
+		line-height: 1.47
+		font-family: $latoThin
+		font-size: 22px
+		color: $text_thin_color
+	&__form-wrap
+		padding: 100px 80px 12px 70px
+		background-color: $main_bg_color_dark
+	&__form-text
+		font-family: $latoThin
+		font-size: 22px
+		line-height: 1.2
+	form
+		margin-top: 26px
+		margin-bottom: 100px
+		.input_wrap + .input_wrap
+			margin-top: 40px
+		button
+			margin-top: 40px
+
+
+
 //	section how i make premium design
 //	section portfolio? examples my works
 //	section price of my service
