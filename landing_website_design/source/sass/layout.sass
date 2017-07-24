@@ -462,11 +462,145 @@
 			margin-top: 40px
 		button
 			margin-top: 40px
-
-
-
 //	section how i make premium design
-//	section portfolio? examples my works
+.work-steps
+	padding: 177px 0 177px 0
+	background-color: $main_bg_color_dark
+	position: relative
+	.text-mask
+		position: absolute
+		text-align: center
+		left: 0
+		right: 0
+		top: 54px
+	&__slogan
+		font-family: $latoBlack
+		font-size: 44px
+	.line
+		margin: 52px 0 100px 0
+	&__item + .work-steps__item
+		margin-top: 55px
+	&__item_number
+		font-family: $latoBold
+		-webkit-text-fill-color: transparent
+		background: linear-gradient(-180deg,$main_color_gradient_start,$main_color_gradient_end)
+		-webkit-background-clip: text
+		margin: 0
+		height: 75px
+		display: flex
+		padding-top: 36px
+		justify-content: center
+		align-items: center
+		font-size: 159px
+		position: relative
+	&__item_name
+		text-align: center
+		margin-top: 49px
+		font-size: 24px
+	&__item_description
+		display: block
+		text-align: center
+		font-family: $latoThin
+		font-size: 22px
+	.line_left
+		position: absolute
+		border: 2px solid $line-color
+		width: 44%
+		left: -26px
+		top: 39px
+		&:after
+			position: absolute
+			content: ""
+			display: block
+			width: 11px
+			height: 11px
+			border-radius: 50%
+			background-color: $line-color
+			right: -10px
+			top: -6px
+	.line_right
+		position: absolute
+		border: 2px solid $line-color
+		width: 44%
+		right: -26px
+		top: 39px
+		&:after
+			position: absolute
+			content: ""
+			display: block
+			width: 11px
+			height: 11px
+			border-radius: 50%
+			background-color: $line-color
+			left: -10px
+			top: -6px
+
+//	section portfolio examples my works
+.portfolio
+	padding: 177px 0 168px 0
+	background: $main_bg_color_dark
+	position: relative
+	.text-mask
+		position: absolute
+		top: 50px
+		left: 0
+		right: 0
+		text-align: center
+	&__examples
+		font-family: $latoBlack
+		font-size: 39px
+	.line
+		margin: 53px 0 70px 0
+	&__item
+		position: relative
+		img
+			width: 100%
+		&:hover
+			&:before
+				opacity: 0.5
+				transition: opacity .5s
+			.portfolio__puls
+				opacity: 0.5
+				transition: opacity .5s
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+			background: linear-gradient(-180deg,$main_color_gradient_start,$main_color_gradient_end)
+			transition: opacity .5s
+	.portfolio__item_wrap
+		margin-top: 30px
+		cursor: pointer
+	&__puls
+		opacity: 0
+		&:before
+			content: ""
+			width: 4px
+			height: 64px
+			display: block
+			background-color: $main_txt_color
+			margin: 0 auto
+		&:after
+			content: ""
+			width: 64px
+			height: 4px
+			display: block
+			background-color: $main_txt_color
+			position: absolute
+			left: 0
+			top: 31px
+		position: absolute
+		left: calc(50% - 32px)
+		top: calc(50% - 32px)
+		width: 64px
+		height: 64px
+		transition: opacity .5s
+
+
 //	section price of my service
 //	section reviews
 //	section my slogan
