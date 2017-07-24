@@ -42,10 +42,10 @@ $(document).ready( function() {
 		// $(".cost_of_online_store .cost_of_online_store_links_item").css("margin-right", "72px");
 	}
 	if (get_name_browser() == "Safari") {
-		console.log("Это Сафари");
+		//console.log("Это Сафари");
 	}
 	if (get_name_browser() == "Google Chrome") {
-		console.log("Это Хром");
+		//console.log("Это Хром");
 	}
 	// для инициализации tooltips
 	// $( document ).tooltip({

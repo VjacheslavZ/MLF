@@ -26,11 +26,13 @@ $(document).ready(function () {
 		tags: false,
 		width: null
 	});
+
 	$(".select2-tags").select2({
 		tags: true,
 		placeholder: "Выберите один или несколько тегов",
 		width: null // если null то будет шириной родителя
 	});
+
 	// Инициализация маски в input
 	$(".mask").mask("+38(999) 999-99-99");
 
@@ -39,12 +41,7 @@ $(document).ready(function () {
 		video = $(".say-no__video video"),
 		videoBg = $(".say-no__video-bg");
 
-	//console.log(playButton, video, videoBg);
-
-
 	videoBg.click(function() {
-
-
 		video[0].volume = 0;
 
 		if(video[0].paused){
@@ -59,15 +56,7 @@ $(document).ready(function () {
 		}
 	});
 
-	// video.click(function() {
-	// 	console.log("sdasd");
-	// 	if(this.play()){
-	// 		this.pause();
-	// 		//playButton.fadeIn();
-	// 		videoBg.css({"opacity":"1"});
-	// 		video.css({"opacity":"0"});
-	// 	}
-	// });
+
 });
 
 $(window).resize(function () {

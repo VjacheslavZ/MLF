@@ -26,71 +26,72 @@ block main
 				//header top
 				.header__top-bg
 					.container
-						.header__wrap
-							.header__logo
-								a(href="/" class="logo" title="logo").
-									logo
-							nav.header__nav
-								ul
-									-var links = [{title:'Портфолио', href:'#portfolio'},{title:'Стоимость услуг', href:'#price__service'},{title:'Отзывы', href:'#reviews'},{title:'Контакты', href:'#contacts'},{title:'email@gmail.com', href:'mailto:email@gmail.com'},{title:'+ 38 (095) 543 65 21', href:'tel:+38(095)5436521'}];
-									each i in links
-										li
-											a(href=i.href)= i.title
-							.header_modal(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup" class="open-popup-link")
-								a Обратный звонок
+						.row
+							.header__wrap
+								.header__logo
+									a(href="/" class="logo" title="logo").
+										logo
+								nav.header__nav
+									ul
+										-var links = [{title:'Портфолио', href:'#portfolio'},{title:'Стоимость услуг', href:'#price__service'},{title:'Отзывы', href:'#reviews'},{title:'Контакты', href:'#contacts'},{title:'email@gmail.com', href:'mailto:email@gmail.com'},{title:'+ 38 (095) 543 65 21', href:'tel:+38(095)5436521'}];
+										each i in links
+											li
+												a(href=i.href)= i.title
+								.header_modal(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup" class="open-popup-link")
+									a Обратный звонок
 							//моб меню
 							//.header_modal.last
 								a(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup3" class="open-popup-link active" title='Вызов примера модального окна, в виде навигации.') Мобильное меню
 					//header main
 				.container
 					.header__content_wrap
-						.header__text.col-lg-6
-							h1.defaul-title Приветствую Вас!
-							p.header__about-me Я Meagan Fisher - частный веб-дизайнер
-							p.header__about-me UI/UX дизайн
-							span.header__description Оказываю полный спектр услуг по дизайну: сайтов, landing page и уникальных проектов
-							span.line
-						.header__form.col-lg-6
-							p.header__form_title Давайте познакомимся поближе:
-							form#form-file.clearfix
-								.input_wrap
-									i.fa.fa-check
-									input(name='name', type='text', placeholder='Ваше имя')
-								.input_wrap
-									i.fa.fa-check
-									input(name='phone_mask', type='text', placeholder='Ваш контактный телефон').mask
-								.input_wrap
-									i.fa.fa-check
-									input(name='email', type='text', placeholder='Ваш e-mail адрес')
-								.input_wrap
-									i.fa.fa-check
-									textarea(name='text-mail', placeholder='Что хотели бы обсудить?' rows="")
-								input(type='hidden', name='form_name', value='')
-								input(type='hidden', name='form_type', value='normal')
-								.intermediate_item
-									button(type='submit', value='Записаться') Записаться
+						.row
+							.col-lg-6.header__text
+								h1.defaul-title Приветствую Вас!
+								p.header__about-me Я Meagan Fisher - частный веб-дизайнер
+								p.header__about-me UI/UX дизайн
+								span.header__description Оказываю полный спектр услуг по дизайну: сайтов, landing page и уникальных проектов
+								span.line
+							.col-lg-6
+								.header__form
+									p.header__form_title Давайте познакомимся поближе:
+									form#form-file.clearfix
+										.input_wrap
+											i.fa.fa-check
+											input(name='name', type='text', placeholder='Ваше имя')
+										.input_wrap
+											i.fa.fa-check
+											input(name='phone_mask', type='text', placeholder='Ваш контактный телефон').mask
+										.input_wrap
+											i.fa.fa-check
+											input(name='email', type='text', placeholder='Ваш e-mail адрес')
+										.input_wrap
+											i.fa.fa-check
+											textarea(name='text-mail', placeholder='Что хотели бы обсудить?' rows="")
+										input(type='hidden', name='form_name', value='')
+										input(type='hidden', name='form_type', value='normal')
+										.intermediate_item
+											button(type='submit', value='Записаться') Записаться
 
 
 			//	section say No
 			section#say-no.say-no
 				.container
 					.row
-						.say-no__text.col-lg-5
+						.col-lg-5.say-no__text
 							span.text-mask best design maker
 							h1.defaul-title Скажи НЕТ
 							p.say-no__text-slogan серому и скучному
 							p.say-no__text-slogan дизайну сайтов
 							span.line
 							p.say-no__description Делаю яркие и запоминающиеся сайты, которые действительно продают!
-						.say-no__video.col-lg-7
+						.col-lg-7.say-no__video
 							.say-no__video-bg
 								a.video__play-pause(type="button" id="play-pause")
 							video(src=require("../../video/video.mp4") width="564px" height="100%")
 						.btn-big__shadow-outer
 							.btn-big__shadow-inner
 								button.btn-big__show-more Посмотрите что я умею
-
-
 			// Тест react
 			section.react
 				.container
@@ -104,39 +105,45 @@ block main
 						p.five-tasks__description решает мой дизайн сайта:
 						span.line
 						.five-tasks__items
-							.five-tasks__item
-								.five-tasks__item_box-shadow-outer
-									.five-tasks__item_box-shadow-inner
-										.five-tasks__item_logo
-											.five-tasks__item_logo1
-								p.five-tasks__item_description Привлечение внимания
-							.five-tasks__item
-								.five-tasks__item_box-shadow-outer
-									.five-tasks__item_box-shadow-inner
-										.five-tasks__item_logo
-											.five-tasks__item_logo2
-								p.five-tasks__item_description Удержание аудитории
-							.five-tasks__item
-								.five-tasks__item_box-shadow-outer
-									.five-tasks__item_box-shadow-inner
-										.five-tasks__item_logo
-											.five-tasks__item_logo3
-								p.five-tasks__item_description Положительное впечатление
-							//.five-tasks__items
-							.five-tasks__item
-								.five-tasks__item_box-shadow-outer
-									.five-tasks__item_box-shadow-inner
-										.five-tasks__item_logo
-											.five-tasks__item_logo4
-								p.five-tasks__item_description Побуждение к совершению покупки
-							.five-tasks__item
-								.five-tasks__item_box-shadow-outer
-									.five-tasks__item_box-shadow-inner
-										.five-tasks__item_logo
-											.five-tasks__item_logo5
-								p.five-tasks__item_description Формирование положитеьного иммиджа
-							.five-tasks__item.text-mask
-								.text-mask let's make a unicorn
+							.row
+								.col-lg-3
+									.five-tasks__item
+										.five-tasks__item_box-shadow-outer
+											.five-tasks__item_box-shadow-inner
+												.five-tasks__item_logo
+													.five-tasks__item_logo1
+										p.five-tasks__item_description Привлечение внимания
+								.col-lg-6
+									.five-tasks__item
+										.five-tasks__item_box-shadow-outer
+											.five-tasks__item_box-shadow-inner
+												.five-tasks__item_logo
+													.five-tasks__item_logo2
+										p.five-tasks__item_description Удержание аудитории
+								.col-lg-3
+									.five-tasks__item
+										.five-tasks__item_box-shadow-outer
+											.five-tasks__item_box-shadow-inner
+												.five-tasks__item_logo
+													.five-tasks__item_logo3
+										p.five-tasks__item_description Положительное впечатление
+								.col-lg-3
+									.five-tasks__item
+										.five-tasks__item_box-shadow-outer
+											.five-tasks__item_box-shadow-inner
+												.five-tasks__item_logo
+													.five-tasks__item_logo4
+										p.five-tasks__item_description Побуждение к совершению покупки
+								.col-lg-6
+									.five-tasks__item
+										.five-tasks__item_box-shadow-outer
+											.five-tasks__item_box-shadow-inner
+												.five-tasks__item_logo
+													.five-tasks__item_logo5
+										p.five-tasks__item_description Формирование положитеьного иммиджа
+								.col-lg-3
+									.five-tasks__item.text-mask
+										.text-mask let's make a unicorn
 
 					//	section my design
 					//	section with me very comfort
@@ -185,13 +192,81 @@ block main
 					//				option vui
 					//				option(disabled) ember
 					//				option backbone
-			// Секция  ask-form-title
-			//	section my slogan
+
+
 			section.intermediate
-				.container
-					.intermediate_title
-						h3 Заполните форму и мы бесплатно перезвоним и ответим на ваши вопросы
-					.intermediate_wrap
+				//	section my design
+				section#my-design.my-design
+					.container
+						.row
+							.text-mask the quality of work
+							.col-lg-7
+								h1.default-title Мой дизайн
+								p.my-design__slogan соответствует всем
+								p.my-design__slogan стандартам качества
+								span.line
+								ul.my-design__items
+									li.my-design__item
+										.my-design__item_outer
+											span.my-design__item_number 1
+										.my-design__item_description
+											p.my-design__item_text Применение исключительно качественной графики
+											p.my-design__item_note (фотографии иэлементы с проверенных фотостоков)
+									li.my-design__item.my-design__item_right
+										.my-design__item_outer
+											span.my-design__item_number 2
+										.my-design__item_description
+											p.my-design__item_text Расположение элементов выровняно до миллиметра
+											p.my-design__item_note (использование модульной сетки)
+									li.my-design__item
+										.my-design__item_outer
+											span.my-design__item_number 3
+										.my-design__item_description
+											p.my-design__item_text Удобная и понятная структура папок
+											p.my-design__item_note (содержит названия слоев и пояснения)
+									li.my-design__item.my-design__item_right
+										.my-design__item_outer
+											span.my-design__item_number 4
+										.my-design__item_description
+											p.my-design__item_text Грамотный подбор шрифто
+											p.my-design__item_note (в соответствии с общей стилистикой проекта)
+							.col-lg-5
+								.my-design__photo
+								img.my-design__photo_front(src=require("../../img/my_design_img_front.png"))
+				//	section with me very comfort
+				section#comfort.comfort
+					.container
+						.row
+							.col-lg-6
+								h1.default-title Со мной очень
+								p.comfort__slogan удобно сотрудничать
+								span.line
+								.comfort__why-i
+									.text-mask__wrap
+										.text-mask w h y
+										.text-mask m e ?
+								ul.comfort__tale
+									li.comfort__item
+										.comfort__item_outer
+											span.comfort__item_number 1
+										.comfort__item_description
+											p.comfort__item_text Надежность
+											p.comfort__item_note Я всегда на связи
+									li.comfort__item
+										.comfort__item_outer
+											span.comfort__item_number 2
+										.comfort__item_description
+											p.comfort__item_text Оперативность
+											p.comfort__item_note Могу работать ненормировано
+									li.comfort__item
+										.comfort__item_outer
+											span.comfort__item_number 3
+										.comfort__item_description
+											p.comfort__item_text Ответственность
+											p.comfort__item_note Работаю на результат
+							.col-lg-6
+								.comfort__ic
+					//.intermediate_wrap
 						//form#form-file.clearfix
 							.file_wrap
 								input(type='file' name='field')
@@ -212,7 +287,41 @@ block main
 								input(type='hidden', name='form_type', value='normal')
 								.intermediate_item.col-lg-3
 									input(type='submit', value='Записаться')
-			// Секция footer
+				//	section make good design
+				section#good-design.good-design
+					.container
+						span.text-mask throw me challenge
+						h1.defaul-title Делаю потрясающий
+						p.good-design__about-me и уникальный дизайн для:
+						span.line
+						.row
+							.col-lg-6
+								ul.good-design__table
+									li.good-design__category
+										p Адаптивных сайтов
+										span.good-design__adaptive_ic
+									li.good-design__category
+										p Интернет-магазинов
+										span.good-design__store_ic
+									li.good-design__category
+										p Корпоративных сайтов
+										span.good-design__corporate_ic
+							.col-lg-6
+								ul.good-design__table
+									li.good-design__category.good-design__category_reverse
+										p Landing Page
+										span.good-design__landing_ic
+									li.good-design__category.good-design__category_reverse
+											p Редизайн готового сайта
+											span.good-design__redisign_ic
+									li.good-design__category.good-design__category_reverse
+										p Индивидуальных проектов
+										span.good-design__personal_ic
+							.btn-big__shadow-outer
+								.btn-big__shadow-inner
+									button.btn-big__show-more Посмотреть расценки
+
+
 			footer.footer
 		div(off-canvas='id-1 left shift')
 			nav.header_nav_mobile

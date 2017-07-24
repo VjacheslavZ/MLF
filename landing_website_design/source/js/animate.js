@@ -49,4 +49,30 @@ $(window).ready(function() {
 		anim.play();
 	}
 
+	//callBack GSAP
+	function startAnima() {
+	}
+
+	function endAnima() {
+	}
+
+	function progressAnima() {
+	}
+
+	let arrow = $(".line"),
+		time_anim = 10,
+		arrow_anim_options = {
+			x: 500,
+			delay: 1,
+			onStart: startAnima,//callBack
+			onUpdate: progressAnima,//callBack
+			onComplete: endAnima,//callBack
+		};
+	// TweenLite.to(arrow, time_anim, arrow_anim_options)
+	//TweenLite.from(arrow, time_anim, arrow_anim_options)
+	//TweenLite.to(arrow, time_anim, arrow_anim_options)//callBAck
+
+	//TimelineLite последовательная анимация https://www.youtube.com/watch?v=I6GeiSZPxjQ&list=PLZPPsh_ba_ERRTdC8UBUnyk2vScciM5Xx&t=17
+
+
 });
