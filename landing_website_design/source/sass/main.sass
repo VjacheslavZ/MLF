@@ -9,6 +9,8 @@
 @import "../libs/anim-modal.css"
 @import "../libs/slidebars.min.css"
 @import "../libs/select2.min.css"
+@import "../libs/owl.carousel.min.css"
+@import "../libs/owl.theme.default.min.css"
 
 html
 	&.modal
@@ -55,7 +57,9 @@ p,ul,span
 	line-height: 1
 li
 	list-style: none
-
+button
+	&:focus
+		outline: 0
 .noselect
 	-webkit-touch-callout: none
 	-webkit-user-select: none
@@ -157,6 +161,7 @@ li
 		transition: 1s
 		&:focus
 			outline: 0
+
 	textarea
 		width: 100%
 		min-height: 100px
@@ -506,7 +511,7 @@ nav[canvas]
 		margin-top: 40px
 form
 	.input_wrap + .input_wrap
-		margin-top: 20px
+		margin-top: 19px
 	input
 		width: 100%
 		outline: none
@@ -570,7 +575,7 @@ form
 		height: 41px
 		color: $main_txt_color
 		padding: 0
-		margin-top: 12px
+		margin-top: 11px
 		@include btnDefault(41px)
 .react
 	display: none

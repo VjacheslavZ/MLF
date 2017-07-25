@@ -41,6 +41,7 @@ const common = merge([
 				'fonts': path.resolve(__dirname, 'source/fonts/'),
 				'sass': path.resolve(__dirname, 'source/sass/'),
 				'video': path.resolve(__dirname, 'source/video/'),
+				'owlImage': path.resolve(__dirname, 'source/img/')
 			}
 		},
 		plugins: [

@@ -6,6 +6,8 @@ import './index.sass';
 import animate from '../../js/animate';
 import App from '../../js/react';
 
+require("../../libs/libs").owl_carousel_min_js();
+
 $(document).ready(function () {
 	// пример анимации через библиотечку animat (но лучше анимировать через GSAP)
 	$('.our_advantages h2').animated("fadeInUp");
@@ -54,6 +56,17 @@ $(document).ready(function () {
 			videoBg.css({"opacity":"1"});
 			video.css({"opacity":"0"});
 		}
+	});
+
+	//slider
+
+	var reviews_slider = $("#reviews-slider.owl-carousel");
+
+	reviews_slider.owlCarousel({
+		loop: true,
+		items: 1,
+		dots: false,
+		nav: true
 	});
 
 

@@ -57,3 +57,7 @@ exports.animate_modal_js = function () {
 	return require("../libs/anim-modal");
 };
 
+exports.owl_carousel_min_js = function () {
+	return require("../libs/owl.carousel.min.js")
+};
+
