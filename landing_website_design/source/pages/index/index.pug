@@ -530,6 +530,57 @@ block main
 
 
 			footer.footer
+					.container.footer__inner
+						.row
+							.col-lg-7
+								.footer__form
+									.text-mask because i’m a fan of my case
+									h1.default-title Мой лозунг:
+									p.footer__text нестандартные решения
+									p.footer__text для привычных вещей!
+									span.line
+									p.footer__description Делаю креативный, цепляющий дизайн быстро и качественно. Обращайтесь!
+
+									form#form-file.clearfix.footer__form_consult
+										.input_wrap
+											i.fa.fa-check
+											input(name='name', type='text', placeholder='Ваше имя')
+										.input_wrap
+											i.fa.fa-check
+											input(name='phone_mask', type='text', placeholder='Ваш контактный телефон').mask
+
+										input(type='hidden', name='form_name', value='Хочу консультацию')
+										input(type='hidden', name='form_type', value='normal')
+										.intermediate_item
+											button(type='submit', value='Записаться') Хочу консультацию
+							.col-lg-5
+								ul.footer__contacts
+									li
+										a.footer__contacts_maill(href="mailto:designer@gmail.com") designer@gmail.com
+									li
+										a.footer__contacts_phone(href="tel:+380935855858") +38 093 585 58 58
+									li
+										a.footer__contacts_skype(href="#") meagan fisher
+								p.footer__speek Общайтесь со мной в соцсетях:
+								ul.footer__social-network
+									li
+										a.footer__pinterest(href="#" target="_blank")
+									li
+										a.footer__google-plus(href="#" target="_blank")
+									li
+										a.footer__instagram(href="#" target="_blank")
+									li
+										a.footer__behance(href="#" target="_blank")
+									li
+										a.footer__facebook(href="#" target="_blank")
+								span.footer__copyright 2107. Все права защищены
+
+
+
+
+
+
+
 		div(off-canvas='id-1 left shift')
 			nav.header_nav_mobile
 				ul.menu

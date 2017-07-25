@@ -473,6 +473,7 @@
 	padding: 177px 0 177px 0
 	background-color: $main_bg_color_dark
 	position: relative
+	overflow: hidden
 	.text-mask
 		position: absolute
 		text-align: center
@@ -796,5 +797,108 @@
 				height: 3px
 				transform: rotate(-125deg)
 				left: calc(50% - 5px)
+//	section my slogan, footer
+.footer
+	padding: 90px 0 90px 0
+	background: url("../img/footer__bg.jpg") no-repeat center center
+	background-size: cover
+	position: relative
+	//overflow: hidden
+	@include section-mask()
+	&__inner
+		//margin: 0 auto
+		//width: 1350px
+		//padding: 98px 247px 90px 96px
+		padding: 156px 75px 90px 75px
+		background-color: $main_bg_color_dark
+	&__form
+		.text-mask
+			//margin-bottom: 38px
+			position: absolute
+			top: -58px
+	&__text
+		font-family: $latoBlack
+		font-size: 34px
+	.line
+		margin: 65px 0 60px 0
+	&__description
+		font-family: $latoThin
+		font-size: 22px
+		color: $text_thin_color
+	&__form_consult
+		margin-top: 56px
+		.input_wrap
+			width: 370px
+			input
+				background-size: contain
+		.input_wrap + .input_wrap
+			margin-top: 30px
+		button[type=submit]
+			margin-top: 30px
+		.intermediate_item
+			width: 370px
+	&__contacts
+		margin-top: 6px
+		a
+			font-size: 14px
+			padding-left: 60px
+			display: flex
+			vertical-align: middle
+			align-items: center
+		a:before
+			position: absolute
+			left: 15px
+		li + li
+			margin-top: 41px
+	&__contacts_maill
+		&:before
+			content: ""
+			@include sprite($mail-to)
+	&__contacts_phone
+		&:before
+			content: ""
+			@include sprite($phone)
+	&__contacts_skype
+		&:before
+			content: ""
+			@include sprite($skype)
+	&__speek
+		font-family: $latoThin
+		font-size: 22px
+		color: $text_thin_color
+		margin-top: 69px
+	&__social-network
+		li
+			display: inline-block
+			margin: 30px 0 59px 0
+			& + li
+				margin-left: 30px
+			a
+				display: block
+				&:before
+					content: ""
+					display: block
+	&__pinterest
+		&:before
+			@include sprite($pinterest-ic)
+	&__google-plus
+		&:before
+			@include sprite($google-plus-ic)
+	&__instagram
+		&:before
+			@include sprite($instagram-ic)
+	&__behance
+		&:before
+			@include sprite($behance-ic)
+	&__facebook
+		&:before
+			@include sprite($facebook-ic)
+	&__copyright
+		font-family: $latoThin
+		font-size: 14px
+		letter-spacing: 0.4px
 
-//	section my slogan
+
+
+
+
