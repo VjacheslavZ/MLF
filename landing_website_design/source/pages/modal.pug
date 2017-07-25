@@ -1,28 +1,28 @@
 //Модальное окно
 #popup.mfp-hide.white-popup.mfp-with-anim.popup
-	p.success_mail Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с вами свяжется.
+	p.success_mail Ваше сообщение отправлено! Спасибо!
 	form
-		p.modal-title.
+		//p.modal-title.
 			Введите данные
-		p.modal-paragraph.
+		//p.modal-paragraph.
 			и мы Вам перезвоним
 		div
 			.input_wrap
 				i.fa.fa-check
-				input(name="name" type="text" placeholder="Имя")
-			.input_wrap
+				input(name="name" type="text" placeholder="Ваше Имя")
+			//.input_wrap
 				i.fa.fa-check
 				input(name="phone" type="text" placeholder="Введите свой телефон")
 			.input_wrap
 				i.fa.fa-check
-				input(name="phone_mask" type="text" class="mask" placeholder="+38(___) ___-__-__")
+				input(name="phone_mask" type="text" class="mask" placeholder="Введите Ваш телефон")
 			.input_wrap
 				i.fa.fa-check
-				input(name="email" type="text" placeholder="E-mail")
+				input(name="email" type="text" placeholder="Ваш E-mail адрес")
 			.input_wrap
 				i.fa.fa-check
-				textarea(name="textarea" type="text" placeholder="Описание заяки")
-			.select
+				textarea(name="textarea" type="text" placeholder="Что хотели бы обсудить?")
+			//.select
 				.slct_arrow
 					i.fa.fa-angle-down
 				a(href="#" class="slct") Выбор заголовков:
@@ -31,9 +31,9 @@
 					li Я в Вас влюбился
 					li Быстрей Вас только Флеш
 				input(type="hidden" name="services")
-		input(type="hidden" name="form_name" value="")
+		input(type="hidden" name="form_name" value="Обратній звонок")
 		input(type="hidden" name="form_type" value="modal")
-		input(type="submit" value="Отправить")
+		input(type="submit" value="Заказать обратній звонок")
 .overlay
 // Модальное окно success
 #popup-success.mfp-hide.white-popup.mfp-with-anim.popup

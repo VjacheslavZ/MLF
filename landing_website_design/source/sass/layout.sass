@@ -80,7 +80,7 @@
 				content: ""
 				position: absolute
 				left: -41px
-				bottom: -2px
+				bottom: -8px
 				@include sprite($phone)
 .header_modal
 	display: inline-block
@@ -139,6 +139,19 @@
 .header__form
 	background-color: $main_bg_color_dark
 	padding: 65px 100px 60px 70px
+	.white-popup
+		width: initial
+		padding: 0
+		line-height: initial
+		font-size: 16px
+		input
+			height: 42px
+		.success_mail
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
 	.header__form_title
 		font-size: 22px
 		font-family: $latoThin
@@ -898,7 +911,61 @@
 		font-size: 14px
 		letter-spacing: 0.4px
 
+// overlayMenu
+.mask-overlay
+	position: relative
+	transition: opacity .5s
+	&:before
+		transition: opacity .5s
+		opacity: 0
+		z-index: 0
+	@include section-mask()
+
+.mask-overlay__active
+	position: relative
+	&:before
+		transition: opacity .5s
+		opacity: 1
+		z-index: 2
+	@include section-mask()
+// Overlay Navigation style
+.overlay-navigation
+	height: 100%
+	width: 0
+	position: fixed
+	z-index: 3
+	top: 0
+	right: 0
+	background-color: rgba(40,44,84, 0.9)
+	overflow-x: hidden
+	transition: 0.5s
 
 
+.overlay-navigation_wrap
+	padding: 57px 0 0 87px
+	position: relative
+	font-size: 40px
+	display: inline-block
 
-
+	.fa-close
+		color: $main_color_gradient_start
+		position: absolute
+		right: -40px
+		top: 0
+		cursor: pointer
+		transition: color 0.5s
+		&:hover
+			color: $main_color_gradient_end
+	h3
+		font-family: $latoRegular
+		font-size: 24px
+		margin-bottom: 35px
+.header__side-nav
+	.footer__contacts
+		li
+			a:before
+				left: 87px
+.portfolio__side-nav
+	&_slide
+		width: 370px
+		height: 100%

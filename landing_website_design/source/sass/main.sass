@@ -100,18 +100,21 @@ button
 	display: none
 // Модальное окно
 .white-popup
-	width: 470px
+	width: 430px
 	margin: auto
 	max-width: 50em
-	padding: 50px 46px 50px 46px
+	padding: 35px
+	line-height: 1.5
 	text-align: center
 	position: relative
-	background-color: #fff
-	border-radius: 5px
+	background-color: $main_bg_color_dark
 	transition: 0.5s
-	p.modal-title
+	font-family: $latoBlack
+	font-size: 35px
+	color: $main_txt_color
+	//p.modal-title
 		@include font($main_txt_color_old, 24, $latoRegular, 1.4)
-	p.modal-paragraph
+	//p.modal-paragraph
 		margin-bottom: 10px
 		@include font($main_txt_color_old, 14, $latoRegular, 1.4)
 	&#popup-success
@@ -136,6 +139,8 @@ button
 	.input_wrap
 		position: relative
 		display: block
+		& + .input_wrap
+			margin-top: 9px
 		i
 			display: none
 			position: absolute
@@ -159,31 +164,37 @@ button
 		margin-bottom: 10px
 		padding-left: 20px
 		padding-right: 37px
-		color: #3a4763
-		@include fz(14)
-		border: 1px solid #cdcdcd
-		background-color: #ffffff
-		border-radius: 5px
-		transition: 1s
+		color: $main_txt_color
+		font-family: $latoBlack
+		font-size: 14px
+		//border: 1px solid #cdcdcd
+		//background-color: #ffffff
+		//border-radius: 5px
+		background-size: contain
+		transition: .5s
+
 		&:focus
 			outline: 0
-
+			background-size: contain
+		&:hover
+			background-size: contain
 	textarea
 		width: 100%
 		min-height: 100px
-		margin-bottom: 10px
-		padding-left: 20px
+		margin-bottom: 20px
+		padding-left: 17px
 		padding-right: 37px
-		color: #3a4763
-		@include fz(14)
-		border: 1px solid #cdcdcd
-		background-color: #ffffff
-		border-radius: 5px
-		transition: 1s
+		color: $main_txt_color
+		background-color: transparent
+		transition: .5s
+		background-size: contain
 		&:focus
 			outline: 0
+			background-size: contain
+		&:hover
+			background-size: contain
 	.success_mail
-		@include font($main_color_old, 24, $latoRegular, 1.1)
+		color: $main_txt_color
 		display: none
 		&.active
 			display: block
@@ -193,7 +204,8 @@ button
 		padding-left: 0
 		padding-right: 0
 		cursor: pointer
-		@extend .main_btn
+		//@extend .main_btn
+		@include btnDefault(41px)
 		&:focus
 			outline: 0
 	.select
@@ -261,22 +273,22 @@ button
 			&.active .fa
 				transform: rotate(180deg)
 .mfp-zoom-in.mfp-ready.mfp-bg
-	opacity: 0.7
+	//opacity: 0.7
 .mfp-bg
-	background: rgba(11, 11, 11, 0.46)
+	background: rgba(42, 46, 87, 0.9)
 .mfp-close-btn-in .mfp-close
 	position: absolute
-	right: 10px
-	top: -30px
+	right: 1px
+	top: -45px
 	display: block
-	color: transparent
 	transition: top 0.5s
+	color: $main_color_gradient_start
 	&:hover i
-		color: $main_color_old
+		color: $main_color_gradient_end
 	i
-		color: #ffffff
+		font-size: 40px
+		color: $main_color_gradient_start
 		transition: color 0.5s
-		@include fz(18)
 	&:hover
 		outline: 0
 	&:active
@@ -593,7 +605,6 @@ form
 //	Секция 
 //	Секция
 //	Секция
-
 
 
 

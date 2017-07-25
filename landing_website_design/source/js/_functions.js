@@ -38,7 +38,7 @@ $(window).scroll(function () {
 	var controller = new slidebars();
 	controller.init();
 
-	// Toggle Slidebars
+	// Toggle Slidebars mobMenu
 	$('#nav-button-label').on('click', function (event) {
 		// Stop default action and bubbling
 		event.stopPropagation();
@@ -47,6 +47,18 @@ $(window).scroll(function () {
 		controller.toggle('id-1');
 		$("html,body").toggleClass("slidebars");
 	});
+
+	// Toggle Slidebars contacts for btn
+	// $('#contacts').on('click', function (event) {
+	// 	// Stop default action and bubbling
+	// 	event.stopPropagation();
+	// 	event.preventDefault();
+	// 	// Toggle the Slidebar with id 'id-1'
+	// 	controller.toggle('id-2');
+	// 	$("html,body").toggleClass("slidebars");
+	// });
+
+
 
 	// Close Slidebar links
 	$('[off-canvas] a').on('click', function (event) {
@@ -72,6 +84,7 @@ $(window).scroll(function () {
 	$(controller.events).on('closing', function (event) {
 		$('[canvas]').removeClass('js-close-any');
 	});
+
 	// Close any
 	$(document).on('click', '.js-close-any', function (event) {
 		if (controller.getActiveSlidebar()) {
@@ -94,7 +107,6 @@ $(document).ready(function () {
 	if (md.userAgent() == "Safari" && md.mobile() == "iPhone" || md.mobile() == "iPad") {
 		$("html,body").css("overflow", "hidden !important");
 	}
-
 
 	// Select в модальном окне
 	$(document).click(function () {

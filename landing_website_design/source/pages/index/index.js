@@ -69,6 +69,41 @@ $(document).ready(function () {
 		nav: true
 	});
 
+	//sidebar menu
+	let body = $("body");
+	let mask_overlay = $(".mask-overlay");
+	let mask_overlay_active = $(".mask-overlay__active");
+	let btn_close = $(".overlay-navigation .fa-close");
+
+	let btn_contacts = $("a.contacts"),
+		btn_portfolio = $("a.portfolio");
+	console.log(btn_portfolio);
+
+
+	let header__side_nav = $("#header__side-nav"),
+		portfolio__side_nav = $("#portfolio__side-nav");
+
+
+
+	btn_contacts.on("click", function() {
+		header__side_nav.css({"width" : "70%"});
+		body.addClass("mask-overlay__active");
+	});
+	btn_close.on("click", function(){
+		body.removeClass("mask-overlay__active");
+		header__side_nav.css({"width" : "0%"});
+
+	});
+
+	btn_portfolio.on("click", function() {
+
+		portfolio__side_nav.css({"width" : "70%"});
+		body.addClass("mask-overlay__active");
+	});
+
+
+
+
 
 });
 

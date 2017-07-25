@@ -3,7 +3,7 @@ block title
 	| Index page
 block main
 	// второй класс у body это анимация на модалке (animated-transition-effects гуглануть или спросить меня, убрав класс вернётся обычная анимация модалки, без изысков)
-	body.index.ink-transition
+	body.index.ink-transition.mask-overlay
 		div
 			.loader
 				.loader_inner
@@ -20,7 +20,6 @@ block main
 						i.nav-line
 						i.nav-line
 						i.nav-line
-
 		div(canvas='container')
 			header(class="header")
 				//header top
@@ -33,10 +32,19 @@ block main
 										logo
 								nav.header__nav
 									ul
-										-var links = [{title:'Портфолио', href:'#portfolio'},{title:'Стоимость услуг', href:'#price__service'},{title:'Отзывы', href:'#reviews'},{title:'Контакты', href:'#contacts'},{title:'email@gmail.com', href:'mailto:email@gmail.com'},{title:'+ 38 (095) 543 65 21', href:'tel:+38(095)5436521'}];
+										-var links = [{title:'Портфолио', href:'#portfolio', class: 'portfolio'},{title:'Стоимость услуг', href:'#price__service', id: 'price__service'},{title:'Отзывы', href:'#reviews', id: 'reviews'},{title:'Контакты', href:'#contacts', id: 'contacts', class:'contacts'}, {title:'email@gmail.com', href:'mailto:email@gmail.com', id: 'mail'}, {title:'+ 38 (095) 543 65 21', href:'tel:+38(095)5436521'}];
 										each i in links
 											li
-												a(href=i.href)= i.title
+												a(href=i.href class=i.class)= i.title
+										//script.
+											function openNav() {
+												document.getElementById("header__overlay").style.width = "50%";
+											}
+
+											function closeNav() {
+												document.getElementById("header__overlay").style.width = "0%";
+											}
+										//a(onclick="openNav()") sdadas
 								.header_modal(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup" class="open-popup-link")
 									a Обратный звонок
 							//моб меню
@@ -55,7 +63,7 @@ block main
 							.col-lg-6
 								.header__form
 									p.header__form_title Давайте познакомимся поближе:
-									form#form-file.clearfix
+									//form#form-file.clearfix
 										.input_wrap
 											i.fa.fa-check
 											input(name='name', type='text', placeholder='Ваше имя')
@@ -68,10 +76,29 @@ block main
 										.input_wrap
 											i.fa.fa-check
 											textarea(name='text-mail', placeholder='Что хотели бы обсудить?' rows="")
-										input(type='hidden', name='form_name', value='')
+										input(type='hidden', name='form_name', value='Форма "Давайте познакомимся поближе:"')
 										input(type='hidden', name='form_type', value='normal')
 										.intermediate_item
 											button(type='submit', value='Записаться') Записаться
+									.white-popup
+										p.success_mail Ваше сообщение отправлено! Спасибо!
+										form
+											div
+												.input_wrap
+													i.fa.fa-check
+													input(name="name" type="text" placeholder="Ваше Имя")
+												.input_wrap
+													i.fa.fa-check
+													input(name="phone_mask" type="text" class="mask" placeholder="Введите Ваш телефон")
+												.input_wrap
+													i.fa.fa-check
+													input(name="email" type="text" placeholder="Ваш E-mail адрес")
+												.input_wrap
+													i.fa.fa-check
+													textarea(name="textarea" type="text" placeholder="Что хотели бы обсудить?")
+											input(type="hidden" name="form_name" value="Форма 'Давайте познакомимся поближе:")
+											input(type="hidden" name="form_type" value="modal")
+											button(type="submit" value="Заказать обратный звонок") Заказать обратный звонок
 
 
 			//	section say No
@@ -336,7 +363,7 @@ block main
 							.col-lg-6
 								.premium-design__form-wrap
 									p.premium-design__form-text Для того, чтобы уточнить детали по дизайну собственного сайта, оставьте свои данные и я перезвоню.
-									form#form-file.clearfix
+									//form#form-file.clearfix
 										.input_wrap
 											i.fa.fa-check
 											input(name='name', type='text', placeholder='Ваше имя')
@@ -348,6 +375,24 @@ block main
 										input(type='hidden', name='form_type', value='normal')
 										.intermediate_item
 											button(type='submit', value='Записаться') Записаться
+
+									form
+										div
+											.input_wrap
+												i.fa.fa-check
+												input(name="name" type="text" placeholder="Ваше Имя")
+											.input_wrap
+												i.fa.fa-check
+												input(name="phone_mask" type="text" class="mask" placeholder="Введите Ваш телефон")
+											//.input_wrap
+												i.fa.fa-check
+												input(name="email" type="text" placeholder="Ваш E-mail адрес")
+											//.input_wrap
+												i.fa.fa-check
+												textarea(name="textarea" type="text" placeholder="Что хотели бы обсудить?")
+										input(type="hidden" name="form_name" value="Форма 'Создаю премиум дизайн для лидеров'")
+										input(type="hidden" name="form_type" value="modal")
+										button(type="submit" value="Записаться") Записаться
 									span.text-mask be a leader
 
 
@@ -388,7 +433,7 @@ block main
 
 
 				//	section portfolio examples my works
-				section#portfolio.portfolio
+				section.portfolio
 					.container
 						.text-mask look and be shure
 						h1.default-title Портфолио
@@ -529,6 +574,7 @@ block main
 
 
 
+			//	section footer
 			footer.footer
 					.container.footer__inner
 						.row
@@ -575,22 +621,47 @@ block main
 										a.footer__facebook(href="#" target="_blank")
 								span.footer__copyright 2107. Все права защищены
 
-
-
-
-
-
-
-		div(off-canvas='id-1 left shift')
+		div(off-canvas='id-1 right shift')
 			nav.header_nav_mobile
 				ul.menu
 					-var obj1 = [{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'7 38 425 961 68', href:'tel:73842596168'},{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'Примеры', href:'#'}];
 					each i in obj1
 						li
 							a(href=i.href)= i.title
-		div(off-canvas='id-2 right push')
+		//contacts
+		//div(off-canvas='id-2 right push').custom-fluid-width
 		div(off-canvas='id-3 top overlay')
 		div(off-canvas='id-4 bottom shift')
+
+		.header__side-nav#header__side-nav.overlay-navigation
+			.overlay-navigation_wrap
+				i.fa.fa-close
+				h3 Контакты
+				ul.footer__contacts
+					li
+						a.footer__contacts_maill(href="mailto:designer@gmail.com") designer@gmail.com
+					li
+						a.footer__contacts_phone(href="tel:+380935855858") +38 093 585 58 58
+					li
+						a.footer__contacts_skype(href="#") meagan fisher
+				p.footer__speek Общайтесь со мной в соцсетях:
+				ul.footer__social-network
+					li
+						a.footer__pinterest(href="#" target="_blank")
+					li
+						a.footer__google-plus(href="#" target="_blank")
+					li
+						a.footer__instagram(href="#" target="_blank")
+					li
+						a.footer__behance(href="#" target="_blank")
+					li
+						a.footer__facebook(href="#" target="_blank")
+
+		.portfolio__side-nav#portfolio__side-nav.overlay-navigation
+			.overlay-navigation_wrap
+				img(src=require("../../img/portfolio-item-1.jpg")).portfolio__side-nav
+				img(src=require("../../img/portfolio-item-1.jpg")).portfolio__side-nav
+
 		//[if IE 9]>
 			<script src="libs/html5shiv/es5-shim.min.js"></script>
 			<script src="libs/html5shiv/html5shiv.min.js"></script>
