@@ -89,22 +89,18 @@ $(document).ready(function () {
 		header__side_nav.css({"width" : "70%"});
 		body.addClass("mask-overlay__active");
 	});
-	btn_close.on("click", function(){
-		body.removeClass("mask-overlay__active");
-		header__side_nav.css({"width" : "0%"});
-
-	});
 
 	btn_portfolio.on("click", function() {
-
 		portfolio__side_nav.css({"width" : "70%"});
 		body.addClass("mask-overlay__active");
 	});
 
 
-
-
-
+	btn_close.on("click", function(){
+		body.removeClass("mask-overlay__active");
+		header__side_nav.css({"width" : "0%"});
+		portfolio__side_nav.css({"width" : "0%"});
+	});
 });
 
 $(window).resize(function () {

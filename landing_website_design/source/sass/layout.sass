@@ -920,7 +920,8 @@
 		opacity: 0
 		z-index: 0
 	@include section-mask()
-
+.overlay__close
+	z-index: -999
 .mask-overlay__active
 	position: relative
 	&:before
@@ -928,6 +929,8 @@
 		opacity: 1
 		z-index: 2
 	@include section-mask()
+	.overlay__close
+		z-index: 2
 // Overlay Navigation style
 .overlay-navigation
 	height: 100%
@@ -939,19 +942,16 @@
 	background-color: rgba(40,44,84, 0.9)
 	overflow-x: hidden
 	transition: 0.5s
-
-
 .overlay-navigation_wrap
 	padding: 57px 0 0 87px
 	position: relative
 	font-size: 40px
 	display: inline-block
-
 	.fa-close
 		color: $main_color_gradient_start
 		position: absolute
-		right: -40px
-		top: 0
+		right: 0
+		top: 45px
 		cursor: pointer
 		transition: color 0.5s
 		&:hover
@@ -959,13 +959,23 @@
 	h3
 		font-family: $latoRegular
 		font-size: 24px
-		margin-bottom: 35px
+		//margin-bottom: 35px
 .header__side-nav
+	h3
+		margin-bottom: 35px
 	.footer__contacts
 		li
 			a:before
 				left: 87px
 .portfolio__side-nav
-	&_slide
+	//&_slide
 		width: 370px
 		height: 100%
+	.portfolio__wrap
+		width: 770px
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-between
+		img
+			margin-top: 46px
