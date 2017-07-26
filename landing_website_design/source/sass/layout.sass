@@ -7,7 +7,6 @@
 	background-size: cover
 	position: relative
 	@include section-mask()
-
 	.container
 		height: 100%
 		min-height: 100%
@@ -86,7 +85,6 @@
 	display: inline-block
 	padding: 18px 20px
 	@include btnDefault(61px)
-	//&.last for mob menu
 	&.last
 		a
 			color: $main_txt_color
@@ -479,6 +477,8 @@
 		margin-bottom: 100px
 		.input_wrap + .input_wrap
 			margin-top: 40px
+		input:focus
+			outline: 3px
 		button
 			margin-top: 40px
 //	section how i make premium design
@@ -636,7 +636,8 @@
 	.line
 		margin: 55px 0 0 0
 	&__service
-		background: url("../img/price__service-bg.png") no-repeat
+		//background: url("../img/price__service-bg.png") no-repeat
+		outline: 3px dashed $border-dashed
 		height: 152px
 		background-size: contain
 		padding-top: 28px
@@ -816,7 +817,6 @@
 	background: url("../img/footer__bg.jpg") no-repeat center center
 	background-size: cover
 	position: relative
-	//overflow: hidden
 	@include section-mask()
 	&__inner
 		//margin: 0 auto
@@ -844,6 +844,8 @@
 			width: 370px
 			input
 				background-size: contain
+				&:focus
+					outline: 3px
 		.input_wrap + .input_wrap
 			margin-top: 30px
 		button[type=submit]
@@ -942,6 +944,18 @@
 	background-color: rgba(40,44,84, 0.9)
 	overflow-x: hidden
 	transition: 0.5s
+	-webkit-tap-highlight-color: transparent
+	//внешний вид скроллбара
+	scrollbar-base-color: $line-color
+	scrollbar-arrow-color: $line-color
+	&::-webkit-scrollbar
+		width: 12px
+	&::-webkit-scrollbar-thumb
+		background-color: $line-color
+		&:hover
+			background-color: darken($line-color, 10%)
+	&::-webkit-scrollbar-track-piece
+		background-color: transparent
 .overlay-navigation_wrap
 	padding: 57px 0 0 87px
 	position: relative
@@ -968,9 +982,6 @@
 			a:before
 				left: 87px
 .portfolio__side-nav
-	//&_slide
-		width: 370px
-		height: 100%
 	.portfolio__wrap
 		width: 770px
 		display: flex
@@ -979,3 +990,24 @@
 		justify-content: space-between
 		img
 			margin-top: 46px
+.order-online
+	.overlay-navigation_wrap
+		.fa-close
+			right: -80px
+		width: 815px
+		h3
+			font-family: $latoBlack
+			font-size: 60px
+		p
+			font-family: $latoBlack
+			font-size: 33px
+	.white-popup
+		width: 100%
+		padding: 62px 0 0 0
+		max-width: 100%
+		background-color: transparent
+	button[type=submit]
+		font-family: $latoRegular
+		font-size: 14px
+		width: 370px
+		display: block

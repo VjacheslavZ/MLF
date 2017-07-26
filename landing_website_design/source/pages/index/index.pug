@@ -481,59 +481,59 @@ block main
 									span.price__service-price от 150$
 								.intermediate_item
 									form
-										button(type='submit', value='150$') Заказать
+										button(type='submit', value='150$').price__service_price Заказать
+							.col-lg-3
+								.price__service
+									p.price__description Дизайн для Landing page
+									span.price__service-price от 250$
+								.intermediate_item
+									form
+										button(type='submit', value='250$').price__service_price Заказать
 							.col-lg-3
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
-										button(type='submit', value='150$') Заказать
+										button(type='submit', value='150$').price__service_price Заказать
 							.col-lg-3
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
-										button(type='submit', value='150$') Заказать
+										button(type='submit', value='150$').price__service_price Заказать
 							.col-lg-3
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
-										button(type='submit', value='150$') Заказать
+										button(type='submit', value='150$').price__service_price Заказать
 							.col-lg-3
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
-										button(type='submit', value='150$') Заказать
+										button(type='submit', value='150$').price__service_price Заказать
 							.col-lg-3
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
-										button(type='submit', value='150$') Заказать
+										button(type='submit', value='150$').price__service_price Заказать
 							.col-lg-3
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
-										button(type='submit', value='150$') Заказать
-							.col-lg-3
-								.price__service
-									p.price__description Дизайн для Landing page
-									span.price__service-price от 150$
-								.intermediate_item
-									form
-										button(type='submit', value='150$') Заказать
+										button(type='submit', value='150$').price__service_price Заказать
 							.btn-big__shadow-outer
 								.btn-big__shadow-inner
-									button.btn-big__show-more Хочу заполнить заявку на дизайн в режиме онлайн
+									button.btn-big__show-more#btn-big__show-more Хочу заполнить заявку на дизайн в режиме онлайн
 				//	section reviews
 				section#reviews.reviews
 					.container
@@ -668,6 +668,40 @@ block main
 					img(src=require("../../img/portfolio-item-1.jpg"))
 					img(src=require("../../img/portfolio-item-1.jpg"))
 					img(src=require("../../img/portfolio-item-1.jpg"))
+		.order-online#order-online.overlay-navigation
+			.overlay-navigation_wrap
+				i.fa.fa-close
+				h3 Заполнить заявку онлайн
+				p Заполните форму ниже, проконсультируйтесь	онлайн и полчите ответы на все свои вопросы
+				.white-popup
+					p.success_mail Ваше сообщение отправлено! Спасибо!
+					form
+						div
+							.input_wrap
+								i.fa.fa-check
+								input(name="name" type="text" placeholder="Ваше Имя")
+							.input_wrap
+								i.fa.fa-check
+								input(name="phone_mask" type="text" class="mask" placeholder="Введите контактный телефон")
+							.input_wrap
+								i.fa.fa-check
+								input(name="email" type="text" placeholder="Ваш E-mail адрес")
+							.input_wrap
+								i.fa.fa-check
+								input(name="own_email" type="text" placeholder="Ваш сайт")
+							.input_wrap
+								i.fa.fa-check
+								input(name="them" type="text" placeholder="Тема")
+							.input_wrap
+								i.fa.fa-check
+								input(name="what_to_do" type="text" placeholder="Что хотите сделать")
+							.input_wrap
+								i.fa.fa-check
+								textarea(name="textarea" type="text" placeholder="Что хотели бы обсудить?")
+						input(type="hidden" name="form_name" value="Форма 'Заявка онлайн:'").hidden-price
+						input(type="hidden" name="form_type" value="modal")
+						button(type="submit" value="Отправить заявку") Отправить заявку
+
 		//[if IE 9]>
 			<script src="libs/html5shiv/es5-shim.min.js"></script>
 			<script src="libs/html5shiv/html5shiv.min.js"></script>

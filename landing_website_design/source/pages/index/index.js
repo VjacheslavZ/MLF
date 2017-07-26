@@ -76,30 +76,61 @@ $(document).ready(function () {
 	let btn_close = $(".overlay-navigation .fa-close");
 
 	let btn_contacts = $("a.contacts"),
-		btn_portfolio = $("a.portfolio");
-	console.log(btn_portfolio);
-
+		btn_portfolio = $("a.portfolio"),
+		btn_order_online = $("#btn-big__show-more"),
+		btn_order_online_price = $(".price__service_price");
 
 	let header__side_nav = $("#header__side-nav"),
-		portfolio__side_nav = $("#portfolio__side-nav");
+		portfolio__side_nav = $("#portfolio__side-nav"),
+		order_online = $("#order-online");
 
 
 
 	btn_contacts.on("click", function() {
 		header__side_nav.css({"width" : "70%"});
 		body.addClass("mask-overlay__active");
+		body.css({"overflow":"hidden"})
 	});
-
 	btn_portfolio.on("click", function() {
 		portfolio__side_nav.css({"width" : "70%"});
 		body.addClass("mask-overlay__active");
+		body.css({"overflow":"hidden"})
 	});
+	btn_order_online.on("click", function() {
+		order_online.css({"width" : "70%"});
+		body.addClass("mask-overlay__active");
+		body.css({"overflow":"hidden"})
+	});
+
+	//подставляем цену из кнопки в input type-hidden
+	
+	
+	
+	btn_order_online_price.on("click", function(e) {
+		e.preventDefault();
+		//reset old val
+		var price = this.value;
+		var price_hidden = $(".order-online .hidden-price");
+		var new_price_hidden_val = price_hidden.val() + price;
+
+		price_hidden.val(new_price_hidden_val);
+
+		order_online.css({"width" : "70%"});
+	});
+
 
 
 	btn_close.on("click", function(){
 		body.removeClass("mask-overlay__active");
 		header__side_nav.css({"width" : "0%"});
 		portfolio__side_nav.css({"width" : "0%"});
+		order_online.css({"width" : "0%"});
+
+		body.css({"overflow":"inherit"})
+
+		var price_hidden = $(".order-online .hidden-price");
+
+		price_hidden.val("Форма 'Заявка онлайн:");
 	});
 });
 
