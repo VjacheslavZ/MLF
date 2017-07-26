@@ -39,39 +39,179 @@
 //	section my slogan
 
 @media only screen and (max-width : 1199px)
-	.header_modal
+	//.header_modal
 		margin-top: 20px
 	.intermediate
 		.intermediate_wrap
 			margin-bottom: 20px
 			.modal_form_input_wrap
 				display: inline-block
-//	section header top
-//	section header main
-//	section say No
-//	section five tasks
-//	section my design
-//	section with me very comfort
-//	section make good design
-//	section create premium design
-//	section how i make premium design
-//	section portfolio? examples my works
-//	section price of my service
-//	section reviews
-//	section my slogan
+	//	section header top
+	h1
+		font-size: 53px
+	.header__nav
+		ul
+			li + li
+				margin-left: 28px
+			li:nth-child(5)
+				&:before
+					left: -30px
+			li:nth-child(6)
+				&:before
+					left: -30px
+	//	section header main
+	.header__content_wrap
+		.defaul-title
+			margin-bottom: 35px
+	.header__about-me
+		& + .header__about-me
+			margin-top: 25px
+			margin-bottom: 22px
+	.header__form
+		padding: 35px 50px 30px 35px
+	.header__text .line
+		margin-top: 49px
 
+	//	section say No
+	.say-no
+		padding: 90px 0 80px 0
+		&__video-bg
+			width: 448px
+		video
+			width: 448px
+	//	section five tasks
+	.five-tasks
+		padding: 90px 0 85px 0
+	//	section my design
+	.my-design
+		padding: 88px 0 80px 0
+		.text-mask
+			left: 30%
+		&__item_text
+			font-size: 16px
+		&__photo_front
+			display: none
+		&__photo
+			margin-left: 0px
+	//	section with me very comfort
+	.comfort
+		padding: 80px 0 110px 0
+		&__item
+			margin-left: 19px
+		&__slogan
+			font-size: 44px
+	//	section make good design
+	.good-design
+		padding: 80px 0 85px 0
+		.text-mask
+			top: 30px
+			right: 20px
+		.line
+			margin: 24px 0 70px 0
+	//	section create premium design
+	.premium-design
+		padding: 90px 0 90px 0
+		&__for
+			font-size: 45px
+		.line
+			margin: 33px 0 39px 0
+		&__description
+			line-height: 1
+		&__form-wrap
+			padding: 50px 40px 10px 35px
+	//	section how i make premium design
+	.work-steps
+		padding: 88px 0 88px 0
+		.text-mask
+			left: 55%
+			text-align: left
+		.line_left
+			width: 40%
+		.line_right
+			width: 40%
+	//	section portfolio? examples my works
+	.portfolio
+		padding: 88px 0 84px 0
+		.text-mask
+			left: 55%
+			text-align: left
+		.line
+			margin: 24px 0 35px 0
+	//	section price of my service
+	.price
+		padding: 88px 0 85px 0
+		.text-mask
+			left: 55%
+			text-align: left
+		.line
+			margin: 25px 0 0 0
+		&__service
+			margin-top: 50px
+	//	section reviews
+	.reviews
+		padding: 88px 0 88px 0
+		.text-mask
+			left: 55%
+			text-align: left
+		.line
+			margin: 35px 0 50px 0
+		&__slider_description_wrap
+			width: 450px
+			&:after
+				bottom: 0
+	//	section footer
+	.footer
+		padding: 45px 0 45px 0
+		&__inner
+			padding: 75px 35px 45px 35px
 @media only screen and (max-width : 991px)
-
 	.header_nav
 		display: none
 	.header_logo
 		display: block
 		margin-top: 0
-	.header_modal
+	//.header_modal
 		margin-top: 40px
 	nav[canvas]
 		display: block
-//	section header top
+	//	section header top
+	.header__top-bg
+		padding: 7px 0
+	.header__nav
+		ul
+			li
+				&:nth-child(1)
+					display: none
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					display: none
+				&:nth-child(4)
+					display: none
+				&:nth-child(5):before
+					left: -50px
+				&:nth-child(6):before
+					left: -50px
+			li + li
+				margin-left: 75px
+	.header
+		h1
+			font-size: 63px
+		&__about-me
+			font-size: 28px
+		&__content_wrap
+			top: calc(50% - 150px)
+			text-align: center
+		&__description
+			display: block
+			padding: 0 35px
+			text-align: center
+		.line
+			display: inline-block
+		&__form
+			display: none
+
+
 //	section header main
 //	section say No
 //	section five tasks

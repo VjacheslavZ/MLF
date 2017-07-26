@@ -11,21 +11,21 @@
 		height: 100%
 		min-height: 100%
 		position: relative
-.header__top-bg
-	background-color: $main_bg_color_dark
-.header__wrap
-	display: flex
-	justify-content: space-between
-	align-items: center
-	width: 100%
-.header__logo
-	display: inline-block
-	a
-		font-family: $latoThin
-		font-size: 30px
-		color: #fff
-		&:hover
-			text-decoration: none
+	&__top-bg
+		background-color: $main_bg_color_dark
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+	&__logo
+		display: inline-block
+		a
+			font-family: $latoThin
+			font-size: 30px
+			color: #fff
+			&:hover
+				text-decoration: none
 .header__nav
 	display: inline-block
 	position: relative
@@ -72,6 +72,7 @@
 				content: ""
 				position: absolute
 				left: -41px
+				top: -5px
 				@include sprite($mail-to)
 		li:nth-child(6)
 			position: relative
@@ -108,6 +109,7 @@
 	position: absolute
 	//left: 10px
 	right: 0
+	left: 0
 	top: calc(50% - 290px)
 	//display: flex
 	//flex-direction: row
@@ -382,9 +384,11 @@
 		font-family: $latoThin
 		font-size: 22px
 	&__ic
-		background: url("../img/comfort__ic.png") no-repeat bottom
-		width: 100%
-		height: 100%
+		position: absolute
+		bottom: 0
+		//background: url("../img/comfort__ic.png") no-repeat bottom
+		//width: 100%
+		//height: 100%
 
 //	section make good design
 .good-design

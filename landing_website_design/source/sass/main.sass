@@ -333,7 +333,7 @@ button
 	height: 35px
 	width: 50px
 	transition: .4s
-	margin-top: 6px
+	margin-top: -4px
 	cursor: pointer
 	position: relative
 	z-index: 1002
@@ -375,34 +375,43 @@ label
 
 .nav-line
 	display: block
-	height: 3px
+	height: 4px
 	background: #fff
 	position: absolute
 	left: 0
 	width: 100%
 	transition: 2s
 	&.active
-		background: $main_color_old
+		background-image: linear-gradient(to bottom, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
+		background-size: 100%
 	&:nth-child(2)
 		-webkit-transition: .5s
 		-o-transition: .5s
 		transition: .5s
-		top: 14px
+		top: 9px
+		background-image: linear-gradient(to bottom, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
+		background-size: 100%
 	&:nth-child(1)
 		-webkit-transition: .5s
 		-o-transition: .5s
 		transition: .5s
 		top: 0
+		background-image: linear-gradient(to bottom, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
+		background-size: 100%
 	&:nth-child(4)
 		-webkit-transition: .5s
 		-o-transition: .5s
 		transition: .5s
-		top: 28px
+		top: 19px
+		background-image: linear-gradient(to bottom, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
+		background-size: 100%
 	&:nth-child(3)
 		-webkit-transition: .5s
 		-o-transition: .5s
 		transition: .5s
-		top: 14px
+		top: 9px
+		background-image: linear-gradient(to bottom, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
+		background-size: 100%
 
 *::-webkit-input-placeholder
 	color: #666
@@ -430,9 +439,14 @@ body textarea:required:valid
 [canvas]
 	transform: inherit
 [off-canvas]
+	padding: 20px 0 0 20px
 	transition: transform 0.4s
 	overflow: auto
 	-webkit-overflow-scrolling: touch
+	background-color: rgba(44, 48, 95, 1)
+	ul
+		li + li
+			margin-top: 10px
 [off-canvas*=left]
 	width: 255px
 [canvas=container]
@@ -456,8 +470,8 @@ body textarea:required:valid
 			background-color: transparent
 nav[canvas]
 	position: fixed	
-	top: 20px
-	left: 20px
+	top: 28px
+	right: 24px
 	display: none
 	z-index: 100
 [class*=js-open-], [class*=js-toggle-], [class*=js-close-]

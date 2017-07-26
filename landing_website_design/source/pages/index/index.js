@@ -108,10 +108,10 @@ $(document).ready(function () {
 	
 	btn_order_online_price.on("click", function(e) {
 		e.preventDefault();
-		//reset old val
-		var price = this.value;
-		var price_hidden = $(".order-online .hidden-price");
-		var new_price_hidden_val = price_hidden.val() + price;
+
+		var price = this.value,
+		 	price_hidden = $(".order-online .hidden-price"),
+			new_price_hidden_val = price_hidden.val() + price;
 
 		price_hidden.val(new_price_hidden_val);
 
@@ -128,8 +128,8 @@ $(document).ready(function () {
 
 		body.css({"overflow":"inherit"})
 
+		//reset old val
 		var price_hidden = $(".order-online .hidden-price");
-
 		price_hidden.val("Форма 'Заявка онлайн:");
 	});
 });
