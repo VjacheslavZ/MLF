@@ -545,22 +545,16 @@ form
 		display: inline-block
 		background-color: transparent
 		border: none
-		transition: all .5s
+		//transition: all .5s
 		outline: 3px dashed $border-dashed
-		box-shadow: 0 0 0 0 transparent
+		box-shadow: 0 0 0 3px transparent
 		&:hover,&:focus
 			outline-color: $main_color_gradient_end
 			box-shadow: 0 0 0 3px $main_color_gradient_end
-			//border: 2px solid $border-dashed
-			//background: url("../img/input_border-hover.png") no-repeat
-			//background-size: cover
-			//border-image-source: linear-gradient($main_color_gradient_start, $main_color_gradient_end)
-			//border-width: 2px
-			//border-image-slice: 1
 		color: $main_txt_color
 		font-size: 14px
 		font-family: $latoRegular
-		height: 42px
+		height: 36px
 		padding: 0 0 0 18px
 		&::-webkit-input-placeholder
 			color: $main_txt_color
@@ -602,7 +596,7 @@ form
 		height: 41px
 		color: $main_txt_color
 		padding: 0
-		margin-top: 11px
+		margin-top: 15px
 		font-family: $latoThin
 		font-size: 14px
 		@include btnDefault(41px)
