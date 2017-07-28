@@ -48,7 +48,6 @@ $(document).ready(function () {
 
 		if(video[0].paused){
 			video[0].play();
-			//playButton.fadeOut();
 			videoBg.css({"opacity":"0"});
 			video.css({"opacity":"1"});
 		}else{
@@ -59,7 +58,6 @@ $(document).ready(function () {
 	});
 
 	//slider
-
 	var reviews_slider = $("#reviews-slider.owl-carousel");
 
 	reviews_slider.owlCarousel({
@@ -70,34 +68,44 @@ $(document).ready(function () {
 	});
 
 	//sidebar menu
-	let body = $("body");
-	let mask_overlay = $(".mask-overlay");
-	let mask_overlay_active = $(".mask-overlay__active");
-	let btn_close = $(".overlay-navigation .fa-close");
-
-	let btn_contacts = $("a.contacts"),
-		btn_portfolio = $("a.portfolio"),
+	let body = $("body"),
+		mask_overlay = $(".mask-overlay"),
+		mask_overlay_active = $(".mask-overlay__active"),
+		btn_close = $(".overlay-navigation .fa-close"),
+		btn_contacts = $("a.contacts"),
+		btn_portfolio = $("a.portfolio__link"),
+		btn_show_all_portfolio = $(".portfolio button"),
 		btn_order_online = $("#btn-big__show-more"),
-		btn_order_online_price = $(".price__service_price");
-
-	let header__side_nav = $("#header__side-nav"),
+		btn_order_online_price = $(".price__service_price"),
+		header__side_nav = $("#header__side-nav"),
 		portfolio__side_nav = $("#portfolio__side-nav"),
-		order_online = $("#order-online");
-
-
+		order_online = $("#order-online"),
+		clientWidth = document.documentElement.clientWidth;
 
 	btn_contacts.on("click", function() {
 		header__side_nav.css({"width" : "70%"});
 		body.addClass("mask-overlay__active");
 		body.css({"overflow":"hidden"})
 	});
-	btn_portfolio.on("click", function() {
+
+
+	btn_portfolio.on("click", show_portfolio);
+	btn_show_all_portfolio.on("click", show_portfolio);
+
+	function show_portfolio() {
 		portfolio__side_nav.css({"width" : "70%"});
 		body.addClass("mask-overlay__active");
 		body.css({"overflow":"hidden"})
-	});
+	}
+
 	btn_order_online.on("click", function() {
-		order_online.css({"width" : "70%"});
+
+		if(clientWidth <= 980){
+			order_online.css({"width" : "100%"});
+		} else {
+			order_online.css({"width" : "70%"});
+		}
+
 		body.addClass("mask-overlay__active");
 		body.css({"overflow":"hidden"})
 	});
@@ -112,7 +120,14 @@ $(document).ready(function () {
 
 		price_hidden.val(new_price_hidden_val);
 
-		order_online.css({"width" : "70%"});
+		if(document.documentElement.clientWidth < 980){
+			order_online.css({"width" : "100%"});
+		} else {
+			order_online.css({"width" : "70%"});
+		}
+
+		body.addClass("mask-overlay__active");
+		body.css({"overflow":"hidden"})
 	});
 
 	btn_close.on("click", function(){
@@ -127,6 +142,44 @@ $(document).ready(function () {
 		var price_hidden = $(".order-online .hidden-price");
 		price_hidden.val("Форма 'Заявка онлайн:");
 	});
+
+	//scroll on links
+	var header_links = $(".header__nav a[href*='#']"),
+		mobile_menu_links = $(".header_nav_mobile a[href*='#']");
+
+		header_links.on("click", scroll_header_links);
+		mobile_menu_links.on("click", scroll_header_links);
+
+	function scroll_header_links(e) {
+		e.preventDefault();
+
+		var anchor = $(this);
+
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top
+		}, 500);
+
+		return false;
+	}
+
+	//btn see price and btn what i can to do
+	var btn_see_price = $(".good-design button"),
+		btn_see_portfolio = $(".say-no button");
+
+		btn_see_price.on("click", scroll_custom_btn);
+		btn_see_portfolio.on("click", scroll_custom_btn);
+
+	function scroll_custom_btn(e) {
+		e.preventDefault();
+
+		var anchor = $(this);
+
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('data-href')).offset().top
+		}, 500);
+
+		return false;
+	}
 });
 
 $(window).resize(function () {

@@ -32,7 +32,7 @@ block main
 										logo
 								nav.header__nav
 									ul
-										-var links = [{title:'Портфолио', href:'#portfolio', class: 'portfolio'},{title:'Стоимость услуг', href:'#price__service', id: 'price__service'},{title:'Отзывы', href:'#reviews', id: 'reviews'},{title:'Контакты', href:'#contacts', id: 'contacts', class:'contacts'}, {title:'email@gmail.com', href:'mailto:email@gmail.com', id: 'mail'}, {title:'+ 38 (095) 543 65 21', href:'tel:+38(095)5436521'}];
+										-var links = [{title:'Портфолио', href:'#', class: 'portfolio__link'},{title:'Стоимость услуг', href:'#price__service', id: 'price__service'},{title:'Отзывы', href:'#reviews', id: 'reviews'},{title:'Контакты', href:'#', id: 'contacts', class:'contacts'}, {title:'email@gmail.com', href:'mailto:email@gmail.com', id: 'mail'}, {title:'+ 38 (095) 543 65 21', href:'tel:+38(095)5436521'}];
 										each i in links
 											li
 												a(href=i.href class=i.class)= i.title
@@ -125,7 +125,7 @@ block main
 							video(src=require("../../video/video.mp4") width="564px" height="100%")
 						.btn-big__shadow-outer
 							.btn-big__shadow-inner
-								button.btn-big__show-more Посмотрите что я умею
+								button.btn-big__show-more(data-href="#portfolio") Посмотрите что я умею
 			// Тест react
 			section.react
 				.container
@@ -179,56 +179,6 @@ block main
 								.col-xl-3.col-lg-4.col-md-6
 									.five-tasks__item.text-mask
 										.text-mask let's make a unicorn
-
-					//	section my design
-					//	section with me very comfort
-					//	section make good design
-					//	section create premium design
-					//	section how i make premium design
-					//	section portfolio? examples my works
-					//	section price of my service
-					//	section reviews
-					//div Пример checkbox
-					//label.check.noselect
-					//	input(type='checkbox')
-					//	i.fa.fa-1.fa-square-o
-					//	i.fa.fa-2.fa-check-square-o
-					//	span первый чек
-					//label.check.noselect
-					//	input(type='checkbox')
-					//	i.fa.fa-1.fa-square-o
-					//	i.fa.fa-2.fa-check-square-o
-					//	span второй чек
-					//div Пример radio button
-					//label.radio.noselect
-					//	input(type='radio', name='radio')
-					//	i.fa.fa-1.fa-square-o
-					//	i.fa.fa-2.fa-check-square-o
-					//	span первый чек
-					//label.radio.noselect
-					//	input(type='radio', name='radio', checked='')
-					//	i.fa.fa-1.fa-square-o
-					//	i.fa.fa-2.fa-check-square-o
-					//	span второй чек
-					//h3 Пример Select на плагине Select2
-					//	h4 с тегами
-					//		.select2-container
-					//			select.select2-tags.form-control(multiple)
-					//				option angular
-					//				option react
-					//				option vui
-					//				option(disabled) ember
-					//				option backbone
-					//	h4 обычный
-					//		.select2-container
-					//			select.select2
-					//				option angular
-					//				option react
-					//				option vui
-					//				option(disabled) ember
-					//				option backbone
-
-
 			section.intermediate
 				//	section my design
 				section#my-design.my-design
@@ -355,7 +305,7 @@ block main
 										span.good-design__personal_ic
 							.btn-big__shadow-outer
 								.btn-big__shadow-inner
-									button.btn-big__show-more Посмотреть расценки
+									button.btn-big__show-more(data-href="#price__service") Посмотреть расценки
 				//	section create premium design
 				section#premium-design.premium-design
 					.container
@@ -450,7 +400,7 @@ block main
 
 
 				//	section portfolio examples my works
-				section.portfolio
+				section.portfolio#portfolio
 					.container
 						.text-mask look and be shure
 						h1.default-title Портфолио
@@ -485,7 +435,7 @@ block main
 								.btn-big__shadow-inner
 									button.btn-big__show-more Посмотреть весь портфель
 				//	section price of my service
-				section#price.price
+				section#price__service.price
 					.container
 						.text-mask look and be shure
 						h1.default-title Стоимость
@@ -617,7 +567,7 @@ block main
 										.intermediate_item
 											button(type='submit', value='Записаться') Хочу консультацию
 							.col-lg-5.col-sm-12.footer__contacts_wrap
-								ul.footer__contacts
+								ul.footer__contacts#contacts
 									li
 										a.footer__contacts_maill(href="mailto:designer@gmail.com") designer@gmail.com
 									li
