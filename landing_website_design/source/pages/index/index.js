@@ -103,9 +103,6 @@ $(document).ready(function () {
 	});
 
 	//подставляем цену из кнопки в input type-hidden
-	
-	
-	
 	btn_order_online_price.on("click", function(e) {
 		e.preventDefault();
 
@@ -118,15 +115,13 @@ $(document).ready(function () {
 		order_online.css({"width" : "70%"});
 	});
 
-
-
 	btn_close.on("click", function(){
 		body.removeClass("mask-overlay__active");
 		header__side_nav.css({"width" : "0%"});
 		portfolio__side_nav.css({"width" : "0%"});
 		order_online.css({"width" : "0%"});
 
-		body.css({"overflow":"inherit"})
+		body.css({"overflow":"inherit"});
 
 		//reset old val
 		var price_hidden = $(".order-online .hidden-price");

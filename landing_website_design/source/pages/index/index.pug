@@ -55,7 +55,7 @@ block main
 					.container
 						.row
 							.col-lg-6.header__text
-								h1.defaul-title Приветствую Вас!
+								h1.default-title Приветствую Вас!
 								p.header__about-me Я Meagan Fisher - частный веб-дизайнер
 								p.header__about-me UI/UX дизайн
 								span.header__description Оказываю полный спектр услуг по дизайну: сайтов, landing page и уникальных проектов
@@ -82,20 +82,44 @@ block main
 											input(type="hidden" name="form_name" value="Форма 'Давайте познакомимся поближе:")
 											input(type="hidden" name="form_type" value="modal")
 											button(type="submit" value="Заказать обратный звонок") Отправить обратный звонок
-
+			section.header__form_mobile-wrap
+				.container
+					.row.justify-content-center
+						.col-sm-12.col-md-7
+							.header__form.header__form_mobile
+								p.header__form_title Давайте познакомимся поближе:
+								.white-popup
+									p.success_mail Ваше сообщение отправлено! Спасибо!
+									form
+										div
+											.input_wrap
+												i.fa.fa-check
+												input(name="name" type="text" placeholder="Ваше Имя")
+											.input_wrap
+												i.fa.fa-check
+												input(name="phone_mask" type="text" class="mask" placeholder="Введите Ваш телефон")
+											.input_wrap
+												i.fa.fa-check
+												input(name="email" type="text" placeholder="Ваш E-mail адрес")
+											.input_wrap
+												i.fa.fa-check
+												textarea(name="textarea" type="text" placeholder="Что хотели бы обсудить?")
+										input(type="hidden" name="form_name" value="Форма 'Давайте познакомимся поближе:")
+										input(type="hidden" name="form_type" value="modal")
+										button(type="submit" value="Заказать обратный звонок") Отправить обратный звонок
 
 			//	section say No
 			section#say-no.say-no
 				.container
 					.row
-						.col-lg-5.say-no__text
+						.col-lg-5.col-sm-12.say-no__text
 							span.text-mask best design maker
-							h1.defaul-title Скажи НЕТ
+							h1.default-title Скажи НЕТ
 							p.say-no__text-slogan серому и скучному
 							p.say-no__text-slogan дизайну сайтов
 							span.line
 							p.say-no__description Делаю яркие и запоминающиеся сайты, которые действительно продают!
-						.col-lg-7.say-no__video
+						.col-lg-7.col-sm-12.say-no__video
 							.say-no__video-bg
 								a.video__play-pause(type="button" id="play-pause")
 							video(src=require("../../video/video.mp4") width="564px" height="100%")
@@ -117,42 +141,42 @@ block main
 					.five-tasks__items
 						.container
 							.row
-								.col-xl-3.col-lg-4
+								.col-xl-3.col-lg-4.col-md-6
 									.five-tasks__item
 										.five-tasks__item_box-shadow-outer
 											.five-tasks__item_box-shadow-inner
 												.five-tasks__item_logo
 													.five-tasks__item_logo1
 										p.five-tasks__item_description Привлечение внимания
-								.col-xl-6.col-lg-4
+								.col-xl-6.col-lg-4.col-md-6
 									.five-tasks__item
 										.five-tasks__item_box-shadow-outer
 											.five-tasks__item_box-shadow-inner
 												.five-tasks__item_logo
 													.five-tasks__item_logo2
 										p.five-tasks__item_description Удержание аудитории
-								.col-xl-3.col-lg-4
+								.col-xl-3.col-lg-4.col-md-6
 									.five-tasks__item
 										.five-tasks__item_box-shadow-outer
 											.five-tasks__item_box-shadow-inner
 												.five-tasks__item_logo
 													.five-tasks__item_logo3
 										p.five-tasks__item_description Положительное впечатление
-								.col-xl-3.col-lg-4
+								.col-xl-3.col-lg-4.col-md-6
 									.five-tasks__item
 										.five-tasks__item_box-shadow-outer
 											.five-tasks__item_box-shadow-inner
 												.five-tasks__item_logo
 													.five-tasks__item_logo4
 										p.five-tasks__item_description Побуждение к совершению покупки
-								.col-xl-6.col-lg-4
+								.col-xl-6.col-lg-4.col-md-6
 									.five-tasks__item
 										.five-tasks__item_box-shadow-outer
 											.five-tasks__item_box-shadow-inner
 												.five-tasks__item_logo
 													.five-tasks__item_logo5
 										p.five-tasks__item_description Формирование положитеьного иммиджа
-								.col-xl-3.col-lg-4
+								.col-xl-3.col-lg-4.col-md-6
 									.five-tasks__item.text-mask
 										.text-mask let's make a unicorn
 
@@ -211,7 +235,7 @@ block main
 					.container
 						.row
 							.text-mask the quality of work
-							.col-lg-7
+							.col-lg-7.col-sm-12
 								h1.default-title Мой дизайн
 								p.my-design__slogan соответствует всем
 								p.my-design__slogan стандартам качества
@@ -248,7 +272,7 @@ block main
 				section#comfort.comfort
 					.container
 						.row
-							.col-lg-6
+							.col-lg-6.align__items
 								h1.default-title Со мной очень
 								p.comfort__slogan удобно сотрудничать
 								span.line
@@ -303,11 +327,11 @@ block main
 				section#good-design.good-design
 					.container
 						span.text-mask throw me challenge
-						h1.defaul-title Делаю потрясающий
+						h1.default-title Делаю потрясающий
 						p.good-design__about-me и уникальный дизайн для:
 						span.line
-						.row
-							.col-lg-6
+						.row.justify-content-center
+							.col-lg-6.col-md-10.col-sm-12
 								ul.good-design__table
 									li.good-design__category
 										p Адаптивных сайтов
@@ -318,7 +342,7 @@ block main
 									li.good-design__category
 										p Корпоративных сайтов
 										span.good-design__corporate_ic
-							.col-lg-6
+							.col-lg-6.col-md-10.col-sm-12
 								ul.good-design__table
 									li.good-design__category.good-design__category_reverse
 										p Landing Page
@@ -336,8 +360,8 @@ block main
 				section#premium-design.premium-design
 					.container
 						.row
-							.col-lg-6
-								h1.defaul-title Создаю премиум
+							.col-lg-6.col-sm-12
+								h1.default-title Создаю премиум
 								p.premium-design__for дизайн для лидеров!
 								span.line
 								p.premium-design__description Я специализируюсь на дизайне, который взрывет мозг, вызывает эмоции и воспитывает чувства.
@@ -348,19 +372,6 @@ block main
 							.col-lg-6
 								.premium-design__form-wrap
 									p.premium-design__form-text Для того, чтобы уточнить детали по дизайну собственного сайта, оставьте свои данные и я перезвоню.
-									//form#form-file.clearfix
-										.input_wrap
-											i.fa.fa-check
-											input(name='name', type='text', placeholder='Ваше имя')
-										.input_wrap
-											i.fa.fa-check
-											input(name='phone_mask', type='text', placeholder='Ваш контактный телефон').mask
-
-										input(type='hidden', name='form_name', value='секция премиум дизайн')
-										input(type='hidden', name='form_type', value='normal')
-										.intermediate_item
-											button(type='submit', value='Записаться') Записаться
-
 									form
 										div
 											.input_wrap
@@ -377,9 +388,30 @@ block main
 												textarea(name="textarea" type="text" placeholder="Что хотели бы обсудить?")
 										input(type="hidden" name="form_name" value="Форма 'Создаю премиум дизайн для лидеров'")
 										input(type="hidden" name="form_type" value="modal")
-										button(type="submit" value="Записаться") Записаться
+										button(type="submit" value="") Записаться
 									span.text-mask be a leader
-
+				section.header__form_mobile-wrap.premium-design
+					.container
+						.row.justify-content-center
+							.col-lg-7.col-sm-12
+									p.premium-design__form-text Для того, чтобы уточнить детали по дизайну собственного сайта, оставьте свои данные и я перезвоню.
+									form
+										div
+											.input_wrap
+												i.fa.fa-check
+												input(name="name" type="text" placeholder="Ваше Имя")
+											.input_wrap
+												i.fa.fa-check
+												input(name="phone_mask" type="text" class="mask" placeholder="Введите Ваш телефон")
+											//.input_wrap
+												i.fa.fa-check
+												input(name="email" type="text" placeholder="Ваш E-mail адрес")
+											//.input_wrap
+												i.fa.fa-check
+												textarea(name="textarea" type="text" placeholder="Что хотели бы обсудить?")
+										input(type="hidden" name="form_name" value="Форма 'Создаю премиум дизайн для лидеров'")
+										input(type="hidden" name="form_type" value="modal")
+										button(type="submit" value="Давайте пообщаемся") Давайте пообщаемся
 
 				//	section how i make premium design
 				section#work-steps.work-steps
@@ -425,27 +457,27 @@ block main
 						p.portfolio__examples примеры моих работ
 						span.line
 						.row
-							.portfolio__item_wrap.col-lg-4
+							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 								.portfolio__item
 									img(src=require("../../img/portfolio-item-1.jpg"))
 									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4
+							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 								.portfolio__item
 									img(src=require("../../img/portfolio-item-1.jpg"))
 									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4
+							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 								.portfolio__item
 									img(src=require("../../img/portfolio-item-1.jpg"))
 									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4
+							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 								.portfolio__item
 									img(src=require("../../img/portfolio-item-1.jpg"))
 									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4
+							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 								.portfolio__item
 									img(src=require("../../img/portfolio-item-1.jpg"))
 									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4
+							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 								.portfolio__item
 									img(src=require("../../img/portfolio-item-1.jpg"))
 									span.portfolio__puls
@@ -460,56 +492,56 @@ block main
 						p.price__text моих услуг по дизайну
 						span.line
 						.row
-							.col-lg-3
+							.col-lg-3.col-sm-6
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
 										button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3
+							.col-lg-3.col-sm-6
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 250$
 								.intermediate_item
 									form
 										button(type='submit', value='250$').price__service_price Заказать
-							.col-lg-3
+							.col-lg-3.col-sm-6
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
 										button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3
+							.col-lg-3.col-sm-6
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
 										button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3
+							.col-lg-3.col-sm-6
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
 										button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3
+							.col-lg-3.col-sm-6
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
 										button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3
+							.col-lg-3.col-sm-6
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
 										button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3
+							.col-lg-3.col-sm-6
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
@@ -563,7 +595,7 @@ block main
 			footer.footer
 					.container.footer__inner
 						.row
-							.col-lg-7
+							.col-lg-7.col-sm-12
 								.footer__form
 									.text-mask because i’m a fan of my case
 									h1.default-title Мой лозунг:
@@ -584,7 +616,7 @@ block main
 										input(type='hidden', name='form_type', value='normal')
 										.intermediate_item
 											button(type='submit', value='Записаться') Хочу консультацию
-							.col-lg-5
+							.col-lg-5.col-sm-12.footer__contacts_wrap
 								ul.footer__contacts
 									li
 										a.footer__contacts_maill(href="mailto:designer@gmail.com") designer@gmail.com

@@ -61,7 +61,7 @@
 					left: -30px
 	//	section header main
 	.header__content_wrap
-		.defaul-title
+		.default-title
 			margin-bottom: 35px
 	.header__about-me
 		& + .header__about-me
@@ -165,6 +165,8 @@
 		&__inner
 			padding: 75px 35px 45px 35px
 @media only screen and (max-width : 991px)
+	.text-mask
+		display: none
 	.header_nav
 		display: none
 	.header_logo
@@ -210,23 +212,239 @@
 			display: inline-block
 		&__form
 			display: none
+	.header__form_mobile-wrap
+		display: block
+	.header__form_mobile
+		display: block
+	//	section say No
+	.say-no
+		.text-mask
+			display: none
+		.default-title
+			font-size: 70px
+		&__text-slogan
+			font-size: 41px
+		.say-no__text
+			text-align: center
+		.line
+			display: inline-block
+		&__description
+			display: none
+		&__video
+			background: none
+			height: 573px
+		&__video-bg
+			width: 100%
+			background-size: cover
+		video
+			width: 100%
+		.btn-big__shadow-outer
+			margin-top: 60px
+	//	section five tasks
+	.five-tasks
+		.default-title
+			font-size: 70px
+			text-align: center
+		&__description
+			text-align: center
+			font-size: 46px
+		.line
+			display: inline-block
+	//	section my design
+	.my-design
+		.default-title
+			text-align: center
+			font-size: 70px
+		&__slogan
+			text-align: center
+			font-size: 43px
+		.line
+			margin: 54px auto 60px
+		&__photo
+			display: none
+	//	section with me very comfort
+	.comfort
+		padding: 80px 0 70px 0
+		.align__items
+			display: flex
+			flex-direction: column
+			align-items: center
+		.default-title
+			font-size: 70px
+			text-align: center
+		&__slogan
+			font-size: 47px
+			text-align: center
+		.line
+			display: block
+			margin: 52px auto 57px
+		&__why-i
+			display: none
+		&__ic
+			display: none
+	.good-design
+		.default-title
+			font-size: 70px
+		.line
+			display: block
+			margin: 47px auto 31px
+		&__table
+			margin-top: 30px
+		.justify-content-center
+			justify-content: center
+		&__category_reverse
+			flex-direction: row
+	//	section make good design
+	.premium-design
+		padding: 90px 0 80px 0
+		.default-title
+			font-size: 70px
+			text-align: center
+			display: block
+		&__for
+			text-align: center
+			font-size: 57px
+		.line
+			margin: 67px auto 59px
+		&__description
+			text-align: center
+			line-height: 1.47
+		&__form-wrap
+			display: none
+	//form only mob. dev.
+	.header__form_mobile-wrap.premium-design
+		background: none
+		background-color: $main_bg_color_dark
+		.premium-design__form-text
+			text-align: center
+		form
+			margin-bottom: 0
+			.input_wrap + .input_wrap
+				margin-top: 40px
+			button[type=submit]
+				margin-bottom: 0
+	//	section how i make premium design
+	.work-steps
+		.default-title
+			text-align: center
+			font-size: 70px
+		&__slogan
+			text-align: center
+			font-size: 44px
+		.line
+			display: block
+			margin: 52px auto 60px
+	//	section portfolio? examples my works
+	.portfolio
 
-
-//	section header main
-//	section say No
-//	section five tasks
-//	section my design
-//	section with me very comfort
-//	section make good design
-//	section create premium design
-//	section how i make premium design
-//	section portfolio? examples my works
-//	section price of my service
-//	section reviews
-//	section my slogan
-
+		.default-title
+			text-align: center
+			font-size: 70px
+		&__examples
+			text-align: center
+			font-size: 39px
+		.line
+			display: block
+			margin: 53px auto 59px
+		.btn-big__shadow-outer
+			margin: 59px auto 0
+	//	section price of my service
+	.price
+		padding-bottom: 80px
+		.default-title
+			text-align: center
+			font-size: 70px
+		&__text
+			text-align: center
+			font-size: 33px
+		.line
+			display: block
+			margin: 55px auto 30px
+		&__service
+			margin-top: 30px
+		.button[type=submit]
+			margin-top: 46px
+		.btn-big__shadow-outer
+			margin-top: 60px
+	//	section reviews
+	.reviews
+		padding-top: 75px
+		.default-title
+			font-size: 70px
+			text-align: center
+		&__text
+			text-align: center
+			font-size: 37px
+		.line
+			display: block
+			margin: 60px auto 60px
+		&__slider-wrap
+			box-shadow: none
+			background: transparent
+			padding-bottom: 0
+			.item
+				display: flex
+				flex-direction: column
+				align-items: center
+		&__slider_description_wrap
+			width: 100%
+			padding: 60px 0 0 0
+			&:before
+				display: none
+			&:after
+				display: none
+		&__slider_description
+			text-align: center
+		.owl-nav
+			margin-top: 0
+			.owl-next
+				right: -80px
+			.owl-prev
+				left: -80px
+	//	section footer
+	.footer
+		background: $main_bg_color_dark none
+		&__inner
+		padding-top: 0
+		.default-title
+			font-size: 70px
+			text-align: center
+		&__text
+			font-size: 34px
+			text-align: center
+		.line
+			display: block
+			margin: 65px auto 60px
+		&__description
+			text-align: center
+		&__form_consult
+			margin-top: 60px
+			display: flex
+			flex-direction: column
+			align-items: center
+		&__contacts_wrap
+			margin-top: 60px
+			display: flex
+			flex-direction: column
+			align-items: center
+		&__contacts
+			display: inline-block
+			a
+				position: relative
+		&__speek
+			padding-top: 60px
+@media only screen and (max-width : 920px)
+	.header
+		&__logo
+			position: absolute
+			left: 0
+		&__wrap
+			flex-direction: column
+		&__nav
+			margin-top: 20px
+		&_modal
+			margin-top: 23px
 @media only screen and (max-width : 767px)
-	
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -252,7 +470,7 @@
 		h1
 			font-size: 30px
 			margin-top: 40px
-	.header_modal
+	//.header_modal
 		margin-top: 40px
 	[off-canvas*=left]
 		width: 255px
@@ -265,38 +483,334 @@
 	.white-popup
 		textarea
 			min-height: 80px
-//	section header top
-//	section header main
-//	section say No
-//	section five tasks
-//	section my design
-//	section with me very comfort
-//	section make good design
-//	section create premium design
-//	section how i make premium design
-//	section portfolio? examples my works
-//	section price of my service
-//	section reviews
-//	section my slogan
+	//	section header top
+	//	section header main
+	.header
+		&__content_wrap
+			top: calc(50% - 95px)
+		h1
+			font-size: 58px
+		&__about-me
+			font-size: 26px
+		.line
+			margin-top: 12px
+			&:after
+				top: 20px
+	.white-popup
+		input
+			margin-bottom: 15px
+	.header__form_mobile-wrap
+		.header__form_mobile
+			padding: 30px 0 20px 0
+		.header__form_title
+			margin-bottom: 28px
+	//	section say No
+	.say-no
+		padding: 40px 0 30px 0
+		.default-title
+			font-size: 54px
+		&__text-slogan
+			font-size: 31px
+		.line
+			margin: 8px 0 30px 0
+		.btn-big__shadow-outer
+			margin-top: 30px
+	//	section five tasks
+	.five-tasks
+		padding: 28px 0 30px 0
+		.default-title
+			font-size: 54px
+		&__description
+			font-size: 31px
+		.line
+			margin: 12px 0 0 0
+		&__item
+			margin-top: 30px
+	//	section my design
+	.my-design
+		padding: 30px 0 30px 0
+		.default-title
+			font-size: 54px
+		&__slogan
+			font-size: 31px
+		.line
+			margin: 10px auto 30px
+		&__item_description
+			margin-left: 30px
+		&__item_text
+			font-size: 15px
+		&__item_note
+			font-size: 15px
+		&__item_right
+			flex-direction: row
+			text-align: left
+	//	section with me very comfort
+	.comfort
+		padding: 30px 0 27px 0
+		.default-title
+			font-size: 54px
+		&__slogan
+			font-size: 31px
+		.line
+			margin: 11px auto 28px
+		&__item + .comfort__item
+			margin-top: 28px
+
+	//	section make good design
+	.good-design
+		padding: 29px 0 29px 0
+		.default-title
+			font-size: 50px
+			text-align: center
+		&__about-me
+			font-size: 31px
+			text-align: center
+		.line
+			margin: 12px auto 30px
+		.btn-big__shadow-outer
+			display: none
+	//	section create premium design
+	.premium-design
+		padding: 28px 0 27px 0
+		.default-title
+			font-size: 50px
+		&__for
+			font-size: 31px
+		.line
+			margin: 10px auto 29px
+	.header__form_mobile-wrap.premium-design
+		form
+			margin-top: 28px
+			.input_wrap + .input_wrap
+				margin-top: 15px
+			button
+				margin-top: 15px
+	//	section how i make premium design
+	.work-steps
+		padding: 27px 0 27px 0
+		.default-title
+			font-size: 50px
+		&__slogan
+			font-size: 31px
+		.line
+			margin: 10px auto 30px
+		.line_left
+			display: none
+		.line_right
+			display: none
+		&__item_name
+			margin-top: 30px
+		&__item + .work-steps__item
+			margin-top: 27px
+	//	section portfolio? examples my works
+	.portfolio
+		padding: 24px 0 24px 0
+		.default-title
+			font-size: 50px
+		&__examples
+			font-size: 31px
+		.line
+			margin: 11px auto 0px
+		.btn-big__shadow-outer
+			margin-top: 30px
+	//	section price of my service
+	.price
+		padding: 32px 0 30px 0
+		.default-title
+			font-size: 50px
+		&__text
+			font-size: 31px
+		.line
+			margin: 11px auto 0px
+		.btn-big__shadow-outer
+			margin-top: 30px
+	//	section reviews
+	.reviews
+		padding-top: 27px
+		padding-bottom: 55px
+		.default-title
+			font-size: 50px
+		&__text
+			font-size: 31px
+		.line
+			margin: 16px auto 0
+		&__slider-wrap
+			padding-top: 30px
+		&__slider_bg
+			display: none
+		&__slider_company
+			margin: 0
+		&__slider_description_wrap
+			padding: 30px 0 0 0
+		&__slider_description
+			line-height: 24px
+	//	section footer
+	.footer
+		padding: 55px 0 27px 0
+		&__inner
+			padding-bottom: 0
+		.default-title
+			font-size: 50px
+		&__text
+			font-size: 31px
+		.line
+			margin: 11px auto 30px
+		&__form_consult
+			margin-top: 27px
+			button[type=submit]
+				margin-top: 15px
+		.input_wrap + .input_wrap
+			margin-top: 15px
+		&__speek
+			margin-top: 30px
+			padding-top: 0
+		&__social-network li
+			margin-bottom: 29px
 
 @media only screen and (max-width : 575px)
 	/**/
-//	section header top
-//	section header main
-//	section say No
-//	section five tasks
-//	section my design
-//	section with me very comfort
-//	section make good design
-//	section create premium design
-//	section how i make premium design
-//	section portfolio? examples my works
-//	section price of my service
-//	section reviews
-//	section my slogan
+	.btn-big__shadow-outer
+		width: calc(100% - 30px)
+
+	.btn-big__show-more
+		width: 100%
+		&::before
+			height: 34px
+	.btn-big__show-more
+		font-size: 10px
+		padding: 9px 5px
+	//	section header top
+	.header
+		&__logo
+			left: 15px
+		&__nav
+			margin-top: 40px
+			ul
+				li
+					display: block
+					margin-top: 26px
+					& + li
+						margin-left: 49px
+		h1
+			font-size: 34px
+		&__about-me
+			font-size: 15px
+		&__description
+			font-size: 18px
+	.header__form_mobile-wrap
+		.header__form_title
+			font-size: 16px
+	//	section header main
+	//	section say No
+	.say-no
+		.default-title
+			font-size: 47px
+		&__text-slogan + .say-no__text-slogan
+			margin-top: 5px
+	//	section five tasks
+	.five-tasks
+		.default-title
+			font-size: 35px
+		&__description
+			font-size: 23px
+		&__item_description
+			font-size: 15px
+	//	section my design
+	.my-design
+		.default-title
+			font-size: 50px
+
+		&__item_text
+			font-size: 14px
+		&__item_description
+			width: 64%
+	//	section with me very comfort
+	.comfort
+		.default-title
+			font-size: 42px
+		&__slogan
+			font-size: 28px
+		&__item_description
+			width: 70%
+			margin-left: 35px
+	//	section make good design
+	.good-design
+		.default-title
+			font-size: 28px
+			text-align: center
+			display: block
+		&__about-me
+			font-size: 23px
+		&__category
+			p
+				font-size: 15px
+	//	section create premium design
+	.premium-design
+		.default-title
+			font-size: 35px
+		&__for
+			font-size: 28px
+		&__description
+			font-size: 18px
+	//	section how i make premium design
+	.work-steps
+		.default-title
+			font-size: 48px
+		&__slogan
+			font-size: 30px
+		&__item_name
+			font-size: 16px
+		&__item_description
+			font-size: 16px
+	//	section portfolio? examples my works
+	.portfolio
+		.default-title
+			font-size: 51px
+		&__examples
+			font-size: 28px
+	//	section price of my service
+	.price
+		.default-title
+			font-size: 56px
+		&__text
+			font-size: 26px
+	//	section reviews
+	.reviews
+		.default-title
+			font-size: 70px
+		&__text
+			font-size: 37px
+		.owl-nav
+			.owl-next
+				top: calc(100% + 30px)
+				right: calc(50% - 50px)
+			.owl-prev
+				top: calc(100% + 30px)
+				left: calc(50% - 50px)
+		&__slider-wrap
+			padding: 59px 0px
+	//	section my slogan
+	.footer
+		padding-top: 10px
+		&__inner
+			padding-top: 0
+		.default-title
+			font-size: 49px
+		&__text
+			font-size: 24px
+		&__form_consult
+			.input_wrap
+				width: 300px
+			.intermediate_item
+				width: 297px
+		.footer
+			&__social-network li + li
+				margin-left: 23px
 
 @media only screen and (max-width : 520px)
 	/**/
+	nav[canvas]
+		right: 15px
 	.white-popup
 		width: 100%
 		padding: 20px 10px 20px 10px
@@ -346,6 +860,14 @@
 
 @media only screen and (max-width : 320px)
 	/**/
+	.my-design
+		&__slogan
+			font-size: 28px
+	.footer
+		.default-title
+			font-size: 43px
+		&__text
+			font-size: 21px
 //	section header top
 //	section header main
 //	section say No

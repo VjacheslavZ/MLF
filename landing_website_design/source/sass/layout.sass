@@ -110,10 +110,10 @@
 	//left: 10px
 	right: 0
 	left: 0
-	top: calc(50% - 290px)
+	top: calc(50% - 230px)
 	//display: flex
 	//flex-direction: row
-	.defaul-title
+	.default-title
 		margin-bottom: 70px
 .header__about-me
 	font-family: $latoBold
@@ -157,12 +157,21 @@
 		font-family: $latoThin
 		margin-bottom: 51px
 		letter-spacing: 1px
+.header__form_mobile-wrap
+	display: none
+	background: $main_bg_color_dark
+	.justify-content-center
+		justify-content: center
+	.header__form_mobile
+		padding: 80px 0 40px 0
+	.header__form_title
+		text-align: center
 
 //	section say No
 .say-no
 	padding:  180px 0 166px 0
 	background: $main_bg_color_dark
-	.defaul-title
+	.default-title
 		letter-spacing: 4px
 		margin-bottom: 5px
 	.text-mask
@@ -483,6 +492,8 @@
 		margin-bottom: 100px
 		.input_wrap + .input_wrap
 			margin-top: 46px
+		input
+			margin-left: 3px
 		input:focus
 			outline: 3px
 		button
@@ -846,6 +857,8 @@
 		margin-top: 65px
 		.input_wrap
 			width: 370px
+			padding-left: 3px
+			margin-left: 3px
 			input
 				background-size: contain
 				&:focus
@@ -855,7 +868,7 @@
 		button[type=submit]
 			margin-top: 30px
 		.intermediate_item
-			width: 370px
+			width: 367px
 	&__contacts
 		margin-top: 6px
 		a
@@ -1010,6 +1023,10 @@
 		padding: 62px 0 0 0
 		max-width: 100%
 		background-color: transparent
+		input
+			margin-bottom: 0
+		textarea
+			margin-top: 20px
 	button[type=submit]
 		font-family: $latoRegular
 		font-size: 14px
