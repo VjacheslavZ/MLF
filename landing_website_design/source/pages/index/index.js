@@ -93,7 +93,13 @@ $(document).ready(function () {
 	btn_show_all_portfolio.on("click", show_portfolio);
 
 	function show_portfolio() {
-		portfolio__side_nav.css({"width" : "70%"});
+
+		if(document.documentElement.clientWidth < 980){
+			portfolio__side_nav.css({"width" : "100%"});
+		} else {
+			portfolio__side_nav.css({"width" : "70%"});
+		}
+
 		body.addClass("mask-overlay__active");
 		body.css({"overflow":"hidden"})
 	}
@@ -128,6 +134,10 @@ $(document).ready(function () {
 
 		body.addClass("mask-overlay__active");
 		body.css({"overflow":"hidden"})
+	});
+
+	body.on("click", function () {
+		console.log("test");
 	});
 
 	btn_close.on("click", function(){
@@ -180,6 +190,23 @@ $(document).ready(function () {
 
 		return false;
 	}
+	
+	//clone elements in side bar
+	let portfolio_items = $("#portfolio .portfolio__item_wrap img"),
+		sidebar_portfolio_wrap = $("#portfolio__side-nav .portfolio__items_wrap");
+
+	addItemsSidebarPortfolio()
+
+	function addItemsSidebarPortfolio() {
+		for (var i = 0; i < portfolio_items.length; i++){
+
+			console.log(portfolio_items);
+
+
+			sidebar_portfolio_wrap.append("<div class='.portfolio__wrap'><div class='portfolio__item'></div></div>")
+		}
+	}
+
 });
 
 $(window).resize(function () {
