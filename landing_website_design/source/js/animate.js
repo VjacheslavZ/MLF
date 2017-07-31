@@ -23,14 +23,30 @@ class Animation {
 
 		this.tl7 = new TimelineMax();
 		this.tl7.pause();
+
+		this.tl8 = new TimelineMax();
+		this.tl8.pause();
+
+		this.tl9 = new TimelineMax();
+		this.tl9.pause();
+
+		this.tl10 = new TimelineMax();
+		this.tl10.pause();
+
+		this.tl11 = new TimelineMax();
+		this.tl11.pause();
+
+		this.tl12 = new TimelineMax();
+		this.tl12.pause();
 	}
 
 	description() {
-		this.tl1.from('.header__content_wrap', 0.7, {
-			y: -100,
-			opacity: 0,
-			ease: Power4.easeOut
-		}, '+=0.3');
+
+		const header_wrap = $(".header__content_wrap"),
+				arrow_bottom = $(".header__arrow");
+
+		this.tl1.from(header_wrap, 0.7, { y: -100, opacity: 0, ease: Power4.easeOut	}, '+=0.3')
+				.to(arrow_bottom, 0.5, { y: -20, repeat: -1, yoyo:true});
 	}
 	
 	section_say_no(){
@@ -102,8 +118,6 @@ class Animation {
 				table_item_2 = $(".comfort__table .comfort__item:nth-child(2)"),
 				table_item_3 = $(".comfort__table .comfort__item:nth-child(3)");
 
-		console.log(table_item_1);
-
 		this.tl5.from(default_title, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn})
 				.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
 				.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
@@ -141,7 +155,7 @@ class Animation {
 				.from(btn, 0.7, { autoAlpha: 0, y: +200, ease: Power3.easeIn})
 	}
 
-	srction_premium_design(){
+	section_premium_design(){
 		const 	default_title = $(".premium-design .default-title"),
 				description = $(".premium-design .premium-design__for"),
 				line = $(".premium-design .line"),
@@ -153,8 +167,131 @@ class Animation {
 				.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
 				.from(text_description, 0.7, { autoAlpha: 0, x: -200, ease: Power3.easeIn})
 				.from(form_wrap, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
+	}
+
+	section_work_stepts(){
+		const	default_title = $(".work-steps .default-title"),
+				description = $(".work-steps .work-steps__slogan"),
+				line = $(".work-steps .line"),
+				text_mask = $(".work-steps .text-mask"),
+				work_step_1 = $(".work-steps__levels .work-steps__item:nth-child(1)"),
+				work_step_2 = $(".work-steps__levels .work-steps__item:nth-child(2)"),
+				work_step_3 = $(".work-steps__levels .work-steps__item:nth-child(3)"),
+				work_step_4 = $(".work-steps__levels .work-steps__item:nth-child(4)"),
+				work_step_5 = $(".work-steps__levels .work-steps__item:nth-child(5)");
+
+		this.tl8.from(default_title, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn})
+				.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
+				.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
+				.from(text_mask, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn})
+				.from(work_step_1, 0.7, { autoAlpha: 0, x: -200, ease: Power3.easeIn})
+				.from(work_step_2, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
+				.from(work_step_3, 0.7, { autoAlpha: 0, x: -200, ease: Power3.easeIn})
+				.from(work_step_4, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
+				.from(work_step_5, 0.7, { autoAlpha: 0, x: -200, ease: Power3.easeIn})
+	}
+
+	section_portfolio(){
+		const 	default_title = $(".portfolio .default-title"),
+				description = $(".portfolio .portfolio__examples"),
+				line = $(".portfolio .line"),
+				text_mask = $(".portfolio .text-mask"),
+				portfolio_item_1 = $(".portfolio .portfolio__item_wrap:nth-child(1)"),
+				portfolio_item_2 = $(".portfolio .portfolio__item_wrap:nth-child(2)"),
+				portfolio_item_3 = $(".portfolio .portfolio__item_wrap:nth-child(3)"),
+				portfolio_item_4 = $(".portfolio .portfolio__item_wrap:nth-child(4)"),
+				portfolio_item_5 = $(".portfolio .portfolio__item_wrap:nth-child(5)"),
+				portfolio_item_6 = $(".portfolio .portfolio__item_wrap:nth-child(6)"),
+				btn = $(".portfolio .btn-big__shadow-outer");
+
+		this.tl9.from(default_title, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn})
+				.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
+				.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
+				.from(text_mask, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn})
+				.from(portfolio_item_1, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn})
+				.from(portfolio_item_2, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn}, "-=0.4")
+				.from(portfolio_item_3, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn}, "-=0.4")
+				.from(portfolio_item_4, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn}, "-=0.4")
+				.from(portfolio_item_5, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn}, "-=0.4")
+				.from(portfolio_item_6, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn}, "-=0.4")
+				.from(btn, 0.7, { autoAlpha: 0, y: 200, ease: Power3.easeIn})
+	}
+
+	section_price(){
+		const 	default_title = $(".price .default-title"),
+				description = $(".price .price__text"),
+				line = $(".price .line"),
+				text_mask = $(".price .text-mask"),
+				price_item_1 = $(".price .price__service_anim-1"),
+				price_item_2 = $(".price .price__service_anim-2"),
+				price_item_3 = $(".price .price__service_anim-3"),
+				price_item_4 = $(".price .price__service_anim-4"),
+				price_item_5 = $(".price .price__service_anim-5"),
+				price_item_6 = $(".price .price__service_anim-6"),
+				price_item_7 = $(".price .price__service_anim-7"),
+				price_item_8 = $(".price .price__service_anim-8"),
+				btn = $(".price .btn-big__shadow-outer");
+
+		this.tl10.from(default_title, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn})
+			.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
+			.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
+			.from(text_mask, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn})
+			.from(price_item_1, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn})
+			.from(price_item_2, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn}, "-=0.4")
+			.from(price_item_3, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn}, "-=0.4")
+			.from(price_item_4, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn}, "-=0.4")
+			.from(price_item_5, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn}, "-=0.4")
+			.from(price_item_6, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn}, "-=0.4")
+			.from(price_item_7, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn}, "-=0.4")
+			.from(price_item_8, 0.7, { autoAlpha: 0, x: 200, ease: Power3.easeIn}, "-=0.4")
+			.from(btn, 0.7, { autoAlpha: 0, y: 200, ease: Power3.easeIn})
+	}
+
+	section_reviews(){
+		const 	default_title = $(".reviews .default-title"),
+				description = $(".reviews .reviews__text"),
+				line = $(".reviews .line"),
+				text_mask = $(".reviews .text-mask"),
+				slider_wrap = $(".reviews .reviews__slider-wrap");
+
+
+		this.tl11.from(default_title, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn})
+			.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
+			.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
+			.from(text_mask, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn})
+			.from(slider_wrap, 0.7, { autoAlpha: 0, y: 200, ease: Power3.easeIn})
+	}
+
+	section_footer(){
+		const 	default_title = $(".footer .default-title"),
+				description = $(".footer .footer__text"),
+				line = $(".footer .line"),
+				text_mask = $(".footer .text-mask"),
+				form_description = $(".footer .footer__description"),
+				form = $(".footer .footer__form_consult"),
+				contacts_mail = $(".footer__contacts li:nth-child(1)"),
+				contacts_phone = $(".footer__contacts li:nth-child(2)"),
+				contacts_skype = $(".footer__contacts li:nth-child(3)"),
+				footer_speek = $(".footer__speek"),
+				social_network_ic = $(".footer__social-network"),
+				footer_copyright = $(".footer__copyright");
+
+
+		this.tl12.from(default_title, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn})
+			.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=0.2")
+			.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.2")
+			.from(text_mask, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn})
+			.from(form_description, 0.4, { autoAlpha: 0, x: -200, ease: Power3.easeIn}, "+=0.2")
+			.from(form, 0.4, { autoAlpha: 0, x: -200, ease: Power3.easeIn}, "-=0.2")
+			.from(contacts_mail, 0.4, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
+			.from(contacts_phone, 0.4, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
+			.from(contacts_skype, 0.4, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
+			.from(footer_speek, 0.4, { autoAlpha: 0, y: +50, ease: Power3.easeIn})
+			.from(social_network_ic, 0.4, { autoAlpha: 0, y: +50, ease: Power3.easeIn})
+			.from(footer_copyright, 0.4, { autoAlpha: 0, y: +50, ease: Power3.easeIn})
 
 	}
+
 
 	activeSection(section, startTop = 0, startBotton = 0) {
 		section = '.' + section;
@@ -195,6 +332,26 @@ class Animation {
 		if (this.activeSection('premium-design',500, -100)) {
 			this.tl7.resume();
 		}
+
+		if (this.activeSection('work-steps',500, -100)) {
+			this.tl8.resume();
+		}
+
+		if (this.activeSection('portfolio',500, -100)) {
+			this.tl9.resume();
+		}
+
+		if (this.activeSection('price',500, -100)) {
+			this.tl10.resume();
+		}
+
+		if (this.activeSection('reviews',500, -100)) {
+			this.tl11.resume();
+		}
+
+		if (this.activeSection('footer',500, -100)) {
+			this.tl12.resume();
+		}
 	}
 }
 
@@ -217,7 +374,12 @@ $(window).ready(function() {
 		anim.section_my_design();
 		anim.section_comfort();
 		anim.section_good_design();
-		anim.srction_premium_design();
+		anim.section_premium_design();
+		anim.section_work_stepts();
+		anim.section_portfolio();
+		anim.section_price();
+		anim.section_reviews();
+		anim.section_footer();
 	}
 
 	//callBack GSAP

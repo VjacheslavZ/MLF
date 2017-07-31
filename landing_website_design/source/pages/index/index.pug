@@ -36,21 +36,9 @@ block main
 										each i in links
 											li
 												a(href=i.href class=i.class)= i.title
-										//script.
-											function openNav() {
-												document.getElementById("header__overlay").style.width = "50%";
-											}
-
-											function closeNav() {
-												document.getElementById("header__overlay").style.width = "0%";
-											}
-										//a(onclick="openNav()") sdadas
+										
 								.header_modal(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup" class="open-popup-link")
 									a Обратный звонок
-							//моб меню
-							//.header_modal.last
-								a(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup3" class="open-popup-link active" title='Вызов примера модального окна, в виде навигации.') Мобильное меню
-					//header main
 				.header__content_wrap
 					.container
 						.row
@@ -60,6 +48,7 @@ block main
 								p.header__about-me UI/UX дизайн
 								span.header__description Оказываю полный спектр услуг по дизайну: сайтов, landing page и уникальных проектов
 								span.line
+									img(src=require("../../img/arrow_bottom.png")).header__arrow
 							.col-lg-6
 								.header__form
 									p.header__form_title Давайте познакомимся поближе:
@@ -443,56 +432,56 @@ block main
 						p.price__text моих услуг по дизайну
 						span.line
 						.row
-							.col-lg-3.col-sm-6
+							.col-lg-3.col-sm-6.price__service_anim-1
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
 										button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6
+							.col-lg-3.col-sm-6.price__service_anim-2
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 250$
 								.intermediate_item
 									form
 										button(type='submit', value='250$').price__service_price Заказать
-							.col-lg-3.col-sm-6
+							.col-lg-3.col-sm-6.price__service_anim-3
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
 										button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6
+							.col-lg-3.col-sm-6.price__service_anim-4
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
 										button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6
+							.col-lg-3.col-sm-6.price__service_anim-5
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
 										button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6
+							.col-lg-3.col-sm-6.price__service_anim-6
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
 										button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6
+							.col-lg-3.col-sm-6.price__service_anim-7
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
 								.intermediate_item
 									form
 										button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6
+							.col-lg-3.col-sm-6.price__service_anim-8
 								.price__service
 									p.price__description Дизайн для Landing page
 									span.price__service-price от 150$
