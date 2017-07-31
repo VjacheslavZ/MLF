@@ -46,7 +46,7 @@ class Animation {
 				arrow_bottom = $(".header__arrow");
 
 		this.tl1.from(header_wrap, 0.7, { y: -100, opacity: 0, ease: Power4.easeOut	}, '+=0.3')
-				.to(arrow_bottom, 0.5, { y: -20, repeat: -1, yoyo:true});
+				.to(arrow_bottom, 0.5, { y: -20, repeat: -1, yoyo: true});
 	}
 	
 	section_say_no(){
@@ -116,15 +116,50 @@ class Animation {
 				why_i = $(".comfort__why-i"),
 				table_item_1 = $(".comfort__table .comfort__item:nth-child(1)"),
 				table_item_2 = $(".comfort__table .comfort__item:nth-child(2)"),
-				table_item_3 = $(".comfort__table .comfort__item:nth-child(3)");
+				table_item_3 = $(".comfort__table .comfort__item:nth-child(3)"),
+				svg = $(".svg"),
+				svg_circle_middle = $(".circle__middle"),
+				svg_circle_outer = $(".circle__outer"),
+				svg_circle_inner = $(".circle__inner"),
+				svg_circle_bg = $(".circle__bg"),
+				svg_monitor = $(".monitor"),
+				svg_key_board = $(".keyword__ic"),
+				svg_cable = $(".keyword__cable"),
+				svg_massage_ic = $(".massage__ic"),
+				svg_phone_ic = $(".phone__ic");
 
-		this.tl5.from(default_title, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn})
+
+
+
+
+		this.tl5
+				.from(default_title, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn})
 				.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
 				.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
 				.from(why_i, 0.7, { autoAlpha: 0, scale: 2, y: -200, ease: Power3.easeIn})
 				.from(table_item_1, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
 				.from(table_item_2, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
 				.from(table_item_3, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
+				.from(svg_circle_bg, 0.7, { autoAlpha: 0, ease: Power3.easeIn})
+				.from(svg_monitor, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
+				.from(svg_key_board, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn})
+				.from(svg_cable, 0.4, { autoAlpha: 0, ease: Power3.easeIn})
+				.from(svg_massage_ic, 0.4, { autoAlpha: 0, x: 100, ease: Power3.easeIn})
+				.from(svg_phone_ic, 0.4, { autoAlpha: 0, x: 50, ease: Power3.easeIn})
+
+				.from(svg_circle_middle, 100, {
+					rotation: -360,
+					transformOrigin: "50% 50%",
+				})
+				.from(svg_circle_outer, 75, {
+					rotation: 360,
+					transformOrigin: "50% 50%",
+				}, "=-100")
+				.from(svg_circle_inner, 50, {
+					rotation: -360,
+					transformOrigin: "50% 50%",
+				}, "=-100")
+
 	}
 
 	section_good_design(){
@@ -269,12 +304,12 @@ class Animation {
 				text_mask = $(".footer .text-mask"),
 				form_description = $(".footer .footer__description"),
 				form = $(".footer .footer__form_consult"),
-				contacts_mail = $(".footer__contacts li:nth-child(1)"),
-				contacts_phone = $(".footer__contacts li:nth-child(2)"),
-				contacts_skype = $(".footer__contacts li:nth-child(3)"),
-				footer_speek = $(".footer__speek"),
-				social_network_ic = $(".footer__social-network"),
-				footer_copyright = $(".footer__copyright");
+				contacts_mail = $(".footer .footer__contacts li:nth-child(1)"),
+				contacts_phone = $(".footer .footer__contacts li:nth-child(2)"),
+				contacts_skype = $(".footer .footer__contacts li:nth-child(3)"),
+				footer_speek = $(".footer .footer__speek"),
+				social_network_ic = $(".footer .footer__social-network"),
+				footer_copyright = $(".footer .footer__copyright");
 
 
 		this.tl12.from(default_title, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn})
