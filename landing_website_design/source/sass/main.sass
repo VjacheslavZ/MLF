@@ -100,7 +100,7 @@ button
 	display: none
 // Модальное окно
 .white-popup
-	width: 430px
+	width: 530px
 	margin: auto
 	max-width: 50em
 	padding: 35px
@@ -110,7 +110,7 @@ button
 	background-color: $main_bg_color_dark
 	transition: 0.5s
 	font-family: $latoBlack
-	//font-size: 35px
+	padding: 100px 15px
 	color: $main_txt_color
 	//p.modal-title
 		@include font($main_txt_color_old, 24, $latoRegular, 1.4)
@@ -138,13 +138,12 @@ button
 			display: none
 	.input_wrap
 		position: relative
-		display: block
 		& + .input_wrap
 			margin-top: 5px
 		i
 			display: none
 			position: absolute
-			top: 15px
+			top: 12px
 			right: 16px
 			@include fz(14)
 			color: #35be70
@@ -182,11 +181,11 @@ button
 		padding-right: 37px
 		color: $main_txt_color
 		background-color: transparent
-		transition: .5s
+		//transition: .5s
 		background-size: contain
 		&:focus
-			outline: 0
-			background-size: contain
+			outline: 3px
+			//background-size: contain
 		&:hover
 			background-size: contain
 	.success_mail
@@ -299,7 +298,7 @@ button
 	i
 		display: none
 		position: absolute
-		top: 15px
+		top: 12px
 		right: 16px
 		font-size: 14px
 		color: #35be70
@@ -539,7 +538,7 @@ nav[canvas]
 		margin-top: 40px
 form
 	.input_wrap + .input_wrap
-		margin-top: 19px
+		margin-top: 26px
 	input
 		width: calc(100% - 6px)
 		display: inline-block
@@ -549,6 +548,7 @@ form
 		outline: 3px dashed $border-dashed
 		box-shadow: 0 0 0 3px transparent
 		&:hover,&:focus
+			outline: 3px
 			outline-color: $main_color_gradient_end
 			box-shadow: 0 0 0 3px $main_color_gradient_end
 		color: $main_txt_color
@@ -565,20 +565,19 @@ form
 		&:-ms-input-placeholder
 			color: $main_txt_color
 	textarea
-		width: 100%
+		width: calc(100% - 6px)
 		resize: none
 		background-color: transparent
 		outline: 3px dashed $border-dashed
 		box-shadow: 0 0 0 0px transparent
 		border: transparent
-		transition: .5s
 		min-height: 102px
 		padding: 13px 0 0 18px
 		font-size: 14px
 		font-family: $latoRegular
 		color: $main_txt_color
 		&:hover,&:focus
-			opacity: 1
+			outline: 3px
 			outline-color: $main_color_gradient_end
 			box-shadow: 0 0 0 3px $main_color_gradient_end
 		&::-webkit-input-placeholder

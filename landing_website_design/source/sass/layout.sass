@@ -110,7 +110,7 @@
 	//left: 10px
 	right: 0
 	left: 0
-	top: calc(50% - 230px)
+	top: calc(50% - 250px)
 	//display: flex
 	//flex-direction: row
 	.default-title
@@ -152,6 +152,9 @@
 			right: 0
 			top: 0
 			bottom: 0
+			font-family: $latoBold
+			font-size: 35px
+
 	.header__form_title
 		font-size: 22px
 		font-family: $latoThin
@@ -371,7 +374,7 @@
 			line-height: 1.1
 			& + .text-mask
 				margin-top: 25px
-	&__tale
+	&__table
 		display: inline-block
 		vertical-align: middle
 	&__item
@@ -974,13 +977,15 @@
 			background-color: darken($line-color, 10%)
 	&::-webkit-scrollbar-track-piece
 		background-color: transparent
+
 .overlay-navigation_wrap
 	padding: 57px 0 0 87px
 	position: relative
-	font-size: 40px
+	//font-size: 40px
 	display: inline-block
 	.fa-close
 		color: $main_color_gradient_start
+		font-size: 40px
 		position: absolute
 		right: 0
 		top: 45px
@@ -988,6 +993,8 @@
 		transition: color 0.5s
 		&:hover
 			color: $main_color_gradient_end
+	//.input_wrap + input_wrap
+		margin-top: 15px
 	h3
 		font-family: $latoRegular
 		font-size: 24px
@@ -1026,6 +1033,9 @@
 		p
 			font-family: $latoBlack
 			font-size: 33px
+		form
+			.input_wrap + .input_wrap
+				margin-top: 26px
 	.white-popup
 		width: 100%
 		padding: 62px 0 0 0
@@ -1033,7 +1043,7 @@
 		background-color: transparent
 		input
 			margin-bottom: 0
-		textarea
+		//textarea
 			margin-top: 20px
 	button[type=submit]
 		font-family: $latoRegular

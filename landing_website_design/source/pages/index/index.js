@@ -200,12 +200,10 @@ $(document).ready(function () {
 	function addItemsSidebarPortfolio() {
 		for (var i = 0; i < portfolio_items.length; i++){
 
-			console.log(portfolio_items);
-
-
 			sidebar_portfolio_wrap.append("<div class='.portfolio__wrap'><div class='portfolio__item'></div></div>")
 		}
 	}
+
 
 });
 
