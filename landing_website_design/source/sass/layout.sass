@@ -730,6 +730,8 @@
 		justify-content: space-between
 		flex-direction: row
 		align-items: center
+	.item + .item
+		visibility: hidden
 	&__slider_company
 		display: inline-block
 		position: relative
@@ -967,10 +969,17 @@
 		font-size: 14px
 		letter-spacing: 0.4px
 
-// overlayMenu
+//для закрытия сайд бара
 .mask-overlay
 	position: relative
 	transition: opacity .5s
+	height: 100%
+	position: absolute
+	bottom: 0
+	top: 0
+	left: 0
+	right: 0
+	z-index: 0
 	&:before
 		transition: opacity .5s
 		opacity: 0
@@ -987,10 +996,14 @@
 	@include section-mask()
 	.overlay__close
 		z-index: 2
+	//для закрытия сайд бара
+	.mask-overlay
+		z-index: 2
 // Overlay Navigation style
 .overlay-navigation
 	height: 100%
 	width: 0
+	transform: translateX(100%)
 	position: fixed
 	z-index: 3
 	top: 0

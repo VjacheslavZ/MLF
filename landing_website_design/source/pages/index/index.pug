@@ -3,7 +3,8 @@ block title
 	| Index page
 block main
 	// второй класс у body это анимация на модалке (animated-transition-effects гуглануть или спросить меня, убрав класс вернётся обычная анимация модалки, без изысков)
-	body.index.ink-transition.mask-overlay
+	body.index.ink-transition
+		.mask-overlay
 		div
 			.loader
 				.loader_inner
@@ -2109,10 +2110,10 @@ block main
 								input(name="own_site" type="text" placeholder="Ваш сайт")
 							.input_wrap
 								i.fa.fa-check
-								input(name="letter_subject" type="text" placeholder="Тема")
+								input(name="letter_subject" type="text" placeholder="Тема" )
 							.input_wrap
 								i.fa.fa-check
-								input(name="what_to_do" type="text" placeholder="" disabled=).what_to_do
+								input(name="what_to_do" type="text" placeholder="Что хотели бы обсудить?").what_to_do
 							.input_wrap
 								i.fa.fa-check
 								textarea(name="textarea" type="text" placeholder="Что хотели бы обсудить?")

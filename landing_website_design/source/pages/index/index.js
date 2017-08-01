@@ -11,6 +11,7 @@ require("../../libs/libs").owl_carousel_min_js();
 $(document).ready(function () {
 	// пример анимации через библиотечку animat (но лучше анимировать через GSAP)
 	$('.our_advantages h2').animated("fadeInUp");
+
 	// инициализация tooltipster
 	if (window.matchMedia("(min-width: 992px)").matches) {
 		$(".header_modal a").tooltipster({
@@ -83,21 +84,23 @@ $(document).ready(function () {
 		clientWidth = document.documentElement.clientWidth;
 
 	btn_contacts.on("click", function() {
-		header__side_nav.css({"width" : "70%"});
+		header__side_nav.css({"width" : "70%" , "transform":"translateX(0%)"});
 		body.addClass("mask-overlay__active");
 		body.css({"overflow":"hidden"})
 	});
 
 
-	btn_portfolio.on("click", show_portfolio);
+
+
+	btn_portfolio.on("click", mask_overlay_active, show_portfolio);
 	btn_show_all_portfolio.on("click", show_portfolio);
 
 	function show_portfolio() {
 
 		if(document.documentElement.clientWidth < 980){
-			portfolio__side_nav.css({"width" : "100%"});
+			portfolio__side_nav.css({"width" : "100%", "transform":"translateX(0%)"});
 		} else {
-			portfolio__side_nav.css({"width" : "70%"});
+			portfolio__side_nav.css({"width" : "70%", "transform":"translateX(0%)"});
 		}
 
 		body.addClass("mask-overlay__active");
@@ -107,9 +110,9 @@ $(document).ready(function () {
 	btn_order_online.on("click", function() {
 
 		if(clientWidth <= 980){
-			order_online.css({"width" : "100%"});
+			order_online.css({"width" : "100%" , "transform":"translateX(0%)"});
 		} else {
-			order_online.css({"width" : "70%"});
+			order_online.css({"width" : "70%" , "transform":"translateX(0%)"});
 		}
 
 		body.addClass("mask-overlay__active");
@@ -120,40 +123,44 @@ $(document).ready(function () {
 	btn_order_online_price.on("click", function(e) {
 		e.preventDefault();
 
-		let service_name = $(this).closest( ".price__service" )
-									 .children("p")
-									 .text();
+		let service_name = $(this).closest( ".price__service" ).children("p").text();
 		let price = this.value,
 		 	price_hidden = $(".order-online .hidden-price"),
 			input_what_to_do = $(".order-online .what_to_do"),
 			new_price_hidden_val = price_hidden.val() + price;
 
-		input_what_to_do.attr("placeholder", service_name);
+		input_what_to_do.attr("placeholder", service_name).attr("disabled", true);
 
 		price_hidden.val(new_price_hidden_val);
 
 		if(document.documentElement.clientWidth < 980){
-			order_online.css({"width" : "100%"});
+			order_online.css({"width" : "100%" , "transform":"translateX(0%)"});
 		} else {
-			order_online.css({"width" : "70%"});
+			order_online.css({"width" : "70%" , "transform":"translateX(0%)"});
 		}
 
 		body.addClass("mask-overlay__active");
 		body.css({"overflow":"hidden"})
 	});
-	//---------------------------------------
-	btn_close.on("click", function(){
+
+	btn_close.on("click", closeSideBar);
+	mask_overlay.on("click", closeSideBar);
+
+	function closeSideBar() {
 		body.removeClass("mask-overlay__active");
-		header__side_nav.css({"width" : "0%"});
-		portfolio__side_nav.css({"width" : "0%"});
-		order_online.css({"width" : "0%"});
+		header__side_nav.css({"width" : "0%", "transform":"translateX(100%)"});
+		portfolio__side_nav.css({"width" : "0%" , "transform":"translateX(100%)"});
+		order_online.css({"width" : "0%", "transform":"translateX(100%)"});
 
 		body.css({"overflow":"inherit"});
 
 		//reset old val
 		var price_hidden = $(".order-online .hidden-price");
+		var placeholder_what_to_do = $(".order-online .what_to_do");
+
 		price_hidden.val("Форма 'Заявка онлайн:");
-	});
+		placeholder_what_to_do.attr("placeholder", "Что хотели бы обсудить?").attr("disabled", false).val("");
+	}
 
 	//scroll on links
 	var header_links = $(".header__nav a[href*='#']"),
