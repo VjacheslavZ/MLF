@@ -133,7 +133,7 @@
 	.header__arrow
 		position: absolute
 		top: 46px
-		left: calc(50% - 15px)
+		left: calc(50% - 20px)
 	//&:after
 		content: ""
 
@@ -502,8 +502,15 @@
 			margin-top: 46px
 		input
 			margin-left: 3px
-		input:focus
-			outline: 3px
+			outline: 3px dashed $border-dashed
+			transition: all .3s
+			&:hover
+				outline-color: $main_color_gradient_end
+				box-shadow: 0 0 0 3px $main_color_gradient_end
+			&:focus
+				outline: -webkit-focus-ring-color auto 3px
+				outline-color: $main_color_gradient_end
+				box-shadow: 0 0 0 3px $main_color_gradient_end
 		button
 			margin-top: 40px
 //	section how i make premium design
@@ -607,6 +614,7 @@
 			.portfolio__puls
 				opacity: 0.5
 				transition: opacity .5s
+
 		&:before
 			content: ""
 			position: absolute
@@ -629,6 +637,7 @@
 			display: block
 			background-color: $main_txt_color
 			margin: 0 auto
+			transition: background-color .5s
 		&:after
 			content: ""
 			width: 64px
@@ -638,6 +647,12 @@
 			position: absolute
 			left: 0
 			top: 31px
+			transition: background-color .5s
+		&:hover
+			&:before
+				background-color: $main_color_gradient_end
+			&:after
+				background-color: $main_color_gradient_end
 		position: absolute
 		left: calc(50% - 32px)
 		top: calc(50% - 32px)
@@ -666,7 +681,7 @@
 		height: 152px
 		background-size: contain
 		padding-top: 28px
-		margin-top: 99px
+		//margin-top: 175px
 	&__description
 		font-family: $latoThin
 		font-size: 21px
@@ -679,9 +694,16 @@
 		display: block
 		text-align: center
 		margin-top: 26px
-	button[type=submit]
-		margin-top: 40px
-	.btn-big__show-more
+	&__wrap
+		margin-top: 165px
+
+	form
+		padding-top: 40px
+	.btn-big__shadow-outer
+		margin-top: 163px
+	//.intermediate_item
+		margin-top: 46px
+	//.btn-big__show-more
 		padding: 9px 37px
 //	section reviews
 .reviews
@@ -869,8 +891,15 @@
 			margin-left: 3px
 			input
 				background-size: contain
+				outline: 3px dashed $border-dashed
+				transition: all .3s
+				&:hover
+					outline-color: $main_color_gradient_end
+					box-shadow: 0 0 0 3px $main_color_gradient_end
 				&:focus
-					outline: 3px
+					outline: -webkit-focus-ring-color auto 3px
+					outline-color: $main_color_gradient_end
+					box-shadow: 0 0 0 3px $main_color_gradient_end
 		.input_wrap + .input_wrap
 			margin-top: 35px
 		button[type=submit]

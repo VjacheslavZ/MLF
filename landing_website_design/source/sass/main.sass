@@ -168,27 +168,32 @@ button
 		font-family: $latoBlack
 		font-size: 14px
 		background-size: contain
-		//transition: .5s
-		&:focus
-			//background-size: contain
-			outline: 3px
+		outline: 3px dashed $border-dashed
+		transition: all .3s
 		&:hover
-			background-size: contain
+			outline-color: $main_color_gradient_end
+			box-shadow: 0 0 0 3px $main_color_gradient_end
+		&:focus
+			outline: -webkit-focus-ring-color auto 3px
+			outline-color: $main_color_gradient_end
+			box-shadow: 0 0 0 3px $main_color_gradient_end
 	textarea
 		width: calc(100% - 6px)
 		min-height: 100px
-		//margin-bottom: 20px
 		padding-left: 17px
 		padding-right: 37px
 		color: $main_txt_color
 		background-color: transparent
-		//transition: .5s
 		background-size: contain
-		&:focus
-			outline: 3px
-			//background-size: contain
+		outline: 3px dashed $border-dashed
+		transition: all .3s
 		&:hover
-			background-size: contain
+			outline-color: $main_color_gradient_end
+			box-shadow: 0 0 0 3px $main_color_gradient_end
+		&:focus
+			outline: -webkit-focus-ring-color auto 3px
+			outline-color: $main_color_gradient_end
+			box-shadow: 0 0 0 3px $main_color_gradient_end
 	.success_mail
 		color: $main_txt_color
 		display: none
@@ -545,11 +550,14 @@ form
 		display: inline-block
 		background-color: transparent
 		border: none
-		//transition: all .5s
-		outline: 3px dashed $border-dashed
 		box-shadow: 0 0 0 3px transparent
-		&:hover,&:focus
-			outline: 3px
+		outline: 3px dashed $border-dashed
+		transition: all .3s
+		&:hover
+			outline-color: $main_color_gradient_end
+			box-shadow: 0 0 0 3px $main_color_gradient_end
+		&:focus
+			outline: -webkit-focus-ring-color auto 3px
 			outline-color: $main_color_gradient_end
 			box-shadow: 0 0 0 3px $main_color_gradient_end
 		color: $main_txt_color
@@ -577,8 +585,15 @@ form
 		font-size: 14px
 		font-family: $latoRegular
 		color: $main_txt_color
-		&:hover,&:focus
-			outline: 3px
+		transition: all .3s
+		&:hover
+			//outline: 3px
+			//outline-color: $main_color_gradient_end
+			//box-shadow: 0 0 0 3px $main_color_gradient_end
+			outline-color: $main_color_gradient_end
+			box-shadow: 0 0 0 3px $main_color_gradient_end
+		&:focus
+			outline: -webkit-focus-ring-color auto 3px
 			outline-color: $main_color_gradient_end
 			box-shadow: 0 0 0 3px $main_color_gradient_end
 		&::-webkit-input-placeholder

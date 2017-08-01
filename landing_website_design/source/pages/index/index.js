@@ -116,13 +116,19 @@ $(document).ready(function () {
 		body.css({"overflow":"hidden"})
 	});
 
-	//подставляем цену из кнопки в input type-hidden
+	// new values in form
 	btn_order_online_price.on("click", function(e) {
 		e.preventDefault();
 
-		var price = this.value,
+		let service_name = $(this).closest( ".price__service" )
+									 .children("p")
+									 .text();
+		let price = this.value,
 		 	price_hidden = $(".order-online .hidden-price"),
+			input_what_to_do = $(".order-online .what_to_do"),
 			new_price_hidden_val = price_hidden.val() + price;
+
+		input_what_to_do.attr("placeholder", service_name);
 
 		price_hidden.val(new_price_hidden_val);
 
@@ -135,11 +141,7 @@ $(document).ready(function () {
 		body.addClass("mask-overlay__active");
 		body.css({"overflow":"hidden"})
 	});
-
-	body.on("click", function () {
-		console.log("test");
-	});
-
+	//---------------------------------------
 	btn_close.on("click", function(){
 		body.removeClass("mask-overlay__active");
 		header__side_nav.css({"width" : "0%"});
@@ -192,19 +194,31 @@ $(document).ready(function () {
 	}
 	
 	//clone elements in side bar
-	let portfolio_items = $("#portfolio .portfolio__item_wrap img"),
+	let portfolio_items = $("#portfolio .portfolio__item_wrap"),
 		sidebar_portfolio_wrap = $("#portfolio__side-nav .portfolio__items_wrap");
 
-	addItemsSidebarPortfolio()
+	
+	addItemsSidebarPortfolio();
 
 	function addItemsSidebarPortfolio() {
 		for (var i = 0; i < portfolio_items.length; i++){
 
-			sidebar_portfolio_wrap.append("<div class='.portfolio__wrap'><div class='portfolio__item'></div></div>")
+			//sidebar_portfolio_wrap.append(portfolio_items[i])
 		}
 	}
+	
+	//show portfolio photo in sidebar 
+	
+	const portfolio_prewie_ic = $(".portfolio .portfolio__item_wrap");
 
+	portfolio_prewie_ic.on("click", show_photo_portfolio)
+	
+	function show_photo_portfolio(e) {
+		console.log(this);
 
+	}
+	
+	
 });
 
 $(window).resize(function () {

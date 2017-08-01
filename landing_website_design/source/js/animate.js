@@ -3,6 +3,9 @@ require("../libs/libs").greenSock();
 
 class Animation {
 	constructor() {
+		this.tl0 = new TimelineMax();
+		this.tl0.pause();
+
 		this.tl1 = new TimelineMax();
 		this.tl1.pause();
 
@@ -40,13 +43,19 @@ class Animation {
 		this.tl12.pause();
 	}
 
+	arrow(){
+		const arrow_bottom = $(".header__arrow");
+		this.tl0.to(arrow_bottom, 0.5, { y: -20, repeat: -1, yoyo: true});
+	}
+
 	description() {
 
-		const header_wrap = $(".header__content_wrap"),
-				arrow_bottom = $(".header__arrow");
+		const 	header_wrap = $(".header__content_wrap"),
+				arrow_bottom_color = $(".header__arrow path");
 
 		this.tl1.from(header_wrap, 0.7, { y: -100, opacity: 0, ease: Power4.easeOut	}, '+=0.3')
-				.to(arrow_bottom, 0.5, { y: -20, repeat: -1, yoyo: true});
+				.from(arrow_bottom_color, 0.5, { repeat: -1, yoyo: true, "fill":"rgba(243, 58, 115, 1)"});
+
 	}
 	
 	section_say_no(){
@@ -122,31 +131,16 @@ class Animation {
 				svg_circle_outer = $(".circle__outer"),
 				svg_circle_inner = $(".circle__inner"),
 				svg_circle_bg = $(".circle__bg"),
+
 				svg_monitor = $(".monitor"),
 				svg_key_board = $(".keyword__ic"),
 				svg_cable = $(".keyword__cable"),
 				svg_massage_ic = $(".massage__ic"),
-				svg_phone_ic = $(".phone__ic");
-
-
-
-
+				svg_phone_ic = $(".phone__ic"),
+				svg_time_ic = $(".time_ic"),
+				svg_result_ic = $("#result");
 
 		this.tl5
-				.from(default_title, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn})
-				.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
-				.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.7")
-				.from(why_i, 0.7, { autoAlpha: 0, scale: 2, y: -200, ease: Power3.easeIn})
-				.from(table_item_1, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
-				.from(table_item_2, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
-				.from(table_item_3, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
-				.from(svg_circle_bg, 0.7, { autoAlpha: 0, ease: Power3.easeIn})
-				.from(svg_monitor, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
-				.from(svg_key_board, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn})
-				.from(svg_cable, 0.4, { autoAlpha: 0, ease: Power3.easeIn})
-				.from(svg_massage_ic, 0.4, { autoAlpha: 0, x: 100, ease: Power3.easeIn})
-				.from(svg_phone_ic, 0.4, { autoAlpha: 0, x: 50, ease: Power3.easeIn})
-
 				.from(svg_circle_middle, 100, {
 					rotation: -360,
 					transformOrigin: "50% 50%",
@@ -159,6 +153,29 @@ class Animation {
 					rotation: -360,
 					transformOrigin: "50% 50%",
 				}, "=-100")
+
+				.from(default_title, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=100")
+				.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=99.5")
+				.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=99")
+				.from(why_i, 0.7, { autoAlpha: 0, scale: 2, y: -200, ease: Power3.easeIn}, "-=98.5")
+
+				.from(svg_circle_bg, 0.7, { autoAlpha: 0, ease: Power3.easeIn}, "-=98")
+				.from(svg_monitor, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn}, "-=97.5")
+				.from(svg_key_board, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=97")
+				.from(svg_cable, 0.4, { autoAlpha: 0, ease: Power3.easeIn}, "-=96.5")
+
+				.from(table_item_1, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn}, "-=96")
+				.from(svg_massage_ic, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=95.7")
+				.from(svg_phone_ic, 0.7, { autoAlpha: 0, x: 50, ease: Power3.easeIn}, "-=95.7")
+				.to(svg_massage_ic, 0.7, { opacity: 0, y: 100, ease: Power3.easeOut}, "-=94.7")
+				.to(svg_phone_ic, 0.7, { opacity: 0, y: 100, ease: Power3.easeOut}, "-=94.7")
+
+				.from(table_item_2, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn}, "-=94.5")
+				.from(svg_time_ic, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=94.5")
+				.to(svg_time_ic, 0.7, { opacity: 0, x: 100, ease: Power3.easeOut}, "-=93.5")
+
+				.from(table_item_3, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn}, "-=93")
+				.from(svg_result_ic, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=93")
 
 	}
 
@@ -313,17 +330,17 @@ class Animation {
 
 
 		this.tl12.from(default_title, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn})
-			.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=0.2")
-			.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.2")
-			.from(text_mask, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn})
-			.from(form_description, 0.4, { autoAlpha: 0, x: -200, ease: Power3.easeIn}, "+=0.2")
-			.from(form, 0.4, { autoAlpha: 0, x: -200, ease: Power3.easeIn}, "-=0.2")
+			.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=0.4")
+			.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.4")
+			.from(text_mask, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.4")
+			.from(form_description, 0.4, { autoAlpha: 0, x: -200, ease: Power3.easeIn}, "-=0.4")
+			.from(form, 0.4, { autoAlpha: 0, x: -200, ease: Power3.easeIn}, "-=0.4")
 			.from(contacts_mail, 0.4, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
-			.from(contacts_phone, 0.4, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
-			.from(contacts_skype, 0.4, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
-			.from(footer_speek, 0.4, { autoAlpha: 0, y: +50, ease: Power3.easeIn})
-			.from(social_network_ic, 0.4, { autoAlpha: 0, y: +50, ease: Power3.easeIn})
-			.from(footer_copyright, 0.4, { autoAlpha: 0, y: +50, ease: Power3.easeIn})
+			.from(contacts_phone, 0.4, { autoAlpha: 0, x: +200, ease: Power3.easeIn}, "-=0.4")
+			.from(contacts_skype, 0.4, { autoAlpha: 0, x: +200, ease: Power3.easeIn}, "-=0.4")
+			.from(footer_speek, 0.4, { autoAlpha: 0, y: +50, ease: Power3.easeIn}, "-=0.4")
+			.from(social_network_ic, 0.4, { autoAlpha: 0, y: +50, ease: Power3.easeIn}, "-=0.4")
+			.from(footer_copyright, 0.4, { autoAlpha: 0, y: +50, ease: Power3.easeIn}, "-=0.4")
 
 	}
 
@@ -340,6 +357,10 @@ class Animation {
 	}
 
 	play() {
+		if (this.activeSection('header',0, 500)) {
+			this.tl0.resume();
+		}
+
 		if (this.activeSection('header',0, 500)) {
 			this.tl1.resume();
 		}
@@ -387,6 +408,10 @@ class Animation {
 		if (this.activeSection('footer',500, -100)) {
 			this.tl12.resume();
 		}
+
+		// if (this.activeSection('portfolio__side-nav',500, -100)) {
+		// 	this.tl9.resume();
+		// }
 	}
 }
 
@@ -402,6 +427,7 @@ $(window).scroll(function() {
 $(window).ready(function() {
 	
 	if (document.documentElement.clientWidth >= 1200) {
+		anim.arrow();
 		anim.description();
 		anim.play();
 		anim.section_say_no();
