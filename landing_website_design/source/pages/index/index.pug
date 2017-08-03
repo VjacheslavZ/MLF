@@ -115,7 +115,7 @@ block main
 							p.say-no__description Я сделаю вам дизайн, который окупиться несколько раз!
 						.col-lg-7.col-sm-12.say-no__video
 							.say-no__video-bg
-								a.video__play-pause(type="button" id="play-pause")
+								//a.video__play-pause(type="button" id="play-pause")
 							video(src=require("../../video/video.mp4") width="564px" height="100%")
 						.btn-big__shadow-outer
 							.btn-big__shadow-inner
@@ -188,7 +188,7 @@ block main
 									span.portfolio__puls
 							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 								.portfolio__item
-									img(src=require("../../img/portfolio-item-1.jpg"))
+									img(src=require("../../img/pool_full_ic.png") data-src="pool_full.jpg")
 									span.portfolio__puls
 							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 								.portfolio__item
@@ -2051,6 +2051,7 @@ block main
 						a.footer__facebook(href="#" target="_blank")
 
 		.portfolio__side-nav#portfolio__side-nav.overlay-navigation
+			a(href="#portfolio__side-nav_top")#portfolio__side-nav_top
 			.overlay-navigation_wrap
 				i.fa.fa-close
 				h3 Портфолио
@@ -2063,7 +2064,7 @@ block main
 							span.portfolio__puls
 					.portfolio__wrap
 						.portfolio__item
-							img(src=require("../../img/test_landing_ic.png") data-src="test_landing_ic.png")
+							img(src=require("../../img/pool_full_ic.png") data-src="pool_full.jpg")
 							span.portfolio__puls
 					.portfolio__wrap
 						.portfolio__item

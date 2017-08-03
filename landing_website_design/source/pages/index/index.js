@@ -71,7 +71,6 @@ $(document).ready(function () {
 	//sidebar menu
 	let body = $("body"),
 		mask_overlay = $(".mask-overlay"),
-		mask_overlay_active = $(".mask-overlay__active"),
 		btn_close = $(".overlay-navigation .fa-close"),
 		btn_contacts = $("a.contacts"),
 		btn_portfolio = $("a.portfolio__link"),
@@ -82,66 +81,68 @@ $(document).ready(function () {
 		portfolio__side_nav = $("#portfolio__side-nav"),
 		order_online = $("#order-online"),
 		clientWidth = document.documentElement.clientWidth,
-		portfolio_item_big = $('.portfolio__item_big'),
-		portfolio_item_big_img = $('.portfolio__item_big img');
-
-		btn_contacts.on("click", function() {
-		header__side_nav.css({"width" : "70%" , "transform":"translateX(0%)"});
-		body.addClass("mask-overlay__active");
-		body.css({"overflow":"hidden"})
-	});
-
-	btn_portfolio.on("click", mask_overlay_active, show_portfolio);
-	btn_show_all_portfolio.on("click", show_portfolio);
-
-	function show_portfolio() {
-
-		if(document.documentElement.clientWidth <= 991){
-			portfolio__side_nav.css({"width" : "100%", "transform":"translateX(0%)"});
-		} else {
-			portfolio__side_nav.css({"width" : "70%", "transform":"translateX(0%)"});
-		}
+		portfolio_item_big_img = $('.portfolio__item_big img'),
+		portfolio_preview_ic = $(".portfolio .portfolio__item_wrap"),
+		portfolio_preview_ic_side = $(".portfolio__side-nav .portfolio__wrap");
 
 
+	let css_sidebar_prop_full_width = {
+		"width": "100%",
+		"transform": "translateX(0%)",
+		"opacity": "1"
+	};
 
-		body.addClass("mask-overlay__active");
-		body.css({"overflow":"hidden"})
+	let css_sidebar_prop_part_width = {
+		"width" : "70%",
+		"transform": "translateX(0%)",
+		"opacity": "1"
+	};
+
+	let css_sidebar_prop_close = {
+		"width" : "0%",
+		"transform":"translateX(100%)",
+		"opacity":"0"
+	};
+
+	//open side bars
+	btn_portfolio.click(open_side_bar(portfolio__side_nav));
+	btn_show_all_portfolio.click(open_side_bar(portfolio__side_nav));
+	btn_order_online.click(open_side_bar(order_online));
+	btn_contacts.click(open_side_bar(header__side_nav));
+
+	function open_side_bar(sidebar) {
+		return function () {
+			if(clientWidth <= 991){
+				sidebar.css(css_sidebar_prop_full_width);
+			} else {
+				sidebar.css(css_sidebar_prop_part_width);
+			}
+
+			body.addClass("mask-overlay__active");
+			body.css({"overflow":"hidden"})
+		};
 	}
-
-	btn_order_online.on("click", function() {
-
-		if(clientWidth <= 991){
-			order_online.css({"width" : "100%" , "transform":"translateX(0%)"});
-		} else {
-			order_online.css({"width" : "70%" , "transform":"translateX(0%)"});
-		}
-
-		body.addClass("mask-overlay__active");
-		body.css({"overflow":"hidden"})
-	});
 
 	// new values in form
 	btn_order_online_price.on("click", function(e) {
 		e.preventDefault();
 
-		let service_name = $(this).closest( ".price__service" ).children("p").text();
-
-		let price = this.value,
+		let service_name = $(this).closest( ".price__service" ).children("p").text(),
+		 	price = this.value,
 		 	price_hidden = $(".order-online .hidden-price"),
 			input_what_to_do = $(".order-online .what_to_do"),
 			input_what_to_do_hidden = $(".order-online .what_to_do_hidden"),
 			new_price_hidden_val = price_hidden.val() + price;
-
 
 		input_what_to_do.attr("placeholder", service_name).attr("disabled", true);
 		input_what_to_do_hidden.val(service_name);
 
 		price_hidden.val(new_price_hidden_val);
 
-		if(document.documentElement.clientWidth <= 991){
-			order_online.css({"width" : "100%" , "transform":"translateX(0%)"});
+		if(clientWidth <= 991){
+			order_online.css({"width" : "100%" , "transform":"translateX(0%)", "opacity":"1"});
 		} else {
-			order_online.css({"width" : "70%" , "transform":"translateX(0%)"});
+			order_online.css({"width" : "70%" , "transform":"translateX(0%)", "opacity":"1"});
 		}
 
 		body.addClass("mask-overlay__active");
@@ -153,18 +154,20 @@ $(document).ready(function () {
 
 	function closeSideBar() {
 		body.removeClass("mask-overlay__active");
-		header__side_nav.css({"width" : "0%", "transform":"translateX(100%)"});
-		portfolio__side_nav.css({"width" : "0%" , "transform":"translateX(100%)"});
-		order_online.css({"width" : "0%", "transform":"translateX(100%)"});
+
+		header__side_nav.css(css_sidebar_prop_close);
+		portfolio__side_nav.css(css_sidebar_prop_close);
+		order_online.css(css_sidebar_prop_close);
 
 		body.css({"overflow":"inherit"});
 
+		//hide tooltipster
 		$('input:not("[type=submit], [type=hidden], .select2-search__field")').removeClass('tooltipster-show').tooltipster('close');
 
 		//reset old val
-		var price_hidden = $(".order-online .hidden-price");
-		var input_what_to_do_hidden = $(".order-online .what_to_do_hidden");
-		var placeholder_what_to_do = $(".order-online .what_to_do");
+		let price_hidden = $(".order-online .hidden-price");
+		let input_what_to_do_hidden = $(".order-online .what_to_do_hidden");
+		let placeholder_what_to_do = $(".order-online .what_to_do");
 
 		price_hidden.val("Форма 'Заявка онлайн:");
 		input_what_to_do_hidden.val("");
@@ -174,18 +177,22 @@ $(document).ready(function () {
 	}
 
 	//scroll on links
-	var header_links = $(".header__nav a[href*='#']"),
+	let header_links = $(".header__nav a[href*='#']"),
 		mobile_menu_links = $(".header_nav_mobile a[href*='#']"),
-		arrow_bottom_link = $(".header__text a");
+		arrow_bottom_link = $(".header__text a"),
+		btn_see_price = $(".good-design button"),
+		btn_see_portfolio = $(".say-no button");
 
 	header_links.on("click", scroll_header_links);
 	mobile_menu_links.on("click", scroll_header_links);
 	arrow_bottom_link.on("click", scroll_header_links);
+	btn_see_price.on("click", scroll_custom_btn);
+	btn_see_portfolio.on("click", scroll_custom_btn);
 
 	function scroll_header_links(e) {
 		e.preventDefault();
 
-		var anchor = $(this);
+		let anchor = $(this);
 
 		$('html, body').stop().animate({
 			scrollTop: $(anchor.attr('href')).offset().top
@@ -193,13 +200,6 @@ $(document).ready(function () {
 
 		return false;
 	}
-
-	//btn see price and btn what i can to do
-	var btn_see_price = $(".good-design button"),
-		btn_see_portfolio = $(".say-no button");
-
-		btn_see_price.on("click", scroll_custom_btn);
-		btn_see_portfolio.on("click", scroll_custom_btn);
 
 	function scroll_custom_btn(e) {
 		e.preventDefault();
@@ -213,6 +213,31 @@ $(document).ready(function () {
 		return false;
 	}
 	
+
+	portfolio_preview_ic.on("click", show_photo_portfolio);
+	portfolio_preview_ic_side.on("click", show_photo_portfolio);
+
+	function show_photo_portfolio() {
+
+		let data_src_img = $(this).find(".portfolio__item img").attr("data-src");
+
+		if(clientWidth <= 991){
+			portfolio__side_nav.css({"width" : "100%", "transform":"translateX(0%)", "opacity":"1"});
+		} else {
+			portfolio__side_nav.css({"width" : "70%", "transform":"translateX(0%)", "opacity":"1"});
+		}
+
+
+		if(data_src_img){
+			console.log(data_src_img);
+
+			portfolio_item_big_img.attr("src", "img/" + data_src_img).css({"display":"block"})
+		}
+
+		body.addClass("mask-overlay__active");
+		body.css({"overflow":"hidden"});
+	}
+
 	//clone elements in side bar
 	// let portfolio_items = $("#portfolio .portfolio__item_wrap"),
 	// 	sidebar_portfolio_wrap = $("#portfolio__side-nav .portfolio__items_wrap");
@@ -226,46 +251,14 @@ $(document).ready(function () {
 	// 		//sidebar_portfolio_wrap.append(portfolio_items[i])
 	// 	}
 	// }
-	
+
 	//show portfolio photo in sidebar
-	const 	portfolio_prewie_ic = $(".portfolio .portfolio__item_wrap"),
-			portfolio_prewie_ic_side = $(".portfolio__side-nav .portfolio__wrap");
 
-	portfolio_prewie_ic.on("click", show_photo_portfolio);
-	portfolio_prewie_ic_side.on("click", show_photo_portfolio);
+	$(".overlay-navigation_wrap .portfolio__item").on("click", function (e) {
 
-	
-	function show_photo_portfolio() {
+		$('.portfolio__side-nav').animate({ scrollTop: 0}, 500);
 
-		let data_src_img = $(this).find(".portfolio__item img").attr("data-src");
-
-		console.log(document.documentElement.clientWidth);
-
-
-		if(document.documentElement.clientWidth <= 991){
-			portfolio__side_nav.css({"width" : "100%", "transform":"translateX(0%)"});
-		} else {
-			portfolio__side_nav.css({"width" : "70%", "transform":"translateX(0%)"});
-		}
-
-		if(data_src_img){
-			portfolio_item_big_img.attr("src", "img/" + data_src_img).css({"display":"block"})
-		}
-
-		body.addClass("mask-overlay__active");
-		body.css({"overflow":"hidden"});
-	}
-
-	// portfolio_prewie_ic_side.on("click", function (e) {
-	//
-	// 	e.preventDefault();
-	//
-	// 	$('.portfolio__side-nav').stop().animate({
-	// 		scrollTop: $(".overlay-navigation_wrap").offset().top
-	// 	}, 500);
-	//
-	// 	return false;
-	// });
+	});
 
 
 
