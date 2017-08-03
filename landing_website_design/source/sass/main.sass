@@ -111,10 +111,11 @@ button
 	background-color: $main_bg_color_dark
 	transition: 0.5s
 	font-family: $latoBlack
-	padding: 100px 15px
+	padding: 50px 15px
 	color: $main_txt_color
-	//p.modal-title
-		@include font($main_txt_color_old, 24, $latoRegular, 1.4)
+	p
+		font-size: 23px
+		margin: 25px 0
 	//p.modal-paragraph
 		margin-bottom: 10px
 		@include font($main_txt_color_old, 14, $latoRegular, 1.4)
@@ -545,6 +546,7 @@ nav[canvas]
 form
 	.input_wrap + .input_wrap
 		margin-top: 26px
+	text-align: center
 	input
 		width: calc(100% - 6px)
 		display: inline-block

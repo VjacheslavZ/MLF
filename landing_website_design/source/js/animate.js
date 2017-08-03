@@ -89,7 +89,31 @@ class Animation {
 				.from(item3, 0.7, { autoAlpha: 0,	scale: 2, ease: Power3.easeIn}, "-=0.5")
 				.from(item4, 0.7, { autoAlpha: 0,	scale: 2, ease: Power3.easeIn}, "-=0.5")
 				.from(item5, 0.7, { autoAlpha: 0,	scale: 2, ease: Power3.easeIn}, "-=0.5")
-				.from(item6, 0.7, { autoAlpha: 0,	scale: 2, ease: Power3.easeIn}, "-=0.5")
+				.from(item6, 0.7, { autoAlpha: 0,	scale: 2, ease: Power3.easeIn, onStart:emulate_hover_five_tasks}, "-=0.5");
+
+		//section five tasks emulate hover
+
+
+		let five_tasks_items = $(".five-tasks__item"),
+			i = 0;
+
+		function emulate_hover_five_tasks() {
+			setTimeout(function () {
+
+				if(i > 0){
+					five_tasks_items[i - 1].classList.remove("five-tasks__item-hover");
+				}
+
+				five_tasks_items[i].classList.add("five-tasks__item-hover");
+
+				i++;
+
+				if (i < five_tasks_items.length) {
+					emulate_hover_five_tasks();
+				}
+
+			}, 500)
+		}
 	}
 
 	section_my_design(){
@@ -141,41 +165,38 @@ class Animation {
 				svg_result_ic = $("#result");
 
 		this.tl5
-				.from(svg_circle_middle, 100, {
-					rotation: -360,
-					transformOrigin: "50% 50%",
-				})
-				.from(svg_circle_outer, 75, {
-					rotation: 360,
-					transformOrigin: "50% 50%",
-				}, "=-100")
-				.from(svg_circle_inner, 50, {
-					rotation: -360,
-					transformOrigin: "50% 50%",
-				}, "=-100")
 
-				.from(default_title, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=100")
-				.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=99.5")
-				.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=99")
-				.from(why_i, 0.7, { autoAlpha: 0, scale: 2, y: -200, ease: Power3.easeIn}, "-=98.5")
 
-				.from(svg_circle_bg, 0.7, { autoAlpha: 0, ease: Power3.easeIn}, "-=98")
-				.from(svg_monitor, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn}, "-=97.5")
-				.from(svg_key_board, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=97")
-				.from(svg_cable, 0.4, { autoAlpha: 0, ease: Power3.easeIn}, "-=96.5")
+				.from(default_title, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn})
+				.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=0.5")
+				.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.5")
+				.from(why_i, 0.7, { autoAlpha: 0, scale: 2, y: -200, ease: Power3.easeIn})
 
-				.from(table_item_1, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn}, "-=96")
-				.from(svg_massage_ic, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=95.7")
-				.from(svg_phone_ic, 0.7, { autoAlpha: 0, x: 50, ease: Power3.easeIn}, "-=95.7")
-				.to(svg_massage_ic, 0.7, { opacity: 0, y: 100, ease: Power3.easeOut}, "-=94.7")
-				.to(svg_phone_ic, 0.7, { opacity: 0, y: 100, ease: Power3.easeOut}, "-=94.7")
+				.from(svg_circle_bg, 0.7, { autoAlpha: 0, ease: Power3.easeIn},"-=0.7")
+				.from(svg_monitor, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn},"-=0.7")
+				.from(svg_key_board, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn},"-=0.7")
+				.from(svg_cable, 0.4, { autoAlpha: 0, ease: Power3.easeIn},"-=0.7")
 
-				.from(table_item_2, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn}, "-=94.5")
-				.from(svg_time_ic, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=94.5")
-				.to(svg_time_ic, 0.7, { opacity: 0, x: 100, ease: Power3.easeOut}, "-=93.5")
+				.from(table_item_1, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn},)
+				.from(svg_massage_ic, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=0.7")
+				.from(svg_phone_ic, 0.7, { autoAlpha: 0, x: 50, ease: Power3.easeIn}, "-=0.7")
+				.to(svg_massage_ic, 0.3, { opacity: 0, y: 100, ease: Power3.easeOut}, "+=0.7")
+				.to(svg_phone_ic, 0.3, { opacity: 0, y: 100, ease: Power3.easeOut}, "-=0.3")
 
-				.from(table_item_3, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn}, "-=93")
-				.from(svg_result_ic, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=93")
+				.from(table_item_2, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
+				.from(svg_time_ic, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=0.7")
+				.to(svg_time_ic, 0.3, { opacity: 0, x: 100, ease: Power3.easeOut}, "+=0.7")
+
+				.from(table_item_3, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
+				.from(svg_result_ic, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=0.7")
+
+				.from(svg_circle_inner, 0.3, {autoAlpha: 0})
+				.from(svg_circle_middle, 0.3, {autoAlpha: 0}, "-=0.3")
+				.from(svg_circle_outer, 0.3, {autoAlpha: 0}, "-=0.3")
+
+				.from(svg_circle_middle, 100, {rotation: -360, transformOrigin: "50% 50%"})
+				.from(svg_circle_outer, 75, {rotation: 360, transformOrigin: "50% 50%"}, "=-100")
+				.from(svg_circle_inner, 50, {rotation: -360,transformOrigin: "50% 50%"}, "=-100")
 
 	}
 

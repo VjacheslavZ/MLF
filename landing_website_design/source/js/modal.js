@@ -34,6 +34,7 @@ $(document).ready(function () {
 			}
 		}
 	});
+
 	$('.open-popup-link').magnificPopup({
 		type: 'inline',
 		removalDelay: 200,

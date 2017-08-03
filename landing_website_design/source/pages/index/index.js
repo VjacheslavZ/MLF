@@ -81,16 +81,15 @@ $(document).ready(function () {
 		header__side_nav = $("#header__side-nav"),
 		portfolio__side_nav = $("#portfolio__side-nav"),
 		order_online = $("#order-online"),
-		clientWidth = document.documentElement.clientWidth;
+		clientWidth = document.documentElement.clientWidth,
+		portfolio_item_big = $('.portfolio__item_big'),
+		portfolio_item_big_img = $('.portfolio__item_big img');
 
-	btn_contacts.on("click", function() {
+		btn_contacts.on("click", function() {
 		header__side_nav.css({"width" : "70%" , "transform":"translateX(0%)"});
 		body.addClass("mask-overlay__active");
 		body.css({"overflow":"hidden"})
 	});
-
-
-
 
 	btn_portfolio.on("click", mask_overlay_active, show_portfolio);
 	btn_show_all_portfolio.on("click", show_portfolio);
@@ -102,6 +101,8 @@ $(document).ready(function () {
 		} else {
 			portfolio__side_nav.css({"width" : "70%", "transform":"translateX(0%)"});
 		}
+
+
 
 		body.addClass("mask-overlay__active");
 		body.css({"overflow":"hidden"})
@@ -154,20 +155,25 @@ $(document).ready(function () {
 
 		body.css({"overflow":"inherit"});
 
+		$('input:not("[type=submit], [type=hidden], .select2-search__field")').removeClass('tooltipster-show').tooltipster('close');
+
 		//reset old val
 		var price_hidden = $(".order-online .hidden-price");
 		var placeholder_what_to_do = $(".order-online .what_to_do");
 
 		price_hidden.val("Форма 'Заявка онлайн:");
 		placeholder_what_to_do.attr("placeholder", "Что хотели бы обсудить?").attr("disabled", false).val("");
+		portfolio_item_big_img.css({"display":"none"})
 	}
 
 	//scroll on links
 	var header_links = $(".header__nav a[href*='#']"),
-		mobile_menu_links = $(".header_nav_mobile a[href*='#']");
+		mobile_menu_links = $(".header_nav_mobile a[href*='#']"),
+		arrow_bottom_link = $(".header__text a");
 
-		header_links.on("click", scroll_header_links);
-		mobile_menu_links.on("click", scroll_header_links);
+	header_links.on("click", scroll_header_links);
+	mobile_menu_links.on("click", scroll_header_links);
+	arrow_bottom_link.on("click", scroll_header_links);
 
 	function scroll_header_links(e) {
 		e.preventDefault();
@@ -201,31 +207,58 @@ $(document).ready(function () {
 	}
 	
 	//clone elements in side bar
-	let portfolio_items = $("#portfolio .portfolio__item_wrap"),
-		sidebar_portfolio_wrap = $("#portfolio__side-nav .portfolio__items_wrap");
+	// let portfolio_items = $("#portfolio .portfolio__item_wrap"),
+	// 	sidebar_portfolio_wrap = $("#portfolio__side-nav .portfolio__items_wrap");
+	//
+	//
+	// addItemsSidebarPortfolio();
+	//
+	// function addItemsSidebarPortfolio() {
+	// 	for (var i = 0; i < portfolio_items.length; i++){
+	//
+	// 		//sidebar_portfolio_wrap.append(portfolio_items[i])
+	// 	}
+	// }
+	
+	//show portfolio photo in sidebar
+	const 	portfolio_prewie_ic = $(".portfolio .portfolio__item_wrap"),
+			portfolio_prewie_ic_side = $(".portfolio__side-nav .portfolio__wrap");
+
+	portfolio_prewie_ic.on("click", show_photo_portfolio);
+	portfolio_prewie_ic_side.on("click", show_photo_portfolio);
 
 	
-	addItemsSidebarPortfolio();
+	function show_photo_portfolio() {
 
-	function addItemsSidebarPortfolio() {
-		for (var i = 0; i < portfolio_items.length; i++){
+		let data_src_img = $(this).find(".portfolio__item img").attr("data-src");
 
-			//sidebar_portfolio_wrap.append(portfolio_items[i])
+		if(document.documentElement.clientWidth < 980){
+			portfolio__side_nav.css({"width" : "100%", "transform":"translateX(0%)"});
+		} else {
+			portfolio__side_nav.css({"width" : "70%", "transform":"translateX(0%)"});
 		}
-	}
-	
-	//show portfolio photo in sidebar 
-	
-	const portfolio_prewie_ic = $(".portfolio .portfolio__item_wrap");
 
-	portfolio_prewie_ic.on("click", show_photo_portfolio)
-	
-	function show_photo_portfolio(e) {
-		console.log(this);
+		if(data_src_img){
+			portfolio_item_big_img.attr("src", "img/" + data_src_img).css({"display":"block"})
+		}
 
+		body.addClass("mask-overlay__active");
+		body.css({"overflow":"hidden"});
 	}
-	
-	
+
+	portfolio_prewie_ic_side.on("click", function (e) {
+
+		e.preventDefault();
+
+		$('.portfolio__side-nav').stop().animate({
+			scrollTop: $(".overlay-navigation_wrap").offset().top
+		}, 500);
+
+		return false;
+	});
+
+
+
 });
 
 $(window).resize(function () {

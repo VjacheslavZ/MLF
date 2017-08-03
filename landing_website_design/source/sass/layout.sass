@@ -236,11 +236,11 @@
 		font-family: $latoBlack
 	.line
 		margin: 50px 0 0 0
-	//&__items
-		display: flex
-		flex-wrap: wrap
-		flex-direction: row
-		justify-content: space-between
+	&__item-hover
+		.five-tasks__item_box-shadow-outer
+			box-shadow: 0px 0px 29px 3px rgba(241, 58, 115, 0.9)
+		.five-tasks__item_box-shadow-inner
+			box-shadow: inset 0px 0px 29px 3px rgba(241, 58, 115, 0.9)
 	&__item
 		display: inline-block
 		max-width: 270px
@@ -421,6 +421,9 @@
 	&__about-me
 		font-family: $latoBlack
 		font-size: 57px
+		span
+			letter-spacing: 2px
+			margin-left: 5px
 	.line
 		margin: 48px 0 143px 0
 	&__table
@@ -592,6 +595,10 @@
 	padding: 177px 0 168px 0
 	background: $main_bg_color_dark
 	position: relative
+	&__item_big
+		img
+			width: 100%
+			display: none
 	.text-mask
 		position: absolute
 		top: 50px
@@ -605,7 +612,9 @@
 		margin: 53px 0 70px 0
 	&__item
 		position: relative
+		height: 360px
 		img
+			height: 100%
 			width: 100%
 		&:hover
 			&:before
@@ -614,7 +623,6 @@
 			.portfolio__puls
 				opacity: 0.5
 				transition: opacity .5s
-
 		&:before
 			content: ""
 			position: absolute
@@ -889,8 +897,8 @@
 		margin-top: 65px
 		.input_wrap
 			width: 370px
-			padding-left: 3px
-			margin-left: 3px
+			//padding-left: 3px
+			//margin-left: 3px
 			input
 				background-size: contain
 				outline: 3px dashed $border-dashed
@@ -906,6 +914,7 @@
 			margin-top: 35px
 		button[type=submit]
 			margin-top: 30px
+			width: calc(100% + 3px)
 		.intermediate_item
 			width: 367px
 	&__contacts
@@ -1060,6 +1069,7 @@
 		width: 98%
 	.portfolio__wrap
 		display: inline-block
+		cursor: pointer
 		///display: flex
 		//flex-direction: row
 		//flex-wrap: wrap

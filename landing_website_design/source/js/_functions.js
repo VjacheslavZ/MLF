@@ -159,6 +159,7 @@ $(document).ready(function () {
 		/* Предотвращаем обычное поведение ссылки при клике */
 		return false;
 	});
+
 	//обработчик кнопки на нажатие btn_mnu
 	$("#nav-button-label").click(function (e) {
 		e.preventDefault();

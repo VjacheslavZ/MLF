@@ -50,23 +50,10 @@ block main
 								span.header__description Оказываю полный спектр услуг по дизайну: сайтов, landing page и уникальных проектов
 								span.line
 									//img(src=require("../../img/arrow_bottom.png")).header__arrow
-									svg.header__arrow(viewbox='0 0 31.479 31.479', style='enable-background:new 0 0 31.479 31.479;', xml:space='preserve', width='41px', height='43px')
-										path(d='M26.485,21.206c0.429-0.444,0.429-1.143,0-1.587c-0.444-0.429-1.159-0.429-1.587,0l-8.047,8.047  V1.111C16.851,0.492,16.359,0,15.74,0c-0.619,0-1.127,0.492-1.127,1.111v26.555l-8.031-8.047c-0.444-0.429-1.143-0.429-1.587,0  c-0.429,0.444-0.429,1.143,0,1.587l9.952,9.952c0.429,0.429,1.143,0.429,1.587,0L26.485,21.206z', fill='#fff')
-										g
-										g
-										g
-										g
-										g
-										g
-										g
-										g
-										g
-										g
-										g
-										g
-										g
-										g
-										g
+									a(href="#say-no")
+										svg.header__arrow(viewbox='0 0 31.479 31.479', style='enable-background:new 0 0 31.479 31.479;', xml:space='preserve', width='41px', height='43px')
+											path(d='M26.485,21.206c0.429-0.444,0.429-1.143,0-1.587c-0.444-0.429-1.159-0.429-1.587,0l-8.047,8.047  V1.111C16.851,0.492,16.359,0,15.74,0c-0.619,0-1.127,0.492-1.127,1.111v26.555l-8.031-8.047c-0.444-0.429-1.143-0.429-1.587,0  c-0.429,0.444-0.429,1.143,0,1.587l9.952,9.952c0.429,0.429,1.143,0.429,1.587,0L26.485,21.206z', fill='#fff')
+
 							.col-lg-6
 								.header__form
 									p.header__form_title Давайте познакомимся поближе:
@@ -1713,7 +1700,8 @@ block main
 					.container
 						span.text-mask throw me challenge
 						h1.default-title Делаю потрясающий
-						p.good-design__about-me и уникальный дизайн для:
+						p.good-design__about-me и уникальный дизайн
+							span для:
 						span.line
 						.row.justify-content-center
 							.col-lg-6.col-md-10.col-sm-12
@@ -1844,7 +1832,7 @@ block main
 						.row
 							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 								.portfolio__item
-									img(src=require("../../img/portfolio-item-1.jpg"))
+									img(src=require("../../img/test_landing_ic.png") data-src="test_landing.png")
 									span.portfolio__puls
 							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 								.portfolio__item
@@ -2025,7 +2013,7 @@ block main
 		div(off-canvas='id-1 right shift')
 			nav.header_nav_mobile
 				ul.menu
-					-var links = [{title:'Портфолио', href:'#portfolio', class: 'portfolio'},{title:'Стоимость услуг', href:'#price__service', id: 'price__service'},{title:'Отзывы', href:'#reviews', id: 'reviews'},{title:'Контакты', href:'#contacts', id: 'contacts', class:'contacts'}, {title:'email@gmail.com', href:'mailto:email@gmail.com', id: 'mail'}, {title:'+ 38 (095) 543 65 21', href:'tel:+38(095)5436521'}];
+					-var links = [{title:'Портфолио', href:'#portfolio', class: 'portfolio'},{title:'Стоимость услуг', href:'#price__service', id: 'price__service'},{title:'Отзывы', href:'#reviews', id: 'reviews'},{title:'Контакты', href:'#contacts', id: 'contacts', class:'contacts'}];
 					each i in links
 						li
 							a(href=i.href)= i.title
@@ -2063,13 +2051,15 @@ block main
 				i.fa.fa-close
 				h3 Портфолио
 				.portfolio__items_wrap
+					.portfolio__item_big
+						img(src=require("../../img/test_landing_ic.png"))
 					.portfolio__wrap
 						.portfolio__item
-							img(src=require("../../img/portfolio-item-1.jpg"))
+							img(src=require("../../img/test_landing_ic.png") data-src="test_landing.png")
 							span.portfolio__puls
 					.portfolio__wrap
 						.portfolio__item
-							img(src=require("../../img/portfolio-item-1.jpg"))
+							img(src=require("../../img/test_landing_ic.png") data-src="test_landing_ic.png")
 							span.portfolio__puls
 					.portfolio__wrap
 						.portfolio__item
