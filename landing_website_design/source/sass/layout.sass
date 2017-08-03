@@ -110,7 +110,7 @@
 	//left: 10px
 	right: 0
 	left: 0
-	top: calc(50% - 250px)
+	top: calc(50% - 210px)
 	//display: flex
 	//flex-direction: row
 	.default-title
@@ -141,6 +141,10 @@
 .header__form
 	background-color: $main_bg_color_dark
 	padding: 66px 89px 59px 72px
+	height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: space-around
 	.white-popup
 		width: initial
 		padding: 0
@@ -176,48 +180,49 @@
 .say-no
 	padding:  180px 0 166px 0
 	background: $main_bg_color_dark
+	overflow: hidden
 	.default-title
 		letter-spacing: 4px
 		margin-bottom: 5px
+		font-size: 64px
 	.text-mask
 		display: block
 		margin-bottom: 38px
 		letter-spacing: 5px
 	.line
 		margin: 55px 0 51px 0
-.say-no__text-slogan
-	font-size: 41px
-	font-family: $latoBlack
-.say-no__text-slogan + .say-no__text-slogan
-	margin-top: 20px
-.say-no	.uppercase
-	font-size: 50px
-	font-family: $latoBlack
-.say-no__description
-	line-height: 1.5
-	//padding-right: 100px
-	font-size: 24px
-	font-family: $latoRegular
-.say-no__video
-	position: relative
-	background: url("../img/say_no_face.png") left center no-repeat
-.say-no__video-bg
-	background: url("../img/video__bg.jpg") no-repeat
-	position: absolute
-	background-size: contain
-	right: 0
-	z-index: 1
-	height: 100%
-	width: 564px
-	@include section-mask()
-	transition: .5s
-	cursor: pointer
-	&:after
-		content: ""
+	&__text-slogan
+		font-size: 23px
+		font-family: $latoBlack
+	&__text-slogan + .say-no__text-slogan
+		margin-top: 20px
+	.uppercase
+		font-size: 50px
+		font-family: $latoBlack
+	&__description
+		line-height: 1.5
+		font-size: 24px
+		font-family: $latoRegular
+	&__video
+		position: relative
+		background: url("../img/say_no_face.png") left center no-repeat
+	&__video-bg
+		background: url("../img/video__bg.jpg") no-repeat
 		position: absolute
-		left: calc(50% - 135px)
-		bottom: calc(50% - 135px)
-		@include sprite($btn-play)
+		background-size: cover
+		right: 0
+		z-index: 1
+		height: 100%
+		width: 564px
+		@include section-mask()
+		transition: .5s
+		cursor: pointer
+		&:after
+			content: ""
+			position: absolute
+			left: calc(50% - 135px)
+			bottom: calc(50% - 135px)
+			@include sprite($btn-play)
 .say-no__video video
 	position: absolute
 	right: 0
@@ -228,8 +233,10 @@
 .five-tasks
 	background-color: $main_bg_color_darkest
 	padding: 178px 0 175px 0
+	overflow: hidden
 	.default-title
 		text-align: left
+		font-size: 65px
 	&__description
 		text-align: left
 		font-size: 46px
@@ -297,11 +304,13 @@
 	background: $main_bg_color_dark
 	padding: 177px 0 160px 0
 	position: relative
+	overflow: hidden
 	.text-mask
 		position: absolute
 		left: 0
 		right: 0
 		top: 69px
+		padding-left: 200px
 		text-align: center
 	&__slogan
 		font-size: 43px
@@ -480,6 +489,7 @@
 	background: url("../img/premium-design__bg.jpg") no-repeat
 	background-size: cover
 	position: relative
+	overflow: hidden
 	@include section-mask()
 	&__for
 		font-family: $latoBlack
@@ -595,6 +605,7 @@
 	padding: 177px 0 168px 0
 	background: $main_bg_color_dark
 	position: relative
+	overflow: hidden
 	&__item_big
 		img
 			width: 100%
@@ -605,6 +616,7 @@
 		left: 0
 		right: 0
 		text-align: center
+		padding-left: 100px
 	&__examples
 		font-family: $latoBlack
 		font-size: 39px
@@ -613,6 +625,7 @@
 	&__item
 		position: relative
 		height: 360px
+		width: 360px
 		img
 			height: 100%
 			width: 100%
@@ -672,6 +685,7 @@
 	padding: 177px 0 170px 0
 	background: $main_bg_color_darkest
 	position: relative
+	overflow: hidden
 	.text-mask
 		position: absolute
 		left: 0
@@ -718,6 +732,7 @@
 	padding: 177px 0 178px 0
 	background-color: $main_bg_color_dark
 	position: relative
+	overflow: hidden
 	.text-mask
 		position: absolute
 		left: 0
@@ -762,6 +777,7 @@
 		li > *
 			color: $slider_company_text_color
 			letter-spacing: 0.5px
+			text-align: center
 	&__slider_company-name
 		img
 			display: block
@@ -875,6 +891,7 @@
 	background: url("../img/footer__bg.jpg") no-repeat center center
 	background-size: cover
 	position: relative
+	overflow: hidden
 	@include section-mask()
 	&__inner
 		padding: 148px 75px 90px 75px
@@ -947,6 +964,7 @@
 		font-size: 22px
 		color: $text_thin_color
 		margin-top: 69px
+		text-align: center
 	&__social-network
 		li
 			display: inline-block
@@ -1062,9 +1080,12 @@
 			a:before
 				left: 87px
 .portfolio__side-nav
+	display: flex
+	justify-content: center
 	.overlay-navigation_wrap
 		h3
 			margin-left: 30px
+			margin-bottom: 15px
 		padding-left: 57px
 		width: 98%
 	.portfolio__wrap

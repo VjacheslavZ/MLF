@@ -45,9 +45,9 @@ block main
 						.row
 							.col-lg-6.header__text
 								h1.default-title Приветствую Вас!
-								p.header__about-me Я Meagan Fisher - частный веб-дизайнер
-								p.header__about-me UI/UX дизайн
-								span.header__description Оказываю полный спектр услуг по дизайну: сайтов, landing page и уникальных проектов
+								p.header__about-me Я Артем Новиков - частный дизайнер
+								p.header__about-me Делаю дизайны, которые окупаються и прямо влияют на деньги
+								span.header__description Что могу: дизайн/редизайн всех видов сайтов, полиграфия, реклама и мобильные приложения
 								span.line
 									//img(src=require("../../img/arrow_bottom.png")).header__arrow
 									a(href="#say-no")
@@ -56,7 +56,7 @@ block main
 
 							.col-lg-6
 								.header__form
-									p.header__form_title Давайте познакомимся поближе:
+									p.header__form_title Свяжитесь со мной, я начинаю работать без предоплат:
 										//#form-file.clearfix
 										//p.success_mail Ваше сообщение отправлено! Спасибо!
 										form
@@ -66,10 +66,10 @@ block main
 											.input_wrap
 												i.fa.fa-check
 												input(name="phone_mask" type="text" class="mask" placeholder="Введите Ваш телефон")
-											.input_wrap
+											//.input_wrap
 												i.fa.fa-check
 												input(name="email" type="text" placeholder="Ваш E-mail адрес")
-											.input_wrap
+											//.input_wrap
 												i.fa.fa-check
 												textarea(name="textarea" type="text" placeholder="Что хотели бы обсудить?")
 											input(type="hidden" name="form_name" value="Форма 'Давайте познакомимся поближе:")
@@ -107,19 +107,19 @@ block main
 				.container
 					.row
 						.col-lg-5.col-sm-12.say-no__text
-							span.text-mask best design maker
-							h1.default-title Скажи НЕТ
-							p.say-no__text-slogan серому и скучному
-							p.say-no__text-slogan дизайну сайтов
+							span.text-mask Дизайн должен продавать
+							h2.default-title Скажите НЕТ
+							p.say-no__text-slogan дизайнерам, которые самоутверждаются
+							p.say-no__text-slogan вместо того, что бы делать результат
 							span.line
-							p.say-no__description Делаю яркие и запоминающиеся сайты, которые действительно продают!
+							p.say-no__description Я сделаю вам дизайн, который окупиться несколько раз!
 						.col-lg-7.col-sm-12.say-no__video
 							.say-no__video-bg
 								a.video__play-pause(type="button" id="play-pause")
 							video(src=require("../../video/video.mp4") width="564px" height="100%")
 						.btn-big__shadow-outer
 							.btn-big__shadow-inner
-								button.btn-big__show-more(data-href="#portfolio") Посмотрите что я умею
+								button.btn-big__show-more(data-effect="mfp-zoom-in" data-info="Связаться со мной" href="#popup" class="open-popup-link") Связаться со мной
 			// Тест react
 			section.react
 				.container
@@ -129,7 +129,7 @@ block main
 				//	section five tasks
 				section.five-tasks
 					.container
-						h1.default-title 5 задач, которые
+						h3.default-title 5 задач, которые
 						p.five-tasks__description решает мой дизайн сайта:
 						span.line
 					.five-tasks__items
@@ -172,15 +172,191 @@ block main
 										p.five-tasks__item_description Формирование положитеьного иммиджа
 								.col-xl-3.col-lg-4.col-md-6.five-tasks__item-anima-6
 									.five-tasks__item.text-mask
-										.text-mask let's make a unicorn
+										.text-mask Нестндартные решения
 			section.intermediate
+				//	section portfolio examples my works
+				section.portfolio#portfolio
+					.container
+						.text-mask Смотрите и будте уверены
+						h6.default-title Портфолио
+						p.portfolio__examples примеры моих работ
+						span.line
+						.row
+							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+								.portfolio__item
+									img(src=require("../../img/test_landing_ic.png") data-src="test_landing.png")
+									span.portfolio__puls
+							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+								.portfolio__item
+									img(src=require("../../img/portfolio-item-1.jpg"))
+									span.portfolio__puls
+							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+								.portfolio__item
+									img(src=require("../../img/portfolio-item-1.jpg"))
+									span.portfolio__puls
+							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+								.portfolio__item
+									img(src=require("../../img/portfolio-item-1.jpg"))
+									span.portfolio__puls
+							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+								.portfolio__item
+									img(src=require("../../img/portfolio-item-1.jpg"))
+									span.portfolio__puls
+							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+								.portfolio__item
+									img(src=require("../../img/portfolio-item-1.jpg"))
+									span.portfolio__puls
+							.btn-big__shadow-outer
+								.btn-big__shadow-inner
+									button.btn-big__show-more Посмотреть весь портфель
+				//	section price of my service
+				section#price__service.price
+					.container
+						.text-mask Обязатеьно окупиться
+						h6.default-title Стоимость
+						p.price__text моих услуг по дизайну
+						span.line
+						.row
+							.col-lg-3.col-sm-6.price__service_anim-1.price__wrap
+								.price__service
+									p.price__description Дизайн для Landing page
+									span.price__service-price от 150$
+									.intermediate_item
+										form
+											button(type='submit', value='150$').price__service_price Заказать
+							.col-lg-3.col-sm-6.price__service_anim-2.price__wrap
+								.price__service
+									p.price__description Дизайн для Landing page2
+									span.price__service-price от 250$
+									.intermediate_item
+										form
+											button(type='submit', value='250$').price__service_price Заказать
+							.col-lg-3.col-sm-6.price__service_anim-3.price__wrap
+								.price__service
+									p.price__description Дизайн для Landing page3
+									span.price__service-price от 150$
+									.intermediate_item
+										form
+											button(type='submit', value='150$').price__service_price Заказать
+							.col-lg-3.col-sm-6.price__service_anim-4.price__wrap
+								.price__service
+									p.price__description Дизайн для Landing page4
+									span.price__service-price от 150$
+									.intermediate_item
+										form
+											button(type='submit', value='150$').price__service_price Заказать
+							.col-lg-3.col-sm-6.price__service_anim-5.price__wrap
+								.price__service
+									p.price__description Дизайн для Landing page5
+									span.price__service-price от 150$
+									.intermediate_item
+										form
+											button(type='submit', value='150$').price__service_price Заказать
+							.col-lg-3.col-sm-6.price__service_anim-6.price__wrap
+								.price__service
+									p.price__description Дизайн для Landing page
+									span.price__service-price от 150$
+									.intermediate_item
+										form
+											button(type='submit', value='150$').price__service_price Заказать
+							.col-lg-3.col-sm-6.price__service_anim-7.price__wrap
+								.price__service
+									p.price__description Дизайн для Landing page
+									span.price__service-price от 150$
+									.intermediate_item
+										form
+											button(type='submit', value='150$').price__service_price Заказать
+							.col-lg-3.col-sm-6.price__service_anim-8.price__wrap
+								.price__service
+									p.price__description Дизайн для Landing page
+									span.price__service-price от 150$
+									.intermediate_item
+										form
+											button(type='submit', value='150$').price__service_price Заказать
+							.btn-big__shadow-outer
+								.btn-big__shadow-inner
+									button.btn-big__show-more#btn-big__show-more Хочу заполнить заявку на дизайн в режиме онлайн
+				//	section reviews
+				section#reviews.reviews
+					.container
+						.text-mask a few words about me from
+						h6.default-title Отзывы
+						p.reviews__text моих клиентов
+						span.line
+						.reviews__slider-wrap
+							#reviews-slider.owl-carousel.owl-theme
+								.item
+									.reviews__slider_company
+										.reviews__slider_bg
+										ul.reviews__slider_company-detals
+											li
+												.reviews__slider_company-name
+													img(src=require("../../img/company_altmerick.png"))
+												p.reviews__slider_company-type OOO "Компания"
+												p.reviews__slider_company-metier Чем компания занимаеться
+									.reviews__slider_description_wrap
+										p.reviews__slider_description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								.item
+									.reviews__slider_company
+										.reviews__slider_bg
+										ul.reviews__slider_company-detals
+											li
+												.reviews__slider_company-name
+													img(src=require("../../img/company_altmerick.png"))
+												p.reviews__slider_company-type OOO "Компания"
+												p.reviews__slider_company-metier Чем компания занимаеться
+									.reviews__slider_description_wrap
+										p.reviews__slider_description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
+
+
+
+
+
+
+
+				//	section create premium design
+				section#premium-design.premium-design
+					.container
+						.row
+							.col-lg-6.col-sm-12
+								h6.default-title Создаю премиум
+								p.premium-design__for дизайн для лидеров!
+								span.line
+								p.premium-design__description Я специализируюсь на дизайне, который взрывет мозг, вызывает эмоции и воспитывает чувства.
+								p.premium-design__description Мой стиль - это современный, утонченный веб-дизайн, который идеально подходит под нынешние реалии.
+								p.premium-design__description Хотите эксклюзивный дизайн для сайта? Обращайтесь ко мне!
+								p.premium-design__description Хотите продуманный и продающий сайт? Вам опять ко мне!
+								p.premium-design__description До сих пор не определились? Просто оставьте заявку!
+							.col-lg-6
+								.premium-design__form-wrap
+									p.premium-design__form-text Для того, чтобы уточнить детали по дизайну собственного сайта, оставьте свои данные и я перезвоню.
+									form
+										div
+											.input_wrap
+												i.fa.fa-check
+												input(name="name" type="text" placeholder="Ваше Имя")
+											.input_wrap
+												i.fa.fa-check
+												input(name="phone_mask" type="text" class="mask" placeholder="Введите Ваш телефон")
+											//.input_wrap
+												i.fa.fa-check
+												input(name="email" type="text" placeholder="Ваш E-mail адрес")
+											//.input_wrap
+												i.fa.fa-check
+												textarea(name="textarea" type="text" placeholder="Что хотели бы обсудить?")
+										input(type="hidden" name="form_name" value="Форма 'Создаю премиум дизайн для лидеров'")
+										input(type="hidden" name="form_type" value="normal")
+										button(type="submit" value="") Записаться
+									span.text-mask be a leader
 				//	section my design
 				section#my-design.my-design
 					.container
 						.row
-							.text-mask the quality of work
+							.text-mask Я нормальный земной дизайнер
 							.col-lg-7.col-sm-12
-								h1.default-title Мой дизайн
+								h4.default-title Мой дизайн
 								p.my-design__slogan соответствует всем
 								p.my-design__slogan стандартам качества
 								span.line
@@ -217,13 +393,13 @@ block main
 					.container
 						.row
 							.col-lg-6.align__items
-								h1.default-title Со мной очень
+								h5.default-title Со мной очень
 								p.comfort__slogan удобно сотрудничать
 								span.line
 								.comfort__why-i
 									.text-mask__wrap
-										.text-mask w h y
-										.text-mask m e ?
+										.text-mask М а л о
+										.text-mask г о в о р ю
 								ul.comfort__table
 									li.comfort__item
 										.comfort__item_outer
@@ -1696,7 +1872,7 @@ block main
 								.intermediate_item.col-lg-3
 									input(type='submit', value='Записаться')
 				//	section make good design
-				section#good-design.good-design
+				//section#good-design.good-design
 					.container
 						span.text-mask throw me challenge
 						h1.default-title Делаю потрясающий
@@ -1729,40 +1905,7 @@ block main
 							.btn-big__shadow-outer
 								.btn-big__shadow-inner
 									button.btn-big__show-more(data-href="#price__service") Посмотреть расценки
-				//	section create premium design
-				section#premium-design.premium-design
-					.container
-						.row
-							.col-lg-6.col-sm-12
-								h1.default-title Создаю премиум
-								p.premium-design__for дизайн для лидеров!
-								span.line
-								p.premium-design__description Я специализируюсь на дизайне, который взрывет мозг, вызывает эмоции и воспитывает чувства.
-								p.premium-design__description Мой стиль - это современный, утонченный веб-дизайн, который идеально подходит под нынешние реалии.
-								p.premium-design__description Хотите эксклюзивный дизайн для сайта? Обращайтесь ко мне!
-								p.premium-design__description Хотите продуманный и продающий сайт? Вам опять ко мне!
-								p.premium-design__description До сих пор не определились? Просто оставьте заявку!
-							.col-lg-6
-								.premium-design__form-wrap
-									p.premium-design__form-text Для того, чтобы уточнить детали по дизайну собственного сайта, оставьте свои данные и я перезвоню.
-									form
-										div
-											.input_wrap
-												i.fa.fa-check
-												input(name="name" type="text" placeholder="Ваше Имя")
-											.input_wrap
-												i.fa.fa-check
-												input(name="phone_mask" type="text" class="mask" placeholder="Введите Ваш телефон")
-											//.input_wrap
-												i.fa.fa-check
-												input(name="email" type="text" placeholder="Ваш E-mail адрес")
-											//.input_wrap
-												i.fa.fa-check
-												textarea(name="textarea" type="text" placeholder="Что хотели бы обсудить?")
-										input(type="hidden" name="form_name" value="Форма 'Создаю премиум дизайн для лидеров'")
-										input(type="hidden" name="form_type" value="normal")
-										button(type="submit" value="") Записаться
-									span.text-mask be a leader
+
 				section.header__form_mobile-wrap.premium-design
 					.container
 						.row.justify-content-center
@@ -1790,7 +1933,7 @@ block main
 				section#work-steps.work-steps
 					.container
 						.text-mask work steps
-						h1.default-title Как я делаю
+						h6.default-title Как я делаю
 						p.work-steps__slogan уникальный дизайн
 						span.line
 					.container-fluid
@@ -1822,145 +1965,6 @@ block main
 								span.work-steps__item_description Согласование готового проекта с заказчиком
 
 
-				//	section portfolio examples my works
-				section.portfolio#portfolio
-					.container
-						.text-mask look and be shure
-						h1.default-title Портфолио
-						p.portfolio__examples примеры моих работ
-						span.line
-						.row
-							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
-								.portfolio__item
-									img(src=require("../../img/test_landing_ic.png") data-src="test_landing.png")
-									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
-								.portfolio__item
-									img(src=require("../../img/portfolio-item-1.jpg"))
-									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
-								.portfolio__item
-									img(src=require("../../img/portfolio-item-1.jpg"))
-									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
-								.portfolio__item
-									img(src=require("../../img/portfolio-item-1.jpg"))
-									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
-								.portfolio__item
-									img(src=require("../../img/portfolio-item-1.jpg"))
-									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
-								.portfolio__item
-									img(src=require("../../img/portfolio-item-1.jpg"))
-									span.portfolio__puls
-							.btn-big__shadow-outer
-								.btn-big__shadow-inner
-									button.btn-big__show-more Посмотреть весь портфель
-				//	section price of my service
-				section#price__service.price
-					.container
-						.text-mask look and be shure
-						h1.default-title Стоимость
-						p.price__text моих услуг по дизайну
-						span.line
-						.row
-							.col-lg-3.col-sm-6.price__service_anim-1.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page
-									span.price__service-price от 150$
-									.intermediate_item
-										form
-											button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-2.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page2
-									span.price__service-price от 250$
-									.intermediate_item
-										form
-											button(type='submit', value='250$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-3.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page3
-									span.price__service-price от 150$
-									.intermediate_item
-										form
-											button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-4.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page4
-									span.price__service-price от 150$
-									.intermediate_item
-										form
-											button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-5.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page5
-									span.price__service-price от 150$
-									.intermediate_item
-										form
-											button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-6.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page
-									span.price__service-price от 150$
-									.intermediate_item
-										form
-											button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-7.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page
-									span.price__service-price от 150$
-									.intermediate_item
-										form
-											button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-8.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page
-									span.price__service-price от 150$
-									.intermediate_item
-										form
-											button(type='submit', value='150$').price__service_price Заказать
-							.btn-big__shadow-outer
-								.btn-big__shadow-inner
-									button.btn-big__show-more#btn-big__show-more Хочу заполнить заявку на дизайн в режиме онлайн
-				//	section reviews
-				section#reviews.reviews
-					.container
-						.text-mask a few words about me from
-						h1.default-title Отзывы
-						p.reviews__text моих клиентов
-						span.line
-						.reviews__slider-wrap
-							#reviews-slider.owl-carousel.owl-theme
-								.item
-									.reviews__slider_company
-										.reviews__slider_bg
-										ul.reviews__slider_company-detals
-											li
-												.reviews__slider_company-name
-													img(src=require("../../img/company_altmerick.png"))
-												p.reviews__slider_company-type OOO "Компания"
-												p.reviews__slider_company-metier Чем компания занимаеться
-									.reviews__slider_description_wrap
-										p.reviews__slider_description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-								.item
-									.reviews__slider_company
-										.reviews__slider_bg
-										ul.reviews__slider_company-detals
-											li
-												.reviews__slider_company-name
-													img(src=require("../../img/company_altmerick.png"))
-												p.reviews__slider_company-type OOO "Компания"
-												p.reviews__slider_company-metier Чем компания занимаеться
-									.reviews__slider_description_wrap
-										p.reviews__slider_description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-
-
-
-
-
 
 
 
@@ -1970,12 +1974,12 @@ block main
 						.row
 							.col-lg-7.col-sm-12
 								.footer__form
-									.text-mask because i’m a fan of my case
-									h1.default-title Мой лозунг:
-									p.footer__text нестандартные решения
-									p.footer__text для привычных вещей!
+									.text-mask приношу пользу и не выделываюсь
+									h6.default-title Мой лозунг:
+									p.footer__text Дизайн должен окупаться
+									//p.footer__text для привычных вещей!
 									span.line
-									p.footer__description Делаю креативный, цепляющий дизайн быстро и качественно. Обращайтесь!
+									p.footer__description Если не я то, кто? Если не сейчас - когда? Обращайтесь
 									#form-file.clearfix.footer__form_consult
 										form
 											.input_wrap
@@ -2052,7 +2056,7 @@ block main
 				h3 Портфолио
 				.portfolio__items_wrap
 					.portfolio__item_big
-						img(src=require("../../img/test_landing_ic.png"))
+						img(src=require("../../img/test_landing.png"))
 					.portfolio__wrap
 						.portfolio__item
 							img(src=require("../../img/test_landing_ic.png") data-src="test_landing.png")
@@ -2103,6 +2107,7 @@ block main
 								input(name="letter_subject" type="text" placeholder="Тема" )
 							.input_wrap
 								i.fa.fa-check
+								input(name="what_to_do" type="hidden"  value="").what_to_do_hidden
 								input(name="what_to_do" type="text" placeholder="Что хотели бы обсудить?").what_to_do
 							.input_wrap
 								i.fa.fa-check

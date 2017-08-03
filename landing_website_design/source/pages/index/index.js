@@ -96,7 +96,7 @@ $(document).ready(function () {
 
 	function show_portfolio() {
 
-		if(document.documentElement.clientWidth < 980){
+		if(document.documentElement.clientWidth <= 991){
 			portfolio__side_nav.css({"width" : "100%", "transform":"translateX(0%)"});
 		} else {
 			portfolio__side_nav.css({"width" : "70%", "transform":"translateX(0%)"});
@@ -110,7 +110,7 @@ $(document).ready(function () {
 
 	btn_order_online.on("click", function() {
 
-		if(clientWidth <= 980){
+		if(clientWidth <= 991){
 			order_online.css({"width" : "100%" , "transform":"translateX(0%)"});
 		} else {
 			order_online.css({"width" : "70%" , "transform":"translateX(0%)"});
@@ -125,16 +125,20 @@ $(document).ready(function () {
 		e.preventDefault();
 
 		let service_name = $(this).closest( ".price__service" ).children("p").text();
+
 		let price = this.value,
 		 	price_hidden = $(".order-online .hidden-price"),
 			input_what_to_do = $(".order-online .what_to_do"),
+			input_what_to_do_hidden = $(".order-online .what_to_do_hidden"),
 			new_price_hidden_val = price_hidden.val() + price;
 
+
 		input_what_to_do.attr("placeholder", service_name).attr("disabled", true);
+		input_what_to_do_hidden.val(service_name);
 
 		price_hidden.val(new_price_hidden_val);
 
-		if(document.documentElement.clientWidth < 980){
+		if(document.documentElement.clientWidth <= 991){
 			order_online.css({"width" : "100%" , "transform":"translateX(0%)"});
 		} else {
 			order_online.css({"width" : "70%" , "transform":"translateX(0%)"});
@@ -159,9 +163,12 @@ $(document).ready(function () {
 
 		//reset old val
 		var price_hidden = $(".order-online .hidden-price");
+		var input_what_to_do_hidden = $(".order-online .what_to_do_hidden");
 		var placeholder_what_to_do = $(".order-online .what_to_do");
 
 		price_hidden.val("Форма 'Заявка онлайн:");
+		input_what_to_do_hidden.val("");
+
 		placeholder_what_to_do.attr("placeholder", "Что хотели бы обсудить?").attr("disabled", false).val("");
 		portfolio_item_big_img.css({"display":"none"})
 	}
@@ -232,7 +239,10 @@ $(document).ready(function () {
 
 		let data_src_img = $(this).find(".portfolio__item img").attr("data-src");
 
-		if(document.documentElement.clientWidth < 980){
+		console.log(document.documentElement.clientWidth);
+
+
+		if(document.documentElement.clientWidth <= 991){
 			portfolio__side_nav.css({"width" : "100%", "transform":"translateX(0%)"});
 		} else {
 			portfolio__side_nav.css({"width" : "70%", "transform":"translateX(0%)"});
@@ -246,16 +256,16 @@ $(document).ready(function () {
 		body.css({"overflow":"hidden"});
 	}
 
-	portfolio_prewie_ic_side.on("click", function (e) {
-
-		e.preventDefault();
-
-		$('.portfolio__side-nav').stop().animate({
-			scrollTop: $(".overlay-navigation_wrap").offset().top
-		}, 500);
-
-		return false;
-	});
+	// portfolio_prewie_ic_side.on("click", function (e) {
+	//
+	// 	e.preventDefault();
+	//
+	// 	$('.portfolio__side-nav').stop().animate({
+	// 		scrollTop: $(".overlay-navigation_wrap").offset().top
+	// 	}, 500);
+	//
+	// 	return false;
+	// });
 
 
 
