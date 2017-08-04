@@ -53,11 +53,11 @@ class Animation {
 		const 	header_wrap = $(".header__content_wrap"),
 				arrow_bottom_color = $(".header__arrow path");
 
-		this.tl1.from(header_wrap, 0.7, { y: -100, opacity: 0, ease: Power4.easeOut	}, '+=0.3')
+		this.tl1.from(header_wrap, 1, { y: -100, opacity: 0, ease: Power4.easeOut}, '+=0.7')
 				.from(arrow_bottom_color, 0.5, { repeat: -1, yoyo: true, "fill":"rgba(243, 58, 115, 1)"});
 
 	}
-	
+
 	section_say_no(){
 		
 		const	say_no_text = $(".say-no .say-no__text"),
@@ -165,36 +165,34 @@ class Animation {
 				svg_result_ic = $("#result");
 
 		this.tl5
-
-
 				.from(default_title, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn})
 				.from(description, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn}, "-=0.5")
 				.from(line, 0.7, { autoAlpha: 0, scale: 2, x: -100, ease: Power3.easeIn}, "-=0.5")
 				.from(why_i, 0.7, { autoAlpha: 0, scale: 2, y: -200, ease: Power3.easeIn})
 
-				.from(svg_circle_bg, 0.7, { autoAlpha: 0, ease: Power3.easeIn},"-=0.7")
-				.from(svg_monitor, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn},"-=0.7")
-				.from(svg_key_board, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn},"-=0.7")
-				.from(svg_cable, 0.4, { autoAlpha: 0, ease: Power3.easeIn},"-=0.7")
+				.from(svg_circle_bg, 0.3, { autoAlpha: 0, ease: Power3.easeIn},"-=1.4")
+				.from(svg_monitor, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn},"-=1.4")
+				.from(svg_key_board, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn},"-=1.4")
+				.from(svg_cable, 0.4, { autoAlpha: 0, ease: Power3.easeIn},"-=1.4")
 
-				.from(table_item_1, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn},)
+				.from(table_item_1, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn}, "-=0.7")
 				.from(svg_massage_ic, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=0.7")
-				.from(svg_phone_ic, 0.7, { autoAlpha: 0, x: 50, ease: Power3.easeIn}, "-=0.7")
-				.to(svg_massage_ic, 0.3, { opacity: 0, y: 100, ease: Power3.easeOut}, "+=0.7")
+				.from(svg_phone_ic, 0.3, { autoAlpha: 0, x: 50, ease: Power3.easeIn}, "-=0.7")
+				.to(svg_massage_ic, 0.3, { opacity: 0, y: 100, ease: Power3.easeOut}, "+=0.3")
 				.to(svg_phone_ic, 0.3, { opacity: 0, y: 100, ease: Power3.easeOut}, "-=0.3")
 
-				.from(table_item_2, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
+				.from(table_item_2, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn}, "-=0.5")
 				.from(svg_time_ic, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=0.7")
-				.to(svg_time_ic, 0.3, { opacity: 0, x: 100, ease: Power3.easeOut}, "+=0.7")
+				.to(svg_time_ic, 0.3, { opacity: 0, x: 100, ease: Power3.easeOut}, "+=0.3")
 
-				.from(table_item_3, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn})
+				.from(table_item_3, 0.7, { autoAlpha: 0, x: +200, ease: Power3.easeIn}, "-=0.5")
 				.from(svg_result_ic, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn}, "-=0.7")
 
 				.from(svg_circle_inner, 0.3, {autoAlpha: 0})
 				.from(svg_circle_middle, 0.3, {autoAlpha: 0}, "-=0.3")
 				.from(svg_circle_outer, 0.3, {autoAlpha: 0}, "-=0.3")
 
-				.from(svg_circle_middle, 100, {rotation: -360, transformOrigin: "50% 50%"})
+				.from(svg_circle_middle, 100, {rotation: -360, transformOrigin: "50% 50%"}, "-=0.3")
 				.from(svg_circle_outer, 75, {rotation: 360, transformOrigin: "50% 50%"}, "=-100")
 				.from(svg_circle_inner, 50, {rotation: -360,transformOrigin: "50% 50%"}, "=-100")
 
@@ -533,4 +531,5 @@ $(window).ready(function() {
 	// 		.reverse(false)
 	// 		.addTo(controller)
 	// });
+
 });

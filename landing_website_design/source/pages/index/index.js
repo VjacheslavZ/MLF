@@ -1,9 +1,9 @@
 import common from '../../js/common';
+import animate from '../../js/animate';
 import '../../pages/index/index.pug'; //это для обновления страницы при hotreload - при npm build убрать
 import '../../pages/modal.pug'; //это для обновления страницы при hotreload - при npm build убрать
 import './index.sass';
 
-import animate from '../../js/animate';
 import App from '../../js/react';
 
 require("../../libs/libs").owl_carousel_min_js();
@@ -68,6 +68,10 @@ $(document).ready(function () {
 		nav: true
 	});
 
+
+
+
+
 	//sidebar menu
 	let body = $("body"),
 		mask_overlay = $(".mask-overlay"),
@@ -86,6 +90,22 @@ $(document).ready(function () {
 		portfolio_preview_ic_side = $(".portfolio__side-nav .portfolio__wrap");
 
 
+
+	if(clientWidth <= 767){
+		console.log("slider");
+
+
+		//portfolio_preview_ic.wrapAll("<div class='#portfolio-slider.owl-carousel.owl-theme'>");
+
+		portfolio_preview_ic.owlCarousel({
+			loop: true,
+			items: 1,
+			dots: false,
+			nav: true,
+		});
+	};
+
+
 	let css_sidebar_prop_full_width = {
 		"width": "100%",
 		"transform": "translateX(0%)",
@@ -99,7 +119,6 @@ $(document).ready(function () {
 	};
 
 	let css_sidebar_prop_close = {
-		"width" : "0%",
 		"transform":"translateX(100%)",
 		"opacity":"0"
 	};
@@ -204,7 +223,7 @@ $(document).ready(function () {
 	function scroll_custom_btn(e) {
 		e.preventDefault();
 
-		var anchor = $(this);
+		let anchor = $(this);
 
 		$('html, body').stop().animate({
 			scrollTop: $(anchor.attr('data-href')).offset().top
@@ -212,7 +231,6 @@ $(document).ready(function () {
 
 		return false;
 	}
-	
 
 	portfolio_preview_ic.on("click", show_photo_portfolio);
 	portfolio_preview_ic_side.on("click", show_photo_portfolio);
@@ -239,18 +257,15 @@ $(document).ready(function () {
 	}
 
 	//clone elements in side bar
-	// let portfolio_items = $("#portfolio .portfolio__item_wrap"),
-	// 	sidebar_portfolio_wrap = $("#portfolio__side-nav .portfolio__items_wrap");
+
+	//portfolio_preview_ic
+
+	// (function addItemsSidebarPortfolio() {
+	// 	var newitems = $(".portfolio .portfolio__item_wrap");
 	//
+	// 	newitems.removeClass("portfolio__item_wrap col-lg-4 col-md-6 col-sm-12").addClass("portfolio__wrap").append(portfolio_preview_ic)
 	//
-	// addItemsSidebarPortfolio();
-	//
-	// function addItemsSidebarPortfolio() {
-	// 	for (var i = 0; i < portfolio_items.length; i++){
-	//
-	// 		//sidebar_portfolio_wrap.append(portfolio_items[i])
-	// 	}
-	// }
+	// })();
 
 	//show portfolio photo in sidebar
 
@@ -273,5 +288,9 @@ $(window).scroll(function () {
 });
 
 
-$(".loader_inner").fadeOut();
-$(".loader").fadeOut("fast");
+
+setTimeout(function () {
+	$(".loader_inner").fadeOut();
+	$(".loader").fadeOut("fast");
+}, 500);
+

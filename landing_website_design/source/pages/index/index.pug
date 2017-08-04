@@ -22,6 +22,8 @@ block main
 						i.nav-line
 						i.nav-line
 		div(canvas='container')
+			style.
+
 			header(class="header")
 				//header top
 				.header__top-bg
@@ -46,7 +48,7 @@ block main
 							.col-lg-6.header__text
 								h1.default-title Приветствую Вас!
 								p.header__about-me Я Артем Новиков - частный дизайнер
-								p.header__about-me Делаю дизайны, которые окупаються и прямо влияют на деньги
+								p.header__about-me Делаю дизайны, которые окупаются и прямо влияют на деньги
 								span.header__description Что могу: дизайн/редизайн всех видов сайтов, полиграфия, реклама и мобильные приложения
 								span.line
 									//img(src=require("../../img/arrow_bottom.png")).header__arrow
@@ -115,7 +117,7 @@ block main
 							p.say-no__description Я сделаю вам дизайн, который окупиться несколько раз!
 						.col-lg-7.col-sm-12.say-no__video
 							.say-no__video-bg
-								//a.video__play-pause(type="button" id="play-pause")
+								.fa.fa-play
 							video(src=require("../../video/video.mp4") width="564px" height="100%")
 						.btn-big__shadow-outer
 							.btn-big__shadow-inner
@@ -182,38 +184,39 @@ block main
 						p.portfolio__examples примеры моих работ
 						span.line
 						.row
-							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
-								.portfolio__item
-									img(src=require("../../img/test_landing_ic.png") data-src="test_landing.png")
-									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
-								.portfolio__item
-									img(src=require("../../img/pool_full_ic.png") data-src="pool_full.jpg")
-									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
-								.portfolio__item
-									img(src=require("../../img/portfolio-item-1.jpg"))
-									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
-								.portfolio__item
-									img(src=require("../../img/portfolio-item-1.jpg"))
-									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
-								.portfolio__item
-									img(src=require("../../img/portfolio-item-1.jpg"))
-									span.portfolio__puls
-							.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
-								.portfolio__item
-									img(src=require("../../img/portfolio-item-1.jpg"))
-									span.portfolio__puls
-							.btn-big__shadow-outer
-								.btn-big__shadow-inner
-									button.btn-big__show-more Посмотреть весь портфель
+							#portfolio-slider.owl-carousel.owl-theme
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+									.portfolio__item
+										img(src=require("../../img/test_landing_ic.png") data-src="test_landing.png" alt="project 1")
+										span.portfolio__puls
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+									.portfolio__item
+										img(src=require("../../img/pool_full_ic.png") data-src="pool_full.jpg" alt="project 2")
+										span.portfolio__puls
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+									.portfolio__item
+										img(src=require("../../img/portfolio-item-1.jpg") alt="project 3")
+										span.portfolio__puls
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+									.portfolio__item
+										img(src=require("../../img/portfolio-item-1.jpg") alt="project 4")
+										span.portfolio__puls
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+									.portfolio__item
+										img(src=require("../../img/portfolio-item-1.jpg") alt="project 5")
+										span.portfolio__puls
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+									.portfolio__item
+										img(src=require("../../img/portfolio-item-1.jpg") alt="project 6")
+										span.portfolio__puls
+								.btn-big__shadow-outer
+									.btn-big__shadow-inner
+										button.btn-big__show-more Посмотреть весь портфель
 				//	section price of my service
 				section#price__service.price
 					.container
 						.text-mask Обязатеьно окупиться
-						h6.default-title Стоимость
+						h2.default-title Стоимость
 						p.price__text моих услуг по дизайну
 						span.line
 						.row
@@ -280,7 +283,7 @@ block main
 				section#reviews.reviews
 					.container
 						.text-mask a few words about me from
-						h6.default-title Отзывы
+						h2.default-title Отзывы
 						p.reviews__text моих клиентов
 						span.line
 						.reviews__slider-wrap
@@ -291,7 +294,7 @@ block main
 										ul.reviews__slider_company-detals
 											li
 												.reviews__slider_company-name
-													img(src=require("../../img/company_altmerick.png"))
+													img(src=require("../../img/company_altmerick.png") alt="company logo")
 												p.reviews__slider_company-type OOO "Компания"
 												p.reviews__slider_company-metier Чем компания занимаеться
 									.reviews__slider_description_wrap
@@ -302,7 +305,7 @@ block main
 										ul.reviews__slider_company-detals
 											li
 												.reviews__slider_company-name
-													img(src=require("../../img/company_altmerick.png"))
+													img(src=require("../../img/company_altmerick.png") alt="company logo")
 												p.reviews__slider_company-type OOO "Компания"
 												p.reviews__slider_company-metier Чем компания занимаеться
 									.reviews__slider_description_wrap
@@ -321,7 +324,7 @@ block main
 					.container
 						.row
 							.col-lg-6.col-sm-12
-								h6.default-title Создаю премиум
+								h2.default-title Создаю премиум
 								p.premium-design__for дизайн для лидеров!
 								span.line
 								p.premium-design__description Я специализируюсь на дизайне, который взрывет мозг, вызывает эмоции и воспитывает чувства.
@@ -356,7 +359,7 @@ block main
 						.row
 							.text-mask Я нормальный земной дизайнер
 							.col-lg-7.col-sm-12
-								h4.default-title Мой дизайн
+								h2.default-title Мой дизайн
 								p.my-design__slogan соответствует всем
 								p.my-design__slogan стандартам качества
 								span.line
@@ -387,13 +390,13 @@ block main
 											p.my-design__item_note (в соответствии с общей стилистикой проекта)
 							.col-lg-5
 								.my-design__photo
-								img.my-design__photo_front(src=require("../../img/my_design_img_front.png"))
+								img.my-design__photo_front(src=require("../../img/my_design_img_front.png") alt="my design bg")
 				//	section with me very comfort
 				section#comfort.comfort
 					.container
 						.row
 							.col-lg-6.align__items
-								h5.default-title Со мной очень
+								h2.default-title Со мной очень
 								p.comfort__slogan удобно сотрудничать
 								span.line
 								.comfort__why-i
@@ -1940,27 +1943,27 @@ block main
 						ul.work-steps__levels
 							li.work-steps__item
 								h2.work-steps__item_number 01
-									.line_left
+									span.line_left
 								p.work-steps__item_name Подготовка
 								span.work-steps__item_description Заполнение брифа, определение бизнес-задач проекта, изучение конкурентов
 							li.work-steps__item
 								h2.work-steps__item_number 02
-									.line_right
+									span.line_right
 								p.work-steps__item_name Структура сайта
 								span.work-steps__item_description Проработка юзабилити (удобства для пользователей) и карты сайта
 							li.work-steps__item
 								h2.work-steps__item_number 03
-									.line_left
+									span.line_left
 								p.work-steps__item_name Разработка концепции дизайна
 								span.work-steps__item_description Определение цветовой палитры, шрифтов, стиля иконок и прочих элементов
 							li.work-steps__item
 								h2.work-steps__item_number 04
-									.line_right
+									span.line_right
 								p.work-steps__item_name Основная работа по дизайну
 								span.work-steps__item_description Отрисовка всех элементов , блоков и страниц будущего сайта
 							li.work-steps__item
 								h2.work-steps__item_number 05
-									.line_left
+									span.line_left
 								p.work-steps__item_name Презентация дизайна
 								span.work-steps__item_description Согласование готового проекта с заказчиком
 
@@ -2057,30 +2060,30 @@ block main
 				h3 Портфолио
 				.portfolio__items_wrap
 					.portfolio__item_big
-						img(src=require("../../img/test_landing.png"))
+						img(src=require("../../img/test_landing.png") alt="project 1")
 					.portfolio__wrap
 						.portfolio__item
-							img(src=require("../../img/test_landing_ic.png") data-src="test_landing.png")
+							img(src=require("../../img/test_landing_ic.png") data-src="test_landing.png" alt="project 2")
 							span.portfolio__puls
 					.portfolio__wrap
 						.portfolio__item
-							img(src=require("../../img/pool_full_ic.png") data-src="pool_full.jpg")
+							img(src=require("../../img/pool_full_ic.png") data-src="pool_full.jpg" alt="project 3")
 							span.portfolio__puls
 					.portfolio__wrap
 						.portfolio__item
-							img(src=require("../../img/portfolio-item-1.jpg"))
+							img(src=require("../../img/portfolio-item-1.jpg") alt="project 4")
 							span.portfolio__puls
 					.portfolio__wrap
 						.portfolio__item
-							img(src=require("../../img/portfolio-item-1.jpg"))
+							img(src=require("../../img/portfolio-item-1.jpg") alt="project 5")
 							span.portfolio__puls
 					.portfolio__wrap
 						.portfolio__item
-							img(src=require("../../img/portfolio-item-1.jpg"))
+							img(src=require("../../img/portfolio-item-1.jpg") alt="project 6")
 							span.portfolio__puls
 					.portfolio__wrap
 						.portfolio__item
-							img(src=require("../../img/portfolio-item-1.jpg"))
+							img(src=require("../../img/portfolio-item-1.jpg") alt="project 7")
 							span.portfolio__puls
 		.order-online#order-online.overlay-navigation
 			.overlay-navigation_wrap
