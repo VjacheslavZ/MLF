@@ -92,18 +92,14 @@ $(document).ready(function () {
 
 
 	if(clientWidth <= 767){
-		console.log("slider");
 
-
-		//portfolio_preview_ic.wrapAll("<div class='#portfolio-slider.owl-carousel.owl-theme'>");
-
-		portfolio_preview_ic.owlCarousel({
+		$("#portfolio-slider").owlCarousel({
 			loop: true,
 			items: 1,
-			dots: false,
+			dots: true,
 			nav: true,
 		});
-	};
+	}
 
 
 	let css_sidebar_prop_full_width = {

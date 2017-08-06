@@ -184,34 +184,38 @@ block main
 						p.portfolio__examples примеры моих работ
 						span.line
 						.row
-							#portfolio-slider.owl-carousel.owl-theme
-								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+							.owl-carousel.owl-theme#portfolio-slider
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12.item
 									.portfolio__item
 										img(src=require("../../img/test_landing_ic.png") data-src="test_landing.png" alt="project 1")
 										span.portfolio__puls
-								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12.item
 									.portfolio__item
 										img(src=require("../../img/pool_full_ic.png") data-src="pool_full.jpg" alt="project 2")
 										span.portfolio__puls
-								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12.item
 									.portfolio__item
 										img(src=require("../../img/portfolio-item-1.jpg") alt="project 3")
 										span.portfolio__puls
-								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12.item
 									.portfolio__item
 										img(src=require("../../img/portfolio-item-1.jpg") alt="project 4")
 										span.portfolio__puls
-								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12.item
 									.portfolio__item
 										img(src=require("../../img/portfolio-item-1.jpg") alt="project 5")
 										span.portfolio__puls
-								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
+
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12.item
 									.portfolio__item
 										img(src=require("../../img/portfolio-item-1.jpg") alt="project 6")
 										span.portfolio__puls
-								.btn-big__shadow-outer
-									.btn-big__shadow-inner
-										button.btn-big__show-more Посмотреть весь портфель
+							.btn-big__shadow-outer
+								.btn-big__shadow-inner
+									button.btn-big__show-more Посмотреть весь портфель
 				//	section price of my service
 				section#price__service.price
 					.container

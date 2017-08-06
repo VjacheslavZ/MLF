@@ -620,6 +620,7 @@
 	background: $main_bg_color_dark
 	position: relative
 	overflow: hidden
+
 	&__item_big
 		img
 			width: 100%
@@ -661,6 +662,7 @@
 			background: linear-gradient(-180deg,$main_color_gradient_start,$main_color_gradient_end)
 			transition: opacity .5s
 	.portfolio__item_wrap
+		display: inline-block
 		margin-top: 30px
 		cursor: pointer
 	&__puls
@@ -694,6 +696,91 @@
 		width: 64px
 		height: 64px
 		transition: opacity .5s
+	.row
+		position: relative
+	#portfolio-slider
+		display: table
+		position: initial
+		.owl-carousel
+			position: initial
+		.owl-stage-outer
+			position: initial
+		.owl-item
+			visibility: hidden
+		.owl-item.active
+			visibility: visible
+	.owl-nav
+		.owl-prev
+			position: absolute
+			bottom: 85px
+			color: transparent
+			height: 30px
+			width: 16px
+			display: block
+			background: transparent
+			left: 15%
+			&:hover
+				color: transparent
+				background: transparent
+			&:before
+				content: ""
+				top: 6px
+				position: absolute
+				z-index: 999
+				background: #fff
+				width: 21px
+				display: block
+				height: 3px
+				transform: rotate(125deg)
+				left: calc(50% - 5px)
+			&:after
+				content: ""
+				bottom: 6px
+				position: absolute
+				z-index: 999
+				background: #fff
+				width: 21px
+				display: block
+				height: 3px
+				transform: rotate(-125deg)
+				left: calc(50% - 5px)
+		.owl-next
+			color: transparent
+			position: absolute
+			bottom: 85px
+			height: 30px
+			width: 16px
+			transform: rotate(180deg)
+			display: block
+			background: transparent
+			right: 15%
+			&:hover
+				color: transparent
+				background: transparent
+			&:before
+				content: ""
+				top: 6px
+				position: absolute
+				z-index: 999
+				background: #fff
+				width: 21px
+				display: block
+				height: 3px
+				transform: rotate(125deg)
+				left: calc(50% - 5px)
+			&:after
+				content: ""
+				bottom: 6px
+				position: absolute
+				z-index: 999
+				background: #fff
+				width: 21px
+				display: block
+				height: 3px
+				transform: rotate(-125deg)
+				left: calc(50% - 5px)
+
+
 //	section price of my service
 .price
 	padding: 177px 0 170px 0
