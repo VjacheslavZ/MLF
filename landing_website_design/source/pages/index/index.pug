@@ -78,6 +78,7 @@ block main
 											input(type="hidden" name="form_type" value="normal")
 											.intermediate_item
 												button(type="submit" value="Отправить") Отправить
+
 			section.header__form_mobile-wrap
 				.container
 					.row.justify-content-center
@@ -122,60 +123,62 @@ block main
 						.btn-big__shadow-outer
 							.btn-big__shadow-inner
 								button.btn-big__show-more(data-effect="mfp-zoom-in" data-info="Связаться со мной" href="#popup" class="open-popup-link") Связаться со мной
+
+					a(href="#")#say-no__arrow.previous
+						svg(viewbox='0 0 31.479 31.479', style='enable-background:new 0 0 31.479 31.479;', xml:space='preserve', width='41px', height='43px')
+							path(d='M26.485,21.206c0.429-0.444,0.429-1.143,0-1.587c-0.444-0.429-1.159-0.429-1.587,0l-8.047,8.047  V1.111C16.851,0.492,16.359,0,15.74,0c-0.619,0-1.127,0.492-1.127,1.111v26.555l-8.031-8.047c-0.444-0.429-1.143-0.429-1.587,0  c-0.429,0.444-0.429,1.143,0,1.587l9.952,9.952c0.429,0.429,1.143,0.429,1.587,0L26.485,21.206z', fill='#fff')
 			// Тест react
-			section.react
+			.react
 				.container
 					#app
 			// Секция main_content
-			section.main_content
-				//	section five tasks
-				section.five-tasks
+			section.five-tasks
+				.container
+					h3.default-title 5 задач, которые
+					p.five-tasks__description решает мой дизайн сайта:
+					span.line
+				.five-tasks__items
 					.container
-						h3.default-title 5 задач, которые
-						p.five-tasks__description решает мой дизайн сайта:
-						span.line
-					.five-tasks__items
-						.container
-							.row
-								.col-xl-3.col-lg-4.col-md-6.five-tasks__item-anima-1
-									.five-tasks__item
-										.five-tasks__item_box-shadow-outer
-											.five-tasks__item_box-shadow-inner
-												.five-tasks__item_logo
-													.five-tasks__item_logo1
-										p.five-tasks__item_description Привлечение внимания
-								.col-xl-6.col-lg-4.col-md-6.five-tasks__item-anima-2
-									.five-tasks__item
-										.five-tasks__item_box-shadow-outer
-											.five-tasks__item_box-shadow-inner
-												.five-tasks__item_logo
-													.five-tasks__item_logo2
-										p.five-tasks__item_description Удержание аудитории
-								.col-xl-3.col-lg-4.col-md-6.five-tasks__item-anima-3
-									.five-tasks__item
-										.five-tasks__item_box-shadow-outer
-											.five-tasks__item_box-shadow-inner
-												.five-tasks__item_logo
-													.five-tasks__item_logo3
-										p.five-tasks__item_description Положительное впечатление
-								.col-xl-3.col-lg-4.col-md-6.five-tasks__item-anima-4
-									.five-tasks__item
-										.five-tasks__item_box-shadow-outer
-											.five-tasks__item_box-shadow-inner
-												.five-tasks__item_logo
-													.five-tasks__item_logo4
-										p.five-tasks__item_description Побуждение к совершению покупки
-								.col-xl-6.col-lg-4.col-md-6.five-tasks__item-anima-5
-									.five-tasks__item
-										.five-tasks__item_box-shadow-outer
-											.five-tasks__item_box-shadow-inner
-												.five-tasks__item_logo
-													.five-tasks__item_logo5
-										p.five-tasks__item_description Формирование положитеьного иммиджа
-								.col-xl-3.col-lg-4.col-md-6.five-tasks__item-anima-6
-									.five-tasks__item.text-mask
-										.text-mask Нестндартные решения
-			section.intermediate
+						.row
+							.col-xl-3.col-lg-4.col-md-6.five-tasks__item-anima-1
+								.five-tasks__item
+									.five-tasks__item_box-shadow-outer
+										.five-tasks__item_box-shadow-inner
+											.five-tasks__item_logo
+												.five-tasks__item_logo1
+									p.five-tasks__item_description Привлечение внимания
+							.col-xl-6.col-lg-4.col-md-6.five-tasks__item-anima-2
+								.five-tasks__item
+									.five-tasks__item_box-shadow-outer
+										.five-tasks__item_box-shadow-inner
+											.five-tasks__item_logo
+												.five-tasks__item_logo2
+									p.five-tasks__item_description Удержание аудитории
+							.col-xl-3.col-lg-4.col-md-6.five-tasks__item-anima-3
+								.five-tasks__item
+									.five-tasks__item_box-shadow-outer
+										.five-tasks__item_box-shadow-inner
+											.five-tasks__item_logo
+												.five-tasks__item_logo3
+									p.five-tasks__item_description Положительное впечатление
+							.col-xl-3.col-lg-4.col-md-6.five-tasks__item-anima-4
+								.five-tasks__item
+									.five-tasks__item_box-shadow-outer
+										.five-tasks__item_box-shadow-inner
+											.five-tasks__item_logo
+												.five-tasks__item_logo4
+									p.five-tasks__item_description Побуждение к совершению покупки
+							.col-xl-6.col-lg-4.col-md-6.five-tasks__item-anima-5
+								.five-tasks__item
+									.five-tasks__item_box-shadow-outer
+										.five-tasks__item_box-shadow-inner
+											.five-tasks__item_logo
+												.five-tasks__item_logo5
+									p.five-tasks__item_description Формирование положитеьного иммиджа
+							.col-xl-3.col-lg-4.col-md-6.five-tasks__item-anima-6
+								.five-tasks__item.text-mask
+									.text-mask Нестандартные решения
+			.intermediate
 				//	section portfolio examples my works
 				section.portfolio#portfolio
 					.container
@@ -184,32 +187,32 @@ block main
 						p.portfolio__examples примеры моих работ
 						span.line
 						.row
-							.owl-carousel.owl-theme#portfolio-slider
-								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12.item
+							#portfolio-slider.owl-carousel.owl-theme
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 									.portfolio__item
 										img(src=require("../../img/test_landing_ic.png") data-src="test_landing.png" alt="project 1")
 										span.portfolio__puls
-								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12.item
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 									.portfolio__item
 										img(src=require("../../img/pool_full_ic.png") data-src="pool_full.jpg" alt="project 2")
 										span.portfolio__puls
 
-								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12.item
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 									.portfolio__item
 										img(src=require("../../img/portfolio-item-1.jpg") alt="project 3")
 										span.portfolio__puls
 
-								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12.item
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 									.portfolio__item
 										img(src=require("../../img/portfolio-item-1.jpg") alt="project 4")
 										span.portfolio__puls
 
-								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12.item
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 									.portfolio__item
 										img(src=require("../../img/portfolio-item-1.jpg") alt="project 5")
 										span.portfolio__puls
 
-								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12.item
+								.portfolio__item_wrap.col-lg-4.col-md-6.col-sm-12
 									.portfolio__item
 										img(src=require("../../img/portfolio-item-1.jpg") alt="project 6")
 										span.portfolio__puls
@@ -224,59 +227,60 @@ block main
 						p.price__text моих услуг по дизайну
 						span.line
 						.row
-							.col-lg-3.col-sm-6.price__service_anim-1.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page
-									span.price__service-price от 150$
+							.owl-carousel.owl-theme#price-slider
+								.col-lg-3.col-sm-6.price__service_anim-1.price__wrap
+									.price__service
+										p.price__description Дизайн для Landing page
+										span.price__service-price от 150$
 									.intermediate_item
 										form
 											button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-2.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page2
-									span.price__service-price от 250$
+								.col-lg-3.col-sm-6.price__service_anim-2.price__wrap
+									.price__service
+										p.price__description Дизайн для Landing page2
+										span.price__service-price от 250$
 									.intermediate_item
 										form
 											button(type='submit', value='250$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-3.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page3
-									span.price__service-price от 150$
+								.col-lg-3.col-sm-6.price__service_anim-3.price__wrap
+									.price__service
+										p.price__description Дизайн для Landing page3
+										span.price__service-price от 150$
 									.intermediate_item
 										form
 											button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-4.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page4
-									span.price__service-price от 150$
+								.col-lg-3.col-sm-6.price__service_anim-4.price__wrap
+									.price__service
+										p.price__description Дизайн для Landing page4
+										span.price__service-price от 150$
 									.intermediate_item
 										form
 											button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-5.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page5
-									span.price__service-price от 150$
+								.col-lg-3.col-sm-6.price__service_anim-5.price__wrap
+									.price__service
+										p.price__description Дизайн для Landing page5
+										span.price__service-price от 150$
 									.intermediate_item
 										form
 											button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-6.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page
-									span.price__service-price от 150$
+								.col-lg-3.col-sm-6.price__service_anim-6.price__wrap
+									.price__service
+										p.price__description Дизайн для Landing page
+										span.price__service-price от 150$
 									.intermediate_item
 										form
 											button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-7.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page
-									span.price__service-price от 150$
+								.col-lg-3.col-sm-6.price__service_anim-7.price__wrap
+									.price__service
+										p.price__description Дизайн для Landing page
+										span.price__service-price от 150$
 									.intermediate_item
 										form
 											button(type='submit', value='150$').price__service_price Заказать
-							.col-lg-3.col-sm-6.price__service_anim-8.price__wrap
-								.price__service
-									p.price__description Дизайн для Landing page
-									span.price__service-price от 150$
+								.col-lg-3.col-sm-6.price__service_anim-8.price__wrap
+									.price__service
+										p.price__description Дизайн для Landing page
+										span.price__service-price от 150$
 									.intermediate_item
 										form
 											button(type='submit', value='150$').price__service_price Заказать
@@ -314,14 +318,6 @@ block main
 												p.reviews__slider_company-metier Чем компания занимаеться
 									.reviews__slider_description_wrap
 										p.reviews__slider_description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-
-
-
-
-
-
-
 
 				//	section create premium design
 				section#premium-design.premium-design
@@ -1879,7 +1875,7 @@ block main
 								.intermediate_item.col-lg-3
 									input(type='submit', value='Записаться')
 				//	section make good design
-				//section#good-design.good-design
+				//#good-design.good-design
 					.container
 						span.text-mask throw me challenge
 						h1.default-title Делаю потрясающий
@@ -1912,8 +1908,7 @@ block main
 							.btn-big__shadow-outer
 								.btn-big__shadow-inner
 									button.btn-big__show-more(data-href="#price__service") Посмотреть расценки
-
-				section.header__form_mobile-wrap.premium-design
+				.header__form_mobile-wrap.premium-design
 					.container
 						.row.justify-content-center
 							.col-lg-7.col-sm-12
@@ -1936,7 +1931,7 @@ block main
 										input(type="hidden" name="form_type" value="normal")
 										button(type="submit" value="Давайте пообщаемся") Давайте пообщаемся
 
-				//	section how i make premium design
+				//section how i make premium design
 				section#work-steps.work-steps
 					.container
 						.text-mask work steps
@@ -2123,7 +2118,6 @@ block main
 						input(type="hidden" name="form_name" value="Форма 'Заявка онлайн:'").hidden-price
 						input(type="hidden" name="form_type" value="modal")
 						button(type="submit" value="Отправить заявку") Отправить заявку
-
 		//[if IE 9]>
 			<script src="libs/html5shiv/es5-shim.min.js"></script>
 			<script src="libs/html5shiv/html5shiv.min.js"></script>

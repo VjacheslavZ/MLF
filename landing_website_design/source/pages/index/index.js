@@ -69,9 +69,23 @@ $(document).ready(function () {
 	});
 
 
+	if(document.documentElement.clientWidth <= 767){
 
+		$("#portfolio-slider").owlCarousel({
+			loop: true,
+			items: 1,
+			dots: false,
+			nav: true,
+		});
 
-
+		$("#price-slider").owlCarousel({
+			loop: true,
+			items: 1,
+			dots: false,
+			nav: true,
+		});
+	}
+	
 	//sidebar menu
 	let body = $("body"),
 		mask_overlay = $(".mask-overlay"),
@@ -88,18 +102,6 @@ $(document).ready(function () {
 		portfolio_item_big_img = $('.portfolio__item_big img'),
 		portfolio_preview_ic = $(".portfolio .portfolio__item_wrap"),
 		portfolio_preview_ic_side = $(".portfolio__side-nav .portfolio__wrap");
-
-
-
-	if(clientWidth <= 767){
-
-		$("#portfolio-slider").owlCarousel({
-			loop: true,
-			items: 1,
-			dots: true,
-			nav: true,
-		});
-	}
 
 
 	let css_sidebar_prop_full_width = {
@@ -142,12 +144,15 @@ $(document).ready(function () {
 	btn_order_online_price.on("click", function(e) {
 		e.preventDefault();
 
-		let service_name = $(this).closest( ".price__service" ).children("p").text(),
+		let service_name = $(this).closest( ".intermediate_item" ).prev(".price__service").children("p").text(),
 		 	price = this.value,
 		 	price_hidden = $(".order-online .hidden-price"),
 			input_what_to_do = $(".order-online .what_to_do"),
 			input_what_to_do_hidden = $(".order-online .what_to_do_hidden"),
 			new_price_hidden_val = price_hidden.val() + price;
+
+		console.log(service_name);
+
 
 		input_what_to_do.attr("placeholder", service_name).attr("disabled", true);
 		input_what_to_do_hidden.val(service_name);
@@ -271,13 +276,60 @@ $(document).ready(function () {
 
 	});
 
+	//scroll to back section
+
+	$(function(){
+
+		var pagePositon = 0,
+			sectionsSeclector = 'section, footer',
+			$scrollItems = $(sectionsSeclector),
+			offsetTolorence = 30,
+			pageMaxPosition = $scrollItems.length - 1;
+
+		//Map the sections:
+		$scrollItems.each(function(index,ele) { $(ele).attr("debog",index).data("pos",index); });
+
+		// Bind to scroll
+		$(window).bind('scroll',upPos);
+
+		//Move on click:
+		$('#say-no__arrow').click(function(e){
+			if ($(this).hasClass('next') && pagePositon+1 <= pageMaxPosition) {
+				pagePositon++;
+				$('html, body').stop().animate({
+					scrollTop: $scrollItems.eq(pagePositon).offset().top
+				}, 300);
+			}
+			if ($(this).hasClass('previous') && pagePositon-1 >= 0) {
+				pagePositon--;
+				$('html, body').stop().animate({
+					scrollTop: $scrollItems.eq(pagePositon).offset().top
+				}, 300);
+				return false;
+			}
+		});
+
+		//Update position func:
+		function upPos(){
+			var fromTop = $(this).scrollTop();
+			var $cur = null;
+
+			$scrollItems.each(function(index,ele){
+				if ($(ele).offset().top < fromTop + offsetTolorence)$cur = $(ele);
+			});
+			
+			if ($cur != null && pagePositon != $cur.data('pos')) {
+				pagePositon = $cur.data('pos');
+			}
+
+		}
+
+	});
 
 
 });
 
-$(window).resize(function () {
 
-});
 
 $(window).scroll(function () {
 

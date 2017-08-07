@@ -41,6 +41,9 @@ class Animation {
 
 		this.tl12 = new TimelineMax();
 		this.tl12.pause();
+
+		this.tl13 = new TimelineMax();
+		this.tl13.pause();
 	}
 
 	arrow(){
@@ -51,18 +54,24 @@ class Animation {
 	description() {
 
 		const 	header_wrap = $(".header__content_wrap"),
-				arrow_bottom_color = $(".header__arrow path");
+				arrow_bottom_color = $(".header__arrow path"),
+				arrow_top = $("#say-no__arrow");
 
 		this.tl1.from(header_wrap, 1, { y: -100, opacity: 0, ease: Power4.easeOut}, '+=0.7')
 				.from(arrow_bottom_color, 0.5, { repeat: -1, yoyo: true, "fill":"rgba(243, 58, 115, 1)"});
 
+		this.tl13.to(arrow_top, 0.5, { y: -10, repeat: -1, yoyo: true});
+		// console.log("anima start");
+
+
 	}
 
 	section_say_no(){
-		
+
 		const	say_no_text = $(".say-no .say-no__text"),
 				say_no_video = $(".say-no .say-no__video"),
 				btn_big = $(".say-no .btn-big__shadow-outer");
+
 
 		this.tl2.from(say_no_text, 0.7, { autoAlpha: 0,	scale: 2, x: -100, ease: Power3.easeIn})
 		 		.from(say_no_video, 0.7, { autoAlpha: 0, x: 100, ease: Power3.easeIn})
@@ -375,9 +384,18 @@ class Animation {
 		}
 	}
 
+
+
 	play() {
+
+		var arrow_top = $("#say-no__arrow");
+
+		this.tl13.resume();
+
 		if (this.activeSection('header',0, 500)) {
 			this.tl0.resume();
+
+			arrow_top.css({"opacity":"0"});
 		}
 
 		if (this.activeSection('header',0, 500)) {
@@ -388,7 +406,12 @@ class Animation {
 			this.tl2.resume();
 		}
 
-		if (this.activeSection('five-tasks',500, -100)) {
+		if (this.activeSection('say-no',0, -100)) {
+
+			arrow_top.css({"opacity":"1"});
+		}
+
+		if (this.activeSection('five-tasks',500, 0)) {
 			this.tl3.resume();
 		}
 
@@ -437,7 +460,6 @@ class Animation {
 var anim = new Animation;
 
 $(window).scroll(function() {
-	
 	if (document.documentElement.clientWidth >= 1200) {
 		anim.play();
 	}

@@ -168,6 +168,7 @@
 		letter-spacing: 1px
 .header__form_mobile-wrap
 	display: none
+	visibility: hidden
 	background: $main_bg_color_dark
 	.justify-content-center
 		justify-content: center
@@ -235,6 +236,19 @@
 		&:hover
 			.fa-play
 				color: #000
+	#say-no__arrow
+		transition: opacity .5s
+		position: fixed
+		right: 30px
+		bottom: 30px
+		z-index: 999
+		transform: rotate(180deg)
+
+		&:hover
+			svg
+				path
+					transition: fill .5s
+					fill: rgba(253, 58, 116, 1)
 
 .say-no__video video
 	position: absolute
@@ -247,6 +261,7 @@
 	background-color: $main_bg_color_darkest
 	padding: 178px 0 175px 0
 	overflow: hidden
+	text-align: center
 	.default-title
 		text-align: left
 		font-size: 65px
@@ -620,7 +635,6 @@
 	background: $main_bg_color_dark
 	position: relative
 	overflow: hidden
-
 	&__item_big
 		img
 			width: 100%
@@ -709,77 +723,8 @@
 			visibility: hidden
 		.owl-item.active
 			visibility: visible
-	.owl-nav
-		.owl-prev
-			position: absolute
-			bottom: 85px
-			color: transparent
-			height: 30px
-			width: 16px
-			display: block
-			background: transparent
-			left: 15%
-			&:hover
-				color: transparent
-				background: transparent
-			&:before
-				content: ""
-				top: 6px
-				position: absolute
-				z-index: 999
-				background: #fff
-				width: 21px
-				display: block
-				height: 3px
-				transform: rotate(125deg)
-				left: calc(50% - 5px)
-			&:after
-				content: ""
-				bottom: 6px
-				position: absolute
-				z-index: 999
-				background: #fff
-				width: 21px
-				display: block
-				height: 3px
-				transform: rotate(-125deg)
-				left: calc(50% - 5px)
-		.owl-next
-			color: transparent
-			position: absolute
-			bottom: 85px
-			height: 30px
-			width: 16px
-			transform: rotate(180deg)
-			display: block
-			background: transparent
-			right: 15%
-			&:hover
-				color: transparent
-				background: transparent
-			&:before
-				content: ""
-				top: 6px
-				position: absolute
-				z-index: 999
-				background: #fff
-				width: 21px
-				display: block
-				height: 3px
-				transform: rotate(125deg)
-				left: calc(50% - 5px)
-			&:after
-				content: ""
-				bottom: 6px
-				position: absolute
-				z-index: 999
-				background: #fff
-				width: 21px
-				display: block
-				height: 3px
-				transform: rotate(-125deg)
-				left: calc(50% - 5px)
-
+	@include arrow-prev(85px, calc(50% - 50px))
+	@include arrow-next(85px, calc(50% - 50px))
 
 //	section price of my service
 .price
@@ -787,6 +732,8 @@
 	background: $main_bg_color_darkest
 	position: relative
 	overflow: hidden
+	#price-slider
+		display: table
 	.text-mask
 		position: absolute
 		left: 0
@@ -799,12 +746,12 @@
 	.line
 		margin: 55px 0 0 0
 	&__service
-		//background: url("../img/price__service-bg.png") no-repeat
 		outline: 3px dashed $border-dashed
 		height: 152px
 		background-size: contain
 		padding-top: 28px
-		//margin-top: 175px
+		display: block
+
 	&__description
 		font-family: $latoThin
 		font-size: 21px
@@ -818,16 +765,23 @@
 		text-align: center
 		margin-top: 26px
 	&__wrap
-		margin-top: 165px
-
+		margin-top: 100px
+		display: inline-block
 	form
 		padding-top: 40px
 	.btn-big__shadow-outer
-		margin-top: 163px
-	//.intermediate_item
-		margin-top: 46px
-	//.btn-big__show-more
-		padding: 9px 37px
+		margin-top: 90px
+		.btn-big__show-more
+			padding: 9px 10px
+	#price-slider
+		position: initial
+		.owl-carousel
+			position: initial
+		.owl-stage-outer
+			position: initial
+	@include arrow-prev(100px, calc(50% - 50px))
+	@include arrow-next(100px, calc(50% - 50px))
+
 //	section reviews
 .reviews
 	padding: 177px 0 178px 0
