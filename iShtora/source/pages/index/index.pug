@@ -29,73 +29,73 @@ block main
 							li
 								a(href="#howContact") Контакты
 					.header_phone
-						a(href="tel:0992080655") Позвоните нам +38 099 20 80 655
+						span Позвоните нам
+						a(href="tel:0992080655") +38 099 20 80 655
 	div(canvas='container')
 		header#header_logo(class="header")
-			.headerWrap
-				//.header_modal
-				//	a(data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active") Обратный звонок
-				//.header_modal
-				//	a(data-modal="modal-3" data-info="Обратный звонок" href="#" class="modal active") Мобильное меню
-			.container
-				.row
-					.header_title
-						.slider-wrap
-							#headerSlider.owl-carousel.owl-theme
-								.item
-									h1
-										span Заказать рулонные шторы в Харькове просто!
-									p Оставьте ваше имя и телефон, мы вам перезвоним!
-									.intermediate
-										.intermediate_wrap
-											form
-												.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
-													.modal_form_input_wrap
-														.modal_input_error
-															| Заполните поле
-															.modal_error_triangle
-															.modal_error_chest_img
-														i.fa.fa-check
-														input.modal_form_input(name='name', type='text', placeholder='Имя')
-												.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
-													.modal_form_input_wrap
-														.modal_input_error
-															| Заполните поле
-															.modal_error_triangle
-															.modal_error_chest_img
-														i.fa.fa-check
-														input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
-												.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
-													.modal_form_input_wrap
-														input(type='hidden', name='form_name', value='Заказ рулонной шторы')
-														input(type='hidden', name='form_type', value='normal')
-														input.col-lg-4(type='submit', value='Заказать')
-								.item
-									h1.share-title С
-										span.share.text-underline 20.07. по 31.08.2017
-										span.share  скидка 15% на рулонные шторы!
-									p.share-text В акции участвуют ткани: Madagaskar-BO, Air Gold, Liana Gold, Liana Apricot, Bohema Orange, Bohema Blue
-									ul.photo-cloth
-										li
-											img(src=require("../../img/photo-cloth-1.png") alt="photo-cloth-1")
-										li
-											img(src=require("../../img/photo-cloth-2.png") alt="photo-cloth-1")
-										li
-											img(src=require("../../img/photo-cloth-3.png") alt="photo-cloth-1")
-										li
-											img(src=require("../../img/photo-cloth-4.png") alt="photo-cloth-1")
-										li
-											img(src=require("../../img/photo-cloth-5.png") alt="photo-cloth-1")
+			#headerSlider.owl-carousel.owl-theme
+				.item.bg_1
+					.container
+						.row
+							.header_title
+								h1
+									span Заказать рулонные шторы в Харькове просто!
+								p Оставьте ваше имя и телефон, мы вам перезвоним!
+								.intermediate
+									.intermediate_wrap
+										form
+											.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
+												.modal_form_input_wrap
+													.modal_input_error
+														| Заполните поле
+														.modal_error_triangle
+														.modal_error_chest_img
+													i.fa.fa-check
+													input.modal_form_input(name='name', type='text', placeholder='Имя')
+											.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
+												.modal_form_input_wrap
+													.modal_input_error
+														| Заполните поле
+														.modal_error_triangle
+														.modal_error_chest_img
+													i.fa.fa-check
+													input.modal_form_phone(name='phone', type='text', placeholder='Телефон')
+											.intermediate_item.col-sm-4.col-xs-10.col-xs-offset-1.col-sm-offset-0
+												.modal_form_input_wrap
+													input(type='hidden', name='form_name', value='Заказ звонка')
+													input(type='hidden', name='form_type', value='normal')
+													input.col-lg-4(type='submit', value='Заказать звонок')
+								.customNextBtn.customBtn
+								.customPrevBtn.customBtn
 
-							.customNextBtn.customBtn
-							.customPrevBtn.customBtn
+				.item.bg_2.slider_share
+					.container
+						.row
+							.header_title
+								h1.share-title С
+									span.share.text-underline 20.07. по 31.08.2017
+									span.share  скидка 15% на рулонные шторы!
+								p.share-text В акции участвуют ткани: Madagaskar-BO, Air Gold, Liana Gold, Liana Apricot, Bohema Orange, Bohema Blue
+								ul.photo-cloth
+									li
+										img(src=require("../../img/photo-cloth-1.png") alt="photo-cloth-1")
+									li
+										img(src=require("../../img/photo-cloth-2.png") alt="photo-cloth-1")
+									li
+										img(src=require("../../img/photo-cloth-3.png") alt="photo-cloth-1")
+									li
+										img(src=require("../../img/photo-cloth-4.png") alt="photo-cloth-1")
+									li
+										img(src=require("../../img/photo-cloth-5.png") alt="photo-cloth-1")
+								.customNextBtn.customBtn
+								.customPrevBtn.customBtn
 		// Секция  наши преимущества
 		section#our_advantages.our__advantages
 			.container
 				.row
 					h2.title 5 аргументов «ЗА» рулонные шторы!
 					span.underline
-					p Надумали купить штору в Харькове, однако не знаете какую выбрать? Гардины, ламбрекены, тюль, портьеры или тканевые роллеты? Мы покажем вам плюсы рулонных штор, а к классической шторе вернуться вы всегда успеете! Тем более, что они прекрасно соседствуют на окне. Решение за вами, а наш дизайнер поможет сделать его оптимальным и не переплачивать!»
+					p Решили купить! штору в Харькове, однако не знаете какую выбрать? Гардины, ламбрекены, тюль, портьеры или тканевые роллеты? Мы покажем вам плюсы рулонных штор, а к классической шторе вернуться вы всегда успеете! Тем более, что они прекрасно соседствуют на окне. Решение за вами, а наш дизайнер поможет сделать его оптимальным и не переплачивать!»
 					.clearfix
 						.our__advantages-items_left.col-sm-12.col-md-6
 							h3 Обычная штора
@@ -272,14 +272,34 @@ block main
 							h4 Римские шторы
 							p Одна из самых востребованных и известных покупателю штор – римская штора. В нашем рейтинге они также стоят на первых позициях по ряду причин:
 							ul
-								li 1.	Визуально напоминают обычную штору, добавляют мягкость, теплоту интерьеру, наполняют комнату уютом.
-								li 2.	Легко поднимаются и опускаются.
-								li 3.	Не требуют особого ухода.
-								li 4.	Занимают минимум места.
-								li 5.	Штора устанавливаются как на проем, так и на окно.
+								li Визуально напоминают обычную штору, добавляют мягкость, теплоту интерьеру, наполняют комнату уютом.
+								li Легко поднимаются и опускаются.
+								li Не требуют особого ухода.
+								li Занимают минимум места.
+								li Штора устанавливаются как на проем, так и на окно.
 							p Римские шторы в Харькове мы устанавливаем уже много лет. Обращаясь в магазин iShtora, вы выбираете профессионалов, которые любят свою работу и отдаются ей на все 100%. Быстро установим ваши шторы или, если вы проживаете не в Харькове, научим монтировать их самостоятельно.
 					.tovar-groups__item.reverse
 						.col-lg-6.lightgallery
+							a(href="../../img/tovar-groups_1.jpg")
+								img(src=require("../../img/tovar-groups_1.jpg") alt="tovar-group-photo")
+								.demo-gallery-poster.clearfix
+									.fa.fa-search
+								//a(href="../../img/plisse1.jpg")
+									img(src=require("../../img/plisse1.jpg"))
+						.col-lg-6.tovar-groups__description
+							h4 Рулонные шторы
+							p Заказать рулонные шторы в Харькове просто и выгодно в нашем магазине, и вот почему:
+							ul
+								li Предлагаем весь спектр существующих систем: тканевые ролеты открытого типа, тканевые ролеты закрытого типа (отличаются закрытым валом и алюминиевыми направляющими, в которых двигается ткань), жалюзи день ночь, Roman Style, 3D-Shade , мансардные системы, шторы-плиссе и фальш накладки.
+								li В ассортименте представлены все виды тканей: однотонные в широкой гамме цветом, с рисунком, прозрачные и black-out, гофрированные и ткань-зебра, многослойные нестандартные ткани. Всего более 700 позиций.
+								li Рулонные шторы (Харьков) необходимый элемент современного интерьера. Чтобы выбор был легким и проходил в непринуждённой обстановке мы предлагаем услуги дизайнера с бесплатным выездом к вам домой.
+								//li 4.	Тканевые ролеты на окна устанавливают специалисты Айшора с опытом работы 5-10 лет. Мы знаем все нюансы в монтаже данных штор и сможем обучить, если вы планируете устанавливать их самостоятельно.
+
+							p Если вы надумали купить рулонные шторы в Харькове, обращайтесь сразу к нам. Мы работаем напрямую с производителем, гарантируем высокое качество сборки шторы ролеты и установим рулонные жалюзи в течение 3х дней с момента заказа.
+
+					.tovar-groups__item
+						.col-lg-6.lightgallery
+
 							a(href="../../img/tovar-groups_3.jpg")
 								img(src=require("../../img/tovar-groups_3.jpg") alt="tovar-group-photo")
 								.demo-gallery-poster.clearfix
@@ -307,13 +327,13 @@ block main
 							//a(href="../../img/DN11.jpg")
 							//	img(src=require("../../img/DN11.jpg"))
 							//a(href="../../img/DN12.jpg")
-							//	img(src=require("../../img/DN12.jpg"))
+								//	img(src=require("../../img/DN12.jpg"))
 						.col-lg-6.tovar-groups__description
 							h4 Ролеты День Ночь
 							p На сегодняшний день рулонные шторы день ночь находятся на пике популярности. И это не удивительно, ведь это один из самых практичных видов тканевых ролет. Благодаря особому механизму и ткани, состоящей из чередующихся прозрачных и непрозрачных полос, он совмещает в себе функциональные особенности горизонтальных жалюзи (поэтому их еще называют жалюзи день ночь) и ролл штор. Такие ролеты позволяют как полностью открыть или закрыть окно, так и тонко отрегулировать световой поток.
 							p В ассортименте компании iShtora представлена широкая цветовая гамма ролет, различные фактуры и рисунки. Такое разнообразие удовлетворит самый изысканный и требовательный вкус.
 
-					.tovar-groups__item
+					.tovar-groups__item.reverse
 						.col-lg-6.lightgallery
 							a(href="../../img/tovar-groups_4.jpg")
 								img(src=require("../../img/tovar-groups_4.jpg") alt="tovar-group-photo")
@@ -332,37 +352,21 @@ block main
 							a(href="../../img/plisse6.jpg")
 								img(src=require("../../img/plisse6.jpg") alt="tovar-group-photo")
 
+
 						.col-lg-6.tovar-groups__description
 							h4 Шторы-плиссе
-							//p Несколько лет назад на рынке тканевых ролет появились необычные шторы плиссе. В чем же их необычность? Они не имеют вала, на который накручивается обычная ролета, сделаны из гофрированной ткани и устанавливаются в световой проем окна. Это еще одна система, которая вобрала в себя достоинства жалюзи и ролеты. Следовательно, их часто называют жалюзи плиссе.
+								//p Несколько лет назад на рынке тканевых ролет появились необычные шторы плиссе. В чем же их необычность? Они не имеют вала, на который накручивается обычная ролета, сделаны из гофрированной ткани и устанавливаются в световой проем окна. Это еще одна система, которая вобрала в себя достоинства жалюзи и ролеты. Следовательно, их часто называют жалюзи плиссе.
 							p К достоинствам жалюзи плиссе можно отнести:
 							ul
-								li 1.	Компактность. В сложенном виде установленная штора займет лишь 5 см светового проема.
-								li 2.	Жалюзи плиссе легко поднимаются и опускаются, при том двигаются как снизу вверх, так и сверху вниз. Что невозможно в стандартных рулонных шторах.
-								li 3.	Не требуют особого ухода. При сильном загрязнении вы всегда можете ее постирать.
-								li 4.	Штора устанавливаются как на окно, так и на проем.
-								li 5.	Идеально подходит для установки на мансардные окна. Существует возможность ручного управления и автоматического с помощью дистанционного пульта.
-								li 6.	Гофрированные шторы закроют любое нестандартное световое пространство. Арки, трапеции, треугольники и другие сложные пространства, которые часто встречаются в коттеджах/частных домах.
+								li Компактность. В сложенном виде установленная штора займет лишь 5 см светового проема.
+								li Жалюзи плиссе легко поднимаются и опускаются, при том двигаются как снизу вверх, так и сверху вниз. Что невозможно в стандартных рулонных шторах.
+								li Не требуют особого ухода. При сильном загрязнении вы всегда можете ее постирать.
+								li Штора устанавливаются как на окно, так и на проем.
+								li Идеально подходит для установки на мансардные окна. Существует возможность ручного управления и автоматического с помощью дистанционного пульта.
+								li Гофрированные шторы закроют любое нестандартное световое пространство. Арки, трапеции, треугольники и другие сложные пространства, которые часто встречаются в коттеджах/частных домах.
 							p Шторы плиссе купить легко именно у нас. Позвоните, запишитесь на бесплатный замер и после консультации приобретайте понравившуюся вам штору.
 
-					.tovar-groups__item.reverse
-						.col-lg-6.lightgallery
-							a(href="../../img/tovar-groups_1.jpg")
-								img(src=require("../../img/tovar-groups_1.jpg") alt="tovar-group-photo")
-								.demo-gallery-poster.clearfix
-									.fa.fa-search
-							//a(href="../../img/plisse1.jpg")
-								img(src=require("../../img/plisse1.jpg"))
-						.col-lg-6.tovar-groups__description
-							h4 Рулонные шторы
-							p Заказать рулонные шторы в Харькове просто и выгодно в нашем магазине, и вот почему:
-							ul
-								li 1.	Предлагаем весь спектр существующих систем: тканевые ролеты открытого типа, тканевые ролеты закрытого типа (отличаются закрытым валом и алюминиевыми направляющими, в которых двигается ткань), жалюзи день ночь, Roman Stily, 3D Shide, мансардные системы, шторы-плиссе и фальш накладки.
-								li 2.	В ассортименте представлены все виды тканей: однотонные в широкой гамме цветом, с рисунком, прозрачные и black-out, гофрированные и ткань-зебра, многослойные нестандартные ткани. Всего более 700 позиций.
-								li 3.	Рулонные шторы (Харьков) необходимый элемент современного интерьера. Чтобы выбор был легким и проходил в непринуждённой обстановке мы предлагаем услуги дизайнера с бесплатным выездом к вам домой.
-								//li 4.	Тканевые ролеты на окна устанавливают специалисты Айшора с опытом работы 5-10 лет. Мы знаем все нюансы в монтаже данных штор и сможем обучить, если вы планируете устанавливать их самостоятельно.
 
-							p Если вы надумали купить рулонные шторы в Харькове, обращайтесь сразу к нам. Мы работаем напрямую с производителем, гарантируем высокое качество сборки шторы ролеты и установим рулонные жалюзи в течение 3х дней с момента заказа.
 
 
 
@@ -436,14 +440,14 @@ block main
 							span.point
 						.col-md-2.item-usluga
 							.item-usluga__consult
-							p Мы предварительно консультируем вас, дизайнер iShtora бесплатно выезжает к вам на объект в Харькове.
+							p Мы предварительно консультируем вас, дизайнер iShtora бесплатно <span class="text_underline"> выезжает с образцами </span> к вам на объект в Харькове.
 						.points-wrap.points-wrap__consult
 							span.point
 							span.point
 							span.point
 						.col-md-2.item-usluga
 							.item-usluga__settings
-							p Ровно через 3 дня наш специалист по установке роллет приезжает и устанавливает выбранную штору.
+							p Через 3 - 4 дня наш специалист по установке роллет приезжает и устанавливает выбранную штору.
 						.points-wrap.points-wrap__settings
 							span.point
 							span.point
@@ -489,7 +493,7 @@ block main
 									.modal_form_input_wrap
 										input(type='hidden', name='form_name', value='Заявка на выезд дизайнера')
 										input(type='hidden', name='form_type', value='normal')
-										input(type='submit', value='Купить рулонную штору')
+										input(type='submit', value='Купить рулонную штору ')
 
 		//Секция отзывы
 		section#reviews.reviews

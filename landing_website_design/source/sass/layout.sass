@@ -1049,6 +1049,9 @@
 		font-family: $latoThin
 		font-size: 14px
 		letter-spacing: 0.4px
+	&__vk
+		&:before
+			@include sprite($vk-ic)
 
 //для закрытия сайд бара
 .mask-overlay
@@ -1154,6 +1157,13 @@
 		cursor: pointer
 		margin-top: 30px
 		margin-left: 20px
+	.btn-big__shadow-outer
+		width: 300px
+		display: inline-block
+		margin-left: 20px
+	.btn-big__show-more
+		padding: 9px 90px
+
 .order-online
 	opacity: 0
 	width: 0

@@ -40,12 +40,11 @@ $(document).ready(function () {
 	$(".mask").mask("+38(999) 999-99-99");
 
 	//video
-	let playButton = $("#play-pause"),
-		video = $(".say-no__video video"),
+	let video = $(".say-no__video video"),
 		videoBg = $(".say-no__video-bg");
 
 	videoBg.click(function() {
-		video[0].volume = 0;
+		video[0].volume = 1;
 
 		if(video[0].paused){
 			video[0].play();
@@ -67,7 +66,6 @@ $(document).ready(function () {
 		dots: false,
 		nav: true
 	});
-
 
 	if(document.documentElement.clientWidth <= 767){
 
@@ -102,7 +100,6 @@ $(document).ready(function () {
 		portfolio_item_big_img = $('.portfolio__item_big img'),
 		portfolio_preview_ic = $(".portfolio .portfolio__item_wrap"),
 		portfolio_preview_ic_side = $(".portfolio__side-nav .portfolio__wrap");
-
 
 	let css_sidebar_prop_full_width = {
 		"width": "100%",
@@ -233,8 +230,11 @@ $(document).ready(function () {
 		return false;
 	}
 
-	portfolio_preview_ic.on("click", show_photo_portfolio);
-	portfolio_preview_ic_side.on("click", show_photo_portfolio);
+	//portfolio_preview_ic.on("click", show_photo_portfolio);
+	//portfolio_preview_ic_side.on("click", show_photo_portfolio);
+	$(document).on("click", ".portfolio__item_wrap", show_photo_portfolio);
+	$(document).on("click", ".portfolio__wrap", show_photo_portfolio);
+
 
 	function show_photo_portfolio() {
 
@@ -246,38 +246,23 @@ $(document).ready(function () {
 			portfolio__side_nav.css({"width" : "70%", "transform":"translateX(0%)", "opacity":"1"});
 		}
 
-
 		if(data_src_img){
-			console.log(data_src_img);
-
 			portfolio_item_big_img.attr("src", "img/" + data_src_img).css({"display":"block"})
 		}
 
 		body.addClass("mask-overlay__active");
 		body.css({"overflow":"hidden"});
 	}
-
-	//clone elements in side bar
-
-	//portfolio_preview_ic
-
-	// (function addItemsSidebarPortfolio() {
-	// 	var newitems = $(".portfolio .portfolio__item_wrap");
-	//
-	// 	newitems.removeClass("portfolio__item_wrap col-lg-4 col-md-6 col-sm-12").addClass("portfolio__wrap").append(portfolio_preview_ic)
-	//
-	// })();
-
+	
 	//show portfolio photo in sidebar
+	$(document).on("click", ".overlay-navigation_wrap .portfolio__item", side_bar_scroll_top);
 
-	$(".overlay-navigation_wrap .portfolio__item").on("click", function (e) {
 
+	function side_bar_scroll_top() {
 		$('.portfolio__side-nav').animate({ scrollTop: 0}, 500);
-
-	});
+	}
 
 	//scroll to back section
-
 	$(function(){
 
 		var pagePositon = 0,
@@ -325,8 +310,6 @@ $(document).ready(function () {
 		}
 
 	});
-
-
 });
 
 

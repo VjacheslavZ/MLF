@@ -101,8 +101,6 @@ class Animation {
 				.from(item6, 0.7, { autoAlpha: 0,	scale: 2, ease: Power3.easeIn, onStart:emulate_hover_five_tasks}, "-=0.5");
 
 		//section five tasks emulate hover
-
-
 		let five_tasks_items = $(".five-tasks__item"),
 			i = 0;
 

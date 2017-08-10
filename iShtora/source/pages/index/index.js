@@ -77,12 +77,16 @@ $(document).ready( function() {
 	var one = $("#one");
 	var two = $("#two");
 	var three = $("#three");
+
 	//heder slider
 	var headerSlider = $("#headerSlider.owl-carousel");
+
 	headerSlider.owlCarousel({
 		loop: true,
 		items: 1,
-		dots: true
+		dots: true,
+		autoplay: false,
+		autoplayTimeout: 4000
 	});
 	//наши работы
 	one.owlCarousel({
@@ -90,7 +94,7 @@ $(document).ready( function() {
 	    items: 4,
 	    dots: true,
 		margin: 20,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 4000,
 		responsive: {
 			1200: {
@@ -116,7 +120,7 @@ $(document).ready( function() {
 		items: 4,
 		dots: true,
 		margin: 30,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 4000,
 		responsive: {
 			1200: {
@@ -145,6 +149,8 @@ $(document).ready( function() {
 		video:true,
 		lazyLoad:true,
 		center:true,
+		autoplay: true,
+		autoplayTimeout: 4000,
 		responsive: {
 			1200: {
 				margin: 5

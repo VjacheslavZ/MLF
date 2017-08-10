@@ -35,7 +35,7 @@ block main
 										logo
 								nav.header__nav
 									ul
-										-var links = [{title:'Портфолио', href:'#', class: 'portfolio__link'},{title:'Стоимость услуг', href:'#price__service', id: 'price__service'},{title:'Отзывы', href:'#reviews', id: 'reviews'},{title:'Контакты', href:'#', id: 'contacts', class:'contacts'}, {title:'email@gmail.com', href:'mailto:email@gmail.com', id: 'mail'}, {title:'+ 38 (095) 543 65 21', href:'tel:+38(095)5436521'}];
+										-var links = [{title:'Портфолио', href:'#', class: 'portfolio__link'},{title:'Стоимость услуг', href:'#price__service', id: 'price__service'},{title:'Отзывы', href:'#reviews', id: 'reviews'},{title:'Контакты', href:'#', id: 'contacts', class:'contacts'}, {title:'email@gmail.com', href:'mailto:email@gmail.com', id: 'mail'}, {title:'+ 38 (098) 540 40 40', href:'tel:+38(098)5404040'}];
 										each i in links
 											li
 												a(href=i.href class=i.class)= i.title
@@ -216,6 +216,7 @@ block main
 									.portfolio__item
 										img(src=require("../../img/portfolio-item-1.jpg") alt="project 6")
 										span.portfolio__puls
+
 							.btn-big__shadow-outer
 								.btn-big__shadow-inner
 									button.btn-big__show-more Посмотреть весь портфель
@@ -1999,21 +2000,23 @@ block main
 									li
 										a.footer__contacts_maill(href="mailto:designer@gmail.com") designer@gmail.com
 									li
-										a.footer__contacts_phone(href="tel:+380935855858") +38 093 585 58 58
+										a.footer__contacts_phone(href="tel:+380985404040") +38 098 540 40 40
 									li
 										a.footer__contacts_skype(href="#") meagan fisher
 								p.footer__speek Общайтесь со мной в соцсетях:
 								ul.footer__social-network
-									li
+									//li
 										a.footer__pinterest(href="#" target="_blank")
-									li
+									//li
 										a.footer__google-plus(href="#" target="_blank")
 									li
-										a.footer__instagram(href="#" target="_blank")
+										a.footer__instagram(href="https://www.instagram.com/bozhenko.a.v/" target="_blank")
 									li
-										a.footer__behance(href="#" target="_blank")
+										a.footer__behance(href="https://www.behance.net/bozhenkoancdea" target="_blank")
 									li
-										a.footer__facebook(href="#" target="_blank")
+										a.footer__facebook(href="https://www.facebook.com/a.bozhenko" target="_blank")
+									li
+										a.footer__vk(href="https://vk.com/id441325173" target="_blank")
 								span.footer__copyright 2107. Все права защищены
 
 		div(off-canvas='id-1 right shift')
@@ -2084,6 +2087,10 @@ block main
 						.portfolio__item
 							img(src=require("../../img/portfolio-item-1.jpg") alt="project 7")
 							span.portfolio__puls
+					.btn-big__shadow-outer
+						.btn-big__shadow-inner
+							button.btn-big__show-more#download-new-img Показать еще
+
 		.order-online#order-online.overlay-navigation
 			.overlay-navigation_wrap
 				i.fa.fa-close

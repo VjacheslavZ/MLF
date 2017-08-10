@@ -397,21 +397,12 @@ li
 	text-align: center
 	min-height: 600px
 	height: 100vh
-	background: url(../img/header_bg_2.jpg) no-repeat center center fixed
 	-webkit-background-size: cover
 	-moz-background-size: cover
 	-o-background-size: cover
 	background-size: cover
 	overflow: hidden
 	position: relative
-	&:before
-		content: ""
-		position: absolute
-		top: 0
-		bottom: 0
-		left: 0
-		right: 0
-		background-color: rgba(0, 0, 0, .5)
 	.container
 		height: 100%
 		min-height: 100%
@@ -419,6 +410,36 @@ li
 	.owl-carousel
 		.owl-dot.active span
 				background: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
+	.item
+		text-align: center
+		min-height: 600px
+		height: 100vh
+		-webkit-background-size: cover
+		-moz-background-size: cover
+		-o-background-size: cover
+		background-size: cover
+		overflow: hidden
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background-color: rgba(0, 0, 0, .5)
+	.bg_1
+		background: url(../img/header_bg_2.jpg) no-repeat center center
+		background-size: cover
+	.bg_2
+		background: url(../img/header_bg_2.jpg) no-repeat center center
+		background-size: cover
+	.owl-dots
+		margin-top: 10px
+		position: absolute
+		bottom: 40px
+		left: 0
+		right: 0
 .header_logo
 	display: inline-block
 	padding: 0 0
@@ -465,12 +486,16 @@ li
 				padding: 33px 10px
 .header_phone
 	vertical-align: middle
-	display: inline-block
-	width: 140px
 	font-family: $raleway-regular
-	@include fz(16)
-	a
+	span
+		//width: 140px
 		color: #fff
+		font-size: 16px
+		display: block
+	a
+		font-size: 20px
+		color: #fff
+		font-family: sans-serif
 		&:hover
 			text-decoration: none
 //стили для шапки при скролле
@@ -926,7 +951,7 @@ nav[canvas]
 			right: 0
 		.owl-dot.active
 			span
-				background: linear-gradient(to right, $main_color_gradient_start, $main_color_gradient_end)
+				background: linear-gradient(to right, c, $main_color_gradient_end)
 				margin: 5px 10px
 
 	.tovar-groups__item
@@ -1050,6 +1075,19 @@ nav[canvas]
 				padding-top: 35px
 			ul
 				margin: 20px 0
+				li
+					position: relative
+					padding-left: 20px
+				li:before
+					content: ""
+					position: absolute
+					left: 0
+					top: 7px
+					display: block
+					width: 10px
+					height: 10px
+					background: #f64f6e
+					border-radius: 50%
 		.tovar-groups__description_left
 			padding-left: 0
 		.fa-search
@@ -1141,6 +1179,9 @@ nav[canvas]
 			margin-top: 20px
 			font-family: $raleway-regular
 			@include fz(16)
+		.text_underline
+			padding-bottom: 0px
+			border-bottom: 2px solid #f64f6e
 	.points-wrap
 		position: absolute
 		top: 23px
@@ -1454,7 +1495,7 @@ nav[canvas]
 .customBtn
 	display: inline-block
 	position: absolute
-	top: calc(50% - 53px)
+	top: calc(50% - 14px)
 	z-index: 9999
 	&:hover
 		cursor: pointer

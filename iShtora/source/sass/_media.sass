@@ -3,6 +3,7 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
+	/**/
 	.lightgallery
 		&:hover
 			.demo-gallery-poster
@@ -133,13 +134,13 @@
 			padding-top: 50px
 			padding-bottom: 80px
 
-	.customBtn
+	//.customBtn
 		top: calc(50% - 65px)
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
-
+	/**/
 	.header_title
-		top: calc(25% - 71px)
+		top: calc(50% - 71px)
 	.intermediate_item + .intermediate_item
 		margin-top: 0px
 	input[type=submit]
@@ -258,17 +259,18 @@
 	//Общие классы
 	.customNextBtn
 		left: 19px
-	//.customBtn
-	//	top: 30%
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
-
+	/**/
 	.header_title
 		stop: calc(30% - 71px)
 		.intermediate_item
 			margin-top: 20px
 	input[type=submit]
 		//margin-top: 20px
+	.slider_share
+		.customBtn
+			top: calc(50% - 35px)
 	//Секция Мы покажем плюсы новых технологий
 	.our__advantages
 		padding-top: 40px
@@ -361,6 +363,7 @@
 	[off-canvas*=left]
 		width: 255px
 @media only screen and (max-width : 668px)
+	/**/
 	.header_title
 		top: calc(23% - 71px)
 	//Скция наши перимущеста
@@ -395,6 +398,9 @@
 				text-align: center
 
 @media only screen and (max-width : 600px)
+	.slider_share
+		.customBtn
+			top: 50%
 	.dm-modal
 		width: 90%
 	.accordion
@@ -407,7 +413,8 @@
 	.header .photo-cloth
 		li +li
 			display: none
-/* Extra Small Devices, Phones */
+	.customBtn
+		top: 50%
 @media only screen and (max-width : 520px)
 	/**/
 	//секция часто задавемы вопросы
@@ -459,7 +466,9 @@
 	.accordion
 		.ui-accordion-header
 			line-height: 2
-
+	.slider_share
+		.customBtn
+			top: 80%
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

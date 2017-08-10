@@ -7,11 +7,11 @@ class Animation {
 		this.tl1.pause();
 	}
 	description() {
-		this.tl1.from('.header_title', 0.7, {
-			y: -100,
-			opacity: 0,
-			ease: Power4.easeOut
-		}, '+=0.3');
+		// this.tl1.from('.header_title', 0.7, {
+		// 	y: -100,
+		// 	opacity: 0,
+		// 	ease: Power4.easeOut
+		// }, '+=0.3');
 
 	}
 
