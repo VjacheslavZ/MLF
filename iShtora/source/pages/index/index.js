@@ -85,9 +85,21 @@ $(document).ready( function() {
 		loop: true,
 		items: 1,
 		dots: true,
-		autoplay: false,
-		autoplayTimeout: 4000
+		autoplay: true,
+		smartSpeed: 2000
 	});
+
+
+
+	$("#headerSlider input").focus(function (){
+		headerSlider.trigger('stop.owl.autoplay');
+	});
+
+	$("#headerSlider input").focusout(function (){
+		headerSlider.trigger('play.owl.autoplay');
+	});
+
+
 	//наши работы
 	one.owlCarousel({
 	    loop: true,

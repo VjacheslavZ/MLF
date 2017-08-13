@@ -22,7 +22,8 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.6
-	font-family: $raleway-regular
+	//font-family: $raleway-regular
+	font-family: sans-serif
 	overflow-x: hidden
 	color: $main_txt_color
 	-webkit-tap-highlight-color: transparent
@@ -42,7 +43,8 @@ body
 //-moz-osx-font-smoothing: grayscale
 
 h1
-	@include font($main_bg_color, 42, $raleway-bold, 1.2)
+	//@include font($main_bg_color, 42, $raleway-bold, 1.2)
+	@include font($main_bg_color, 42, sans-serif, 1.2)
 p,ul
 	padding: 0
 	margin: 0
@@ -175,7 +177,8 @@ li
 			padding-left: 10px
 			@include fz(15)
 			line-height: 35px
-			font-family: $font_RobotoRegular
+			font-family: sans-serif
+			//font-family: $font_RobotoRegular
 			background-color: #F4F4F4
 			border: 1px solid #C8C8C8
 			-webkit-border-radius: 5px
@@ -212,7 +215,8 @@ li
 		margin-left: 5px
 		text-align: left
 		display: block
-		font-family: $font_RobotoRegular
+		//font-family: $font_RobotoRegular
+		font-family: sans-serif
 		@include fz(14)
 		color: $main_txt_color
 		&.active
@@ -248,7 +252,8 @@ li
 		display: none
 		color: #000
 		@include fz(24)
-		font-family: $font_RobotoRegular
+		//font-family: $font_RobotoRegular
+		font-family: sans-serif
 		&.active
 			display: block
 	input[type=submit]
@@ -354,7 +359,8 @@ li
 		padding-left: 10px
 		@include fz(15)
 		line-height: 35px
-		font-family: $font_RobotoRegular
+		//font-family: $font_RobotoRegular
+		font-family: sans-serif
 		background-color: #F4F4F4
 		border: 1px solid #C8C8C8
 		-webkit-border-radius: 5px
@@ -432,7 +438,7 @@ li
 		background: url(../img/header_bg_2.jpg) no-repeat center center
 		background-size: cover
 	.bg_2
-		background: url(../img/header_bg_2.jpg) no-repeat center center
+		background: url(../img/shtora_sale.jpg) no-repeat center center
 		background-size: cover
 	.owl-dots
 		margin-top: 10px
@@ -477,7 +483,9 @@ li
 				//border-image: linear-gradient(to right, $main_color_gradient_end 0%, $main_color_gradient_start 100%)
 				border-image-slice: 1
 				a
-					font-family: $raleway-semibold
+					//font-family: $raleway-semibold
+					font-family: sans-serif
+
 			a
 				color: #fff
 				@include fz(16)
@@ -486,7 +494,8 @@ li
 				padding: 33px 10px
 .header_phone
 	vertical-align: middle
-	font-family: $raleway-regular
+		//font-family: $raleway-regular
+		font-family: sans-serif
 	span
 		//width: 140px
 		color: #fff
@@ -496,6 +505,7 @@ li
 		font-size: 20px
 		color: #fff
 		font-family: sans-serif
+
 		&:hover
 			text-decoration: none
 //стили для шапки при скролле
@@ -550,7 +560,8 @@ li
 		@include fz(18)
 		color: #fff
 		padding-top: 10px
-		font-family: raleway-medium
+		//font-family: raleway-medium
+		font-family: sans-serif
 	.photo-cloth
 		padding: 0 20px
 		li
@@ -692,7 +703,8 @@ input
 	text-align: center
 	li
 		padding: 10px 0
-		font-family: $raleway-bold
+		//font-family: $raleway-bold
+		font-family: sans-serif
 		a
 			color: #000
 			&:hover
@@ -769,7 +781,8 @@ nav[canvas]
 		text-align: right
 		h3
 			@include fz(18)
-			font-family: $raleway-bold
+			//font-family: $raleway-bold
+			font-family: sans-serif
 			text-align: right
 			text-align: end
 			margin: 0
@@ -795,7 +808,8 @@ nav[canvas]
 			h4
 				text-align: right
 				margin: 0 0 0 40px
-				font-family: $raleway-bold
+				//font-family: $raleway-bold
+				font-family: sans-serif
 			p
 				padding: 0
 				margin: 0
@@ -832,7 +846,8 @@ nav[canvas]
 		background: url("../img/our_advantages_bg-2.png") no-repeat  left 61px top 141px
 		h3
 			@include fz(18)
-			font-family: $raleway-bold
+			//font-family: $raleway-bold
+			font-family: sans-serif
 			text-align: start
 			//text-align-last: left
 			margin: 0
@@ -862,13 +877,15 @@ nav[canvas]
 			h4
 				text-align: start
 				margin: 0
-				font-family: $raleway-bold
+				//font-family: $raleway-bold
+				font-family: sans-serif
 			p
 				padding: 0
 				margin: 0
 				//text-align: start
 				text-align: left
-				font-family: $raleway-regular
+				//font-family: $raleway-regular
+				font-family: sans-serif
 				font-weight: 100
 		.our__advantages-img-wash
 			display: inline-block
@@ -1056,7 +1073,8 @@ nav[canvas]
 			left: 0
 			right: 0
 			color: #fff
-			font-family: $raleway-bold
+			//font-family: $raleway-bold
+			font-family: sans-serif
 			font-size: 19px
 			&:hover
 				bottom: 10%
@@ -1155,7 +1173,8 @@ nav[canvas]
 		margin-bottom: 25px
 		@include fz(16)
 		color: #000
-		font-family: $raleway-regular
+		//font-family: $raleway-regular
+		font-family: sans-serif
 		text-align: center
 	.item-usluga
 		position: relative
@@ -1177,7 +1196,8 @@ nav[canvas]
 			margin: 0 auto
 		p
 			margin-top: 20px
-			font-family: $raleway-regular
+			//font-family: $raleway-regular
+			font-family: sans-serif
 			@include fz(16)
 		.text_underline
 			padding-bottom: 0px
@@ -1218,11 +1238,13 @@ nav[canvas]
 		right: 0
 		background-color: rgba(0, 0, 0, .5)
 	&__title
-		@include font($main_bg_color,32,$raleway-bold,1.5)
+		//@include font($main_bg_color,32,$raleway-bold,1.5)
+		@include font($main_bg_color,32,sans-serif,1.5)
 		position: relative
 		z-index: 11
 	&__description
-		@include font($main_font_color,16,$raleway-regular,1.6)
+		//@include font($main_font_color,16,$raleway-regular,1.6)
+		@include font($main_font_color,16,sans-serif,1.6)
 		margin-top: 39px
 		position: relative
 		z-index: 11
@@ -1247,7 +1269,8 @@ nav[canvas]
 			width: 100%
 			margin: 0 auto
 			&-title
-				@include font(#333,16,$raleway-medium, 1.1)
+				//@include font(#333,16,$raleway-medium, 1.1)
+				@include font(#333,16,sans-serif, 1.1)
 				margin: 0 0 37px 0
 	.customNextBtn
 		@include sprite($btn-slider)
@@ -1314,7 +1337,8 @@ nav[canvas]
 		background: transparent
 		color: #fff
 		outline-color: transparent
-		font-family: $raleway-medium
+		//font-family: $raleway-medium
+		font-family: sans-serif
 		font-weight: 600
 		letter-spacing: 1px
 		.ui-icon
@@ -1329,9 +1353,11 @@ nav[canvas]
 		border-radius: 0 0 12px 22px
 	&__description
 		padding-top: 5px
-		@include font(#333,16,$raleway-light, 1.8)
+		//@include font(#333,16,$raleway-light, 1.8)
+		@include font(#333,16,sans-serif, 1.8)
 	&__description_table
-		@include font(#333,16,$raleway-light, 1.8)
+		//@include font(#333,16,$raleway-light, 1.8)
+		@include font(#333,16,sans-serif, 1.8)
 //Секция Как с нами связаться?
 .how-contact
 	//background: url("../img/how_contact_bg.jpg") no-repeat
@@ -1360,13 +1386,15 @@ nav[canvas]
 		@include sprite($location-ico)
 		margin: 0 auto
 	&_metod
-		@include font(#333,20,$raleway-bold,2)
+		//@include font(#333,20,$raleway-bold,2)
+		@include font(#333,20,sans-serif,2)
 		margin: 0
 		margin-top: 5px
 		text-align: center
 		//display: inline-block
 	&_adress
-		@include font(#333,20,$raleway-light,1.1)
+		//@include font(#333,20,$raleway-light,1.1)
+		@include font(#333,20,sans-serif,1.1)
 		text-align: center
 		&:hover
 			color: #000
@@ -1389,7 +1417,6 @@ nav[canvas]
 	height: 100px
 	display: flex
 	align-items: center
-
 	.copyright
 		display: inline-block
 		vertical-align: - webkit-baseline-middle
@@ -1397,7 +1424,8 @@ nav[canvas]
 			@include fz(16)
 			color: #fff
 		span
-			@include font(#fff, 16, $raleway-medium, 3)
+			//@include font(#fff, 16, $raleway-medium, 3)
+			@include font(#fff, 16, sans-serif, 3)
 			margin-left: 7px
 		.social_networks-ic
 			width: 40px
@@ -1469,7 +1497,9 @@ nav[canvas]
 	color: #626262
 	text-align: center
 	@include fz(36)
-	font-family: $raleway-extrabold
+	//font-family: $raleway-extrabold
+	font-family: sans-serif
+
 
 	background: linear-gradient(to right, $main_color_gradient_start 0%, $main_color_gradient_end 100%)
 	background:	-ms-linear-gradient(top, $main_color_gradient_start 99%, transparent 100%) /* IE10+ */
@@ -1495,7 +1525,7 @@ nav[canvas]
 .customBtn
 	display: inline-block
 	position: absolute
-	top: calc(50% - 14px)
+	top: calc(50% - 54px)
 	z-index: 9999
 	&:hover
 		cursor: pointer
@@ -1541,7 +1571,9 @@ nav[canvas]
 		height: 50px
 		border-radius: 10px
 		border: none
-		font-family: $raleway-bold
+		//font-family: $raleway-bold
+		font-family: sans-serif
+
 		//margin-left: 15px
 		position: relative
 		transition: background .1s ease-out
